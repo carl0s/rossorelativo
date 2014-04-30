@@ -4,8 +4,7 @@
   <!--BODY-->
   <?php wp_reset_postdata(); ?>
   
-  <div class="slider-cinema">
-    <div class="slideshow-wrapper">
+    <div class="slider-cinema slideshow-wrapper">
       <div class="fotorama slideshow" data-nav="thumbs" data-allowfullscreen="native" data-width="100%" data-ratio="1440/750" data-thumbheight="116">
         <?php 
         $args = array(
@@ -49,7 +48,6 @@
         <?php endwhile; endif; ?>
       </div>
     </div>
-  </div>
 
   <?php wp_reset_postdata(); ?>
 
@@ -60,7 +58,7 @@
       <div class="slider-nextexit">
         <div class="slideshow-wrapper">
           <?php wp_reset_postdata(); ?>
-          <div class="fotorama slideshow" data-nav="thumbs" data-width="100%" data-ratio="1180/360">
+          <div class="fotorama slideshow" data-nav="thumbs" data-width="100%" data-ratio="1180/360" data-thumbheight="80">
             <?php 
             $args = array(
               'post_type' => 'film',
@@ -76,7 +74,9 @@
                     <div class='info-title large-3 columns'>
                       <?php the_title('<h4>','</h4>'); ?>
                     </div>
-                    <div class='info-date large-3 columns'>
+                  </div>
+                  <div class='row'>
+                    <div class='info-date large-3 large-offset-9 columns'>
                     <h5><?php echo get_field('data_di_uscita'); ?></h5>
                     </div>
                   </div>
@@ -88,8 +88,9 @@
                   </div>
                 </div>
               <?php endwhile; endif; ?>
-            </div>
 
+            </div>
+            <a class="button right [tiny small large]">Vai alla pagina</a>
           </div>
         </div>
       </div>

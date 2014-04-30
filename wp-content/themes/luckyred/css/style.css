@@ -48,20 +48,20 @@ header {
 
 /* --PROVE FOTORAMA TOP-- */
 
-.fotorama__stage {
+.slider-cinema .fotorama__stage {
   margin-top: 0;
 }
 
-.fotorama__stage__shaft .fotorama__grab {
+.slider-cinema .fotorama__stage__shaft .fotorama__grab {
   margin-top: 0;
 }
 
-.fotorama__stage__frame .fotorama__stage__frame--video .fotorama__loaded fotorama__loaded--img {
+.slider-cinema .fotorama__stage__frame .fotorama__stage__frame--video .fotorama__loaded fotorama__loaded--img {
   margin-top: 0;
 }
 
 .slider-cinema .fotorama__video-play {
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 .slider-cinema .fotorama__nav-wrap {
@@ -74,7 +74,7 @@ header {
 
 .slider-cinema .fotorama__caption__wrap {
   position: absolute;
-  top: -646px;
+  top: -600px;
   background: none;
   width: 100%;
 }
@@ -130,7 +130,7 @@ header {
   padding: 10px;
   font-family: Bebas Neue;
   font-size: 200%;
-  margin-top: 250px;
+  margin-top: 210px;
 }
 
 /* --FINE SLIDER FILM AL CINEMA-- */
@@ -154,32 +154,46 @@ header {
 }
 
 .slider-nextexit .fotorama__caption__wrap {
-  position: absolute;
   background: none;
+  position: absolute;
   width: 100%;
 }
 
 .slider-nextexit .info-title h4 {
   color: rgba(255,255,255,1);
   background-color: rgba(0,0,0,0.8);
-  padding: 10px 0 10px 33px;
+  padding: 10px 10px 10px 33px;
   font-family: Bebas Neue;
   font-size: 200%;
   margin-left: -15px;
   margin-top: -254px;
-}
-
-.slider-nextexit .info-date {
-  background-color: rgba(0,0,0,0.8);
-  padding: 10px;
+  text-align: right;
 }
 
 .slider-nextexit .info-date h5 {
   color: rgba(255,255,255,1);
   font-family: 'Georgia';
+  background-color: rgba(0,0,0,0.8);
+  padding: 10px 33px 10px 10px;
   font-style: italic;
   font-size: 180%;
-  margin-top: -50px;
+  margin-top: -85px;
+}
+
+.slider-nextexit .fotorama__nav-wrap {
+  height: 80px;
+  line-height: 80px;
+  margin-top: 20px;
+  margin-bottom: 70px;
+  margin-left: -300px;
+}
+
+.slider-nextexit .button {
+  background-color: rgba(243,33,36,1);
+  font-family: Bebas Neue;
+  font-size: 190%;
+  padding: 10px 40px 10px 40px;
+  margin-top: -124px;
 }
 
 /* --ON DEMAND-- */
