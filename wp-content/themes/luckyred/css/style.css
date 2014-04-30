@@ -205,227 +205,26 @@ header {
   font-size: 350%;
 }
 
-#content ul li {
-  display: inline-block;
-  margin-top: 20px;
-}
+/* --FINE ON DEMAND-- */
 
-#content ul li p {
-  margin-top: 10px;
-}
-
-#chi-siamo {
-  margin-top: 100px;
-  margin-bottom: 0px;
-  padding-bottom: 20px;
-}
-
-#chi-siamo h1 {
-  text-align: center;
-  margin-top: 30px;
-  margin-bottom: 10px;
-}
-
-.supporticons img {
-  padding: 20px;
-  max-height: 200px;
-}
-
-.supporticons h3 {
-  padding-right: 25px;
-  padding-bottom: 0;
-  text-align: center;
-}
-
-.supporticons p{
-  padding-bottom: 0;
-}
-
-#reparti a {
-  margin-top: 50px;
-}
-
-#uscite {
-  background-color: rgba(165,165,165,1);
-}
-
-#uscite h1 {
-  text-align: center;
-  margin-top: 30px;
-  margin-bottom: 10px;
-}
-
-#uscite h3 {
-  text-align: center;
-}
-
-#uscite p {
-  margin-top: 10px;
-}
-
-#archivio h1 {
-  text-align: center;
-  margin-top: 30px;
-  margin-bottom: 10px;
-}
-
-select {
-  -webkit-appearance: none !important;
-  background: #fafafa;
-  background-position-x: 97%;
-  background-position-y: center;
-  border: 1px solid #cccccc;
-  padding: 0.5rem;
-  font-size: 0.875rem;
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
-}
-
-#archivio {
-  margin-top: 100px;
-}
-
-#archivio .button {
-  margin-top: 20px;
-}
-
-#archivio h5 {
-  text-align: center;
-  font-weight: bold;
-}
-
-#archivio img {
-  margin-bottom: 5px;
-}
-
-#archivio h6 {
-  line-height: 0.8;
-}
-
-#scuole {
-  margin-top: 100px;
-}
-
-#scuole h1 {
-  text-align: center;
-  margin-top: 30px;
-  margin-bottom: 10px;
-}
-
-#scuole img {
-  width: 100%;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-#scuole .film{
-  width: 100%;
-}
-
-#press {
-}
-
-#press h1 {
-  text-align: center;
-  margin-top: 30px;
-  margin-bottom: 10px;
-}
-
-#social {
-}
-
-#social h1 {
-  text-align: center;
-  margin-top: 30px;
-  margin-bottom: 10px;
-}
-
-#social h3 {
-  text-align: center;
-}
-
-#social .activity {
-  width: 100%;
-}
-
-#social img {
-  margin: 22px;
-  width: 15%;
-}
-
-#contatti h1 {
-  text-align: center;
-  margin-top: 30px;
-  margin-bottom: 10px;
-}
-
-#contatti img {
-  width: 100%;
-  border: 10px solid rgba(50,50,50,1);
-}
-
-#contatti p {
-  margin-top: 20px;
-}
+/* --FOOTER-- */
 
 footer {
-  background-color: rgba(50,50,50,1);
+  background-color: rgba(38,37,37,1);
 }
 
-footer h1 {
+footer h6 {
+  text-align: center;
+  padding-top: 70px;
+  padding-bottom: 300px;
+  font-family: Bebas Neue;
   color: rgba(255,255,255,1);
-  text-align: center;
-  margin: 20px;
+  line-height: 40px;
+  font-size: 120%; 
 }
 
-footer .button {
-  background-color: rgba(255,255,255,1);
-  color: rgba(0,0,0,1);
-  margin-left: 445px;
+footer a {
+  color: rgba(149,11,73,1);
 }
 
-footer p {
-  padding: 20px;
-  text-align: center;
-  color: rgba(200,200,200,1);
-  font-size: 75%;
-}
-
-
-.press {
-  margin-top: 100px;
-}
-
-.press h1 {
-  text-align: center;
-}
-
-
-
-.trade {
-  margin-top: 100px;
-}
-
-.trade h1 {
-  text-align: center;
-}
-
-.film-uno {
-  margin-top: 150px;
-}
-
-.film-uno .button {
-  width: 100%;
-}
-
-.film-ondemand {
-  margin-top: 100px;
-}
-
-.film-ondemand h1 {
-  text-align: center;
-}
-
-.film-ondemand .cal {
-  width: 90%;
-}
+/* --FINE FOOTER-- */
