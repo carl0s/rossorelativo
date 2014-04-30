@@ -1,3 +1,5 @@
+/* --HEADER E MAIN MENU-- */
+
 header {
   position: fixed;
   z-index: 1;
@@ -23,44 +25,170 @@ header {
   height: 135px;
 }
 
-.slideshow-wrapper {
+/* --FINE HEADER E MAIN MENU-- */
+
+/* --SLIDER FILM AL CINEMA-- */
+
+.slider-cinema .slideshow-wrapper {
   width: 100%;
   min-height: 838px;
 }
 
-.slideshow {
+.slider-cinema .slideshow {
   z-index: 0;
   margin-top: -30px; /* --DA CAMBIARE IL PRIMA POSSIBILE-- */
   position: relative;
 }
 
-.fotorama__nav-wrap {
+.slider-cinema .fotorama__nav-wrap {
   position: absolute;
   margin-top: -150px;
   z-index: 10;
 }
 
-.fotorama__caption__wrap {
+/* --PROVE FOTORAMA TOP-- */
+
+.fotorama__stage {
+  margin-top: 0;
+}
+
+.fotorama__stage__shaft .fotorama__grab {
+  margin-top: 0;
+}
+
+.fotorama__stage__frame .fotorama__stage__frame--video .fotorama__loaded fotorama__loaded--img {
+  margin-top: 0;
+}
+
+.slider-cinema .fotorama__video-play {
+  margin-top: 30px;
+}
+
+.slider-cinema .fotorama__nav-wrap {
+  background-color: rgba(0,0,0,0.8);
+  height: 210px;
+  line-height: 210px;
+  padding: 10px;
+  padding-top: 15px;
+}
+
+.slider-cinema .fotorama__caption__wrap {
   position: absolute;
-  top: -675px;
+  top: -646px;
   background: none;
   width: 100%;
 }
 
-.info-film h4 {
+.slider-cinema .info-title h4 {
   color: rgba(255,255,255,1);
+  background-color: rgba(0,0,0,0.8);
+  padding: 10px;
+  font-family: Bebas Neue;
+  font-size: 280%;
+}
+
+.slider-cinema .info-content {
+  color: rgba(255,255,255,1);
+  background-color: rgba(0,0,0,0.8);
+  padding: 10px;
+  margin-top: -90px;
+  margin-left: 15px;
+  font-family: 'Georgia';
+  font-style: italic;
+  position: absolute;
+}
+
+.slider-cinema .info-date {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.slider-cinema .info-date h4 {
+  color: rgba(255,255,255,1);
+  font-family: Bebas Neue;
+  font-size: 750%;
+  margin-top: -10px;
+}
+
+.slider-cinema .info-date h5 {
+  color: rgba(255,255,255,1);
+  font-family: 'Georgia';
+  font-style: italic;
+  font-size: 180%;
+  margin-top: -50px;
+}
+
+.slider-cinema .info-date h6 {
+  color: rgba(255,255,255,1);
+  font-family: Bebas Neue;
+  font-size: 184%;
+  margin-top: -10px;
+}
+
+.slider-cinema .film-thumb-title h4 {
+  color: rgba(255,255,255,1);
+  background-color: rgba(0,0,0,0.8);
+  padding: 10px;
+  font-family: Bebas Neue;
+  font-size: 200%;
+  margin-top: 250px;
+}
+
+/* --FINE SLIDER FILM AL CINEMA-- */
+
+/* --SLIDER PROSSIME USCITE-- */
+
+.nextexit-bg {
+  background-color: rgba(242,242,242,1);
+}
+
+.nextexit-bg h2 {
+  font-family: Bebas Neue;
+  color: rgba(243,33,36,1);
+  margin: 50px 0 40px 0;
+  font-size: 350%;
+}
+
+.slider-nextexit .slideshow-wrapper {
+  width: 100%;
+  min-height: 360px;
+}
+
+.slider-nextexit .fotorama__caption__wrap {
+  position: absolute;
+  background: none;
+  width: 100%;
+}
+
+.slider-nextexit .info-title h4 {
+  color: rgba(255,255,255,1);
+  background-color: rgba(0,0,0,0.8);
+  padding: 10px 0 10px 33px;
+  font-family: Bebas Neue;
+  font-size: 200%;
+  margin-left: -15px;
+  margin-top: -254px;
+}
+
+.slider-nextexit .info-date {
   background-color: rgba(0,0,0,0.8);
   padding: 10px;
 }
 
-
-#info-date h4 {
+.slider-nextexit .info-date h5 {
   color: rgba(255,255,255,1);
+  font-family: 'Georgia';
+  font-style: italic;
+  font-size: 180%;
+  margin-top: -50px;
 }
 
-#content h2{
-  margin-top: 30px;
-  margin-bottom: 10px;
+/* --ON DEMAND-- */
+
+.ondemand-bg h2 {
+  font-family: Bebas Neue;
+  color: rgba(72,72,72,1);
+  margin: 50px 0 40px 0;
+  font-size: 350%;
 }
 
 #content ul li {

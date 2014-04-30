@@ -9,7 +9,7 @@ function luckyred_scripts() {
 }
 
 add_theme_support( 'post-thumbnails', array( 'post', 'film', 'regista', 'cinema' ) ); // Posts and Movies
-add_action( 'wp_enqueue_scripts', 'luckyred_scripts' );
+add_action( 'wp_enqueue_scripts', 'luckyred_scripts', 'wp_print_styles', 'add_custom_font' );
 
 // include_once('advanced-custom-fields/acf.php');
 // // define( 'ACF_LITE', true );
@@ -514,6 +514,20 @@ register_nav_menus( array(
 
 function debug($var) {
   return "<pre>" . var_dump($var) . "</pre>";
+}
+
+function add_custom_font() {
+  $url = 'http://luckyred.dev/wp-content/themes/luckyred/fonts/bebasneue_regular_macroman/stylesheet.css';
+  wp_register_style ('Bebas Neue', $ulr);
+  wp_enqueue_style ('Bebas Neue');
+}
+
+function excerpt($num) {
+  $limit = $num + 1;
+  $excerpt = explode(' ', get_the_excerpt(), $limit);
+  array_pop($excerpt);
+  $excerpt = implode(" ", $excerpt)." [<a href='". get_permalink($post->ID) ."'>...</a>]";
+  echo $excerpt;
 }
 
 ?>
