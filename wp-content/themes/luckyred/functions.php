@@ -512,6 +512,8 @@ register_nav_menus( array(
   'main_menu' => 'My Custom Main Menu'
 ) );
 
+show_admin_bar(false);
+
 function debug($var) {
   return "<pre>" . var_dump($var) . "</pre>";
 }

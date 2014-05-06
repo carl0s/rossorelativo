@@ -15,34 +15,35 @@
         $film = new WP_Query($args);
         ?>
         <?php if ($film->have_posts()) : while($film->have_posts()) : $film->the_post() ; ?>
-          <a href="<?php the_field('link_trailer'); ?>" data-caption="
+
+          <div class="slide">
             <div class='info-wrapper'>
+              <?php echo get_the_post_thumbnail($film->ID); ?>
               <div class='row'>
                 <div class='info-title large-6 columns'>
                   <?php the_title('<h4>','</h4>'); ?>
+                  <div class="row">
+                    <div class="large-9 columns">
+                      <div class='info-content'>
+                        <?php excerpt('35','<p>','</p>'); ?>
+                      </div>
+                    </div>
+                  </div>
                 </div>
                 <div class='info-date large-1 large-offset-4 columns'>
                   <h4><?php echo get_field('giorno_uscita'); ?></h4>
                   <h5><?php echo get_field('mese_uscita'); ?></h5>
                   <h6>al cinema</h6>
                 </div>
-              </div>
-              <div class='row'>
-                <div class='info-content large-3 columns'>
-                  <?php excerpt('35','<p>','</p>'); ?>
-                </div>
-              </div>
-              <div class='row'>
                 <div class='film-thumb-title large-2 columns'>
                   <h4>Altri film</h4>
                 </div>
               </div>
             </div>
-          </div>">
-          <?php echo get_the_post_thumbnail($film->ID); ?></a>
-          <div class="row">
-            <div class="film-thumb large-12 columns">
-              <?php the_field('video_thumbnail'); ?>
+            <div class="row">
+              <div class="film-thumb large-12 columns">
+                <?php the_field('video_thumbnail'); ?>
+              </div>
             </div>
           </div>
         <?php endwhile; endif; ?>
@@ -81,12 +82,13 @@
                     </div>
                   </div>
                 </div>">
-                <?php echo get_the_post_thumbnail($film->ID); ?></a>
+                <?php echo get_the_post_thumbnail($film->ID); ?>
                 <div class="row">
                   <div class="large-12 columns">
                     <?php the_field('video_thumbnail'); ?>
                   </div>
                 </div>
+                </a>
               <?php endwhile; endif; ?>
 
             </div>

@@ -36,14 +36,22 @@ header {
 
 .slider-cinema .slideshow {
   z-index: 0;
-  margin-top: -30px; /* --DA CAMBIARE IL PRIMA POSSIBILE-- */
+  /* --DA CAMBIARE IL PRIMA POSSIBILE-- */
   position: relative;
 }
 
 .slider-cinema .fotorama__nav-wrap {
   position: absolute;
-  margin-top: -150px;
+  
   z-index: 10;
+}
+
+.slider-cinema .slide {
+  position: relative;
+}
+
+.slider-cinema .slide .info_wrapper img {
+  position: absolute;
 }
 
 /* --PROVE FOTORAMA TOP-- */
@@ -74,9 +82,14 @@ header {
 
 .slider-cinema .fotorama__caption__wrap {
   position: absolute;
-  top: -600px;
   background: none;
   width: 100%;
+}
+
+
+.slider-cinema .info_wrapper {
+  padding-top: 175px;
+  position: relative;
 }
 
 .slider-cinema .info-title h4 {
@@ -91,11 +104,9 @@ header {
   color: rgba(255,255,255,1);
   background-color: rgba(0,0,0,0.8);
   padding: 10px;
-  margin-top: -90px;
-  margin-left: 15px;
+    margin-left: 15px;
   font-family: 'Georgia';
   font-style: italic;
-  position: absolute;
 }
 
 .slider-cinema .info-date {
@@ -106,23 +117,20 @@ header {
   color: rgba(255,255,255,1);
   font-family: Bebas Neue;
   font-size: 750%;
-  margin-top: -10px;
-}
+  }
 
 .slider-cinema .info-date h5 {
   color: rgba(255,255,255,1);
   font-family: 'Georgia';
   font-style: italic;
   font-size: 180%;
-  margin-top: -50px;
-}
+  }
 
 .slider-cinema .info-date h6 {
   color: rgba(255,255,255,1);
   font-family: Bebas Neue;
   font-size: 184%;
-  margin-top: -10px;
-}
+  }
 
 .slider-cinema .film-thumb-title h4 {
   color: rgba(255,255,255,1);
@@ -166,7 +174,7 @@ header {
   font-family: Bebas Neue;
   font-size: 200%;
   margin-left: -15px;
-  margin-top: -254px;
+  
   text-align: right;
 }
 
@@ -177,8 +185,7 @@ header {
   padding: 10px 33px 10px 10px;
   font-style: italic;
   font-size: 180%;
-  margin-top: -85px;
-}
+  }
 
 .slider-nextexit .fotorama__nav-wrap {
   height: 80px;
@@ -193,7 +200,7 @@ header {
   font-family: Bebas Neue;
   font-size: 190%;
   padding: 10px 40px 10px 40px;
-  margin-top: -124px;
+  
 }
 
 /* --ON DEMAND-- */
