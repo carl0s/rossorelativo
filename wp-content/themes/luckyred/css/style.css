@@ -1,5 +1,7 @@
 /* --HEADER E MAIN MENU-- */
 
+/* @import "pesticide"; */ 
+
 header {
   position: fixed;
   z-index: 1;
@@ -50,8 +52,9 @@ header {
   position: relative;
 }
 
-.slider-cinema .slide .info_wrapper img {
+.slider-cinema .slide .info-wrapper img {
   position: absolute;
+  top: 0px;
 }
 
 /* --PROVE FOTORAMA TOP-- */
@@ -87,49 +90,54 @@ header {
 }
 
 
-.slider-cinema .info_wrapper {
+.slider-cinema .info-wrapper {
   padding-top: 175px;
   position: relative;
 }
 
-.slider-cinema .info-title h4 {
+.slider-cinema .info-title h2 {
   color: rgba(255,255,255,1);
   background-color: rgba(0,0,0,0.8);
   padding: 10px;
   font-family: Bebas Neue;
-  font-size: 280%;
+  font-size: 3em;
+  line-height: 1em;
 }
 
 .slider-cinema .info-content {
   color: rgba(255,255,255,1);
   background-color: rgba(0,0,0,0.8);
   padding: 10px;
-    margin-left: 15px;
   font-family: 'Georgia';
   font-style: italic;
 }
 
 .slider-cinema .info-date {
   background-color: rgba(0,0,0,0.8);
+  text-align: center;
 }
 
 .slider-cinema .info-date h4 {
   color: rgba(255,255,255,1);
   font-family: Bebas Neue;
-  font-size: 750%;
+  font-size: 5em;
+  height: 1em;
+  padding-right: 10px;
+  padding-bottom: 15px;
   }
 
 .slider-cinema .info-date h5 {
   color: rgba(255,255,255,1);
   font-family: 'Georgia';
   font-style: italic;
-  font-size: 180%;
+  font-size: 2em;
   }
 
 .slider-cinema .info-date h6 {
   color: rgba(255,255,255,1);
   font-family: Bebas Neue;
-  font-size: 184%;
+  font-size: 1.5em;
+  height: 1em;
   }
 
 .slider-cinema .film-thumb-title h4 {
@@ -138,7 +146,6 @@ header {
   padding: 10px;
   font-family: Bebas Neue;
   font-size: 200%;
-  margin-top: 210px;
 }
 
 /* --FINE SLIDER FILM AL CINEMA-- */
