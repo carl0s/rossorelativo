@@ -91,7 +91,7 @@ header {
 
 
 .slider-cinema .info-wrapper {
-  padding-top: 175px;
+  padding-top: 185px;
   position: relative;
 }
 
@@ -100,7 +100,7 @@ header {
   background-color: rgba(0,0,0,0.8);
   padding: 10px;
   font-family: Bebas Neue;
-  font-size: 3em;
+  font-size: 2.4em;
   line-height: 1em;
 }
 
@@ -110,6 +110,8 @@ header {
   padding: 10px;
   font-family: 'Georgia';
   font-style: italic;
+  margin-top: 15px;
+  line-height: 1.1em;
 }
 
 .slider-cinema .info-date {
@@ -120,17 +122,19 @@ header {
 .slider-cinema .info-date h4 {
   color: rgba(255,255,255,1);
   font-family: Bebas Neue;
-  font-size: 5em;
+  font-size: 6.5em;
   height: 1em;
-  padding-right: 10px;
-  padding-bottom: 15px;
-  }
+  margin-left: -5px;
+  margin-bottom: -10px;
+  margin-top: -20px;
+}
 
 .slider-cinema .info-date h5 {
   color: rgba(255,255,255,1);
   font-family: 'Georgia';
   font-style: italic;
-  font-size: 2em;
+  font-size: 2.3em;
+  margin-bottom: -5px;
   }
 
 .slider-cinema .info-date h6 {
@@ -145,7 +149,8 @@ header {
   background-color: rgba(0,0,0,0.8);
   padding: 10px;
   font-family: Bebas Neue;
-  font-size: 200%;
+  font-size: 1.5em;
+  margin-top: 255px;
 }
 
 /* --FINE SLIDER FILM AL CINEMA-- */
@@ -174,39 +179,54 @@ header {
   width: 100%;
 }
 
-.slider-nextexit .info-title h4 {
+.slider-nextexit .info-title h2 {
   color: rgba(255,255,255,1);
   background-color: rgba(0,0,0,0.8);
   padding: 10px 10px 10px 33px;
   font-family: Bebas Neue;
-  font-size: 200%;
-  margin-left: -15px;
-  
+  font-size: 1.8em;
+  margin-top: -495px;
   text-align: right;
+}
+
+.slider-nextexit .info-date {
+  margin-top: -75px;
+  background-color: rgba(0,0,0,0.8);
+}
+
+.slider-nextexit .info-date h4 {
+  color: rgba(255,255,255,1);
+  font-family: Bebas Neue;
+  font-size: 2em;
+  height: 1em;
+  float: left;
 }
 
 .slider-nextexit .info-date h5 {
   color: rgba(255,255,255,1);
   font-family: 'Georgia';
-  background-color: rgba(0,0,0,0.8);
   padding: 10px 33px 10px 10px;
   font-style: italic;
-  font-size: 180%;
-  }
+  font-size: 1.3em;
+  height: 1em;
+  float: left;
+}
 
-.slider-nextexit .fotorama__nav-wrap {
-  height: 80px;
-  line-height: 80px;
-  margin-top: 20px;
-  margin-bottom: 70px;
-  margin-left: -300px;
+.slider-nextexit .info-date h6 {
+  color: rgba(255,255,255,1);
+  font-family: Bebas Neue;
+  font-size: 2em;
+  height: 1em;
+  float: left;
 }
 
 .slider-nextexit .button {
   background-color: rgba(243,33,36,1);
   font-family: Bebas Neue;
-  font-size: 190%;
+  font-size: 2em;
   padding: 10px 40px 10px 40px;
+  margin-top: 75px;
+  width: 280px;
   
 }
 
