@@ -64,7 +64,7 @@
       <h2>Prossime Uscite</h2>
 
       <div class="slider-nextexit slideshow-wrapper">
-      <div class="fotorama slideshow" data-nav="thumbs" data-allowfullscreen="native" data-width="100%" data-ratio="1440/750">
+      <div class="fotorama slideshow" data-nav="thumbs" data-width="100%" data-ratio="1440/750">
         <?php 
         $args = array(
           'post_type'  => 'film',
@@ -89,7 +89,7 @@
                       ?>
                       <h4><?php echo $date->format('d'); ?></h4>
                       <h5><?php echo $date->format('M'); ?></h5>
-                      <h6><?php echo $date->format('y'); ?></h6>
+                      <h6><?php echo $date->format('Y'); ?></h6>
                     </div>
                   </div>
             </div>
