@@ -105,6 +105,48 @@
     <div class="ondemand-bg row">
       <h2>On Demand</h2>
     </div>
+
+    <div class="blog-archivio-bg large-12 columns">
+      <div class="row">
+        <div class="blog large-5 columns">
+          <h2>Blog</h2>
+          <h4>PROVA TESTO</h4>
+        </div>
+
+        <div class="archivio large-7 columns">
+          <h2>Archivio Film</h2>
+          <br>
+          <div class="archive-film row">  
+          <?php query_posts(array('post_type'=>'film', 'posts_per_page'=>3)); ?>
+          <?php if (have_posts()) : while(have_posts()) : the_post(); ?>
+          <div class="large-4 columns">
+            <a class="archive-img"><?php echo the_post_thumbnail(array());?></a>
+            <h3>
+              <?php 
+              $mytitle = get_the_title();
+              if (strlen($mytitle)>20) $mytitle=substr($mytitle, 0,15) . '...';
+              echo $mytitle;
+              ?>
+            </h3>
+              <h5><span>Regia:</span>  <?php $registi = get_field('regia'); $i = 0;
+            foreach($registi as $regista):
+              if($i = 0):
+                $separator = ', ';
+              else:
+                $separator = '';
+              endif;?>
+              <a href="<?php echo get_permalink($regista->ID); ?>" title="Regia di <?php echo $regista->post_title; ?>"><?php echo $separator . $regista->post_title; ?></a>
+              <?php
+              $i++;
+              endforeach;
+              ?>
+            </h5>
+          </div>
+        <?php endwhile; endif; ?>
+      </div>
+    </div>
+    </div>
+  </div>
     <!--SIDEBAR-->
     <?php get_sidebar(); ?>
     <!--FOOTER-->

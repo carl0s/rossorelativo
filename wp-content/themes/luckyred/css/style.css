@@ -221,6 +221,58 @@ header {
 
 /* --FINE ON DEMAND-- */
 
+/* --BLOG-ARCHIVIO-- */
+
+.blog-archivio-bg {
+  background-color: rgba(242,242,242,1);
+}
+
+.blog {
+  margin-left: -15px;
+}
+
+.blog-archivio-bg h2 {
+  font-family: Bebas Neue;
+  color: rgba(243,33,36,1);
+  margin: 50px 0 40px 0;
+  font-size: 350%;
+}
+
+.blog-archivio-bg h5 {
+  font-family: Bebas Neue;
+  padding:2px;
+  color: rgba(255,255,255,1);
+}
+
+.archive-film {
+  margin-left: -15px;
+}
+
+.archive-img {
+  width: 1em;
+}
+
+.archivio h3 {
+  font-family: Bebas Neue;
+  margin-top: 10px;
+  color: rgba(72,72,72,1);
+}
+
+.archivio a {
+  font-family: 'Georgia';
+  font-style: italic;
+  color: rgba(72,72,72,1);
+  font-size: 0.8em;
+}
+
+.archivio span {
+  background-color: rgba(72,72,72,1);
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+/* --FINE BLOG-ARCHIVIO-- */
+
 /* --FOOTER-- */
 
 footer {
