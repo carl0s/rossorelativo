@@ -63,8 +63,13 @@
   <div class="row">
     <h2>Prossime Uscite</h2>
 
+<<<<<<< HEAD
     <div class="slider-nextexit slideshow-wrapper">
       <div class="fotorama slideshow" data-nav="thumbs" data-allowfullscreen="native" data-width="100%" data-ratio="1440/750">
+=======
+      <div class="slider-nextexit slideshow-wrapper">
+      <div class="fotorama slideshow" data-nav="thumbs" data-width="100%" data-ratio="1440/750">
+>>>>>>> FETCH_HEAD
         <?php 
         $args = array(
           'post_type'  => 'film',
@@ -74,6 +79,7 @@
         $film = new WP_Query($args);
         ?>
         <?php if ($film->have_posts()) : while($film->have_posts()) : $film->the_post() ; ?>
+<<<<<<< HEAD
         <div class="slide" data-thumb="<?php echo wp_get_attachment_image_src(get_post_thumbnail_id($film->ID))[0]; // retrieving url from attached thumb as featured image ?>">
           <div class='info-wrapper'>
             <?php echo get_the_post_thumbnail($film->ID); ?>
@@ -81,6 +87,26 @@
               <div class='info-title large-5 columns'>
                 <?php the_title('<h2>','</h2>'); ?>
               </div>
+=======
+          <div class="slide" data-thumb="<?php echo wp_get_attachment_image_src(get_post_thumbnail_id($film->ID))[0]; // retrieving url from attached thumb as featured image ?>">
+            <div class='info-wrapper'>
+              <?php echo get_the_post_thumbnail($film->ID); ?>
+              <div class='row'>
+                    <div class='info-title large-5 columns'>
+                      <?php the_title('<h2>','</h2>'); ?>
+                    </div>
+                  </div>
+                  <div class='row'>
+                    <div class='info-date large-3 large-offset-9 end columns'>
+                      <?php 
+                      $date = DateTime::createFromFormat('Ymd', get_field('data_di_uscita'));
+                      ?>
+                      <h4><?php echo $date->format('d'); ?></h4>
+                      <h5><?php echo $date->format('M'); ?></h5>
+                      <h6><?php echo $date->format('Y'); ?></h6>
+                    </div>
+                  </div>
+>>>>>>> FETCH_HEAD
             </div>
             <div class='row'>
               <div class='info-date large-3 large-offset-9 end columns'>
