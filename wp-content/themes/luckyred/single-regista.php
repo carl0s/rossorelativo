@@ -27,3 +27,4 @@
 </div>
 
 <?php get_footer(); ?>
+>>>>>>> FETCH_HEAD
