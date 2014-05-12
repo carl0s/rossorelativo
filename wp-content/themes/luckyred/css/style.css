@@ -337,3 +337,114 @@ footer a {
 }
 
 /* --FINE FOOTER-- */
+
+/* --SINGLE-REGISTA-- */
+
+.img-regista .slideshow-wrapper {
+  width: 100%;
+  min-height: 838px;
+}
+
+.img-regista .slideshow {
+  z-index: 0;
+  /* --DA CAMBIARE IL PRIMA POSSIBILE-- */
+  position: relative;
+}
+
+.img-regista .fotorama__nav-wrap {
+  position: absolute;
+  z-index: 10;
+}
+
+.img-regista .slide {
+  position: relative;
+}
+
+.img-regista .slide .info-wrapper img {
+  position: absolute;
+  top: 0px;
+}
+
+.img-regista .fotorama__video-play {
+  margin-top: 20px;
+}
+
+.img-regista .fotorama__nav-wrap {
+  background-color: rgba(0,0,0,0.8);
+  height: 210px;
+  line-height: 210px;
+  padding: 10px;
+  padding-top: 15px;
+}
+
+.img-regista .fotorama__caption__wrap {
+  position: absolute;
+  background: none;
+  width: 100%;
+}
+
+
+.img-regista .info-wrapper {
+  padding-top: 185px;
+  position: relative;
+}
+
+.img-regista .info-title h2 {
+  color: rgba(255,255,255,1);
+  background-color: rgba(0,0,0,0.8);
+  padding: 10px;
+  font-family: Bebas Neue;
+  font-size: 2.4em;
+  line-height: 1em;
+}
+
+.img-regista .info-content {
+  color: rgba(255,255,255,1);
+  background-color: rgba(0,0,0,0.8);
+  padding: 10px;
+  font-family: 'Georgia';
+  font-style: italic;
+  margin-top: 15px;
+  line-height: 1.1em;
+}
+
+.img-regista .info-date {
+  background-color: rgba(0,0,0,0.8);
+  text-align: center;
+}
+
+.img-regista .info-date h4 {
+  color: rgba(255,255,255,1);
+  font-family: Bebas Neue;
+  font-size: 6.5em;
+  height: 1em;
+  margin-left: -5px;
+  margin-bottom: -10px;
+  margin-top: -20px;
+}
+
+.img-regista .info-date h5 {
+  color: rgba(255,255,255,1);
+  font-family: 'Georgia';
+  font-style: italic;
+  font-size: 2.3em;
+  margin-bottom: -5px;
+  }
+
+.img-regista .info-date h6 {
+  color: rgba(255,255,255,1);
+  font-family: Bebas Neue;
+  font-size: 1.5em;
+  height: 1em;
+  }
+
+.img-regista .film-thumb-title h4 {
+  color: rgba(255,255,255,1);
+  background-color: rgba(0,0,0,0.8);
+  padding: 10px;
+  font-family: Bebas Neue;
+  font-size: 1.5em;
+  margin-top: 255px;
+}
+
+/* --FINE SINGLE-REGISTA-- */
