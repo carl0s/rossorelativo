@@ -12,12 +12,7 @@
               <?php the_title('<h2>','</h2>'); ?>
             </div>
             <div class='info-date large-1 large-offset-4 columns'>
-              <?php 
-              $date = DateTime::createFromFormat('Ymd', get_field('data_di_uscita'));
-              ?>
-              <h6>dal</h6>
-              <h4><?php echo $date->format('d'); ?></h4>
-              <h5><?php echo $date->format('M'); ?></h5>
+              
               <h6>al cinema</h6>
             </div>
           </div>
@@ -27,4 +22,3 @@
 </div>
 
 <?php get_footer(); ?>
->>>>>>> FETCH_HEAD

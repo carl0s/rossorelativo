@@ -131,7 +131,7 @@
           <h3>
             <?php 
             $mytitle = get_the_title();
-            if (strlen($mytitle)>20) $mytitle=substr($mytitle, 0,15) . '...';
+            if (strlen($mytitle)>17) $mytitle=substr($mytitle, 0,15) . '...';
             echo $mytitle;
             ?>
           </h3>
