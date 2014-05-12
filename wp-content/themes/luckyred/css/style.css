@@ -44,7 +44,6 @@ header {
 
 .slider-cinema .fotorama__nav-wrap {
   position: absolute;
-  
   z-index: 10;
 }
 
@@ -103,6 +102,10 @@ header {
   font-size: 2.4em;
   line-height: 1em;
 }
+
+.slider-cinema .info-title {
+  
+} 
 
 .slider-cinema .info-content {
   color: rgba(255,255,255,1);
