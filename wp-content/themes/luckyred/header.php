@@ -10,6 +10,7 @@
   </head>
   <body>
     <header>
+    <div id="header_nav">
       <div class="row">
         <div id="logo" class="large-3 columns">
           <a href="http://luckyred.dev"><img src="<?php echo get_template_directory_uri() . '/img/logo.png' ?>"></a>
@@ -18,4 +19,5 @@
           <?php wp_nav_menu(); ?>
         </nav>
       </div>
+    </div>
     </header>

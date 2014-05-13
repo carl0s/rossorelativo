@@ -151,6 +151,7 @@
     </div>
     </div>
   </div>
+    
     <!--SIDEBAR-->
     <?php get_sidebar(); ?>
     <!--FOOTER-->
