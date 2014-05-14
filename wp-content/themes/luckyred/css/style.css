@@ -9,11 +9,23 @@ header {
   width: 100%;
   top: 0;
   height: 135px;
+
+  -webkit-transition: height 0.3s;
+  -moz-transition: height 0.3s;
+  -ms-transition: height 0.3s;
+  -o-transition: height 0.3s;
+  transition: height 0.3s;
 }
 
 #logo {
   height: 135px;
   line-height: 135px;
+
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 #main-menu ul li {
@@ -26,6 +38,28 @@ header {
   color: rgba(255,255,255,1);
   line-height: 135px;
   height: 135px;
+
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+header.smaller {
+    height: 80px;
+    background-color: rgba(38,37,37,1);
+}
+
+header.smaller #logo {
+  max-width: 200px;
+  height: 60px;
+  line-height: 60px;
+}
+
+header.smaller #main-menu a {
+  height: 80px;
+  line-height: 80px;
 }
 
 /* --FINE HEADER E MAIN MENU-- */
@@ -401,10 +435,9 @@ footer a {
   color: rgba(255,255,255,1);
   background-color: rgba(0,0,0,0.8);
   padding: 10px;
-  font-family: 'Georgia';
-  font-style: italic;
-  margin-top: 15px;
-  line-height: 1.1em;
+  font-family: Bebas Neue;
+  font-size: 2.4em;
+  line-height: 1em;
 }
 
 .img-regista .info-date {
@@ -445,6 +478,41 @@ footer a {
   font-size: 1.5em;
   margin-top: 255px;
 }
+
+.biografia {
+  background-color: rgba(242,242,242,1);
+}
+
+.biografia h2 {
+  font-family: Bebas Neue;
+  color: rgba(243,33,36,1);
+  margin: 45px 0 10px 0;
+  font-size: 350%;
+}
+
+.biografia p {
+  font-family: 'Georgia';
+  font-style: italic;
+}
+
+.filmografia h2 {
+  font-family: Bebas Neue;
+  color: rgba(243,33,36,1);
+  margin: 45px 0 10px 0;
+  font-size: 350%;
+}
+
+.filmografia h3 {
+  font-family: Bebas Neue;
+  margin-top: 10px;
+  color: rgba(255,255,255,1);
+    display: inline-block;
+  background-color: rgba(72,72,72,1);
+  padding-left: 7px;
+  padding-right: 7px;
+  padding-top: 3px;
+}
+
 
 /* --FINE SINGLE-REGISTA-- */
 
@@ -492,7 +560,6 @@ footer a {
   background: none;
   width: 100%;
 }
-
 
 .img-film .info-wrapper {
   padding-top: 185px;

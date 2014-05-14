@@ -7,6 +7,24 @@
     <?php wp_head(); ?>
     <link rel="stylesheet" href="css/pesticide.css">
     <script src="js/modernizr.js"></script>
+    <script>
+    function init() {
+      window.addEventListener('scroll', function(e){
+        var distanceY = window.pageYOffset || document.documentElement.scrollTop,
+        shrinkOn = 90,
+        header = document.querySelector("header");
+        if (distanceY > shrinkOn) {
+          classie.add(header,"smaller");
+        } else {
+          if (classie.has(header,"smaller")) {
+            classie.remove(header,"smaller");
+          }
+        }
+      });
+    }
+    window.onload = init();
+    </script>
+
   </head>
   <body>
     <header>

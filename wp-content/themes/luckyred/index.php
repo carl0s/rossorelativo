@@ -203,18 +203,8 @@
       </p>
     </div>
   </div>
-<<<<<<< HEAD
-    
-    <!--SIDEBAR-->
-    <?php get_sidebar(); ?>
     <!--FOOTER-->
     <?php get_footer(); ?>
-=======
-  <!--SIDEBAR-->
-  <?php get_sidebar(); ?>
-  <!--FOOTER-->
-  <?php get_footer(); ?>
->>>>>>> FETCH_HEAD
 
   <script>
   $(document).foundation();

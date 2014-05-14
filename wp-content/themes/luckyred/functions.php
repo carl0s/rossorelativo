@@ -3,9 +3,18 @@
 function luckyred_scripts() {
   wp_enqueue_style( 'luckyred-foundation', get_template_directory_uri() . '/css/foundation.css', array(), '1.0.0' );
   wp_enqueue_style( 'luckyred-general', get_template_directory_uri() . '/css/style.css', array(), '1.0.0' );
+
+  wp_enqueue_style( 'luckyred-slider', get_template_directory_uri() . '/css/gridNavigation.css', array(), '1.0.0' );
+
   wp_enqueue_script( 'twentyfourteen-script', get_template_directory_uri() . '/js/functions.js', array( 'jquery' ), '20131209', true );
   wp_enqueue_script( 'jquery-script', get_template_directory_uri() . '/js/vendor/jquery.js', array( 'jquery' ), '20131209', true );
   wp_enqueue_script( 'foundation-script', get_template_directory_uri() . '/js/foundation.min.js', array( 'jquery' ), '20131209', true );
+  wp_enqueue_script( 'classie-script', get_template_directory_uri() . '/js/classie.js', array( 'jquery' ), '20131209', true );
+
+  wp_enqueue_script( 'e-script', get_template_directory_uri() . '/js/jquery.easing.1.3.js', array( 'jquery' ), '20131209', true );
+  wp_enqueue_script( 'm-script', get_template_directory_uri() . '/js/jquery.mousewheel.js', array( 'jquery' ), '20131209', true );
+  wp_enqueue_script( 'g-script', get_template_directory_uri() . '/js/jquery.gridnav.js', array( 'jquery' ), '20131209', true );
+
 }
 
 add_theme_support( 'post-thumbnails', array( 'post', 'film', 'regista', 'cinema' ) ); // Posts and Movies
