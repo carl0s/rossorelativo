@@ -65,15 +65,15 @@
     <h3>Film dal catalogo lucky red</h3>
   </div>
   <section class="slider">
-          <div class="flexslider carousel">
-            <ul class="slides">
-              <?php query_posts(array('post_type'=>'film')); ?>
-              <?php if (have_posts()) : while(have_posts()) : the_post(); ?>
-              <li><a href="<?php echo get_permalink(); ?>"><?php $image = get_field('locandina'); ?><img src="<?php echo $image['url']; ?>" /></a></li>
-              <?php endwhile; endif; ?>
-            </ul>
-          </div>
-          </section>
-        </div>
+    <div class="flexslider carousel">
+      <ul class="slides">
+        <?php query_posts(array('post_type'=>'film')); ?>
+        <?php if (have_posts()) : while(have_posts()) : the_post(); ?>
+        <li><a href="<?php echo get_permalink(); ?>"><?php $image = get_field('locandina'); ?><img src="<?php echo $image['url']; ?>" /></a></li>
+      <?php endwhile; endif; ?>
+      </ul>
+    </div>
+  </section>
+</div>
     <!--FOOTER-->
     <?php get_footer(); ?>

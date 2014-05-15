@@ -1,5 +1,5 @@
 Questa versione in italiano di WordPress è basata sulla versione di
-Wordpress 3.9 inglese rilasciata il 16/04/2014.
+Wordpress 3.9.1 inglese rilasciata il 08/05/2014.
 
 Nessuna responsabilità viene presa da wordpress-it.it per eventuali problemi
 o malfunzionamenti derivanti dall'uso di questa distribuzione.
