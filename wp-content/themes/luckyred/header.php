@@ -33,9 +33,16 @@
         <div id="logo" class="large-3 columns">
           <a href="http://luckyred.dev"><img src="<?php echo get_template_directory_uri() . '/img/logo.png' ?>"></a>
         </div>
-        <nav id="main-menu" class="left">
+        <nav id="main-menu" class="left large-6 columns">
           <?php wp_nav_menu(); ?>
         </nav>
+        <div class="social-icon large-3 columns end right">
+          <a href="http://luckyred.dev"><img src="<?php echo get_template_directory_uri() . '/img/facebook.svg' ?>"></a>
+          <a href="http://luckyred.dev"><img src="<?php echo get_template_directory_uri() . '/img/twitter.svg' ?>"></a>
+          <a href="http://luckyred.dev"><img src="<?php echo get_template_directory_uri() . '/img/pinterest.svg' ?>"></a>
+          <a href="http://luckyred.dev"><img src="<?php echo get_template_directory_uri() . '/img/googleplus.svg' ?>"></a>
+          <a href="http://luckyred.dev"><img src="<?php echo get_template_directory_uri() . '/img/youtube.svg' ?>"></a>
+        </div>
       </div>
 
     </header>

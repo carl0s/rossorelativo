@@ -100,10 +100,53 @@
 </div>
 </div>
 </div>
-<div class="large-12 columns">
-  <div class="ondemand-bg row">
-    <h2>On Demand</h2>
+
+
+<?php wp_reset_postdata(); ?>
+
+<div class="ondemand-bg large-12 columns">
+  <div class="row">
+    <h2>On demand</h2>
+
+    <div class="slider-ondemand slideshow-wrapper">
+      <div class="fotorama slideshow" data-nav="thumbs" data-width="100%" data-ratio="1180/360" data-thumbheight="260" data-thumbwidth="180">
+        <?php 
+        $args = array(
+          'post_type'  => 'film',
+          'meta_key'   => 'in_uscita',
+          'meta_value' => 'Si'
+          );
+        $film = new WP_Query($args);
+        ?>
+        <?php if ($film->have_posts()) : while($film->have_posts()) : $film->the_post() ; ?>
+        <div class="slide" data-thumb="<?php echo wp_get_attachment_image_src(get_post_thumbnail_id($film->ID))[0]; // retrieving url from attached thumb as featured image ?>">
+          <div class='info-wrapper'>
+            <?php echo get_the_post_thumbnail($film->ID); ?>
+            <div class='row'>
+              <div class='info-title large-5 large-offset-7 end columns'>
+                <?php the_title('<h2>','</h2>'); ?>
+                <div class="row collapse">
+                <div class="large-9 columns">
+                  <div class='info-content'>
+                    <?php excerpt('35','<p>','</p>'); ?>
+                  </div>
+                </div>
+              </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="film-thumb large-12 columns">
+              <?php the_field('video_thumbnail'); ?>
+            </div>
+          </div>
+        </div>
+      <?php endwhile; endif; ?>
+    </div>
+    <a class="button right [tiny small large]">Vai alla pagina</a>
   </div>
+</div>
+</div>
 </div>
 
 
@@ -121,7 +164,7 @@
         <?php query_posts(array('post_type'=>'film', 'posts_per_page'=>3)); ?>
         <?php if (have_posts()) : while(have_posts()) : the_post(); ?>
         <div class="lista large-4 columns">
-          <a class="archive-img"><?php echo the_post_thumbnail(array());?></a>
+          <a class="archive-img" href="<?php echo get_permalink(); ?>"> <?php $image = get_field('locandina'); ?><img src="<?php echo $image['url']; ?>" /></a>
           <h3>
             <?php 
             $mytitle = get_the_title();

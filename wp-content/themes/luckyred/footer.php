@@ -1,3 +1,4 @@
+
 <footer class="large-12 columns">
   <div class="row">
     <h6>Copyright 2013 LUCKY RED S.r.l. tutti i diritti riservati. <a>Privacy e policy</a> e diritti di utilizzo.<br>
