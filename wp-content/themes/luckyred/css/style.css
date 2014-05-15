@@ -270,40 +270,6 @@ header.smaller #main-menu a {
   font-size: 350%;
 }
 
-.ondemand-bg h3 {
-  margin: 10px 0 10px 0;
-
-  background-color: rgba(72,72,72,1);
-
-
-
-  color: rgba(255,255,255,1);
-  padding: 10px;
-  font-family: Bebas Neue;
-  font-size: 1.8em;
-  line-height: 1em;
-  display: inline-block;
-}
-
-.ondemand-bg p {
-  font-family: Georgia;
-  font-style: oblique;
-  color: rgba(72,72,72,1);
-  margin: 0px;
-  font-size: 100%;
-}
-
-  .ondemand-bg .button {
-  background-color: rgba(243,33,36,1);
-  font-family: Bebas Neue;
-  font-size: 2em;
-  padding: 10px 40px 10px 40px;
-  margin-top: 29px;
-  width: 280px;
-}
-
-
-
 /* --FINE ON DEMAND-- */
 
 /* --BLOG-ARCHIVIO-- */
