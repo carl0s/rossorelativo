@@ -7,7 +7,7 @@
   <!-- <script type="text/javascript">$pesticide-debug: true;</script> -->
 
   <div class="slider-cinema slideshow-wrapper">
-    <div class="fotorama slideshow" data-nav="thumbs" data-allowfullscreen="native" data-width="100%" data-ratio="1440/750">
+    <div class="fotorama slideshow" data-nav="thumbs" data-allowfullscreen="native" data-width="100%" data-ratio="1440/750" data-thumbheight="115" data-thumbwidth="180">
       <?php 
       $args = array(
         'post_type'  => 'film',
@@ -81,9 +81,6 @@
             </div>
             <div class='row'>
               <div class='info-date large-3 large-offset-9 end columns'>
-                <?php 
-                $date = DateTime::createFromFormat('Ymd', get_field('data_di_uscita'));
-                ?>
                 <h4><?php echo date_i18n('j', strtotime(get_field('data_di_uscita'))); ?></h4>
                 <h5><?php echo date_i18n('F', strtotime(get_field('data_di_uscita'))); ?></h5>
                 <h6><?php echo date_i18n('Y', strtotime(get_field('data_di_uscita'))); ?></h6>
@@ -196,7 +193,7 @@
   </div>
   <div class="mission large-12 columns">
     <div class="row">
-      <h2>La nosta mission</h2>
+      <h2>La nostra mission</h2>
       <p>Lucky Red è una società di distribuzione e produzione cinematografica, fondata nel 1987 da Andrea Occhipinti.<br>
         La socità acquista e distribuisce film considerati d'essai, attraverso festival cinematografici importanti come il festival di Cannes<br> e di Berlino.
         Lucky Red distribuisce i Italia pellicole spagnole, francesi e di molti altri paesi del mondo girate da autori di qualità e giovani emergenti.

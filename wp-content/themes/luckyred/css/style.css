@@ -142,7 +142,7 @@ header.smaller #main-menu a {
   font-size: 7.3em;
   height: 1em;
   margin-left: -5px;
-  margin-bottom: -6px;
+  margin-bottom: 0px;
   margin-top: -30px;
 }
 
@@ -150,8 +150,9 @@ header.smaller #main-menu a {
   color: rgba(255,255,255,1);
   font-family: 'Georgia';
   font-style: italic;
-  font-size: 1.5em;
+  font-size: 1.2em;
   margin-bottom: -5px;
+  text-align: center;
 }
 
 .slider-cinema .info-date h6 {
@@ -170,6 +171,7 @@ header.smaller #main-menu a {
   position: absolute;
   bottom: -450px;
   z-index: 10;
+  display: inline-block;
 }
 
 /* --FINE SLIDER FILM AL CINEMA-- */
@@ -256,6 +258,8 @@ header.smaller #main-menu a {
   width: 280px;
   
 }
+
+/* --FINE SLIDER PROSSIME USCITE-- */
 
 /* --ON DEMAND-- */
 
@@ -573,6 +577,7 @@ footer a {
   font-family: Bebas Neue;
   font-size: 2.4em;
   line-height: 1em;
+  display: inline-block;
 }
 
 .img-film .info-content {
@@ -583,6 +588,7 @@ footer a {
   font-style: italic;
   margin-top: 15px;
   line-height: 1.1em;
+  display: inline-block;
 }
 
 .img-film .info-content p {
@@ -633,6 +639,7 @@ footer a {
   font-family: Bebas Neue;
   font-size: 1.5em;
   margin-top: 255px;
+  display: inline-block;
 }
 
 .info-film {
