@@ -2,26 +2,24 @@
 
 <?php wp_reset_postdata();  ?>
 
-<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
-    <script type="text/javascript" src="js/jquery.mousewheel.js"></script>
-    <script type="text/javascript" src="js/jquery.gridnav.js"></script>
-
 <script type="text/javascript">
-      $(function() {
-        $('#tj_container').gridnav({
-          rows    : 1,
-    navL    : '#tj_prev',
-    navR    : '#tj_next',
-          type  : {
-            mode    : 'def',  // use def | fade | seqfade | updown | sequpdown | showhide | disperse | rows
-            speed   : 400,      // for fade, seqfade, updown, sequpdown, showhide, disperse, rows
-            easing    : '',     // for fade, seqfade, updown, sequpdown, showhide, disperse, rows 
-            factor    : 50,     // for seqfade, sequpdown, rows
-            reverse   : false     // for sequpdown
-          }
-        });
+    $(function(){
+      SyntaxHighlighter.all();
+    });
+    $(window).load(function(){
+      $('.flexslider').flexslider({
+        animation: "slide",
+        animationLoop: false,
+        itemWidth: 210,
+        itemMargin: 5,
+        
+        pausePlay: true,
+        start: function(slider){
+          $('body').removeClass('loading');
+        }
       });
-    </script>
+    });
+  </script>
 
 
 <div class="img-regista slideshow-wrapper">
@@ -66,21 +64,16 @@
     <h2>Filmografia</h2>
     <h3>Film dal catalogo lucky red</h3>
   </div>
-
-  <div id="tj_container" class="tj_container">
-          <div class="tj_nav">
-            <span id="tj_prev" class="tj_prev">Previous</span>
-            <span id="tj_next" class="tj_next">Next</span>
-          </div>
-          <div class="tj_wrapper">
-            <ul class="tj_gallery">
-              <?php query_posts(array('post_type'=>'film', 'posts_per_page'=>5)); ?>
+  <section class="slider">
+          <div class="flexslider carousel">
+            <ul class="slides">
+              <?php query_posts(array('post_type'=>'film')); ?>
               <?php if (have_posts()) : while(have_posts()) : the_post(); ?>
-              <li><a href="<?php echo get_permalink(); ?>"><?php echo get_the_post_thumbnail(); ?></a></li>
+              <li><a href="<?php echo get_permalink(); ?>"><?php $image = get_field('locandina'); ?><img src="<?php echo $image['url']; ?>" /></a></li>
               <?php endwhile; endif; ?>
             </ul>
           </div>
+          </section>
         </div>
-</div>
     <!--FOOTER-->
     <?php get_footer(); ?>

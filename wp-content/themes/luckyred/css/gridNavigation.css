@@ -1,7 +1,7 @@
 /* Thumbnail Effects Style */
 .tj_container{
 	width:1000px;
-	height:400px;
+	height:300px;
 	position:relative;
 	margin:30px auto;
 }
@@ -43,37 +43,36 @@
 .tj_nav span:hover{
 	opacity:1.0;
 }
-.tj_wrapper{
-	width:100%;
+.flexslider{
+	width:80%;
 	height:100%;
 	position:relative;
 	margin:0px auto;
 }
-.tj_wrapper ul li{
+.flexslider ul li{
 	float:left;
 	list-style-type: none;
 	
 }
-.tj_wrapper ul li a{
+.flexslider ul li a{
 	width:173px;
 	height:257px;
+
 	outline:none;
 	display:block;
 	margin:5px;
-	background:transparent no-repeat center center;
 	border:none;
-	opacity:;
 	-moz-box-shadow:2px 2px 4px #8e8e8e;
 	-webkit-box-shadow:2px 2px 4px #8e8e8e;
 	box-shadow:2px 2px 4px #8e8e8e;
-	/*
+
 	-webkit-transition: all 0.2s ease-in-out;
 	-moz-transition:all 0.2s ease-in-out;
 	-o-transition: all 0.2s ease-in-out;
 	-transition: all 0.2s ease-in-out;
-	*/
+
 }
-.tj_wrapper ul li a:hover{
+.flexslider ul li a:hover{
 	opacity:0.8;
 }
 

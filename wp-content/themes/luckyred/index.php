@@ -196,7 +196,7 @@
         <?php query_posts(array('post_type'=>'film', 'posts_per_page'=>3)); ?>
         <?php if (have_posts()) : while(have_posts()) : the_post(); ?>
         <div class="lista large-4 columns">
-          <a class="archive-img"><?php echo the_post_thumbnail(array());?></a>
+          <a class="archive-img" href="<?php echo get_permalink(); ?>"> <?php $image = get_field('locandina'); ?><img src="<?php echo $image['url']; ?>" /></a>
           <h3>
             <?php 
             $mytitle = get_the_title();
