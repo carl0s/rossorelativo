@@ -12,7 +12,8 @@
       $args = array(
         'post_type'  => 'film',
         'meta_key'   => 'in_uscita',
-        'meta_value' => 'Si'
+        'meta_value' => 'Si',
+        'posts_per_page' => 4
         );
       $film = new WP_Query($args);
       ?>
@@ -114,7 +115,8 @@
         $args = array(
           'post_type'  => 'film',
           'meta_key'   => 'in_uscita',
-          'meta_value' => 'Si'
+          'meta_value' => 'Si',
+          'posts_per_page' => 3
           );
         $film = new WP_Query($args);
         ?>
