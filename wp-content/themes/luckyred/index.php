@@ -12,7 +12,8 @@
       $args = array(
         'post_type'  => 'film',
         'meta_key'   => 'in_uscita',
-        'meta_value' => 'Si'
+        'meta_value' => 'No',
+        'posts_per_page' => 4
         );
       $film = new WP_Query($args);
       ?>
@@ -61,12 +62,13 @@
     <h2>Prossime Uscite</h2>
 
     <div class="slider-nextexit slideshow-wrapper">
-      <div class="fotorama slideshow" data-nav="thumbs" data-width="100%" data-ratio="1180/360">
+      <div class="fotorama slideshow" data-nav="thumbs" data-width="100%" data-ratio="1180/360" data-thumbheight="112" data-thumbwidth="180">
         <?php 
         $args = array(
           'post_type'  => 'film',
           'meta_key'   => 'in_uscita',
-          'meta_value' => 'Si'
+          'meta_value' => 'Si',
+          'posts_per_page' => 3
           );
         $film = new WP_Query($args);
         ?>
@@ -113,13 +115,14 @@
         <?php 
         $args = array(
           'post_type'  => 'film',
-          'meta_key'   => 'in_uscita',
-          'meta_value' => 'Si'
+          'meta_key'   => 'stato_film',
+          'meta_value' => 1,
+          'posts_per_page' => 3
           );
         $film = new WP_Query($args);
         ?>
         <?php if ($film->have_posts()) : while($film->have_posts()) : $film->the_post() ; ?>
-        <div class="slide" data-thumb="<?php echo wp_get_attachment_image_src(get_post_thumbnail_id($film->ID))[0]; // retrieving url from attached thumb as featured image ?>">
+        <div class="slide" data-thumb="<?php echo wp_get_attachment_image_src($image = get_field('locandina'));?><?php echo $image['url']; ?>">
           <div class='info-wrapper'>
             <?php echo get_the_post_thumbnail($film->ID); ?>
             <div class='row'>
@@ -138,6 +141,7 @@
           <div class="row">
             <div class="film-thumb large-12 columns">
               <?php the_field('video_thumbnail'); ?>
+
             </div>
           </div>
         </div>
@@ -164,7 +168,7 @@
         <?php query_posts(array('post_type'=>'film', 'posts_per_page'=>3)); ?>
         <?php if (have_posts()) : while(have_posts()) : the_post(); ?>
         <div class="lista large-4 columns">
-          <a class="archive-img" href="<?php echo get_permalink(); ?>"> <?php $image = get_field('locandina'); ?><img src="<?php echo $image['url']; ?>" /></a>
+          <a class="archive-img" href="<?php echo get_permalink(); ?>"><?php $image = get_field('locandina'); ?><img src="<?php echo $image['url']; ?>" /></a>
           <h3>
             <?php 
             $mytitle = get_the_title();

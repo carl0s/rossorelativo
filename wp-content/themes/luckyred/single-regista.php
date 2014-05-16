@@ -63,27 +63,42 @@
   <div class="row">
     <h2>Filmografia</h2>
     <h3>Film dal catalogo lucky red</h3>
-  </div>
-  <section class="slider">
-          <div class="flexslider carousel">
-            <ul class="slides">
-              <?php query_posts(array('post_type'=>'film')); ?>
-              <?php if (have_posts()) : while(have_posts()) : the_post(); ?>
-              <li><a href="<?php echo get_permalink(); ?>"><?php $image = get_field('locandina'); ?><img src="<?php echo $image['url']; ?>" /></a></li>
-              <?php endwhile; endif; ?>
-            </ul>
+    <div class="slider-film-catalogo slideshow-wrapper">
+      <div class="fotorama slideshow" data-nav="thumbs" data-width="100%" data-ratio="1180/460" data-thumbheight="255" data-thumbwidth="185">
+        <?php 
+        $args = array(
+          'post_type'  => 'film',
+          );
+        $film = new WP_Query($args);
+        ?>
+        <?php if ($film->have_posts()) : while($film->have_posts()) : $film->the_post() ; ?>
+        <div class="slide" data-thumb="<?php echo wp_get_attachment_image_src($image = get_field('locandina'));?><?php echo $image['url']; ?>">
+          <a href="<?php echo get_permalink(); ?>"><?php the_title('<h2>','</h2>'); ?></a>
+          <div class='info-wrapper'>
+            <?php echo get_the_post_thumbnail($film->ID); ?>
           </div>
-          </section>
         </div>
-    <div class="flexslider carousel">
-      <ul class="slides">
-        <?php query_posts(array('post_type'=>'film')); ?>
-        <?php if (have_posts()) : while(have_posts()) : the_post(); ?>
-        <li><a href="<?php echo get_permalink(); ?>"><?php $image = get_field('locandina'); ?><img src="<?php echo $image['url']; ?>" /></a></li>
       <?php endwhile; endif; ?>
-      </ul>
     </div>
-  </section>
+  </div>
+
+  </div>
+</div>
+
+
+<div class="altri-film-bg large-12 columns">
+  <div class="row">
+    <h2><span>Altri film</span></h2>
+    <?php wp_reset_postdata();  ?>
+      <?php $film_registi = get_field('film_regista'); ?>
+      <?php if($film_registi): ?>
+        <?php foreach ($film_registi as $film_regista): ?>
+          <h6>
+            <a href=""><?php echo get_the_title($film_regista->ID); ?></a>
+          </h6>
+        <?php endforeach; ?>
+      <?php endif;?>
+  </div>
 </div>
     <!--FOOTER-->
     <?php get_footer(); ?>

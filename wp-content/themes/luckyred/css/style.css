@@ -367,7 +367,7 @@ header.smaller .social-icon {
   padding: 10px 40px 10px 40px;
   margin-top: -75px;
   width: 280px;  
-  margin-bottom: 45px;
+  margin-bottom: 95px;
 }
 
 /* --FINE ON DEMAND-- */
@@ -429,6 +429,7 @@ header.smaller .social-icon {
   padding: 10px 40px 10px 40px;
   margin-top: 29px;
   width: 280px;
+  margin-bottom: 95px;
 }
 
 .archivio .button a {
@@ -617,6 +618,40 @@ footer a {
   padding-top: 3px;
 }
 
+.slider-film-catalogo .info-wrapper img {
+  opacity: 0;
+}
+
+.slider-film-catalogo .slideshow-wrapper {
+  width: 100%;
+  min-height: 360px;
+}
+
+.slider-film-catalogo .fotorama__caption__wrap {
+  background: none;
+  position: absolute;
+  width: 100%;
+}
+
+.slider-film-catalogo h2 {
+  color: rgba(0,0,0,0.7);
+  text-align: center;
+  margin-top: -2px;
+  margin-bottom: -50px;  
+  font-size: 2em;
+}
+
+.slider-film-catalogo .fotorama__nav-wrap {
+  background-color: rgba(255,255,255,1);
+  height: 280px;
+  line-height: 280px;
+  padding-top: 20px;
+  z-index: 10;
+  width: 100%;
+  margin-top: -350px;
+  position: absolute;
+}
+
 
 /* --FINE SINGLE-REGISTA-- */
 
@@ -702,35 +737,19 @@ footer a {
   font-style: normal;
 }
 
-.img-film .info-date {
+.img-film .info-share {
   background-color: rgba(0,0,0,0.8);
+  display: inline-block;
   text-align: center;
 }
 
-.img-film .info-date h4 {
-  color: rgba(255,255,255,1);
-  font-family: Bebas Neue;
-  font-size: 6.5em;
-  height: 1em;
-  margin-left: -5px;
-  margin-bottom: -10px;
-  margin-top: -20px;
-}
-
-.img-film .info-date h5 {
-  color: rgba(255,255,255,1);
-  font-family: 'Georgia';
-  font-style: italic;
-  font-size: 2.3em;
-  margin-bottom: -5px;
-  }
-
-.img-film .info-date h6 {
+.img-film .info-share h6 {
   color: rgba(255,255,255,1);
   font-family: Bebas Neue;
   font-size: 1.5em;
   height: 1em;
-  }
+  display: inline-block;
+}
 
 .img-film .film-thumb-title h4 {
   color: rgba(255,255,255,1);

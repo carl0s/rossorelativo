@@ -24,7 +24,7 @@
                 </div>
               </div>
             </div>
-            <div class='info-date large-1 large-offset-4 columns'>
+            <div class='info-share large-1 large-offset-4 columns'>
               <h6>Share</h6>
             </div>
           </div>
@@ -152,7 +152,29 @@
 <div class="row">
   <div class="altri-film large-12 columns">
     <h3>Guarda anche</h3>
+
+    <?php if (is_single()) { ?>
+      <div class="row">
+        <?php
+          $category = get_the_category();
+          $cat = $category[0]->cat_ID;
+          $myposts = get_posts("posts_per_page=5&category=$cat&exclude=$post->ID");
+        ?>
+        <ul>
+          <?php foreach($myposts as $post) : ?>
+          <li>
+            <?php $image = get_field('locandina'); ?><img src="<?php echo $image['url']; ?>" />
+            <a href="<?php the_permalink(); ?>" title="Vai all'articolo <?php echo get_the_title(); ?>">
+            <?php the_title(); ?>
+            </a>
+          </li>
+          <?php endforeach; ?>
+        </ul>
+      </div>
+    <?php } ?>
+
   </div>
+
 </div>
 
 
