@@ -536,6 +536,7 @@ footer a {
   font-family: Bebas Neue;
   font-size: 2.4em;
   line-height: 1em;
+  display: inline-block;
 }
 
 .img-regista .info-content {
