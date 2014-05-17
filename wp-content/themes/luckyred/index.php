@@ -111,7 +111,7 @@
     <h2>On demand</h2>
 
     <div class="slider-ondemand slideshow-wrapper">
-      <div class="fotorama slideshow" data-nav="thumbs" data-width="100%" data-ratio="1180/360" data-thumbheight="260" data-thumbwidth="180">
+      <div class="fotorama slideshow" data-transition="crossfade" data-nav="thumbs" data-width="100%" data-ratio="1180/360" data-thumbheight="260" data-thumbwidth="180">
         <?php 
         $args = array(
           'post_type'  => 'film',

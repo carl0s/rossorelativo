@@ -64,7 +64,7 @@
     <h2>Filmografia</h2>
     <h3>Film dal catalogo lucky red</h3>
     <div class="slider-film-catalogo slideshow-wrapper">
-      <div class="fotorama slideshow" data-nav="thumbs" data-width="100%" data-ratio="1180/460" data-thumbheight="255" data-thumbwidth="185">
+      <div class="fotorama slideshow" data-transition="crossfade" data-nav="thumbs" data-width="100%" data-ratio="1180/460" data-thumbheight="255" data-thumbwidth="185">
         <?php 
         $args = array(
           'post_type'  => 'film',
