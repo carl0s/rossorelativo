@@ -62,7 +62,7 @@
 <div class="filmografia large-12 columns">
   <div class="row">
     <h2>Filmografia</h2>
-    <h3>Film dal catalogo lucky red</h3>
+    <h3>Film dal catalogo lucky red:</h3>
     <div class="slider-film-catalogo slideshow-wrapper">
       <div class="fotorama slideshow" data-transition="crossfade" data-nav="thumbs" data-width="100%" data-ratio="1180/460" data-thumbheight="255" data-thumbwidth="185">
         <?php 
@@ -73,7 +73,7 @@
         ?>
         <?php if ($film->have_posts()) : while($film->have_posts()) : $film->the_post() ; ?>
         <div class="slide" data-thumb="<?php echo wp_get_attachment_image_src($image = get_field('locandina'));?><?php echo $image['url']; ?>">
-          <a href="<?php echo get_permalink(); ?>"><?php the_title('<h2>','</h2>'); ?></a>
+          <a href="<?php echo get_permalink(); ?>"> <?php the_title(); ?></a>
           <div class='info-wrapper'>
             <?php echo get_the_post_thumbnail($film->ID); ?>
           </div>
