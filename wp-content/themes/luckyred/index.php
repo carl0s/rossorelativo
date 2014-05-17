@@ -176,23 +176,23 @@
             echo $mytitle;
             ?>
           </h3>
-          <h5><span>Regia:</span>  
+          <h5><span><?php echo __('Regia:'); ?></span>  
             <?php $registi = get_field('regia');
             $i = 0;
             foreach($registi as $regista):
-              if($i = 0):
+              if($i > 0):
                 $separator = ', ';
               else:
                 $separator = '';
               endif;?>
-              <a href="<?php echo get_permalink($regista->ID); ?>" title="Regia di <?php echo $regista->post_title; ?>"><?php echo $separator . $regista->post_title; ?></a>
+              <?php echo $separator; ?><a href="<?php echo get_permalink($regista->ID); ?>" title="La scheda di <?php echo $regista->post_title; ?>"><?php echo $regista->post_title; ?></a>
               <?php
               $i++;
               endforeach;
               ?>
             </h5>
             <h5>
-              <span>Genere:</span> 
+              <span><?php echo __('Genere:'); ?></span> 
               <?php
               $categories = get_the_category();
               $separator = ' ';
@@ -206,7 +206,7 @@
               ?>
             </h5> 
             <h5>
-              <span>Nazione:</span>
+              <span><?php echo __('Nazione:'); ?></span>
               <?php
               $nazioni = get_field('nazione');
               $i=0;
@@ -223,7 +223,7 @@
                 ?>
               </h5>
               <h5>
-                <span>Anno:</span>
+                <span><?php echo __('Anno:'); ?></span>
                 <?php
                 $anno = get_field('anno');
                 ?>
