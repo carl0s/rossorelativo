@@ -153,6 +153,29 @@
   <div class="altri-film large-12 columns">
     <h3>Guarda anche</h3>
 
+    <div class="slider-film-simili slideshow-wrapper">
+      <div class="fotorama slideshow" data-transition="crossfade" data-nav="thumbs" data-width="100%" data-ratio="1180/460" data-thumbheight="255" data-thumbwidth="185">
+        <?php 
+        $args = array(
+          'post_type'  => 'film',
+          'category_name' => 'drammatico',
+          );
+        $film = new WP_Query($args);
+        ?>
+        <?php if ($film->have_posts()) : while($film->have_posts()) : $film->the_post() ; ?>
+        <div class="slide" data-thumb="<?php echo wp_get_attachment_image_src($image = get_field('locandina'));?><?php echo $image['url']; ?>">
+          <a href="<?php echo get_permalink(); ?>"> <?php the_title(); ?></a>
+          <div class='info-wrapper'>
+            <?php echo get_the_post_thumbnail($film->ID); ?>
+          </div>
+        </div>
+      <?php endwhile; endif; ?>
+    </div>
+  </div>
+
+
+
+
     <?php if (is_single()) { ?>
       <div class="row">
         <?php

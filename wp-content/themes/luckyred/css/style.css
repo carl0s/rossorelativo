@@ -418,7 +418,7 @@ header.smaller .social-icon {
 }
 
 .archivio span {
-  background-color: rgba(72,72,72,1);
+  background-color: rgba(0,0,0,0.8);
   padding-left: 2px;
   padding-right: 2px;
 }
@@ -972,6 +972,110 @@ footer a {
   color: rgba(181,58,61,1);
   padding-top: 40px;
   padding-bottom: 40px;
+  position: absolute;
+}
+
+.slider-film-simili {
+  margin-top: 50px;
+}
+
+.slider-film-simili .info-wrapper img {
+  opacity: 0;
+}
+
+.slider-film-simili .slideshow-wrapper {
+  width: 100%;
+  min-height: 360px;
+}
+
+.slider-film-simili .fotorama__caption__wrap {
+  background: none;
+  position: absolute;
+  width: 100%;
+}
+
+.slider-film-simili a {
+  font-family: Bebas Neue;
+  color: rgba(0,0,0,0.7);
+  text-align: left;
+  margin-left: 150px;
+  margin-top: -2px;
+  margin-bottom: -50px;  
+  font-size: 2em;
+}
+
+.slider-film-simili .fotorama__nav-wrap {
+  background-color: rgba(255,255,255,1);
+  height: 280px;
+  line-height: 280px;
+  padding-top: 20px;
+  z-index: 10;
+  width: 100%;
+  margin-top: -320px;
+  position: absolute;
 }
 
 /* --FINE SINGLE-FILM-- */
+
+/* PAGINA ARCHIVIO */
+
+.archivio-pg h2 {
+  color: rgba(243,33,36,1);
+  background-color: rgba(0,0,0,0.8);
+  padding: 10px;
+  font-family: Bebas Neue;
+  font-size: 2.4em;
+  line-height: 1em;
+  display: inline-block;
+  margin-top: 180px;
+}
+
+.ricerca-bg {
+  background-color: rgba(242,242,242,1);
+  height: 500px;
+}
+
+.option-visual-page h6 {
+  font-family: 'Georgia';
+  font-style: italic;
+  margin-top: 30px;
+  margin-bottom: 60px;
+  font-size: 1.2em;
+}
+
+.layout-film {
+  height: 580px;
+  margin-bottom: 80px;
+}
+
+.archivio-film h3 {
+  color: rgba(255,255,255,1);
+  background-color: rgba(0,0,0,0.5);
+  padding: 10px;
+  font-family: Bebas Neue;
+  font-size: 2em;
+  line-height: 1em;
+  display: inline-block;
+  margin-bottom: 30px;
+}
+
+.archivio-film img {
+  margin-bottom: 20px;
+}
+
+.archivio-film span {
+  background-color: rgba(0,0,0,0.8);
+  color: rgba(255,255,255,1);
+  font-family: Bebas Neue;
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+.archivio-film a {
+  font-family: 'Georgia';
+  font-style: italic;
+  color: rgba(0,0,0,1);
+  font-size: 0.8em;
+  text-decoration: underline;
+}
+/* FINE PAGINA ARCHIVIO */

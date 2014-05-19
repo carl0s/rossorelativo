@@ -7,7 +7,7 @@
   <!-- <script type="text/javascript">$pesticide-debug: true;</script> -->
 
   <div class="slider-cinema slideshow-wrapper">
-    <div class="fotorama slideshow" data-nav="thumbs" data-allowfullscreen="native" data-width="100%" data-ratio="1440/750" data-thumbheight="115" data-thumbwidth="180">
+    <div class="fotorama slideshow" data-nav="thumbs" data-width="100%" data-ratio="1440/750" data-thumbheight="115" data-thumbwidth="180">
       <?php 
       $args = array(
         'post_type'  => 'film',
@@ -57,7 +57,7 @@
 
 <?php wp_reset_postdata(); ?>
 
-<div class="nextexit-bg large-12 columns">
+<div id="prossime-uscite" class="nextexit-bg large-12 columns">
   <div class="row">
     <h2>Prossime Uscite</h2>
 
@@ -97,7 +97,7 @@
         </div>
       <?php endwhile; endif; ?>
     </div>
-    <a class="button right [tiny small large]">Vai alla pagina</a>
+    <a href="<?php echo get_permalink($film->ID); ?>" class="button right [tiny small large]">Vai alla pagina</a>
   </div>
 </div>
 </div>
