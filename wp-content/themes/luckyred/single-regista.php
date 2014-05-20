@@ -81,22 +81,26 @@
       <?php endwhile; endif; ?>
     </div>
   </div>
-
   </div>
 </div>
 
 <div class="altri-film-bg large-12 columns">
   <div class="row">
-    <h2><span>Altri film</span></h2>
-    <?php wp_reset_postdata();  ?>
-      <?php $film_registi = get_field('film_regista'); ?>
-      <?php if($film_registi): ?>
-        <?php foreach ($film_registi as $film_regista): ?>
-          <h6>
-            <a href=""><?php echo get_the_title($film_regista->ID); ?></a>
-          </h6>
-        <?php endforeach; ?>
-      <?php endif;?>
+    <h3><span>Altri film</span></h3>
+
+    <?php query_posts(array('post_type'=>'regista')); ?>
+    <?php if (have_posts()) : while(have_posts()) : the_post(); ?>
+    <ul>
+      <?php $registi = get_field('film_regista')?>
+      <?php if($registi):?>
+      <?php foreach($registi as $regista):?>
+      <li>
+        <a href="<?php echo get_permalink($regista->ID); ?>"><?php echo get_the_title($regista->ID); ?></a>
+      </li>
+      <?php endforeach; ?>
+    <?php endif; ?>
+  </ul>
+<?php endwhile; endif; ?>
   </div>
 </div>
     <!--FOOTER-->
