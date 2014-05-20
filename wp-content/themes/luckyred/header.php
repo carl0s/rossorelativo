@@ -12,17 +12,16 @@
       window.addEventListener('scroll', function(e){
         var distanceY = window.pageYOffset || document.documentElement.scrollTop,
         shrinkOn = 90,
-        header = document.querySelector("header");
+        header = $("header");
         if (distanceY > shrinkOn) {
-          classie.add(header,"smaller");
+          header.addClass('smaller');
         } else {
-          if (classie.has(header,"smaller")) {
-            classie.remove(header,"smaller");
+          if (header.hasClass("smaller")) {
+            header.removeClass("smaller");
           }
         }
       });
     }
-    window.onload = init();
     </script>
 
   </head>
@@ -37,11 +36,11 @@
           <?php wp_nav_menu(); ?>
         </nav>
         <div class="social-icon large-3 columns end right">
-          <a href="http://luckyred.dev"><img src="<?php echo get_template_directory_uri() . '/img/facebook.svg' ?>"></a>
-          <a href="http://luckyred.dev"><img src="<?php echo get_template_directory_uri() . '/img/twitter.svg' ?>"></a>
+          <a href="https://www.facebook.com/lucky.red.distribuzione"><img src="<?php echo get_template_directory_uri() . '/img/facebook.svg' ?>"></a>
+          <a href="https://twitter.com/luckyredfilm"><img src="<?php echo get_template_directory_uri() . '/img/twitter.svg' ?>"></a>
           <a href="http://luckyred.dev"><img src="<?php echo get_template_directory_uri() . '/img/pinterest.svg' ?>"></a>
-          <a href="http://luckyred.dev"><img src="<?php echo get_template_directory_uri() . '/img/googleplus.svg' ?>"></a>
-          <a href="http://luckyred.dev"><img src="<?php echo get_template_directory_uri() . '/img/youtube.svg' ?>"></a>
+          <a href="https://plus.google.com/103538445066530070167"><img src="<?php echo get_template_directory_uri() . '/img/googleplus.svg' ?>"></a>
+          <a href="https://www.youtube.com/channel/UCZ2NF3-EhyJ1LNYfQIvqJRg"><img src="<?php echo get_template_directory_uri() . '/img/youtube.svg' ?>"></a>
         </div>
       </div>
 

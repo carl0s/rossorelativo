@@ -65,13 +65,18 @@ header {
 
 header.smaller {
     height: 80px;
-    background-color: rgba(38,37,37,1);
 }
 
 header.smaller #logo {
-  max-width: 200px;
+  width: 200px;
   height: 60px;
   line-height: 60px;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+
 }
 
 header.smaller #main-menu a {
@@ -367,7 +372,7 @@ header.smaller .social-icon {
   padding: 10px 40px 10px 40px;
   margin-top: -75px;
   width: 280px;  
-  margin-bottom: 45px;
+  margin-bottom: 95px;
 }
 
 /* --FINE ON DEMAND-- */
@@ -414,10 +419,11 @@ header.smaller .social-icon {
   font-style: italic;
   color: rgba(72,72,72,1);
   font-size: 0.8em;
+  text-decoration: underline;
 }
 
 .archivio span {
-  background-color: rgba(72,72,72,1);
+  background-color: rgba(0,0,0,0.8);
   padding-left: 2px;
   padding-right: 2px;
 }
@@ -429,6 +435,7 @@ header.smaller .social-icon {
   padding: 10px 40px 10px 40px;
   margin-top: 29px;
   width: 280px;
+  margin-bottom: 95px;
 }
 
 .archivio .button a {
@@ -446,10 +453,11 @@ header.smaller .social-icon {
   font-size: 350%;
 }
 
-  .mission p {
-    font-family: 'Georgia';
+.mission p {
+  font-family: 'Georgia';
   font-style: italic;
-  }
+  margin-bottom: 95px;
+}
 
 /* -- FINE MISSION-- */
 
@@ -533,6 +541,7 @@ footer a {
   font-family: Bebas Neue;
   font-size: 2.4em;
   line-height: 1em;
+  display: inline-block;
 }
 
 .img-regista .info-content {
@@ -608,13 +617,104 @@ footer a {
 
 .filmografia h3 {
   font-family: Bebas Neue;
-  margin-top: 10px;
+  margin-top: -5px;
   color: rgba(255,255,255,1);
-    display: inline-block;
+  display: inline-block;
   background-color: rgba(72,72,72,1);
   padding-left: 7px;
   padding-right: 7px;
   padding-top: 3px;
+  position: absolute;
+}
+
+.slider-film-catalogo .info-wrapper img {
+  opacity: 0;
+}
+
+.slider-film-catalogo .slideshow-wrapper {
+  width: 100%;
+  min-height: 360px;
+}
+
+.slider-film-catalogo .fotorama__caption__wrap {
+  background: none;
+  position: absolute;
+  width: 100%;
+}
+
+.slider-film-catalogo .info-film-catalogo h3 spam {
+  font-family: Bebas Neue;
+  color: rgba(255,255,255,1);
+  display: inline-block;
+  background-color: rgba(72,72,72,1);
+  padding-left: 7px;
+  padding-right: 7px;
+  padding-top: 3px;
+}
+
+.altri-film-bg {
+  background-color: rgba(242,242,242,1);
+}
+
+.altri-film-bg h3 {
+  font-family: Bebas Neue;
+  margin-top: 10px;
+  color: rgba(255,255,255,1);
+  display: inline-block;
+  background-color: rgba(72,72,72,1);
+  padding-left: 7px;
+  padding-right: 7px;
+  padding-top: 3px;
+  position: absolute;
+}
+
+.slider-film-catalogo .info-wrapper img {
+  opacity: 0;
+}
+
+.slider-film-catalogo .slideshow-wrapper {
+  width: 100%;
+  min-height: 360px;
+}
+
+.slider-film-catalogo .fotorama__caption__wrap {
+  background: none;
+  position: absolute;
+  width: 100%;
+}
+
+.slider-film-catalogo .info-film-catalogo h3 spam {
+  font-family: Bebas Neue;
+  color: rgba(255,255,255,1);
+  display: inline-block;
+  background-color: rgba(72,72,72,1);
+  padding-left: 7px;
+  padding-right: 7px;
+  padding-top: 3px;
+}
+
+.altri-film-bg ul li {
+  list-style-type: none;
+}
+.slider-film-catalogo a {
+  font-family: Bebas Neue;
+  color: rgba(0,0,0,0.7);
+  text-align: left;
+  margin-left: 280px;
+  margin-top: -2px;
+  margin-bottom: -50px;  
+  font-size: 2em;
+}
+
+.slider-film-catalogo .fotorama__nav-wrap {
+  background-color: rgba(255,255,255,1);
+  height: 280px;
+  line-height: 280px;
+  padding-top: 20px;
+  z-index: 10;
+  width: 100%;
+  margin-top: -320px;
+  position: absolute;
 }
 
 
@@ -702,35 +802,19 @@ footer a {
   font-style: normal;
 }
 
-.img-film .info-date {
+.img-film .info-share {
   background-color: rgba(0,0,0,0.8);
+  display: inline-block;
   text-align: center;
 }
 
-.img-film .info-date h4 {
-  color: rgba(255,255,255,1);
-  font-family: Bebas Neue;
-  font-size: 6.5em;
-  height: 1em;
-  margin-left: -5px;
-  margin-bottom: -10px;
-  margin-top: -20px;
-}
-
-.img-film .info-date h5 {
-  color: rgba(255,255,255,1);
-  font-family: 'Georgia';
-  font-style: italic;
-  font-size: 2.3em;
-  margin-bottom: -5px;
-  }
-
-.img-film .info-date h6 {
+.img-film .info-share h6 {
   color: rgba(255,255,255,1);
   font-family: Bebas Neue;
   font-size: 1.5em;
   height: 1em;
-  }
+  display: inline-block;
+}
 
 .img-film .film-thumb-title h4 {
   color: rgba(255,255,255,1);
@@ -937,6 +1021,312 @@ footer a {
   color: rgba(181,58,61,1);
   padding-top: 40px;
   padding-bottom: 40px;
+  position: absolute;
+}
+
+.slider-film-simili {
+  margin-top: 50px;
+}
+
+.slider-film-simili .info-wrapper img {
+  opacity: 0;
+}
+
+.slider-film-simili .slideshow-wrapper {
+  width: 100%;
+  min-height: 360px;
+}
+
+.slider-film-simili .fotorama__caption__wrap {
+  background: none;
+  position: absolute;
+  width: 100%;
+}
+
+.slider-film-simili a {
+  font-family: Bebas Neue;
+  color: rgba(0,0,0,0.7);
+  text-align: left;
+  margin-left: 150px;
+  margin-top: -10px;
+  margin-bottom: -50px;  
+  font-size: 2em;
+}
+
+.slider-film-simili .fotorama__nav-wrap {
+  background-color: rgba(255,255,255,1);
+  height: 280px;
+  line-height: 280px;
+  padding-top: 20px;
+  z-index: 10;
+  width: 100%;
+  margin-top: -320px;
+  position: absolute;
 }
 
 /* --FINE SINGLE-FILM-- */
+
+/* --PRESS-- */
+
+.press-bg {
+  margin-top: 150px;
+}
+
+.press-bg .first-menu {
+  margin-left: -15px;
+}
+
+.press-bg .sezione-film h4 {
+  font-family: Bebas Neue;
+  margin-top: 10px;
+  color: rgba(255,255,255,1);
+  display: inline-block;
+  background-color: rgba(72,72,72,1);
+  padding-left: 7px;
+  padding-right: 7px;
+  padding-top: 3px;
+}
+
+.press-bg ul li h5 {
+  font-family: 'Georgia';
+  font-style: italic;  
+}
+
+.press-bg .selected li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.press-bg .selected a {
+  font-family: 'Georgia';
+  font-style: italic;
+  color: rgba(181,58,61,1);
+}
+
+.press-bg .selected a.selected {
+  color: rgba(255,255,255,1);
+  background: rgba(72,72,72,1);
+  padding: 0px 5px;
+}
+
+.press-icone {
+  max-width: 1.2em;
+  margin-right: 0.5em;
+  margin-top: 1.0em;
+  margin-bottom: 3.0em;
+}
+
+.press-icone2 {
+  max-width: 1.0em;
+  margin-right: 0.5em;
+  margin-top: 1.0em;
+  margin-bottom: 3.0em;
+}
+
+/*-- start --*/
+
+.og-grid {
+  list-style: none;
+}
+
+.og-grid li {
+  display: inline-block;
+}
+
+.og-grid li.og-expanded > a::after {
+    top: auto;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-bottom-color: #ddd;
+    border-width: 15px;
+    left: 50%;
+    margin: -20px 0 0 -15px;
+}
+
+.og-expander {
+    position: absolute;
+    background: #ddd;
+    top: auto;
+    left: 0;
+    width: 100%;
+    margin-top: 10px;
+    text-align: left;
+    height: 0;
+    overflow: hidden;
+}
+ 
+.og-expander-inner {
+    padding: 50px 30px;
+    height: 100%;
+}
+
+.og-close {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+ 
+.og-close::before,
+.og-close::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    height: 1px;
+    background: #888;
+    transform: rotate(45deg);
+}
+ 
+.og-close::after {
+    transform: rotate(-45deg);
+}
+ 
+.og-close:hover::before,
+.og-close:hover::after {
+    background: #333;
+}
+
+.og-fullimg,
+.og-details {
+    width: 50%;
+    float: left;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.og-details {
+    padding: 0 40px 0 20px;
+}
+ 
+.og-fullimg {
+    text-align: center;
+}
+ 
+.og-fullimg img {
+    display: inline-block;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.og-loading {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #ddd;
+    box-shadow: 0 0 1px #ccc, 15px 30px 1px #ccc, -15px 30px 1px #ccc;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -25px 0 0 -25px;
+    animation: loader 0.5s infinite ease-in-out both;
+}
+ 
+@keyframes loader {
+    0% { background: #ddd; }
+    33% { background: #ccc; box-shadow: 0 0 1px #ccc, 15px 30px 1px #ccc, -15px 30px 1px #ddd; }
+    66% { background: #ccc; box-shadow: 0 0 1px #ccc, 15px 30px 1px #ddd, -15px 30px 1px #ccc; }
+}
+
+/*-- --*/
+
+.navigation li a,
+.navigation li a:hover,
+.navigation li.active a,
+.navigation li.disabled {
+  color: rgba(181,58,61,1);
+  text-decoration:none;
+  font-family: 'Georgia';
+  font-style: italic;
+}
+
+.navigation li {
+  display: inline;
+  margin: 0 0.2em;
+}
+
+.navigation li a,
+.navigation li a:hover,
+.navigation li.active a,
+.navigation li.disabled {
+  cursor: pointer;
+  padding: 0 0.3em;
+}
+
+.navigation li.active a {
+  background-color: rgba(72,72,72,1);
+}
+
+
+
+/* --FINE PRESS-- */
+
+/* PAGINA ARCHIVIO */
+
+.archivio-pg h2 {
+  color: rgba(243,33,36,1);
+  background-color: rgba(0,0,0,0.8);
+  padding: 10px;
+  font-family: Bebas Neue;
+  font-size: 2.4em;
+  line-height: 1em;
+  display: inline-block;
+  margin-top: 180px;
+}
+
+.ricerca-bg {
+  background-color: rgba(242,242,242,1);
+  height: 500px;
+}
+
+.option-visual-page h6 {
+  font-family: 'Georgia';
+  font-style: italic;
+  margin-top: 30px;
+  margin-bottom: 60px;
+  font-size: 1.2em;
+}
+
+.layout-film {
+  height: 580px;
+  margin-bottom: 80px;
+}
+
+.archivio-film h3 {
+  color: rgba(255,255,255,1);
+  background-color: rgba(0,0,0,0.5);
+  padding: 10px;
+  font-family: Bebas Neue;
+  font-size: 2em;
+  line-height: 1em;
+  display: inline-block;
+  margin-bottom: 30px;
+}
+
+.archivio-film img {
+  margin-bottom: 20px;
+}
+
+.archivio-film span {
+  background-color: rgba(0,0,0,0.8);
+  color: rgba(255,255,255,1);
+  font-family: Bebas Neue;
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+.archivio-film a {
+  font-family: 'Georgia';
+  font-style: italic;
+  color: rgba(0,0,0,1);
+  font-size: 0.8em;
+  text-decoration: underline;
+}
+/* FINE PAGINA ARCHIVIO */

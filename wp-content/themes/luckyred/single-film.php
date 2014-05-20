@@ -24,7 +24,7 @@
                 </div>
               </div>
             </div>
-            <div class='info-date large-1 large-offset-4 columns'>
+            <div class='info-share large-1 large-offset-4 columns'>
               <h6>Share</h6>
             </div>
           </div>
@@ -111,6 +111,36 @@
   <div class="download-film large-12 columns">
     <h3>Download</h3>
   </div>
+
+  <dl class="tabs" data-tab>
+    <dd class="active">
+      <a href="#panel2-1">Tab 1</a>
+    </dd>
+    <dd>
+      <a href="#panel2-2">Tab 2</a>
+    </dd>
+    <dd>
+      <a href="#panel2-3">Tab 3</a>
+    </dd>
+    <dd>
+      <a href="#panel2-4">Tab 4</a>
+    </dd>
+  </dl>
+  <div class="tabs-content">
+    <div class="content active" id="panel2-1">
+      <p>First panel content goes here...</p>
+    </div>
+    <div class="content" id="panel2-2">
+      <p>Second panel content goes here...</p>
+    </div>
+    <div class="content" id="panel2-3">
+      <p>Third panel content goes here...</p>
+    </div>
+    <div class="content" id="panel2-4">
+      <p>Fourth panel content goes here...</p>
+    </div>
+  </div>
+
   <div class="download-film large-2 columns">
     <h4><span><?php echo __('Foto film'); ?><span></h4>
   </div>
@@ -130,6 +160,35 @@
     <h4><span><?php echo __('Clip audio'); ?><span></h4>
   </div>
 </div>
+<!-- GALLERY DI FOTO -->
+<div class="row">
+  <?php $items = get_field('foto_item'); ?>
+  <div class="fotorama">
+    <?php
+      foreach ($items as $item): 
+    ?>
+      <a href="#" data-caption="<?php echo $item['titolo']; ?>"><img src="<?php echo $item['foto_immagine']; ?>" alt="<?php echo $item['titolo']; ?>"></a>
+    <?php
+      endforeach;
+    ?>
+  </div>
+</div>
+<!-- END GALLERY -->
+
+<!-- GALLERY DI VIDEO -->
+<div class="row">
+  <?php $items = get_field('video_item'); ?>
+  <div class="fotorama">
+    <?php
+      foreach ($items as $item): 
+    ?>
+      <a href="<?php echo $item['video_link']; ?>" data-caption="<?php echo $item['titolo_video']; ?>"><img src="<?php echo $item['foto_video']; ?>" alt="<?php echo $item['titolo']; ?>"></a>
+    <?php
+      endforeach;
+    ?>
+  </div>
+</div>
+<!-- END GALLERY -->
 <div class="img-film-download slideshow-wrapper">
     <div class="fotorama slideshow" data-nav="thumbs" data-width="100%" data-ratio="1440/750">
       <div class="slide">
@@ -152,7 +211,52 @@
 <div class="row">
   <div class="altri-film large-12 columns">
     <h3>Guarda anche</h3>
+
+    <div class="slider-film-simili slideshow-wrapper">
+      <div class="fotorama slideshow" data-transition="crossfade" data-nav="thumbs" data-width="100%" data-ratio="1180/460" data-thumbheight="255" data-thumbwidth="185">
+        <?php 
+        $args = array(
+          'post_type'  => 'film',
+          'category_name' => 'drammatico',
+          );
+        $film = new WP_Query($args);
+        ?>
+        <?php if ($film->have_posts()) : while($film->have_posts()) : $film->the_post() ; ?>
+        <div class="slide" data-thumb="<?php echo wp_get_attachment_image_src($image = get_field('locandina'));?><?php echo $image['url']; ?>">
+          <a href="<?php echo get_permalink(); ?>"> <?php the_title(); ?></a>
+          <div class='info-wrapper'>
+            <?php echo get_the_post_thumbnail($film->ID); ?>
+          </div>
+        </div>
+      <?php endwhile; endif; ?>
+    </div>
   </div>
+
+
+
+
+    <?php if (is_single()) { ?>
+      <div class="row">
+        <?php
+          $category = get_the_category();
+          $cat = $category[0]->cat_ID;
+          $myposts = get_posts("posts_per_page=5&category=$cat&exclude=$post->ID");
+        ?>
+        <ul>
+          <?php foreach($myposts as $post) : ?>
+          <li>
+            <?php $image = get_field('locandina'); ?><img src="<?php echo $image['url']; ?>" />
+            <a href="<?php the_permalink(); ?>" title="Vai all'articolo <?php echo get_the_title(); ?>">
+            <?php the_title(); ?>
+            </a>
+          </li>
+          <?php endforeach; ?>
+        </ul>
+      </div>
+    <?php } ?>
+
+  </div>
+
 </div>
 
 

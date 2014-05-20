@@ -7,12 +7,16 @@
   <!-- <script type="text/javascript">$pesticide-debug: true;</script> -->
 
   <div class="slider-cinema slideshow-wrapper">
-    <div class="fotorama slideshow" data-nav="thumbs" data-allowfullscreen="native" data-width="100%" data-ratio="1440/750" data-thumbheight="115" data-thumbwidth="180">
+<<<<<<< HEAD
+    <div class="fotorama slideshow" data-nav="thumbs" data-width="100%" data-ratio="1440/750" data-thumbheight="115" data-thumbwidth="180">
+=======
+    <div class="fotorama slideshow" data-click="false" data-nav="thumbs" data-width="100%" data-ratio="1440/750" data-thumbheight="115" data-thumbwidth="180">
+>>>>>>> FETCH_HEAD
       <?php 
       $args = array(
         'post_type'  => 'film',
         'meta_key'   => 'in_uscita',
-        'meta_value' => 'Si',
+        'meta_value' => 'No',
         'posts_per_page' => 4
         );
       $film = new WP_Query($args);
@@ -57,17 +61,18 @@
 
 <?php wp_reset_postdata(); ?>
 
-<div class="nextexit-bg large-12 columns">
+<div id="prossime-uscite" class="nextexit-bg large-12 columns">
   <div class="row">
     <h2>Prossime Uscite</h2>
 
     <div class="slider-nextexit slideshow-wrapper">
-      <div class="fotorama slideshow" data-nav="thumbs" data-width="100%" data-ratio="1180/360">
+      <div class="fotorama slideshow" data-click="false" data-nav="thumbs" data-width="100%" data-ratio="1180/360" data-thumbheight="112" data-thumbwidth="180">
         <?php 
         $args = array(
           'post_type'  => 'film',
           'meta_key'   => 'in_uscita',
-          'meta_value' => 'Si'
+          'meta_value' => 'Si',
+          'posts_per_page' => 3
           );
         $film = new WP_Query($args);
         ?>
@@ -96,7 +101,7 @@
         </div>
       <?php endwhile; endif; ?>
     </div>
-    <a class="button right [tiny small large]">Vai alla pagina</a>
+    <a href="<?php echo get_permalink($film->ID); ?>" class="button right [tiny small large]">Vai alla pagina</a>
   </div>
 </div>
 </div>
@@ -110,18 +115,19 @@
     <h2>On demand</h2>
 
     <div class="slider-ondemand slideshow-wrapper">
-      <div class="fotorama slideshow" data-nav="thumbs" data-width="100%" data-ratio="1180/360" data-thumbheight="260" data-thumbwidth="180">
+      <div class="fotorama slideshow" data-click="false" data-transition="crossfade" data-nav="thumbs" data-width="100%" data-ratio="1180/360" data-thumbheight="260" data-thumbwidth="180">
         <?php 
         $args = array(
           'post_type'  => 'film',
-          'meta_key'   => 'in_uscita',
-          'meta_value' => 'Si',
+          'meta_key'   => 'stato_film',
+          'meta_value' => 1,
           'posts_per_page' => 3
           );
         $film = new WP_Query($args);
         ?>
         <?php if ($film->have_posts()) : while($film->have_posts()) : $film->the_post() ; ?>
-        <div class="slide" data-thumb="<?php echo wp_get_attachment_image_src(get_post_thumbnail_id($film->ID))[0]; // retrieving url from attached thumb as featured image ?>">
+        <?php wp_get_attachment_image_src($image = get_field('locandina'));?>
+        <div class="slide" data-thumb="<?php echo $image['url']; ?>">
           <div class='info-wrapper'>
             <?php echo get_the_post_thumbnail($film->ID); ?>
             <div class='row'>
@@ -140,6 +146,7 @@
           <div class="row">
             <div class="film-thumb large-12 columns">
               <?php the_field('video_thumbnail'); ?>
+
             </div>
           </div>
         </div>
@@ -166,7 +173,7 @@
         <?php query_posts(array('post_type'=>'film', 'posts_per_page'=>3)); ?>
         <?php if (have_posts()) : while(have_posts()) : the_post(); ?>
         <div class="lista large-4 columns">
-          <a class="archive-img" href="<?php echo get_permalink(); ?>"> <?php $image = get_field('locandina'); ?><img src="<?php echo $image['url']; ?>" /></a>
+          <a class="archive-img" href="<?php echo get_permalink(); ?>"><?php $image = get_field('locandina'); ?><img src="<?php echo $image['url']; ?>" /></a>
           <h3>
             <?php 
             $mytitle = get_the_title();
@@ -174,23 +181,23 @@
             echo $mytitle;
             ?>
           </h3>
-          <h5><span>Regia:</span>  
+          <h5><span><?php echo __('Regia:'); ?></span>  
             <?php $registi = get_field('regia');
             $i = 0;
             foreach($registi as $regista):
-              if($i = 0):
+              if($i > 0):
                 $separator = ', ';
               else:
                 $separator = '';
               endif;?>
-              <a href="<?php echo get_permalink($regista->ID); ?>" title="Regia di <?php echo $regista->post_title; ?>"><?php echo $separator . $regista->post_title; ?></a>
+              <?php echo $separator; ?><a href="<?php echo get_permalink($regista->ID); ?>" title="La scheda di <?php echo $regista->post_title; ?>"><?php echo $regista->post_title; ?></a>
               <?php
               $i++;
               endforeach;
               ?>
             </h5>
             <h5>
-              <span>Genere:</span> 
+              <span><?php echo __('Genere:'); ?></span> 
               <?php
               $categories = get_the_category();
               $separator = ' ';
@@ -204,7 +211,7 @@
               ?>
             </h5> 
             <h5>
-              <span>Nazione:</span>
+              <span><?php echo __('Nazione:'); ?></span>
               <?php
               $nazioni = get_field('nazione');
               $i=0;
@@ -221,7 +228,7 @@
                 ?>
               </h5>
               <h5>
-                <span>Anno:</span>
+                <span><?php echo __('Anno:'); ?></span>
                 <?php
                 $anno = get_field('anno');
                 ?>
