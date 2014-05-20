@@ -691,11 +691,58 @@ footer a {
   padding-left: 7px;
   padding-right: 7px;
   padding-top: 3px;
+  position: absolute;
+}
+
+.slider-film-catalogo .info-wrapper img {
+  opacity: 0;
+}
+
+.slider-film-catalogo .slideshow-wrapper {
+  width: 100%;
+  min-height: 360px;
+}
+
+.slider-film-catalogo .fotorama__caption__wrap {
+  background: none;
+  position: absolute;
+  width: 100%;
+}
+
+.slider-film-catalogo .info-film-catalogo h3 spam {
+  font-family: Bebas Neue;
+  color: rgba(255,255,255,1);
+  display: inline-block;
+  background-color: rgba(72,72,72,1);
+  padding-left: 7px;
+  padding-right: 7px;
+  padding-top: 3px;
 }
 
 .altri-film-bg ul li {
   list-style-type: none;
 }
+.slider-film-catalogo a {
+  font-family: Bebas Neue;
+  color: rgba(0,0,0,0.7);
+  text-align: left;
+  margin-left: 280px;
+  margin-top: -2px;
+  margin-bottom: -50px;  
+  font-size: 2em;
+}
+
+.slider-film-catalogo .fotorama__nav-wrap {
+  background-color: rgba(255,255,255,1);
+  height: 280px;
+  line-height: 280px;
+  padding-top: 20px;
+  z-index: 10;
+  width: 100%;
+  margin-top: -320px;
+  position: absolute;
+}
+
 .slider-film-catalogo a {
   font-family: Bebas Neue;
   color: rgba(0,0,0,0.7);

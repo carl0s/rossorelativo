@@ -7,11 +7,8 @@ function luckyred_scripts() {
   wp_enqueue_script( 'modernizr-script', get_template_directory_uri() . '/js/modernizr.js', array( 'jquery' ), '20131209', true );
   wp_enqueue_script( 'jquery-script', get_template_directory_uri() . '/js/jquery.js', array( 'jquery' ), '20131209', true );
   wp_enqueue_script( 'foundation-script', get_template_directory_uri() . '/js/foundation.min.js', array( 'jquery' ), '20131209', true );
-
-  wp_enqueue_script( 'classie-script', get_template_directory_uri() . '/js/classie.js', array( 'jquery' ), '20131209', true );
   wp_enqueue_script( 'grid-script', get_template_directory_uri() . '/js/grid.js', array( 'jquery' ), '20131209', true );
 
-  wp_enqueue_script( 'fex-script', get_template_directory_uri() . '/js/jquery.flexslider-min.js', array( 'jquery' ), '20131209', true);
   wp_enqueue_script( 'custom-script', get_template_directory_uri() . '/js/custom.js', array( 'jquery' ), '20131209', true);
 }
 

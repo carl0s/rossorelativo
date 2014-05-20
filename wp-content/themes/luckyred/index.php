@@ -7,11 +7,7 @@
   <!-- <script type="text/javascript">$pesticide-debug: true;</script> -->
 
   <div class="slider-cinema slideshow-wrapper">
-<<<<<<< HEAD
-    <div class="fotorama slideshow" data-nav="thumbs" data-width="100%" data-ratio="1440/750" data-thumbheight="115" data-thumbwidth="180">
-=======
     <div class="fotorama slideshow" data-click="false" data-nav="thumbs" data-width="100%" data-ratio="1440/750" data-thumbheight="115" data-thumbwidth="180">
->>>>>>> FETCH_HEAD
       <?php 
       $args = array(
         'post_type'  => 'film',
