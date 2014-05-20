@@ -5,25 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lucky Red</title>
     <?php wp_head(); ?>
-    <link rel="stylesheet" href="css/pesticide.css">
-    <script src="js/modernizr.js"></script>
-    <script>
-    function init() {
-      window.addEventListener('scroll', function(e){
-        var distanceY = window.pageYOffset || document.documentElement.scrollTop,
-        shrinkOn = 90,
-        header = $("header");
-        if (distanceY > shrinkOn) {
-          header.addClass('smaller');
-        } else {
-          if (header.hasClass("smaller")) {
-            header.removeClass("smaller");
-          }
-        }
-      });
-    }
-    </script>
-
   </head>
   <body>
     <header>

@@ -13,7 +13,9 @@
         'post_type'  => 'film',
         'meta_key'   => 'in_uscita',
         'meta_value' => 'No',
-        'posts_per_page' => 4
+        'posts_per_page' => 4,
+        'orderby' => 'title',
+        'order' => 'ASC'
         );
       $film = new WP_Query($args);
       ?>
@@ -68,7 +70,8 @@
           'post_type'  => 'film',
           'meta_key'   => 'in_uscita',
           'meta_value' => 'Si',
-          'posts_per_page' => 3
+          'posts_per_page' => 3,
+          'orderby' => 'data_di_uscita'
           );
         $film = new WP_Query($args);
         ?>

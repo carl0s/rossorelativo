@@ -85,23 +85,6 @@
   </div>
 </div>
 
-
-<div class="altri-film-bg large-12 columns">
-  <div class="row">
-    <h2><span>Altri film</span></h2>
-    <?php wp_reset_postdata();  ?>
-      <?php $film_registi = get_field('film_regista'); ?>
-      <?php if($film_registi): ?>
-        <?php foreach ($film_registi as $film_regista): ?>
-          <h6>
-            <a href=""><?php echo get_the_title($film_regista->ID); ?></a>
-          </h6>
-        <?php endforeach; ?>
-      <?php endif;?>
-  </div>
-</div>
-
-
 <div class="altri-film-bg large-12 columns">
   <div class="row">
     <h2><span>Altri film</span></h2>
