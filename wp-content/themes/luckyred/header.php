@@ -12,17 +12,16 @@
       window.addEventListener('scroll', function(e){
         var distanceY = window.pageYOffset || document.documentElement.scrollTop,
         shrinkOn = 90,
-        header = document.querySelector("header");
+        header = $("header");
         if (distanceY > shrinkOn) {
-          classie.add(header,"smaller");
+          header.addClass('smaller');
         } else {
-          if (classie.has(header,"smaller")) {
-            classie.remove(header,"smaller");
+          if (header.hasClass("smaller")) {
+            header.removeClass("smaller");
           }
         }
       });
     }
-    window.onload = init();
     </script>
 
   </head>

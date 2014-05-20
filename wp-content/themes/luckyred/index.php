@@ -7,7 +7,7 @@
   <!-- <script type="text/javascript">$pesticide-debug: true;</script> -->
 
   <div class="slider-cinema slideshow-wrapper">
-    <div class="fotorama slideshow" data-nav="thumbs" data-width="100%" data-ratio="1440/750" data-thumbheight="115" data-thumbwidth="180">
+    <div class="fotorama slideshow" data-click="false" data-nav="thumbs" data-width="100%" data-ratio="1440/750" data-thumbheight="115" data-thumbwidth="180">
       <?php 
       $args = array(
         'post_type'  => 'film',
@@ -62,7 +62,7 @@
     <h2>Prossime Uscite</h2>
 
     <div class="slider-nextexit slideshow-wrapper">
-      <div class="fotorama slideshow" data-nav="thumbs" data-width="100%" data-ratio="1180/360" data-thumbheight="112" data-thumbwidth="180">
+      <div class="fotorama slideshow" data-click="false" data-nav="thumbs" data-width="100%" data-ratio="1180/360" data-thumbheight="112" data-thumbwidth="180">
         <?php 
         $args = array(
           'post_type'  => 'film',
@@ -111,7 +111,7 @@
     <h2>On demand</h2>
 
     <div class="slider-ondemand slideshow-wrapper">
-      <div class="fotorama slideshow" data-transition="crossfade" data-nav="thumbs" data-width="100%" data-ratio="1180/360" data-thumbheight="260" data-thumbwidth="180">
+      <div class="fotorama slideshow" data-click="false" data-transition="crossfade" data-nav="thumbs" data-width="100%" data-ratio="1180/360" data-thumbheight="260" data-thumbwidth="180">
         <?php 
         $args = array(
           'post_type'  => 'film',
@@ -122,7 +122,8 @@
         $film = new WP_Query($args);
         ?>
         <?php if ($film->have_posts()) : while($film->have_posts()) : $film->the_post() ; ?>
-        <div class="slide" data-thumb="<?php echo wp_get_attachment_image_src($image = get_field('locandina'));?><?php echo $image['url']; ?>">
+        <?php wp_get_attachment_image_src($image = get_field('locandina'));?>
+        <div class="slide" data-thumb="<?php echo $image['url']; ?>">
           <div class='info-wrapper'>
             <?php echo get_the_post_thumbnail($film->ID); ?>
             <div class='row'>

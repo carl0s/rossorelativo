@@ -111,6 +111,36 @@
   <div class="download-film large-12 columns">
     <h3>Download</h3>
   </div>
+
+  <dl class="tabs" data-tab>
+    <dd class="active">
+      <a href="#panel2-1">Tab 1</a>
+    </dd>
+    <dd>
+      <a href="#panel2-2">Tab 2</a>
+    </dd>
+    <dd>
+      <a href="#panel2-3">Tab 3</a>
+    </dd>
+    <dd>
+      <a href="#panel2-4">Tab 4</a>
+    </dd>
+  </dl>
+  <div class="tabs-content">
+    <div class="content active" id="panel2-1">
+      <p>First panel content goes here...</p>
+    </div>
+    <div class="content" id="panel2-2">
+      <p>Second panel content goes here...</p>
+    </div>
+    <div class="content" id="panel2-3">
+      <p>Third panel content goes here...</p>
+    </div>
+    <div class="content" id="panel2-4">
+      <p>Fourth panel content goes here...</p>
+    </div>
+  </div>
+
   <div class="download-film large-2 columns">
     <h4><span><?php echo __('Foto film'); ?><span></h4>
   </div>
@@ -130,6 +160,35 @@
     <h4><span><?php echo __('Clip audio'); ?><span></h4>
   </div>
 </div>
+<!-- GALLERY DI FOTO -->
+<div class="row">
+  <?php $items = get_field('foto_item'); ?>
+  <div class="fotorama">
+    <?php
+      foreach ($items as $item): 
+    ?>
+      <a href="#" data-caption="<?php echo $item['titolo']; ?>"><img src="<?php echo $item['foto_immagine']; ?>" alt="<?php echo $item['titolo']; ?>"></a>
+    <?php
+      endforeach;
+    ?>
+  </div>
+</div>
+<!-- END GALLERY -->
+
+<!-- GALLERY DI VIDEO -->
+<div class="row">
+  <?php $items = get_field('video_item'); ?>
+  <div class="fotorama">
+    <?php
+      foreach ($items as $item): 
+    ?>
+      <a href="<?php echo $item['video_link']; ?>" data-caption="<?php echo $item['titolo_video']; ?>"><img src="<?php echo $item['foto_video']; ?>" alt="<?php echo $item['titolo']; ?>"></a>
+    <?php
+      endforeach;
+    ?>
+  </div>
+</div>
+<!-- END GALLERY -->
 <div class="img-film-download slideshow-wrapper">
     <div class="fotorama slideshow" data-nav="thumbs" data-width="100%" data-ratio="1440/750">
       <div class="slide">
