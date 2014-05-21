@@ -19,14 +19,9 @@
             <div class="row collapse">
               <div class="large-9 columns">
                 <div class='info-content'>
-                  <p>Titolo originale</p>
+                  <p><?php echo __('Titolo originale'); ?></p>
                   <span><?php echo get_field('titolo_originale'); ?></span>
                 </div>
-              </div>
-            </div>
-            <div class="row collapse">
-              <div class='film-thumb-title large-5 columns'>
-                <h4>Videogallery</h4>
               </div>
             </div>
           </div>
@@ -45,7 +40,7 @@
 </div>
 <div class="info-film row">
   <div class="large-6 columns">
-    <h3><span>Il film</span></h3>
+    <h3><span><?php echo __('Il film') ?></span></h3>
     <div class="row">
       <div class="large-3 columns">
         <h4><?php echo __('Regia'); ?></h4>
@@ -111,7 +106,7 @@
           </div>
         </div>
         <div class="large-6 columns">
-          <h3><span>Trama</span></h3>
+          <h3><span><?php echo __('La trama'); ?></span></h3>
           <p><?php the_content(); ?></p>
         </div>
         <div class="download-film large-12 columns">
@@ -147,7 +142,7 @@
                 <div class='info-wrapper'>
                   <div class="row">
                     <div class='film-thumb-title large-5 columns'>
-                    <h4>Download</h4>
+                    <h4><?php echo __('Download'); ?></h4>
                     </div>
                   </div>
                   <img src="<?php the_sub_field('foto_immagine'); ?>" alt="<?php the_sub_field('titolo'); ?>" />
@@ -168,12 +163,26 @@
           </div>
         </div>
         <div class="content" id="panel2-2">
+          <div class="pressbook">
+            <?php echo get_the_post_thumbnail(); ?>
+            <div class="large-12 columns">
+            <a href="#" class="button left [tiny small large]"><?php echo __('Download'); ?></a>
+          </div>
+          </div>
         </div>
         <div class="content" id="panel2-3">
-          <p>Third panel content goes here...</p>
+          <div class="manifesto">
+            <?php echo get_the_post_thumbnail(); ?>
+            <div class="large-3 large-offset-2 columns">
+              <a href="<?php echo get_permalink(); ?>"><?php $manifesto = get_field('poster'); ?><img src="<?php echo $manifesto['url']; ?>" /></a>
+            </div>
+            <div class="large-6 large-offset-1 columns">
+              <h4>Il manifesto del film</h4>
+              <a href="#" class="button left [tiny small large]"><?php echo __('Download'); ?></a>
+            </div>
+          </div>
         </div>
         <div class="content" id="panel2-4">
-
           <!-- GALLERY DI VIDEO -->
           <?php $items = get_field('video_item'); ?>
           <div class="video-film-download fotorama" data-click="false" data-nav="thumbs" data-thumbheight="115" data-thumbwidth="180">
@@ -200,6 +209,16 @@
             ?>
           </div>
           <!-- END GALLERY -->
+        </div>
+        <div class="content" id="panel2-5">
+          <div class="pressbook">
+            <?php echo get_the_post_thumbnail(); ?>
+          </div>
+        </div>
+        <div class="content" id="panel2-6">
+          <div class="pressbook">
+            <?php echo get_the_post_thumbnail(); ?>
+          </div>
         </div>
       </div>
     </div>
