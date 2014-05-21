@@ -101,6 +101,14 @@
           </div>
           <div class="row">
             <div class="large-3 columns">
+              <h4><?php echo __('Durata'); ?></h4>
+            </div>
+            <div class="content-film large-9 columns">
+              <a><?php echo get_field('durata'); ?></a>
+            </div>
+          </div>
+          <div class="row">
+            <div class="large-3 columns">
               <h4><?php echo __('Cast'); ?></h4>
             </div>
           </div>
@@ -109,6 +117,8 @@
           <h3><span><?php echo __('La trama'); ?></span></h3>
           <p><?php the_content(); ?></p>
         </div>
+      </div>
+      <div class="row">
         <div class="download-film large-12 columns">
           <h3>Download</h3>
           <dl class="tabs" data-tab>

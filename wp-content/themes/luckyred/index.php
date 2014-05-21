@@ -171,7 +171,7 @@
       <div class="archive-film row">  
         <?php query_posts(array('post_type'=>'film', 'posts_per_page'=>3)); ?>
         <?php if (have_posts()) : while(have_posts()) : the_post(); ?>
-        <div class="lista large-4 columns">
+        <div class="large-4 columns">
           <a class="archive-img" href="<?php echo get_permalink(); ?>"><?php $image = get_field('locandina'); ?><img src="<?php echo $image['url']; ?>" /></a>
           <a href="<?php echo get_permalink(); ?>">
             <h3>
@@ -222,7 +222,7 @@
                 else:
                   $separator = '';
                 endif;?>
-                <a href="<?php echo get_permalink($nazione->ID); ?>" title="Film di origine <?php echo $nazione ?>"><?php echo $separator . $nazione ?></a>
+                <a title="Film di origine <?php echo $nazione ?>"><?php echo $separator . $nazione ?></a>
                 <?php
                 $i++;
                 endforeach;
@@ -233,7 +233,7 @@
                 <?php
                 $anno = get_field('anno');
                 ?>
-                <a href="<?php echo get_permalink($anno->ID); ?>" title="Film del <?php echo $anno ?>"><?php echo $anno;?></a>
+                <a title="Film del <?php echo $anno ?>"><?php echo $anno;?></a>
               </h5>
             </div>
           <?php endwhile; endif; ?>
