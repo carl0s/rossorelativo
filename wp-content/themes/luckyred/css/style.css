@@ -946,7 +946,6 @@ footer a {
   background: none;
   margin-left: 0px;
   margin-right: 0px;
-<<<<<<< HEAD
 }
 
 .download-film .tabs a:hover {
@@ -955,16 +954,6 @@ footer a {
   margin-right: 0px;
 }
 
-=======
-}
-
-.download-film .tabs a:hover {
-  background: none;
-  margin-left: 0px;
-  margin-right: 0px;
-}
-
->>>>>>> FETCH_HEAD
 .download-film .tabs a h4 span {
   font-family: Bebas Neue;
   font-size: 1.1em;
@@ -1285,11 +1274,6 @@ footer a {
   bottom: -575px;
   z-index: 10;
   display: inline-block;
-=======
-  position: absolute;
-  z-index: 30;
-  height: 210px;
-  margin-top: -120px;
 }
 
 .video-film-download .fotorama__caption__wrap {
@@ -1302,72 +1286,6 @@ footer a {
 .video-film-download .info-wrapper {
   padding-top: 60px;
   position: relative;
->>>>>>> FETCH_HEAD
-}
-/* FINE CLIP VIDEO */
-
-.video-film-download .info-title h2 {
-  color: rgba(255,255,255,1);
-  background-color: rgba(0,0,0,0.8);
-  padding: 10px;
-  font-family: Bebas Neue;
-  font-size: 2.4em;
-  line-height: 1em;
-  display: inline-block;
-} 
-
-.video-film-download .info-content {
-  color: rgba(255,255,255,1);
-  background-color: rgba(0,0,0,0.8);
-  padding: 10px;
-  font-family: 'Georgia';
-  font-style: italic;
-  margin-top: 15px;
-  line-height: 1.1em;
-  width: 100%;
-}
-
-.video-film-download .info-date {
-  background-color: rgba(0,0,0,0.8);
-  text-align: center;
-}
-
-.video-film-download .info-date h4 {
-  color: rgba(255,255,255,1);
-  font-family: Bebas Neue;
-  font-size: 7.3em;
-  height: 1em;
-  margin-left: -5px;
-  margin-bottom: 0px;
-  margin-top: -30px;
-}
-
-.video-film-download .info-date h5 {
-  color: rgba(255,255,255,1);
-  font-family: 'Georgia';
-  font-style: italic;
-  font-size: 1.2em;
-  margin-bottom: -5px;
-  text-align: center;
-}
-
-.video-film-download .info-date h6 {
-  color: rgba(255,255,255,1);
-  font-family: Bebas Neue;
-  font-size: 1.5em;
-  height: 1em;
-}
-
-.video-film-download .film-thumb-title h4 {
-  color: rgba(255,255,255,1);
-  background-color: rgba(0,0,0,0.8);
-  padding: 10px;
-  font-family: Bebas Neue;
-  font-size: 1.5em;
-  position: absolute;
-  bottom: -575px;
-  z-index: 10;
-  display: inline-block;
 }
 /* FINE CLIP VIDEO */
 
@@ -1460,31 +1378,6 @@ footer a {
   padding: 0px 5px;
 }
 
-<<<<<<< HEAD
-/*-- start img exstendes --*/
-
-<<<<<<< HEAD
-
-/*-- end img exstendes --*/
-
-=======
->>>>>>> FETCH_HEAD
-=======
-.press-icone {
-  max-width: 1.2em;
-  margin-right: 0.5em;
-  margin-top: 1.0em;
-  margin-bottom: 3.0em;
-}
-
-.press-icone2 {
-  max-width: 1.0em;
-  margin-right: 0.5em;
-  margin-top: 1.0em;
-  margin-bottom: 3.0em;
-}
-
->>>>>>> FETCH_HEAD
 .navigation li a,
 .navigation li a:hover,
 .navigation li.active a,
