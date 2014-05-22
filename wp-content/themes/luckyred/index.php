@@ -59,7 +59,7 @@
 
 <?php wp_reset_postdata(); ?>
 
-<div id="prossime-uscite" class="nextexit-bg large-12 columns">
+<div name="prossime-uscite" id="prossime-uscite" class="nextexit-bg large-12 columns">
   <div class="row">
     <h2><?php echo __('Prossime uscite'); ?></h2>
 

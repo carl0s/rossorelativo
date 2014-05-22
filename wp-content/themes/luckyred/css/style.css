@@ -1329,120 +1329,6 @@ footer a {
   margin-bottom: 3.0em;
 }
 
-/*-- start --*/
-
-.og-grid {
-  list-style: none;
-}
-
-.og-grid li {
-  display: inline-block;
-}
-
-.og-grid li.og-expanded > a::after {
-    top: auto;
-    border: solid transparent;
-    content: " ";
-    height: 0;
-    width: 0;
-    position: absolute;
-    pointer-events: none;
-    border-bottom-color: #ddd;
-    border-width: 15px;
-    left: 50%;
-    margin: -20px 0 0 -15px;
-}
-
-.og-expander {
-    position: absolute;
-    background: #ddd;
-    top: auto;
-    left: 0;
-    width: 100%;
-    margin-top: 10px;
-    text-align: left;
-    height: 0;
-    overflow: hidden;
-}
- 
-.og-expander-inner {
-    padding: 50px 30px;
-    height: 100%;
-}
-
-.og-close {
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    top: 20px;
-    right: 20px;
-    cursor: pointer;
-}
- 
-.og-close::before,
-.og-close::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    top: 50%;
-    height: 1px;
-    background: #888;
-    transform: rotate(45deg);
-}
- 
-.og-close::after {
-    transform: rotate(-45deg);
-}
- 
-.og-close:hover::before,
-.og-close:hover::after {
-    background: #333;
-}
-
-.og-fullimg,
-.og-details {
-    width: 50%;
-    float: left;
-    height: 100%;
-    overflow: hidden;
-    position: relative;
-}
-
-.og-details {
-    padding: 0 40px 0 20px;
-}
- 
-.og-fullimg {
-    text-align: center;
-}
- 
-.og-fullimg img {
-    display: inline-block;
-    max-height: 100%;
-    max-width: 100%;
-}
-
-.og-loading {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background: #ddd;
-    box-shadow: 0 0 1px #ccc, 15px 30px 1px #ccc, -15px 30px 1px #ccc;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin: -25px 0 0 -25px;
-    animation: loader 0.5s infinite ease-in-out both;
-}
- 
-@keyframes loader {
-    0% { background: #ddd; }
-    33% { background: #ccc; box-shadow: 0 0 1px #ccc, 15px 30px 1px #ccc, -15px 30px 1px #ddd; }
-    66% { background: #ccc; box-shadow: 0 0 1px #ccc, 15px 30px 1px #ddd, -15px 30px 1px #ccc; }
-}
-
-/*-- --*/
-
 .navigation li a,
 .navigation li a:hover,
 .navigation li.active a,
@@ -1469,8 +1355,6 @@ footer a {
 .navigation li.active a {
   background-color: rgba(72,72,72,1);
 }
-
-
 
 /* --FINE PRESS-- */
 

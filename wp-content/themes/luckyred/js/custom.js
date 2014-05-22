@@ -12,6 +12,11 @@ function init() {
       }
     }
   });
+
+  $('#prossime-uscite').on('click', function() {
+    $('html, body').animate({scrollTop: $($(this).attr('href')).offset().top }, 1000);
+    return false;
+  });
 }
 $(document).foundation();
 init();

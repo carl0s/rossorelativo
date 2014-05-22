@@ -4,15 +4,6 @@ function luckyred_scripts() {
   wp_enqueue_style( 'luckyred-foundation', get_template_directory_uri() . '/css/foundation.css', array(), '1.0.0' );
   wp_enqueue_style( 'luckyred-general', get_template_directory_uri() . '/css/style.css', array(), '1.0.0' );
 
-  if (!is_admin()) {
-      wp_dequeue_script( 'jquery' );
-      wp_deregister_script( 'jquery' );
-      wp_register_script( 'jquery', get_template_directory_uri() . '/js/vendor/jquery.js', array(), '20140226', true);
-      wp_register_script( 'jquery-migrate', get_template_directory_uri() . '/js/jquery-migrate-1.2.1.min.js', array(), '20140226', true);
-      wp_enqueue_script( 'jquery' );
-      wp_enqueue_script( 'jquery-migrate' );
-  }
-
   wp_enqueue_script( 'modernizr-script', get_template_directory_uri() . '/js/modernizr.js', array(), '20131209' );
   wp_enqueue_script( 'foundation-script', get_template_directory_uri() . '/js/foundation.min.js', array(), '20131209', true );
 
