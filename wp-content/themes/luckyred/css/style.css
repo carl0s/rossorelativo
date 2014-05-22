@@ -38,6 +38,7 @@ header {
   color: rgba(255,255,255,1);
   line-height: 135px;
   height: 135px;
+  font-size: 1.3em;
 
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
@@ -82,6 +83,7 @@ header.smaller #logo {
 header.smaller #main-menu a {
   height: 80px;
   line-height: 80px;
+  font-size: 1em;
 }
 
 header.smaller .social-icon {
@@ -232,6 +234,10 @@ header.smaller .social-icon {
   width: 100%;
 }
 
+.slider-nextexit .info-wrapper {
+  margin-top: -75px;
+}
+
 .slider-nextexit .info-title h2 {
   color: rgba(255,255,255,1);
   background-color: rgba(0,0,0,0.8);
@@ -273,6 +279,7 @@ header.smaller .social-icon {
   font-size: 2em;
   height: 1em;
   float: left;
+  padding-right: -100px;
 }
 
 .slider-nextexit .fotorama__nav-wrap {
@@ -324,7 +331,7 @@ header.smaller .social-icon {
   padding: 5px 10px 2px 10px;
   font-family: Bebas Neue;
   font-size: 1.8em;
-  margin-top: -495px;
+  margin-top: -535px;
   text-align: left;
   position: absolute;
   display: inline-block;
@@ -341,7 +348,7 @@ header.smaller .social-icon {
   width: 100%;
   position: absolute;
   display: inline-block;
-  margin-top: -430px;
+  margin-top: -490px;
   z-index: 20;
 }
 
@@ -408,17 +415,18 @@ header.smaller .social-icon {
   width: 1em;
 }
 
-.archivio h3 {
+.archivio a h3 {
   font-family: Bebas Neue;
   margin-top: 10px;
   color: rgba(72,72,72,1);
+  text-decoration: none;
 }
 
-.archivio .lista a {
+.archivio h5 a {
   font-family: 'Georgia';
   font-style: italic;
   color: rgba(72,72,72,1);
-  font-size: 0.8em;
+  font-size: 0.7em;
   text-decoration: underline;
 }
 
@@ -875,6 +883,7 @@ footer a {
 
 .info-film {
   margin-top: 50px;
+  height: 450px;
 }
 
 .info-film h3 {
@@ -928,22 +937,45 @@ footer a {
 
 .download-film h3 {
   font-family: Bebas Neue;
-  font-size: 2em;
+  font-size: 3em;
   color: rgba(181,58,61,1);
+  margin-bottom: -10px;
 }
 
-.download-film h4 span {
+.download-film .tabs a {
+  background: none;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.download-film .tabs a:hover {
+  background: none;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.download-film .tabs a h4 span {
   font-family: Bebas Neue;
-  font-size: 1em;
+  font-size: 1.1em;
   color: rgba(0,0,0,0.7);
-  padding: 5px 0 3px 7px;
+  padding: 5px 7px 3px 7px;
+  text-align: center;
+  background: none;
 }
 
-.download-film h4 span:hover {
+.download-film .tabs a h4 span:hover {
   color: rgba(255,255,255,1);
   background-color: rgba(0,0,0,0.9);
 }
 
+.tabs-content {
+  margin-top: 51px;
+  margin-bottom: -20px;
+  z-index: 40;
+  position: relative;
+}
+
+/* FOTO FILM */
 .img-film-download .slideshow-wrapper {
   width: 100%;
   min-height: 838px;
@@ -955,11 +987,6 @@ footer a {
   position: relative;
 }
 
-.img-film-download .fotorama__nav-wrap {
-  position: absolute;
-  z-index: 10;
-}
-
 .img-film-download .slide {
   position: relative;
 }
@@ -967,18 +994,15 @@ footer a {
 .img-film-download .slide .info-wrapper img {
   position: absolute;
   top: 0px;
-}
-
-.img-film-download .fotorama__video-play {
-  margin-top: 20px;
+  z-index: 0;
 }
 
 .img-film-download .fotorama__nav-wrap {
   background-color: rgba(0,0,0,0.8);
+  position: absolute;
+  z-index: 30;
   height: 210px;
-  line-height: 210px;
-  padding: 10px;
-  padding-top: 15px;
+  margin-top: -120px;
 }
 
 .img-film-download .fotorama__caption__wrap {
@@ -987,9 +1011,8 @@ footer a {
   width: 100%;
 }
 
-
-.img-film-download .info-wrapper {
-  padding-top: 185px;
+.img-film-download .slide .info-wrapper {
+  padding-top: 60px;
   position: relative;
 }
 
@@ -1000,7 +1023,8 @@ footer a {
   font-family: Bebas Neue;
   font-size: 2.4em;
   line-height: 1em;
-}
+  display: inline-block;
+} 
 
 .img-film-download .info-content {
   color: rgba(255,255,255,1);
@@ -1010,17 +1034,7 @@ footer a {
   font-style: italic;
   margin-top: 15px;
   line-height: 1.1em;
-}
-
-.img-film-download .info-content p {
-  margin-bottom: 5px;
-}
-
-.img-film-download .info-content span {
-  color: rgba(255,255,255,0.8);
-  font-size: 2em;
-  font-family: Bebas Neue;
-  font-style: normal;
+  width: 100%;
 }
 
 .img-film-download .info-date {
@@ -1031,27 +1045,28 @@ footer a {
 .img-film-download .info-date h4 {
   color: rgba(255,255,255,1);
   font-family: Bebas Neue;
-  font-size: 6.5em;
+  font-size: 7.3em;
   height: 1em;
   margin-left: -5px;
-  margin-bottom: -10px;
-  margin-top: -20px;
+  margin-bottom: 0px;
+  margin-top: -30px;
 }
 
 .img-film-download .info-date h5 {
   color: rgba(255,255,255,1);
   font-family: 'Georgia';
   font-style: italic;
-  font-size: 2.3em;
+  font-size: 1.2em;
   margin-bottom: -5px;
-  }
+  text-align: center;
+}
 
 .img-film-download .info-date h6 {
   color: rgba(255,255,255,1);
   font-family: Bebas Neue;
   font-size: 1.5em;
   height: 1em;
-  }
+}
 
 .img-film-download .film-thumb-title h4 {
   color: rgba(255,255,255,1);
@@ -1059,17 +1074,209 @@ footer a {
   padding: 10px;
   font-family: Bebas Neue;
   font-size: 1.5em;
-  margin-top: 255px;
+  position: absolute;
+  bottom: -575px;
+  z-index: 10;
+  display: inline-block;
+}
+/* FINE FOTO FILM */
+
+/* PRESSBOOK */
+.pressbook img {
+  opacity: 0.2;
 }
 
-.altri-film h3 {
+.pressbook .button {
+  background-color: rgba(0,0,0,0.8);
   font-family: Bebas Neue;
   font-size: 2em;
-  color: rgba(181,58,61,1);
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding: 10px 40px 10px 40px;
+  margin-top: -300px;
+  width: 280px;
+  margin-left: 520px;
   position: absolute;
+  display: inline-block;
 }
+/* FINE PRESSBOOK */
+
+/* MANIFESTO */
+.manifesto img {
+  opacity: 0.2;
+}
+
+.manifesto a img {
+  opacity: 1;
+  position: absolute;
+  margin-top: -620px;
+}
+
+.manifesto h4 {
+  font-family: Bebas Neue;
+  color: rgba(0,0,0,1);
+  position: absolute;
+  margin-top: -580px;
+  font-size: 2.5em;
+}
+
+.manifesto .button {
+  background-color: rgba(0,0,0,0.8);
+  font-family: Bebas Neue;
+  font-size: 2em;
+  padding: 10px 40px 10px 40px;
+  margin-top: -300px;
+  width: 280px;
+  position: absolute;
+  display: inline-block;
+}
+/* FINE MANIFESTO */
+
+/* CLIP VIDEO */
+.video-film-download .slide .info-wrapper img {
+  position: absolute;
+  top: 0px;
+  z-index: 0;
+}
+
+.video-film-download .fotorama__video-play {
+  margin-top: -100px;
+}
+
+.video-film-download .fotorama__nav-wrap {
+  background-color: rgba(0,0,0,0.8);
+  position: absolute;
+  z-index: 30;
+  height: 210px;
+  margin-top: -120px;
+}
+
+.video-film-download .fotorama__caption__wrap {
+  position: relative;
+  background: none;
+  width: 100%;
+  margin-top: -1390px;
+}
+
+.video-film-download .info-wrapper {
+  padding-top: 60px;
+  position: relative;
+}
+
+.manifesto h4 {
+  font-family: Bebas Neue;
+  color: rgba(0,0,0,1);
+  position: absolute;
+  margin-top: -580px;
+  font-size: 2.5em;
+}
+
+.manifesto .button {
+  background-color: rgba(0,0,0,0.8);
+  font-family: Bebas Neue;
+  font-size: 2em;
+  padding: 10px 40px 10px 40px;
+  margin-top: -300px;
+  width: 280px;
+  position: absolute;
+  display: inline-block;
+}
+/* FINE MANIFESTO */
+
+/* CLIP VIDEO */
+.video-film-download .slide .info-wrapper img {
+  position: absolute;
+  top: 0px;
+  z-index: 0;
+}
+
+.video-film-download .fotorama__video-play {
+  margin-top: -100px;
+}
+
+.video-film-download .fotorama__nav-wrap {
+  background-color: rgba(0,0,0,0.8);
+  position: absolute;
+  z-index: 30;
+  height: 210px;
+  margin-top: -120px;
+}
+
+.video-film-download .fotorama__caption__wrap {
+  position: relative;
+  background: none;
+  width: 100%;
+  margin-top: -1390px;
+}
+
+.video-film-download .info-wrapper {
+  padding-top: 60px;
+  position: relative;
+}
+
+>>>>>>> FETCH_HEAD
+.video-film-download .info-title h2 {
+  color: rgba(255,255,255,1);
+  background-color: rgba(0,0,0,0.8);
+  padding: 10px;
+  font-family: Bebas Neue;
+  font-size: 2.4em;
+  line-height: 1em;
+  display: inline-block;
+} 
+
+.video-film-download .info-content {
+  color: rgba(255,255,255,1);
+  background-color: rgba(0,0,0,0.8);
+  padding: 10px;
+  font-family: 'Georgia';
+  font-style: italic;
+  margin-top: 15px;
+  line-height: 1.1em;
+  width: 100%;
+}
+
+.video-film-download .info-date {
+  background-color: rgba(0,0,0,0.8);
+  text-align: center;
+}
+
+.video-film-download .info-date h4 {
+  color: rgba(255,255,255,1);
+  font-family: Bebas Neue;
+  font-size: 7.3em;
+  height: 1em;
+  margin-left: -5px;
+  margin-bottom: 0px;
+  margin-top: -30px;
+}
+
+.video-film-download .info-date h5 {
+  color: rgba(255,255,255,1);
+  font-family: 'Georgia';
+  font-style: italic;
+  font-size: 1.2em;
+  margin-bottom: -5px;
+  text-align: center;
+}
+
+.video-film-download .info-date h6 {
+  color: rgba(255,255,255,1);
+  font-family: Bebas Neue;
+  font-size: 1.5em;
+  height: 1em;
+}
+
+.video-film-download .film-thumb-title h4 {
+  color: rgba(255,255,255,1);
+  background-color: rgba(0,0,0,0.8);
+  padding: 10px;
+  font-family: Bebas Neue;
+  font-size: 1.5em;
+  position: absolute;
+  bottom: -575px;
+  z-index: 10;
+  display: inline-block;
+}
+/* FINE CLIP VIDEO */
 
 .slider-film-simili {
   margin-top: 50px;
@@ -1090,12 +1297,16 @@ footer a {
   width: 100%;
 }
 
-.slider-film-simili a {
+.slider-film-simili .altri-film span {
+  font-family: Bebas Neue;
+  color: rgba(181,58,61,1);
+}
+
+.slider-film-simili .slide a {
   font-family: Bebas Neue;
   color: rgba(0,0,0,0.7);
   text-align: left;
-  margin-left: 150px;
-  margin-top: -10px;
+  margin-top: 50px;
   margin-bottom: -50px;  
   font-size: 2em;
 }
@@ -1107,7 +1318,7 @@ footer a {
   padding-top: 20px;
   z-index: 10;
   width: 100%;
-  margin-top: -320px;
+  margin-top: -400px;
   position: absolute;
 }
 
@@ -1156,134 +1367,14 @@ footer a {
   padding: 0px 5px;
 }
 
-.press-icone {
-  max-width: 1.2em;
-  margin-right: 0.5em;
-  margin-top: 1.0em;
-  margin-bottom: 3.0em;
-}
+/*-- start img exstendes --*/
 
-.press-icone2 {
-  max-width: 1.0em;
-  margin-right: 0.5em;
-  margin-top: 1.0em;
-  margin-bottom: 3.0em;
-}
+<<<<<<< HEAD
 
-/*-- start --*/
+/*-- end img exstendes --*/
 
-.og-grid {
-  list-style: none;
-}
-
-.og-grid li {
-  display: inline-block;
-}
-
-.og-grid li.og-expanded > a::after {
-    top: auto;
-    border: solid transparent;
-    content: " ";
-    height: 0;
-    width: 0;
-    position: absolute;
-    pointer-events: none;
-    border-bottom-color: #ddd;
-    border-width: 15px;
-    left: 50%;
-    margin: -20px 0 0 -15px;
-}
-
-.og-expander {
-    position: absolute;
-    background: #ddd;
-    top: auto;
-    left: 0;
-    width: 100%;
-    margin-top: 10px;
-    text-align: left;
-    height: 0;
-    overflow: hidden;
-}
- 
-.og-expander-inner {
-    padding: 50px 30px;
-    height: 100%;
-}
-
-.og-close {
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    top: 20px;
-    right: 20px;
-    cursor: pointer;
-}
- 
-.og-close::before,
-.og-close::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    top: 50%;
-    height: 1px;
-    background: #888;
-    transform: rotate(45deg);
-}
- 
-.og-close::after {
-    transform: rotate(-45deg);
-}
- 
-.og-close:hover::before,
-.og-close:hover::after {
-    background: #333;
-}
-
-.og-fullimg,
-.og-details {
-    width: 50%;
-    float: left;
-    height: 100%;
-    overflow: hidden;
-    position: relative;
-}
-
-.og-details {
-    padding: 0 40px 0 20px;
-}
- 
-.og-fullimg {
-    text-align: center;
-}
- 
-.og-fullimg img {
-    display: inline-block;
-    max-height: 100%;
-    max-width: 100%;
-}
-
-.og-loading {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background: #ddd;
-    box-shadow: 0 0 1px #ccc, 15px 30px 1px #ccc, -15px 30px 1px #ccc;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin: -25px 0 0 -25px;
-    animation: loader 0.5s infinite ease-in-out both;
-}
- 
-@keyframes loader {
-    0% { background: #ddd; }
-    33% { background: #ccc; box-shadow: 0 0 1px #ccc, 15px 30px 1px #ccc, -15px 30px 1px #ddd; }
-    66% { background: #ccc; box-shadow: 0 0 1px #ccc, 15px 30px 1px #ddd, -15px 30px 1px #ccc; }
-}
-
-/*-- --*/
-
+=======
+>>>>>>> FETCH_HEAD
 .navigation li a,
 .navigation li a:hover,
 .navigation li.active a,
@@ -1310,8 +1401,6 @@ footer a {
 .navigation li.active a {
   background-color: rgba(72,72,72,1);
 }
-
-
 
 /* --FINE PRESS-- */
 
@@ -1342,7 +1431,7 @@ footer a {
 }
 
 .layout-film {
-  height: 580px;
+  height: 650px;
   margin-bottom: 80px;
 }
 

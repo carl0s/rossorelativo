@@ -13,22 +13,23 @@
   <div class="ricerca-bg large-12 columns">
     <div class="archivio-pg row">
       <div class="large-12 columns">
-        <h2>Archivio</h2>
+        <h2><?php echo __('Archivio'); ?></h2>
       </div>
     </div>
   </div>
   <div class="option-visual-page row">
     <div class="large-6 columns">
-      <h6>Ordina per</h6>
+      <h6><?php echo __('Ordina per'); ?></h6>
     </div>
     <div class="large-6 columns">
-      <h6>Visualizza</h6>
+      <h6><?php echo __('Visualizza'); ?></h6>
     </div>
   </div>
   <div class="archivio-film row">
-    <?php query_posts(array('post_type'=>'film', 'posts_per_page'=>9)); ?>
+    <?php $paged = (get_query_var('paged')) ? get_query_var('paged') : 1; query_posts(array('post_type'=>'film', 'orderby' => 'title', 'order' => 'ASC', 'posts_per_page'=>4, 'paged'=>$paged)); ?>
     <?php if (have_posts()) : while(have_posts()) : the_post(); ?>
       <div class="layout-film large-3 columns">
+          <a href="<?php echo get_the_permalink(); ?>">
           <h3>
             <?php 
             $mytitle = get_the_title();
@@ -36,6 +37,7 @@
             echo $mytitle;
             ?>
           </h3>
+          </a>
           <a class="archive-img" href="<?php echo get_permalink(); ?>"><?php $image = get_field('locandina'); ?><img src="<?php echo $image['url']; ?>" /></a>
           <h5><span><?php echo __('Regia:'); ?></span>  
             <?php $registi = get_field('regia');
@@ -94,6 +96,12 @@
           <?php endwhile; endif; ?>
         </div>
 
+        <div class="row">
+          <div class="large-3 columns end right">
+            <?php wpbeginner_numeric_posts_nav(); ?>
+          </div>
+        </div>
+
 
     </div>
   </div>
@@ -102,15 +110,3 @@
   <?php get_sidebar(); ?>
   <!--FOOTER-->
   <?php get_footer(); ?>
-  
-
-
-  <script>
-    document.write('<script src=' +
-      ('__proto__' in {} ? 'js/vendor/zepto' : 'js/vendor/jquery') +
-      '.js><\/script>')
-  </script>
-  <script src="js/foundation.min.js"></script>
-  <script>
-    $(document).foundation();
-  </script>

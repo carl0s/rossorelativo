@@ -215,25 +215,6 @@ var Grid = (function() {
 
 	}
 
-	// add more items to the grid.
-	// the new items need to appended to the grid.
-	// after that call Grid.addItems(theItems);
-	function addItems( $newitems ) {
-
-		$items = $items.add( $newitems );
-
-		$newitems.each( function() {
-			var $item = $( this );
-			$item.data( {
-				offsetTop : $item.offset().top,
-				height : $item.height()
-			} );
-		} );
-
-		initItemsEvents( $newitems );
-
-	}
-
 	// saves the item´s offset top and height (if saveheight is true)
 	function saveItemInfo( saveheight ) {
 		$items.each( function() {
@@ -250,8 +231,18 @@ var Grid = (function() {
 		// when clicking an item, show the preview with the item´s info and large image.
 		// close the item if already expanded.
 		// also close if clicking on the item´s cross
-		initItemsEvents( $items );
-		
+		$items.on( 'click', 'span.og-close', function() {
+			hidePreview();
+			return false;
+		} ).children( 'a' ).on( 'click', function(e) {
+
+			var $item = $( this ).parent();
+			// check if item already opened
+			current === $item.index() ? hidePreview() : showPreview( $item );
+			return false;
+
+		} );
+
 		// on window resize get the window´s size again
 		// reset some values..
 		$window.on( 'debouncedresize', function() {
@@ -268,20 +259,6 @@ var Grid = (function() {
 
 		} );
 
-	}
-
-	function initItemsEvents( $items ) {
-		$items.on( 'click', 'span.og-close', function() {
-			hidePreview();
-			return false;
-		} ).children( 'a' ).on( 'click', function(e) {
-
-			var $item = $( this ).parent();
-			// check if item already opened
-			current === $item.index() ? hidePreview() : showPreview( $item );
-			return false;
-
-		} );
 	}
 
 	function getWinSize() {
@@ -507,9 +484,6 @@ var Grid = (function() {
 		}
 	}
 
-	return { 
-		init : init,
-		addItems : addItems
-	};
+	return { init : init };
 
 })();

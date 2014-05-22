@@ -2,26 +2,6 @@
 
 <?php wp_reset_postdata();  ?>
 
-<script type="text/javascript">
-    $(function(){
-      SyntaxHighlighter.all();
-    });
-    $(window).load(function(){
-      $('.flexslider').flexslider({
-        animation: "slide",
-        animationLoop: false,
-        itemWidth: 210,
-        itemMargin: 5,
-        
-        pausePlay: true,
-        start: function(slider){
-          $('body').removeClass('loading');
-        }
-      });
-    });
-  </script>
-
-
 <div class="img-regista slideshow-wrapper">
     <div class="fotorama slideshow" data-allowfullscreen="native" data-width="100%" data-ratio="1440/750">
       <div class="slide">
@@ -100,7 +80,7 @@
       <?php endforeach; ?>
     <?php endif; ?>
   </ul>
-<?php endwhile; endif; ?> 
+<?php endwhile; endif; ?>
   </div>
 </div>
     <!--FOOTER-->
