@@ -43,3 +43,4 @@ $('.slider-nextexit .fotorama').on(
       $('.cta-page').attr('href', $('.info-wrapper').attr('data-id'));
     }
 ).fotorama();
+

@@ -38,11 +38,8 @@ endif;
 		</div>
 		
 
-
 		<?php $paged = (get_query_var('paged')) ? get_query_var('paged') : 1; query_posts(array('post_type'=>'film', 'orderby'=>$post_orderby, 'order'=>'ASC', 'posts_per_page'=>4, 'paged'=>$paged)); ?>
 		<?php
-
-
 	 	if (have_posts()) : while(have_posts()) : the_post();
 	 	?>
 		<div class="sezione-film large-3 columns">
@@ -54,7 +51,7 @@ endif;
 			</h4>
 			
 			<a class="archive-img" href="<?php echo get_permalink(); ?>"> <?php $image = get_field('locandina'); ?><img src="<?php echo $image['url']; ?>" /></a>
-			
+
 
 			<ul id="og-grid" class="og-grid">
 				<li>
