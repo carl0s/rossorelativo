@@ -2,12 +2,20 @@
 
 function luckyred_scripts() {
   wp_enqueue_style( 'luckyred-foundation', get_template_directory_uri() . '/css/foundation.css', array(), '1.0.0' );
-  wp_enqueue_style( 'luckyred-general', get_template_directory_uri() . '/css/style.css', array(), '1.0.0' );
+
+
+  wp_enqueue_style( 'luckyred-general', get_template_directory_uri() . '/css/style.css', array(), '1.0.0' ); 
+  
+  wp_enqueue_script( 'jquery-script', get_template_directory_uri() . '/js/jquery.js', array(), '20131209', true );
+  
 
   wp_enqueue_script( 'modernizr-script', get_template_directory_uri() . '/js/modernizr.js', array(), '20131209' );
   wp_enqueue_script( 'foundation-script', get_template_directory_uri() . '/js/foundation.min.js', array(), '20131209', true );
 
   wp_enqueue_script( 'custom-script', get_template_directory_uri() . '/js/custom.js', array(), '20131209', true);
+
+  wp_enqueue_script( 'grid-script', get_template_directory_uri() . '/js/grid.js', array(), '20131209', true);
+
 }
 
 add_theme_support( 'post-thumbnails', array( 'post', 'film', 'regista', 'cinema', 'page' ) ); // Posts and Movies
@@ -110,6 +118,16 @@ function wpbeginner_numeric_posts_nav() {
 
   echo '</ul></div>' . "\n";
 
+}
+
+function get_page_link_by_slug($page_slug) {
+  $page = get_page_by_path($page_slug);
+  if ($page) :
+    
+    return get_permalink( $page->ID );
+  else :
+    return "#";
+  endif;
 }
 
 

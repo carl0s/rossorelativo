@@ -63,21 +63,23 @@
   <div class="row">
     <h2><?php echo __('Prossime uscite'); ?></h2>
 
+
     <div class="slider-nextexit slideshow-wrapper">
-      <div class="fotorama slideshow" data-click="false" data-nav="thumbs" data-width="100%" data-ratio="1180/360" data-thumbheight="112" data-thumbwidth="180">
+      <div class="fotorama slideshow" data-click="false" data-auto="false" data-nav="thumbs" data-width="100%" data-ratio="1180/360" data-thumbheight="112" data-thumbwidth="180">
         <?php 
         $args = array(
           'post_type'  => 'film',
           'meta_key'   => 'in_uscita',
           'meta_value' => 'Si',
           'posts_per_page' => 3,
-          'orderby' => 'data_di_uscita'
+          'orderby' => 'menu_order',
+          'order' => 'ASC'
           );
         $film = new WP_Query($args);
         ?>
         <?php if ($film->have_posts()) : while($film->have_posts()) : $film->the_post() ; ?>
         <div class="slide" data-thumb="<?php echo wp_get_attachment_image_src(get_post_thumbnail_id($film->ID))[0]; // retrieving url from attached thumb as featured image ?>">
-          <div class='info-wrapper'>
+          <div class='info-wrapper' data-id="<?php echo get_permalink($film->ID); ?>">
             <?php echo get_the_post_thumbnail($film->ID); ?>
             <div class='row'>
               <div class='info-title large-5 columns'>
@@ -100,7 +102,7 @@
         </div>
       <?php endwhile; endif; ?>
     </div>
-    <a href="<?php echo get_permalink($film->ID); ?>" class="button right [tiny small large]"><?php echo __('Vai alla pagina'); ?></a>
+    <a href="" class="cta-page button right"><?php echo __('Vai alla pagina'); ?></a>
   </div>
 </div>
 </div>
@@ -182,7 +184,7 @@
               ?>
             </h3>
           </a>
-          <h5><span><?php echo __('Regia:'); ?></span>  
+          <h5><span><?php echo __('Regia'); ?></span>  
             <?php $registi = get_field('regia');
             $i = 0;
             foreach($registi as $regista):
@@ -198,7 +200,7 @@
               ?>
             </h5>
             <h5>
-              <span><?php echo __('Genere:'); ?></span> 
+              <span><?php echo __('Genere'); ?></span> 
               <?php
               $categories = get_the_category();
               $separator = ' ';
@@ -212,7 +214,7 @@
               ?>
             </h5> 
             <h5>
-              <span><?php echo __('Nazione:'); ?></span>
+              <span><?php echo __('Nazione'); ?></span>
               <?php
               $nazioni = get_field('nazione');
               $i=0;
@@ -229,7 +231,7 @@
                 ?>
               </h5>
               <h5>
-                <span><?php echo __('Anno:'); ?></span>
+                <span><?php echo __('Anno'); ?></span>
                 <?php
                 $anno = get_field('anno');
                 ?>
@@ -239,7 +241,7 @@
           <?php endwhile; endif; ?>
         </div>
         <div>
-          <a class="button right [tiny small large]">Guarda l'archivio</a>
+          <a href="<?php echo get_page_link_by_slug('archivio'); ?>" class="button right">Guarda l'archivio</a>
         </div>
       </div>
     </div>
@@ -254,8 +256,4 @@
     </div>
   </div>
     <!--FOOTER-->
-    <?php get_footer(); ?>
-
-  <script>
-  $(document).foundation();
-  </script>
+  <?php get_footer(); ?>
