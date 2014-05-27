@@ -113,6 +113,16 @@ function wpbeginner_numeric_posts_nav() {
 
 }
 
+function get_page_link_by_slug($page_slug) {
+  $page = get_page_by_path($page_slug);
+  if ($page) :
+    
+    return get_permalink( $page->ID );
+  else :
+    return "#";
+  endif;
+}
+
 
 
 ?>

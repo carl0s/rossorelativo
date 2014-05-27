@@ -2,6 +2,12 @@
     
     /* Template Name: Stile Archivio */
     
+
+    if($_GET):
+      $post_initial_view = $_GET['posts'];
+    else:
+      $post_initial_view = 4;
+    endif;
   ?>
 
   <!--HEADER-->
@@ -10,7 +16,7 @@
   <!--BODY-->
   <?php wp_reset_postdata(); ?>
 
-  <div class="ricerca-bg large-12 columns">
+  <div id="archivio" class="ricerca-bg large-12 columns">
     <div class="archivio-pg row">
       <div class="large-12 columns">
         <h2><?php echo __('Archivio'); ?></h2>
@@ -23,10 +29,15 @@
     </div>
     <div class="large-6 columns">
       <h6><?php echo __('Visualizza'); ?></h6>
+      <ul class="view-film">
+      <li><a href="?posts=4#archivio">4</a></li>
+      <li><a href="?posts=8#archivio">8</a></li>
+      <li><a href="?posts=16#archivio">16</a></li>
+      </ul>
     </div>
   </div>
   <div class="archivio-film row">
-    <?php $paged = (get_query_var('paged')) ? get_query_var('paged') : 1; query_posts(array('post_type'=>'film', 'orderby' => 'title', 'order' => 'ASC', 'posts_per_page'=>4, 'paged'=>$paged)); ?>
+    <?php $paged = (get_query_var('paged')) ? get_query_var('paged') : 1; query_posts(array('post_type'=>'film', 'orderby' => 'title', 'order' => 'ASC', 'posts_per_page'=>$post_initial_view, 'paged'=>$paged)); ?>
     <?php if (have_posts()) : while(have_posts()) : the_post(); ?>
       <div class="layout-film large-3 columns">
           <a href="<?php echo get_the_permalink(); ?>">
@@ -39,7 +50,7 @@
           </h3>
           </a>
           <a class="archive-img" href="<?php echo get_permalink(); ?>"><?php $image = get_field('locandina'); ?><img src="<?php echo $image['url']; ?>" /></a>
-          <h5><span><?php echo __('Regia:'); ?></span>  
+          <h5><span><?php echo __('Regia'); ?></span>  
             <?php $registi = get_field('regia');
             $i = 0;
             foreach($registi as $regista):
@@ -55,7 +66,7 @@
               ?>
             </h5>
             <h5>
-              <span><?php echo __('Genere:'); ?></span> 
+              <span><?php echo __('Genere'); ?></span> 
               <?php
               $categories = get_the_category();
               $separator = ' ';
@@ -69,7 +80,7 @@
               ?>
             </h5> 
             <h5>
-              <span><?php echo __('Nazione:'); ?></span>
+              <span><?php echo __('Nazione'); ?></span>
               <?php
               $nazioni = get_field('nazione');
               $i=0;
@@ -86,7 +97,7 @@
                 ?>
               </h5>
               <h5>
-                <span><?php echo __('Anno:'); ?></span>
+                <span><?php echo __('Anno'); ?></span>
                 <?php
                 $anno = get_field('anno');
                 ?>

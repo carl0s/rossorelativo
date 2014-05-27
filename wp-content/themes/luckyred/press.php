@@ -32,27 +32,33 @@ Template Name:  Press
 		</div>
 		
 
-		<?php $paged = (get_query_var('paged')) ? get_query_var('paged') : 1; query_posts(array('post_type'=>'film', 'orderby'=>'title', 'order'=>'ASC', 'posts_per_page'=>3, 'paged'=>$paged)); ?>
-		<?php
-
+		<?php 
+		$paged = (get_query_var('paged')) ? get_query_var('paged') : 1; 
+		query_posts(array(
+									'post_type'=>'film', 
+									'orderby'=>'title', 
+									'order'=>'ASC', 
+									'posts_per_page'=>3, 
+									'paged'=>$paged)
+								); 
+		
 	 	if (have_posts()) : while(have_posts()) : the_post();
 	 	?>
 		<div class="sezione-film large-4 columns">
 			<h4>
 				<?php 
 				$mytitle = get_the_title();
-				if (strlen($mytitle)>30) $mytitle=substr($mytitle, 0,30) . '...';
 				echo $mytitle;
 				?>
 			</h4>
 			
 			<a class="archive-img" href="<?php echo get_permalink(); ?>"> <?php $image = get_field('locandina'); ?><img src="<?php echo $image['url']; ?>" /></a>
-
-				
+			
 		</div>
 		<?php endwhile; endif; ?>
 
 	</div>
+
 	<div class="row">
 		<div class="large-3 columns end right">
 			<?php wpbeginner_numeric_posts_nav(); ?>
