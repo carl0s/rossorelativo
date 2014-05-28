@@ -25,14 +25,20 @@
   </div>
   <div class="option-visual-page row">
     <div class="large-6 columns">
-      <h6><?php echo __('Ordina per'); ?></h6>
+      <ul class="order-film">
+      <li><?php echo __('Ordina per'); ?></li>
+      <li><a href="?posts=4#archivio">Nome</a></li>
+      <li><a href="?posts=8#archivio">Più recente</a></li>
+      <li><a href="?posts=16#archivio">Più vecchio</a></li>
+      </ul>
     </div>
-    <div class="large-6 columns">
-      <h6><?php echo __('Visualizza'); ?></h6>
+    <div class="large-6 end columns">
       <ul class="view-film">
+      <li><?php echo __('Visualizza'); ?></li>
       <li><a href="?posts=4#archivio">4</a></li>
       <li><a href="?posts=8#archivio">8</a></li>
       <li><a href="?posts=16#archivio">16</a></li>
+      <li><?php echo __('per pagina'); ?></li>
       </ul>
     </div>
   </div>
@@ -40,15 +46,16 @@
     <?php $paged = (get_query_var('paged')) ? get_query_var('paged') : 1; query_posts(array('post_type'=>'film', 'orderby' => 'title', 'order' => 'ASC', 'posts_per_page'=>$post_initial_view, 'paged'=>$paged)); ?>
     <?php if (have_posts()) : while(have_posts()) : the_post(); ?>
       <div class="layout-film large-3 columns">
+        <div class="title-layout">
           <a href="<?php echo get_the_permalink(); ?>">
           <h3>
             <?php 
             $mytitle = get_the_title();
-            if (strlen($mytitle)>17) $mytitle=substr($mytitle, 0,15) . '...';
             echo $mytitle;
             ?>
           </h3>
           </a>
+        </div>
           <a class="archive-img" href="<?php echo get_permalink(); ?>"><?php $image = get_field('locandina'); ?><img src="<?php echo $image['url']; ?>" /></a>
           <h5><span><?php echo __('Regia'); ?></span>  
             <?php $registi = get_field('regia');

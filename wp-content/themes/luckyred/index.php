@@ -135,25 +135,24 @@
               <div class='info-title large-5 large-offset-7 end columns'>
                 <?php the_title('<h2>','</h2>'); ?>
                 <div class="row collapse">
-                <div class="large-9 columns">
-                  <div class='info-content'>
-                    <?php excerpt('35','<p>','</p>'); ?>
+                  <div class="large-9 columns">
+                    <div class='info-content'>
+                      <?php excerpt('35','<p>','</p>'); ?>
+                    </div>
                   </div>
                 </div>
-              </div>
+                <a href="<?php echo get_the_permalink($film->ID); ?>" class="button right [tiny small large]"><?php echo __('Vai alla pagina'); ?></a>
               </div>
             </div>
           </div>
           <div class="row">
             <div class="film-thumb large-12 columns">
               <?php the_field('video_thumbnail'); ?>
-
             </div>
           </div>
         </div>
       <?php endwhile; endif; ?>
     </div>
-    <a class="button right [tiny small large]"><?php echo __('Vai alla pagina'); ?></a>
   </div>
 </div>
 </div>
@@ -175,15 +174,16 @@
         <?php if (have_posts()) : while(have_posts()) : the_post(); ?>
         <div class="large-4 columns">
           <a class="archive-img" href="<?php echo get_permalink(); ?>"><?php $image = get_field('locandina'); ?><img src="<?php echo $image['url']; ?>" /></a>
+          <div class="title-layout">
           <a href="<?php echo get_permalink(); ?>">
             <h3>
               <?php 
               $mytitle = get_the_title();
-              if (strlen($mytitle)>17) $mytitle=substr($mytitle, 0,15) . '...';
               echo $mytitle;
               ?>
             </h3>
           </a>
+          </div>
           <h5><span><?php echo __('Regia'); ?></span>  
             <?php $registi = get_field('regia');
             $i = 0;
