@@ -169,7 +169,7 @@
                       if( get_sub_field('download_immagine') ):
                         $file = get_sub_field('download_immagine');
                       ?>
-                      <a href="<?php echo $file['url']; ?>"><?php echo __('Download'); ?></a>
+                      <a href="<?php echo $file['url']; ?>"><?php echo __('Download immagine'); ?></a>
                       <?php
                       endif;
                       ?>
@@ -251,7 +251,7 @@
                       if( get_sub_field('download_video') ):
                         $file = get_sub_field('download_video');
                       ?>
-                      <a href='<?php echo $file['url']; ?>'><?php echo __('Download'); ?></a>
+                      <a href='<?php echo $file['url']; ?>'><?php echo __('Download video'); ?></a>
                       <?php
                       endif;
                       ?>

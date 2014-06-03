@@ -3,7 +3,6 @@
 require_once('wp-advanced-search/wpas.php');
 function luckyred_scripts() {
   wp_enqueue_style( 'luckyred-foundation', get_template_directory_uri() . '/css/foundation.css', array(), '1.0.0' );
-  wp_enqueue_style( 'luckyred-general', get_template_directory_uri() . '/css/style.css', array(), '1.0.0' );
   wp_enqueue_style( 'luckyred-fotorama', get_template_directory_uri() . '/css/fotorama.css', array(), '1.0.0' );
   wp_enqueue_style( 'luckyred-general', get_template_directory_uri() . '/css/style.css', array(), '1.0.0' ); 
 

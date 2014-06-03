@@ -128,6 +128,16 @@ header {
   transition: all 0.3s;
 }
 
+#main-menu a:hover {
+  color: rgba(255,255,255,0.5);
+
+  -webkit-transition: all 0.1s;
+  -moz-transition: all 0.1s;
+  -ms-transition: all 0.1s;
+  -o-transition: all 0.1s;
+  transition: all 0.1s;
+}
+
 .social-icon {
   height: 135px;
   line-height: 135px;
@@ -188,7 +198,8 @@ header.smaller .search-container.show .searchform input[type=text] {
   border: 0;
   box-shadow: none;
   font-family: Bebas Neue;
-  font-size: 1.5em;
+  font-size: 1.2em;
+  margin-top: 10px;
   height: 30px;
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
@@ -245,7 +256,6 @@ header.smaller .social-icon {
 
 .fotorama__thumb-border {
   border-color: rgba(243,33,36,1);
-  border-width: 20px;
 }
 
 .fotorama__video-play {
@@ -690,13 +700,17 @@ footer a {
   color: rgba(181,58,61,1);
 }
 
+footer a:hover {
+  color: rgba(253,184,19,1);
+}
+
 footer .button {
   background-color: rgba(243,33,36,1);
   font-family: Bebas Neue;
   padding: 10px 40px 10px 40px;
   margin-top: 29px;
   width: 180px;
-  float: left;
+  margin-bottom: -50px;
 }
 
 footer .button:hover {
@@ -712,8 +726,33 @@ footer .button:active {
   border: none;
 }
 
+.back-login .close-reveal-modal {
+  text-decoration: none;
+}
+
+.back-login h4 {
+  color: rgba(38,37,37,1);
+  font-size: 3em;
+  font-family: "Bebas Neue";
+}
+
+.back-login h6 {
+  color: rgba(38,37,37,1);
+  font-size: 1em;
+  font-family: "Georgia";
+  font-style: italic;
+  float: right;
+  line-height: 60px;
+  margin-left: 50px;
+}
+
+.back-login h6 a {
+  color: rgba(38,37,37,1);
+  text-decoration: underline;
+}
+
 #loginform {
-  margin-top: 50px;
+  margin-top: 20px;
 }
 
 #loginform p {
@@ -750,18 +789,65 @@ footer .button:active {
   width: 180px;
   border: none;
   color: rgba(255,255,255,1);
-  font-size: 1em;
+  font-size: 1.5em;
+  float: left;
+  line-height: 60px;
+}
+
+.hello-user a {
+  float: left;
+  font-family: "Bebas Neue";
+  font-size: 2.5em;
+  width: 33.33%;
+  text-align: center;
+  color: rgba(243,33,36,1);
+  padding: 20px 20px 20px 20px;
+}
+
+.hello-user a:hover {
+  background-color: rgba(243,33,36,1);
+  color: rgba(255,255,255,1);
+}
+
+.site-admin a {
+  float: left;
+  font-family: "Bebas Neue";
+  font-size: 2.5em;
+  width: 33.33%;
+  text-align: center;
+  color: rgba(243,33,36,1);
+  padding: 20px 20px 20px 20px;
+}
+
+.site-admin a:hover {
+  background-color: rgba(243,33,36,1);
+  color: rgba(255,255,255,1);
+}
+
+.log-out a {
+  float: left;
+  font-family: "Bebas Neue";
+  font-size: 2.5em;
+  width: 33.33%;
+  text-align: center;
+  color: rgba(243,33,36,1);
+  padding: 20px 20px 20px 20px;
+}
+
+.log-out a:hover {
+  background-color: rgba(243,33,36,1);
+  color: rgba(255,255,255,1);
 }
 
 .social-icon-footer {
-  height: 135px;
-  line-height: 135px;
+  height: 75px;
+  line-height: 75px;
 }
 
 .social-icon-footer img {
   height: 20px;
-  margin-left: 3px;
-  margin-right: 3px;
+  margin-left: 0.35em;
+  margin-right: 0.3em;
   padding: 2px;
   opacity: 0;
 }
@@ -822,6 +908,161 @@ footer .button:active {
 }
 
 /* --FINE FOOTER-- */
+
+/* --CHI SIAMO-- */
+
+.chi-siamo .slide .info-wrapper img {
+  position: absolute;
+  top: 0px;
+  z-index: 0;
+}
+
+.chi-siamo .fotorama__video-play {
+  margin-top: 30px;
+}
+
+.chi-siamo .fotorama__nav-wrap {
+  background-color: rgba(0,0,0,0.8);
+  position: absolute;
+  z-index: 30;
+  height: 210px;
+  margin-top: -120px;
+}
+
+.chi-siamo .fotorama__caption__wrap {
+  position: relative;
+  background: none;
+  width: 100%;
+  margin-top: -1390px;
+}
+
+.chi-siamo .info-title h2 {
+  color: rgba(255,255,255,1);
+  background-color: rgba(0,0,0,0.8);
+  padding: 10px;
+  font-family: "Bebas Neue";
+  font-size: 2.4em;
+  line-height: 1em;
+  display: inline-block;
+  margin-top: 285px;
+} 
+
+.chi-siamo .info-content {
+  color: rgba(255,255,255,1);
+  background-color: rgba(0,0,0,0.8);
+  padding: 10px;
+  font-family: 'Georgia';
+  font-style: italic;
+  margin-top: 15px;
+  line-height: 1.1em;
+  width: 100%;
+}
+
+.chi-siamo .info-date {
+  background-color: rgba(0,0,0,0.8);
+  text-align: center;
+  margin-top: -220px;
+}
+
+.chi-siamo .info-date h6 {
+  color: rgba(255,255,255,1);
+  font-family: "Bebas Neue";
+  font-size: 1.5em;
+  height: 1em;
+}
+
+.chi-siamo .info-wrapper {
+  padding-top: 275px;
+  position: relative;
+}
+
+.chi-siamo-bg h3 {
+  font-family: "Bebas Neue";
+  font-size: 2.5em;
+  color: rgba(243,33,36,1);
+  margin-top: 50px;
+}
+
+.chi-siamo-bg p {
+  font-family: "Georgia";
+  font-style: italic;
+}
+
+.produzioni-bg {
+  background-color: rgba(242,242,242,1);
+  height: 640px;
+}
+
+.produzioni-bg h3 {
+  font-family: "Bebas Neue";
+  font-size: 2.5em;
+  color: rgba(243,33,36,1);
+  margin-top: 50px;
+}
+
+.produzioni-bg h4 {
+  font-family: "Bebas Neue";
+  font-size: 1.5em;
+  color: rgba(255,255,255,1);
+  padding: 5px 10px;
+  background-color: rgba(0,0,0,0.8);
+  margin-top: 20px;
+  display: inline-block;
+}
+
+.nome-produttore {
+  font-family: "Georgia";
+  font-style: italic;
+  font-weight: bold;
+}
+
+.titolo-produzione {
+  font-family: "Georgia";
+  font-style: italic;
+}
+
+.azienda-bg {
+  background-image: url(../img/blur2.png);
+  background-repeat: no-repeat;
+  padding-top: 35px;
+  padding-bottom: 90px;
+}
+
+.azienda-bg .sfondo {
+  background-color: rgba(255,255,255,0.5);
+}
+
+.azienda-bg img {
+  opacity: 0.8;
+}
+
+.azienda-bg h4 {
+  font-family: "Bebas Neue";
+  font-size: 2em;
+  color: rgba(255,255,255,1);
+  padding: 5px 10px;
+  background-color: rgba(0,0,0,0.8);
+  margin-top: 20px;
+  display: inline-block;
+  margin-bottom: 40px;
+}
+
+.azienda-bg h5 {
+  font-family: "Bebas Neue";
+  font-size: 2em;
+  color: rgba(255,255,255,1);
+  padding: 5px 10px;
+  background-color: rgba(0,0,0,0.8);
+  margin-top: 20px;
+  display: inline-block;
+}
+
+.azienda-bg p {
+  font-family: "Georgia";
+  font-style: italic;
+  margin-bottom: 70px;
+}
+/* --FINE CHI SIAMO-- */
 
 /* --SINGLE-REGISTA-- */
 
@@ -1312,7 +1553,7 @@ footer .button:active {
 }
 
 .tabs-content {
-  margin-top: 51px;
+  margin-top: 42px;
   margin-bottom: -20px;
   z-index: 40;
   position: relative;
@@ -1416,7 +1657,7 @@ footer .button:active {
   background-color: rgba(0,0,0,0.8);
   padding: 10px;
   font-family: "Bebas Neue";
-  font-size: 1.5em;
+  font-size: 1em;
   position: absolute;
   bottom: -560px;
   z-index: 10;
