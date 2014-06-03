@@ -2,6 +2,19 @@
 
 /* @import "pesticide"; */ 
 
+@font-face {
+    font-family: 'Bebas Neue';
+    src: url('../fonts/BebasNeue-webfont.eot');
+    src: url('../fonts/BebasNeue-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/BebasNeue-webfont.woff') format('woff'),
+         url('../fonts/BebasNeue-webfont.ttf') format('truetype'),
+         url('../fonts/BebasNeue-webfont.svg#bebas_neueregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
 header {
   position: fixed;
   z-index: 99999;
@@ -65,7 +78,7 @@ header {
   float: left;
   border: 0;
   box-shadow: none;
-  font-family: Bebas Neue;
+  font-family: "Bebas Neue";
   font-size: 2em;
   height: 60px;
 }
@@ -75,7 +88,7 @@ header {
   background: transparent;
   padding: 10px;
   color: rgba(255,255,255,0.5);
-  font-family: Bebas Neue;
+  font-family: "Bebas Neue";
   font-size: 2em;
   border: 0; 
   border-left: 1px solid rgba(255,255,255,1);
@@ -99,7 +112,7 @@ header {
 #main-menu ul li {
   display: inline-block;
   margin-right: 15px;
-  font-family: Bebas Neue;
+  font-family: "Bebas Neue";
 }
 
 #main-menu a {
@@ -285,7 +298,7 @@ header.smaller .social-icon {
   color: rgba(255,255,255,1);
   background-color: rgba(0,0,0,0.8);
   padding: 10px;
-  font-family: Bebas Neue;
+  font-family: "Bebas Neue";
   font-size: 2.4em;
   line-height: 1em;
   display: inline-block;
@@ -309,7 +322,7 @@ header.smaller .social-icon {
 
 .slider-cinema .info-date h4 {
   color: rgba(255,255,255,1);
-  font-family: Bebas Neue;
+  font-family: "Bebas Neue";
   font-size: 7.3em;
   height: 1em;
   margin-left: -5px;
@@ -328,7 +341,7 @@ header.smaller .social-icon {
 
 .slider-cinema .info-date h6 {
   color: rgba(255,255,255,1);
-  font-family: Bebas Neue;
+  font-family: "Bebas Neue";
   font-size: 1.5em;
   height: 1em;
 }
@@ -337,7 +350,7 @@ header.smaller .social-icon {
   color: rgba(255,255,255,1);
   background-color: rgba(0,0,0,0.8);
   padding: 10px;
-  font-family: Bebas Neue;
+  font-family: "Bebas Neue";
   font-size: 1.5em;
   position: absolute;
   bottom: -450px;
@@ -363,7 +376,7 @@ header.smaller .social-icon {
 }
 
 .nextexit-bg h2 {
-  font-family: Bebas Neue;
+  font-family: "Bebas Neue";
   color: rgba(243,33,36,1);
   margin: 50px 0 17px 0;
   font-size: 350%;
@@ -388,7 +401,7 @@ header.smaller .social-icon {
   color: rgba(255,255,255,1);
   background-color: rgba(0,0,0,0.8);
   padding: 10px 10px 10px 33px;
-  font-family: Bebas Neue;
+  font-family: "Bebas Neue";
   font-size: 1.8em;
   margin-top: -495px;
   text-align: right;
@@ -403,7 +416,7 @@ header.smaller .social-icon {
 
 .slider-nextexit .info-date h4 {
   color: rgba(255,255,255,1);
-  font-family: Bebas Neue;
+  font-family: "Bebas Neue";
   font-size: 2em;
   height: 1em;
   float: left;
@@ -421,7 +434,7 @@ header.smaller .social-icon {
 
 .slider-nextexit .info-date h6 {
   color: rgba(255,255,255,1);
-  font-family: Bebas Neue;
+  font-family: "Bebas Neue";
   font-size: 2em;
   height: 1em;
   float: left;
@@ -438,7 +451,7 @@ header.smaller .social-icon {
 
 .slider-nextexit .button {
   background-color: rgba(243,33,36,1);
-  font-family: Bebas Neue;
+  font-family: "Bebas Neue";
   font-size: 2em;
   padding: 10px 40px 10px 40px;
   margin-top: -155px;
@@ -459,7 +472,7 @@ header.smaller .social-icon {
 }
 
 .ondemand-bg h2 {
-  font-family: Bebas Neue;
+  font-family: "Bebas Neue";
   color: rgba(72,72,72,1);
   margin: 40px 0 10px 0;
   font-size: 350%;
@@ -489,7 +502,7 @@ header.smaller .social-icon {
   color: rgba(255,255,255,1);
   background-color: rgba(0,0,0,0.8);
   padding: 5px 10px 2px 10px;
-  font-family: Bebas Neue;
+  font-family: "Bebas Neue";
   font-size: 1.8em;
   margin-top: -535px;
   text-align: left;
@@ -534,8 +547,7 @@ header.smaller .social-icon {
 
 .slider-ondemand .button {
   background-color: rgba(243,33,36,1);
-  font-family: Bebas Neue;
-  text-align: center;
+  font-family: "Bebas Neue";
   font-size: 2em;
   padding: 10px 40px 10px 20px;
   margin-top: -335px;
@@ -560,14 +572,14 @@ header.smaller .social-icon {
 }
 
 .blog-archivio-bg h2 {
-  font-family: Bebas Neue;
+  font-family: "Bebas Neue";
   color: rgba(243,33,36,1);
   margin: 45px 0 10px 0;
   font-size: 350%;
 }
 
 .blog-archivio-bg h5 {
-  font-family: Bebas Neue;
+  font-family: "Bebas Neue";
   padding:2px;
   color: rgba(255,255,255,1);
 }
@@ -581,7 +593,7 @@ header.smaller .social-icon {
 }
 
 .archivio a h3 {
-  font-family: Bebas Neue;
+  font-family: "Bebas Neue";
   margin-top: 10px;
   color: rgba(72,72,72,1);
   text-decoration: none;
@@ -603,7 +615,7 @@ header.smaller .social-icon {
 
 .archivio .button {
   background-color: rgba(243,33,36,1);
-  font-family: Bebas Neue;
+  font-family: "Bebas Neue";
   font-size: 2em;
   padding: 10px 40px 10px 40px;
   margin-top: 29px;
@@ -628,7 +640,7 @@ header.smaller .social-icon {
 }
   
 .mission h2 {
-  font-family: Bebas Neue;
+  font-family: "Bebas Neue";
   color: rgba(72,72,72,1);
   margin: 30px 0 10px 0;
   font-size: 350%;
@@ -659,7 +671,7 @@ footer .wrapper {
 footer h6 {
   text-align: center;
   padding-top: 70px;
-  font-family: Bebas Neue;
+  font-family: "Bebas Neue";
   color: rgba(255,255,255,1);
   line-height: 40px;
   font-size: 120%; 
@@ -866,7 +878,7 @@ footer .button:active {
   color: rgba(255,255,255,1);
   background-color: rgba(0,0,0,0.8);
   padding: 10px;
-  font-family: Bebas Neue;
+  font-family: "Bebas Neue";
   font-size: 2.4em;
   line-height: 1em;
   display: inline-block;
@@ -876,7 +888,7 @@ footer .button:active {
   color: rgba(255,255,255,0.8);
   background-color: rgba(0,0,0,0.8);
   padding: 10px;
-  font-family: Bebas Neue;
+  font-family: "Bebas Neue";
   font-size: 2.4em;
   line-height: 1em;
   display: inline-block;
@@ -889,7 +901,7 @@ footer .button:active {
 
 .img-regista .info-date h4 {
   color: rgba(255,255,255,1);
-  font-family: Bebas Neue;
+  font-family: "Bebas Neue";
   font-size: 6.5em;
   height: 1em;
   margin-left: -5px;
@@ -907,7 +919,7 @@ footer .button:active {
 
 .img-regista .info-date h6 {
   color: rgba(255,255,255,1);
-  font-family: Bebas Neue;
+  font-family: "Bebas Neue";
   font-size: 1.5em;
   height: 1em;
   }
@@ -916,7 +928,7 @@ footer .button:active {
   color: rgba(255,255,255,1);
   background-color: rgba(0,0,0,0.8);
   padding: 10px;
-  font-family: Bebas Neue;
+  font-family: "Bebas Neue";
   font-size: 1.5em;
   margin-top: 255px;
 }
@@ -926,7 +938,7 @@ footer .button:active {
 }
 
 .biografia h2 {
-  font-family: Bebas Neue;
+  font-family: "Bebas Neue";
   color: rgba(243,33,36,1);
   margin: 45px 0 10px 0;
   font-size: 350%;
@@ -939,14 +951,14 @@ footer .button:active {
 }
 
 .filmografia h2 {
-  font-family: Bebas Neue;
+  font-family: "Bebas Neue";
   color: rgba(243,33,36,1);
   margin: 45px 0 10px 0;
   font-size: 350%;
 }
 
 .filmografia h3 {
-  font-family: Bebas Neue;
+  font-family: "Bebas Neue";
   margin-top: -5px;
   color: rgba(255,255,255,1);
   display: inline-block;
@@ -973,7 +985,7 @@ footer .button:active {
 }
 
 .slider-film-catalogo .info-film-catalogo h3 spam {
-  font-family: Bebas Neue;
+  font-family: "Bebas Neue";
   color: rgba(255,255,255,1);
   display: inline-block;
   background-color: rgba(72,72,72,1);
@@ -987,7 +999,7 @@ footer .button:active {
 }
 
 .altri-film-bg h3 {
-  font-family: Bebas Neue;
+  font-family: "Bebas Neue";
   margin-top: 10px;
   color: rgba(255,255,255,1);
   display: inline-block;
@@ -1018,7 +1030,7 @@ footer .button:active {
 }
 
 .slider-film-catalogo .info-film-catalogo h3 spam {
-  font-family: Bebas Neue;
+  font-family: "Bebas Neue";
   color: rgba(255,255,255,1);
   display: inline-block;
   background-color: rgba(72,72,72,1);
@@ -1044,7 +1056,7 @@ footer .button:active {
 }
 
 .slider-film-catalogo .info-film-catalogo h3 spam {
-  font-family: Bebas Neue;
+  font-family: "Bebas Neue";
   color: rgba(255,255,255,1);
   display: inline-block;
   background-color: rgba(72,72,72,1);
@@ -1057,7 +1069,7 @@ footer .button:active {
   list-style-type: none;
 }
 .slider-film-catalogo a {
-  font-family: Bebas Neue;
+  font-family: "Bebas Neue";
   color: rgba(0,0,0,0.7);
   text-align: left;
   margin-left: 280px;
@@ -1078,7 +1090,7 @@ footer .button:active {
 }
 
 .slider-film-catalogo a {
-  font-family: Bebas Neue;
+  font-family: "Bebas Neue";
   color: rgba(0,0,0,0.7);
   text-align: left;
   margin-left: 280px;
@@ -1155,7 +1167,7 @@ footer .button:active {
   color: rgba(255,255,255,1);
   background-color: rgba(0,0,0,0.8);
   padding: 10px;
-  font-family: Bebas Neue;
+  font-family: "Bebas Neue";
   font-size: 2.4em;
   line-height: 1em;
   display: inline-block;
@@ -1179,13 +1191,13 @@ footer .button:active {
 .img-film .info-content span {
   color: rgba(255,255,255,0.8);
   font-size: 2em;
-  font-family: Bebas Neue;
+  font-family: "Bebas Neue";
   font-style: normal;
 }
 
 .img-film .info-share h6 {
   color: rgba(255,255,255,1);
-  font-family: Bebas Neue;
+  font-family: "Bebas Neue";
   font-size: 1.5em;
   height: 1em;
   display: inline-block;
@@ -1206,8 +1218,8 @@ footer .button:active {
   color: rgba(255,255,255,1);
   background-color: rgba(0,0,0,0.8);
   padding: 10px;
-  font-family: Bebas Neue;
-  font-size: 1.2em;
+  font-family: "Bebas Neue";
+  font-size: 1.5em;
   margin-top: 255px;
   display: inline-block;
 }
@@ -1222,7 +1234,7 @@ footer .button:active {
 }
 
 .info-film h3 span {
-  font-family: Bebas Neue;
+  font-family: "Bebas Neue";
   padding: 5px 7px 3px 7px;
   color: rgba(255,255,255,1);
   background-color: rgba(0,0,0,0.9);
@@ -1230,7 +1242,7 @@ footer .button:active {
 
 .info-film h4 {
   color: rgba(0,0,0,0.7);
-  font-family: Bebas Neue;
+  font-family: "Bebas Neue";
   font-size: 2em;
   margin-top: 5px;
   margin-bottom: 5px;
@@ -1267,7 +1279,7 @@ footer .button:active {
 }
 
 .download-film h3 {
-  font-family: Bebas Neue;
+  font-family: "Bebas Neue";
   font-size: 3em;
   color: rgba(181,58,61,1);
   margin-bottom: -10px;
@@ -1286,7 +1298,7 @@ footer .button:active {
 }
 
 .download-film .tabs a h4 span {
-  font-family: Bebas Neue;
+  font-family: "Bebas Neue";
   font-size: 1.1em;
   color: rgba(0,0,0,0.7);
   padding: 5px 7px 3px 7px;
@@ -1351,7 +1363,7 @@ footer .button:active {
   color: rgba(255,255,255,1);
   background-color: rgba(0,0,0,0.8);
   padding: 10px;
-  font-family: Bebas Neue;
+  font-family: "Bebas Neue";
   font-size: 2.4em;
   line-height: 1em;
   display: inline-block;
@@ -1375,7 +1387,7 @@ footer .button:active {
 
 .img-film-download .info-date h4 {
   color: rgba(255,255,255,1);
-  font-family: Bebas Neue;
+  font-family: "Bebas Neue";
   font-size: 7.3em;
   height: 1em;
   margin-left: -5px;
@@ -1394,7 +1406,7 @@ footer .button:active {
 
 .img-film-download .info-date h6 {
   color: rgba(255,255,255,1);
-  font-family: Bebas Neue;
+  font-family: "Bebas Neue";
   font-size: 1.5em;
   height: 1em;
 }
@@ -1403,8 +1415,8 @@ footer .button:active {
   color: rgba(255,255,255,1);
   background-color: rgba(0,0,0,0.8);
   padding: 10px;
-  font-family: Bebas Neue;
-  font-size: 1em;
+  font-family: "Bebas Neue";
+  font-size: 1.5em;
   position: absolute;
   bottom: -560px;
   z-index: 10;
@@ -1441,7 +1453,7 @@ footer .button:active {
 
 .pressbook .button {
   background-color: rgba(0,0,0,0.8);
-  font-family: Bebas Neue;
+  font-family: "Bebas Neue";
   font-size: 2em;
   padding: 10px 40px 10px 40px;
   margin-top: -300px;
@@ -1466,7 +1478,7 @@ footer .button:active {
 }
 
 .manifesto h4 {
-  font-family: Bebas Neue;
+  font-family: "Bebas Neue";
   color: rgba(0,0,0,1);
   position: absolute;
   margin-top: -580px;
@@ -1487,7 +1499,7 @@ footer .button:active {
 
 .manifesto .button {
   background-color: rgba(0,0,0,0.8);
-  font-family: Bebas Neue;
+  font-family: "Bebas Neue";
   font-size: 2em;
   padding: 10px 40px 10px 40px;
   margin-top: -300px;
@@ -1532,7 +1544,7 @@ footer .button:active {
   color: rgba(255,255,255,1);
   background-color: rgba(0,0,0,0.8);
   padding: 10px;
-  font-family: Bebas Neue;
+  font-family: "Bebas Neue";
   font-size: 2.4em;
   line-height: 1em;
   display: inline-block;
@@ -1556,7 +1568,7 @@ footer .button:active {
 
 .video-film-download .info-date h4 {
   color: rgba(255,255,255,1);
-  font-family: Bebas Neue;
+  font-family: "Bebas Neue";
   font-size: 7.3em;
   height: 1em;
   margin-left: -5px;
@@ -1575,7 +1587,7 @@ footer .button:active {
 
 .video-film-download .info-date h6 {
   color: rgba(255,255,255,1);
-  font-family: Bebas Neue;
+  font-family: "Bebas Neue";
   font-size: 1.5em;
   height: 1em;
 }
@@ -1584,7 +1596,7 @@ footer .button:active {
   color: rgba(255,255,255,1);
   background-color: rgba(0,0,0,0.8);
   padding: 10px;
-  font-family: Bebas Neue;
+  font-family: "Bebas Neue";
   font-size: 1.5em;
   position: absolute;
   bottom: -575px;
@@ -1634,12 +1646,12 @@ footer .button:active {
 }
 
 .slider-film-simili .altri-film span {
-  font-family: Bebas Neue;
+  font-family: "Bebas Neue";
   color: rgba(181,58,61,1);
 }
 
 .slider-film-simili .slide a {
-  font-family: Bebas Neue;
+  font-family: "Bebas Neue";
   color: rgba(0,0,0,0.7);
   text-align: left;
   margin-top: 50px;
@@ -1705,7 +1717,7 @@ footer .button:active {
 }
 
 .press-bg .sezione-film h4 {
-  font-family: Bebas Neue;
+  font-family: "Bebas Neue";
   margin-top: 10px;
   color: rgba(255,255,255,1);
   display: inline-block;
@@ -1796,7 +1808,7 @@ footer .button:active {
   color: rgba(243,33,36,1);
   background-color: rgba(0,0,0,0.8);
   padding: 10px;
-  font-family: Bebas Neue;
+  font-family: "Bebas Neue";
   font-size: 2.4em;
   line-height: 1em;
   display: inline-block;
@@ -1848,7 +1860,7 @@ footer .button:active {
   color: rgba(255,255,255,1);
   background-color: rgba(0,0,0,0.5);
   padding: 10px;
-  font-family: Bebas Neue;
+  font-family: "Bebas Neue";
   font-size: 2em;
   line-height: 1em;
   display: inline-block;
@@ -1862,7 +1874,7 @@ footer .button:active {
 .archivio-film span {
   background-color: rgba(0,0,0,0.8);
   color: rgba(255,255,255,1);
-  font-family: Bebas Neue;
+  font-family: "Bebas Neue";
   padding-left: 2px;
   padding-right: 2px;
 }
@@ -1924,7 +1936,7 @@ footer .button:active {
 }
 
 #scuola .sezione-film ul li h4 {
-  font-family: Bebas Neue;
+  font-family: "Bebas Neue";
   margin-top: 10px;
   color: rgba(255,255,255,1);
   display: inline-block;
@@ -1935,7 +1947,7 @@ footer .button:active {
 }
 
 #scuola .sezione-film ul li h3 {
-  font-family: Bebas Neue;
+  font-family: "Bebas Neue";
   color: rgba(72,72,72,1);
 }
 
@@ -1957,7 +1969,7 @@ footer .button:active {
 }
 
 .info-film-scuola h5 span {
-  font-family: Bebas Neue;
+  font-family: "Bebas Neue";
   color: rgba(255,255,255,1);
   display: inline-block;
   background-color: rgba(72,72,72,1);
@@ -1976,7 +1988,7 @@ footer .button:active {
 #button-scuola a {
   background-color: rgba(243,33,36,1);
   color: rgba(255,255,255,1);
-  font-family: Bebas Neue;
+  font-family: "Bebas Neue";
   font-size: 2em;
   padding: 10px 40px 10px 40px;
   margin-top: 20px;
