@@ -151,7 +151,8 @@
         </div>
       <?php endwhile; endif; ?>
     </div>
-    <a class="button right [tiny small large]"><?php echo __('Vai alla pagina'); ?></a>
+
+    <a href="<?php  ?>" class="button right [tiny small large]"><?php echo __('Vai alla pagina'); ?></a>
   </div>
 </div>
 </div>
@@ -163,6 +164,7 @@
     <div class="blog large-5 columns">
       <h2><?php echo __('Blog'); ?></h2>
       <h4>PROVA TESTO</h4>
+      <a href="<?php echo get_permalink( get_page_by_title( 'single-blog' )); ?>" class="button right [tiny small large]"><?php echo __('Vai alla pagina'); ?></a>
     </div>
 
     <div class="archivio large-7 columns">
