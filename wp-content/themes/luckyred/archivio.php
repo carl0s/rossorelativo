@@ -20,6 +20,48 @@
     <div class="archivio-pg row">
       <div class="large-12 columns">
         <h2><?php echo __('Archivio'); ?></h2>
+        <?php 
+
+        $dir_args = array(
+          'post_type' => 'regista',
+          'number_posts' => -1
+          );
+
+        $query = new WP_Query($dir_args);
+        $i=0;
+        foreach ($query->posts as $d):
+          $directors[$i] = $d->post_title;
+        $i++;
+        endforeach;
+
+        $args = array();
+        $args['wp_query'] = array('post_type' => 'film',
+          'posts_per_page' => 5,
+          'order' => 'DESC',
+          'orderby' => 'date');
+
+
+        $args['fields'][] = array('type' => 'search',
+          'label' => 'Search',
+          'value' => '');
+
+
+        $args['fields'][] = array('type' => 'taxonomy',
+          'label' => 'Genere',
+          'taxonomy' => 'category',
+          'format' => 'select',
+          'operator' => 'AND');
+
+        $args['fields'][] = array('type' => 'submit',
+          'value' => 'Search');
+        $my_search_object = new WP_Advanced_Search($args);
+
+        $my_search_object->the_form();
+
+        $temp_query = $wp_query;
+        $wp_query = $my_search_object->query();
+
+        ?>
       </div>
     </div>
   </div>
@@ -37,7 +79,7 @@
       <li><?php echo __('Visualizza'); ?></li>
       <li><a href="?posts=4#archivio">4</a></li>
       <li><a href="?posts=8#archivio">8</a></li>
-      <li><a href="?posts=16#archivio">16</a></li>
+      <li><a href="?posts=12#archivio">12</a></li>
       <li><?php echo __('per pagina'); ?></li>
       </ul>
     </div>
