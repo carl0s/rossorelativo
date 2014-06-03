@@ -41,22 +41,23 @@ endif;
 	if (have_posts()) : while(have_posts()) : the_post();
 	?>
 	<div id="scuola" class="row">
+    <div id="sezione-film" class="large-12 columns">
+      <ul>
+        <li><h4>
+        <?php 
+        $mytitle = get_the_title();
+        echo $mytitle;
+        ?>
+      </h4></li>
+      <li><h3><?php echo get_field('limite_età'); ?></h3></li>
+      </ul>
+    </div>
 		<div class="sezione-film large-3 columns">
-			<ul>
-				<li><h4>
-				<?php 
-				$mytitle = get_the_title();
-				echo $mytitle;
-				?>
-			</h4></li>
-			<li><h3><?php echo get_field('limite_età'); ?></h3></li>
-			</ul>
-			
-			
 			<a class="archive-img" href="<?php echo get_permalink(); ?>"> <?php $image = get_field('locandina'); ?><img src="<?php echo $image['url']; ?>" /></a>
 		</div>
 		<div class="text-film large-6 columns">
 			<p><?php echo the_content(); ?></p>
+      <br><br>
 			<a href="#"><h5>Guarda il trailer</h5></a>
 		</div>
 		<div id="content-scuola">
@@ -115,8 +116,8 @@ endif;
               ?>
             </h5> 
             <div id="button-scuola">
-            	<a href="<?php echo get_page_link_by_slug('archivio'); ?>" class="button expand">Scheda del film</a>
-            	<a href="<?php echo get_page_link_by_slug('archivio'); ?>" class="button expand">Spunti didattici</a>
+            	<a href="<?php echo post_permalink(); ?>" class="button expand">Scheda del film</a>
+            	<a href="<?php echo get_page_link_by_slug('index'); ?>" class="button expand">Spunti didattici</a>
             </div>
 
 		</div>

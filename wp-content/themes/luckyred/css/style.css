@@ -761,7 +761,6 @@ footer a {
   padding-left: 7px;
   padding-right: 7px;
   padding-top: 3px;
-  position: absolute;
 }
 
 .slider-film-catalogo .info-wrapper img {
@@ -1421,44 +1420,6 @@ footer a {
   position: relative;
 }
 
-.og-grid {
-    list-style: none;
-    margin: 0 auto;
-    width: 1170px;
-    position: relative;
-}
-
-.og-grid li {
-    display: inline-block;
-    margin: 10px 5px 0 5px;
-    vertical-align: top;
-    height: 250px;
-}
-
-.og-grid li > a,
-.og-grid li > a img {
-    border: none;
-    outline: none;
-}
-
-.og-expanded li {
-  padding-top: 10px;
-  display: none;
-}
-
-.og-expander-inner {
-  position: absolute;
-  width: 100%;
-  left: 0;
-  right: 0;
-}
- 
-@keyframes loader {
-    0% { background: #ddd; }
-    33% { background: #ccc; box-shadow: 0 0 1px #ccc, 15px 30px 1px #ccc, -15px 30px 1px #ddd; }
-    66% { background: #ccc; box-shadow: 0 0 1px #ccc, 15px 30px 1px #ddd, -15px 30px 1px #ccc; }
-}
-
 /*-- end img exstendes --*/
 
 .navigation li a,
@@ -1563,7 +1524,7 @@ footer a {
   margin-left: -15px;
 }
 
-.sezione-film ul {
+#sezione-film ul {
   margin-left: 0rem;
 }
 
@@ -1600,7 +1561,7 @@ footer a {
   margin-bottom: 50px;
 }
 
-#scuola .sezione-film ul li h4 {
+#scuola #sezione-film ul li h4 {
   font-family: Bebas Neue;
   margin-top: 10px;
   color: rgba(255,255,255,1);
@@ -1611,7 +1572,7 @@ footer a {
   padding-top: 3px;
 }
 
-#scuola .sezione-film ul li h3 {
+#scuola #sezione-film ul li h3 {
   font-family: Bebas Neue;
   color: rgba(72,72,72,1);
 }
@@ -1619,7 +1580,7 @@ footer a {
 .text-film p {
   font-family: 'Georgia';
   font-style: italic;
-  margin-top: 60px;
+  margin-top: -25px;
 }
 
 .text-film h5 {
@@ -1648,12 +1609,14 @@ footer a {
   font-style: italic;
   font-size: 80%;
   color: rgba(72,72,72,1);
+  text-decoration:underline;
 }
 
 #button-scuola a {
   background-color: rgba(243,33,36,1);
   color: rgba(255,255,255,1);
   font-family: Bebas Neue;
+  font-style: normal;
   font-size: 2em;
   padding: 10px 40px 10px 40px;
   margin-top: 20px;
@@ -1661,3 +1624,5 @@ footer a {
 }
 
 /* FINE PAGINA SCUOLA */
+
+

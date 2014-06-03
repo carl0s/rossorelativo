@@ -2365,9 +2365,8 @@ meta.foundation-mq-topbar {
     float: left; }
     .tabs dd > a {
       display: block;
-      background: #efefef;
       color: #222222;
-      padding: 1rem 2rem;
+      padding: 0.5rem 0.3rem;
       font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
       font-size: 1rem; }
       .tabs dd > a:hover {

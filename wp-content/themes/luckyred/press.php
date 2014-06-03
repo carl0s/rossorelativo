@@ -52,34 +52,50 @@ endif;
 			
 			<a class="archive-img" href="<?php echo get_permalink(); ?>"> <?php $image = get_field('locandina'); ?><img src="<?php echo $image['url']; ?>" /></a>
 
-
-			<ul id="og-grid" class="og-grid">
-				<li>
-					<a data-largesrc="<?php echo get_template_directory_uri() . '/img/blur.png' ?>" data-title="<?php echo get_the_title(); ?>" data-description="<?php echo get_the_content(); ?>">
-						<img src="<?php echo get_template_directory_uri() . '/img/gallery.png' ?>" alt="img01"/>
-					</a>
-				</li>
-				<li>
-					<a class="hide"><img class="press-icone" src="<?php echo get_template_directory_uri() . '/img/video.png' ?>"></a>
-				</li>
-				
-				<li>
-					<a class="hide"><img class="press-icone2" src="<?php echo get_template_directory_uri() . '/img/press.png' ?>"></a>
-				</li>
-				
-				<li>
-					<a class="hide"><img class="press-icone2" src="<?php echo get_template_directory_uri() . '/img/copy.png' ?>"></a>
-				</li>
-				
-				<li>
-					<a class="hide"><img class="press-icone2" src="<?php echo get_template_directory_uri() . '/img/audio.png' ?>"></a>
-				</li>
-			</ul>
+			<dl class="tabs" data-tab>
+				<dd class="tab-title">
+					<a href="#panel2-1"><img src="<?php echo get_template_directory_uri() . '/img/gallery.png' ?>"></a>
+				</dd>
+				<dd class="tab-title">
+					<a href="#panel2-2"><img src="<?php echo get_template_directory_uri() . '/img/video.png' ?>"></a>
+				</dd>
+				<dd class="tab-title">
+					<a href="#panel2-3"><img src="<?php echo get_template_directory_uri() . '/img/press.png' ?>"></a>
+				</dd>
+				<dd class="tab-title">
+					<a href="#panel2-4"><img src="<?php echo get_template_directory_uri() . '/img/copy.png' ?>"></a>
+				</dd>
+				<dd class="tab-title">
+					<a href="#panel2-5"><img src="<?php echo get_template_directory_uri() . '/img/audio.png' ?>"></a>
+				</dd>
+			</dl>
 
 		</div>
+
 		<?php endwhile; endif; ?>
 
+		<div class="tabs-content large-12 columns">
+			<div class="content" id="panel2-1">
+				<a href="<?php echo get_permalink($id) ?>">
+					<p>First panel content goes here...First panel content goes here...First panel content goes here...First panel content goes here...First panel content goes here...First panel content goes here...</p>
+				</a>
+			</div>
+			<div class="content" id="panel2-2">
+				<p>Second panel content goes here...</p>
+			</div>
+			<div class="content" id="panel2-3">
+				<p>Third panel content goes here...</p>
+			</div>
+			<div class="content" id="panel2-4">
+				<p>Fourth panel content goes here...</p>
+			</div>
+			<div class="content" id="panel2-5">
+				<p>Fourth panel content goes here...</p>
+			</div>
+		</div>
+
 	</div>
+
 
 	<div class="row">
 		<div class="large-3 columns end right">
