@@ -6,33 +6,33 @@
   
   <!-- <script type="text/javascript">$pesticide-debug: true;</script> -->
 
-  <div class="slider-cinema slideshow-wrapper">
-    <div class="fotorama slideshow" data-click="false" data-nav="thumbs" data-width="100%" data-ratio="1440/750" data-thumbheight="115" data-thumbwidth="180">
-      <?php 
-      $args = array(
-        'post_type'  => 'film',
-        'meta_key'   => 'in_uscita',
-        'meta_value' => 'No',
-        'posts_per_page' => 4,
-        'orderby' => 'title',
-        'order' => 'ASC'
-        );
-      $film = new WP_Query($args);
-      ?>
-      <?php if ($film->have_posts()) : while($film->have_posts()) : $film->the_post() ; ?>
-      <div class="slide" data-thumb="<?php echo wp_get_attachment_image_src(get_post_thumbnail_id($film->ID))[0]; // retrieving url from attached thumb as featured image ?>">
+  <!-- PROVA NEW SLIDE -->
+
+  <div class="fotorama slider-cinema" data-click="false" data-nav="thumbs" data-width="100%" data-ratio="1440/750" data-thumbheight="115" data-thumbwidth="180">
+    <?php 
+    $args = array(
+      'post_type'  => 'film',
+      'meta_key'   => 'in_uscita',
+      'meta_value' => 'No',
+      'posts_per_page' => 4,
+      'orderby' => 'title',
+      'order' => 'ASC'
+      );
+    $film = new WP_Query($args);
+    ?>
+    <?php if ($film->have_posts()) : while($film->have_posts()) : $film->the_post() ; ?>
+      <a href="<?php the_field('link_trailer'); ?>" data-caption="
         <div class='info-wrapper'>
-          <div class="row">
-          <div class='film-thumb-title large-5 columns'>
-            <h4><?php echo __('Altri film al cinema'); ?></h4>
+          <div class='row'>
+            <div class='film-thumb-title large-5 columns'>
+              <h4><?php echo __('Altri film al cinema'); ?></h4>
+            </div>
           </div>
-        </div>
-          <?php echo get_the_post_thumbnail($film->ID); ?>
           <div class='row'>
             <div class='info-title large-6 columns'>
-              <?php the_title('<h2>','</h2>'); ?>
-              <div class="row collapse">
-                <div class="large-9 columns">
+              <a href='<?php echo get_the_permalink(); ?>'><?php the_title('<h2>','</h2>'); ?></a>
+              <div class='row collapse'>
+                <div class='large-9 columns'>
                   <div class='info-content'>
                     <?php excerpt('35','<p>','</p>'); ?>
                   </div>
@@ -47,71 +47,70 @@
             </div>
           </div>
         </div>
-        <div class="row">
-          <div class="film-thumb large-12 columns">
+        <div class='row'>
+          <div class='film-thumb large-12 columns'>
             <?php the_field('video_thumbnail'); ?>
           </div>
         </div>
-      </div>
+        ">
+        <img src='<?php echo wp_get_attachment_image_src(get_post_thumbnail_id($film->ID), 'full')[0]; ?>'>
+      </a>
     <?php endwhile; endif; ?>
   </div>
-</div>
+
+  <!-- FINE PROVA NEW SLIDE -->
 
 <?php wp_reset_postdata(); ?>
 
-<div name="prossime-uscite" id="prossime-uscite" class="nextexit-bg large-12 columns">
-  <div class="row">
-    <h2><?php echo __('Prossime uscite'); ?></h2>
+<div name="prossime-uscite" id="prossime-uscite" class="nextexit-bg">
+    <div class="row">
+      <h2><?php echo __('Prossime uscite'); ?></h2>
 
-
-    <div class="slider-nextexit slideshow-wrapper">
-      <div class="fotorama slideshow" data-click="false" data-nav="thumbs" data-width="100%" data-ratio="1180/360" data-thumbheight="112" data-thumbwidth="180">
-        <?php 
-        $args = array(
-          'post_type'  => 'film',
-          'meta_key'   => 'in_uscita',
-          'meta_value' => 'Si',
-          'posts_per_page' => 3,
-          'orderby' => 'menu_order',
-          'order' => 'ASC'
-          );
-        $film = new WP_Query($args);
-        ?>
-        <?php if ($film->have_posts()) : while($film->have_posts()) : $film->the_post() ; ?>
-        <div class="slide" data-thumb="<?php echo wp_get_attachment_image_src(get_post_thumbnail_id($film->ID))[0]; // retrieving url from attached thumb as featured image ?>">
-          <div class='info-wrapper' data-id="<?php echo get_permalink($film->ID); ?>">
-            <?php echo get_the_post_thumbnail($film->ID); ?>
-            <div class='row'>
-              <div class='info-title large-5 columns'>
-                <?php the_title('<h2>','</h2>'); ?>
+      <div class="slider-nextexit slideshow-wrapper">
+        <div class="fotorama slideshow" data-click="false" data-auto="false" data-nav="thumbs" data-width="100%" data-ratio="1180/360" data-thumbheight="112" data-thumbwidth="180">
+          <?php 
+          $args = array(
+            'post_type'  => 'film',
+            'meta_key'   => 'in_uscita',
+            'meta_value' => 'Si',
+            'posts_per_page' => 3,
+            'orderby' => 'menu_order',
+            'order' => 'ASC'
+            );
+          $film = new WP_Query($args);
+          ?>
+          <?php if ($film->have_posts()) : while($film->have_posts()) : $film->the_post() ; ?>
+          <div class="slide" data-thumb="<?php echo wp_get_attachment_image_src(get_post_thumbnail_id())[0]; // retrieving url from attached thumb as featured image ?>">
+            <div class='info-wrapper' data-film-link="<?php echo get_the_permalink(get_the_ID()); ?>">
+              <?php echo get_the_post_thumbnail(); ?>
+              <div class='row'>
+                <div class='info-title large-5 columns'>
+                  <a href="<?php echo get_the_permalink(); ?>"><?php the_title('<h2>','</h2>'); ?></a>
+                </div>
+              </div>
+              <div class='row'>
+                <div class='info-date large-3 large-offset-9 end columns'>
+                  <h4><?php echo date_i18n('j', strtotime(get_field('data_di_uscita'))); ?></h4>
+                  <h5><?php echo date_i18n('F', strtotime(get_field('data_di_uscita'))); ?></h5>
+                  <h6><?php echo date_i18n('Y', strtotime(get_field('data_di_uscita'))); ?></h6>
+                </div>
               </div>
             </div>
-            <div class='row'>
-              <div class='info-date large-3 large-offset-9 end columns'>
-                <h4><?php echo date_i18n('j', strtotime(get_field('data_di_uscita'))); ?></h4>
-                <h5><?php echo date_i18n('F', strtotime(get_field('data_di_uscita'))); ?></h5>
-                <h6><?php echo date_i18n('Y', strtotime(get_field('data_di_uscita'))); ?></h6>
+            <div class="row">
+              <div class="film-thumb large-12 columns">
+                <?php the_field('video_thumbnail'); ?>
               </div>
             </div>
           </div>
-          <div class="row">
-            <div class="film-thumb large-12 columns">
-              <?php the_field('video_thumbnail'); ?>
-            </div>
-          </div>
-        </div>
-      <?php endwhile; endif; ?>
+        <?php endwhile; endif; ?>
+      </div>
+      <a href="" class="cta-page button right"><?php echo __('Vai alla pagina'); ?></a>
     </div>
-    <a href="" class="cta-page button right"><?php echo __('Vai alla pagina'); ?></a>
   </div>
-</div>
-</div>
-</div>
-
 
 <?php wp_reset_postdata(); ?>
 
-<div class="ondemand-bg large-12 columns">
+<div class="ondemand-bg">
   <div class="row">
     <h2><?php echo __('On demand'); ?></h2>
 
@@ -133,40 +132,36 @@
             <?php echo get_the_post_thumbnail($film->ID); ?>
             <div class='row'>
               <div class='info-title large-5 large-offset-7 end columns'>
-                <?php the_title('<h2>','</h2>'); ?>
+                <a href="<?php echo get_the_permalink(); ?>"><?php the_title('<h2>','</h2>'); ?></a>
                 <div class="row collapse">
-                <div class="large-9 columns">
-                  <div class='info-content'>
-                    <?php excerpt('35','<p>','</p>'); ?>
+                  <div class="large-9 columns">
+                    <div class='info-content'>
+                      <?php excerpt('35','<p>','</p>'); ?>
+                    </div>
                   </div>
                 </div>
-              </div>
+                <a href="<?php echo get_the_permalink($film->ID); ?>" class="button right"><?php echo __('Vai alla pagina'); ?></a>
               </div>
             </div>
           </div>
           <div class="row">
             <div class="film-thumb large-12 columns">
               <?php the_field('video_thumbnail'); ?>
-
             </div>
           </div>
         </div>
       <?php endwhile; endif; ?>
     </div>
-    <a class="button right [tiny small large]"><?php echo __('Vai alla pagina'); ?></a>
   </div>
 </div>
-</div>
-</div>
 
 
-<div class="blog-archivio-bg large-12 columns">
+<div class="blog-archivio-bg">
   <div class="row">
     <div class="blog large-5 columns">
       <h2><?php echo __('Blog'); ?></h2>
       <h4>PROVA TESTO</h4>
     </div>
-
     <div class="archivio large-7 columns">
       <h2><?php echo __('Archivio Film'); ?></h2>
       <br>
@@ -175,15 +170,16 @@
         <?php if (have_posts()) : while(have_posts()) : the_post(); ?>
         <div class="large-4 columns">
           <a class="archive-img" href="<?php echo get_permalink(); ?>"><?php $image = get_field('locandina'); ?><img src="<?php echo $image['url']; ?>" /></a>
-          <a href="<?php echo get_permalink(); ?>">
-            <h3>
-              <?php 
-              $mytitle = get_the_title();
-              if (strlen($mytitle)>17) $mytitle=substr($mytitle, 0,15) . '...';
-              echo $mytitle;
-              ?>
-            </h3>
-          </a>
+          <div class="title-layout">
+            <a href="<?php echo get_permalink(); ?>">
+              <h3>
+                <?php 
+                $mytitle = get_the_title();
+                echo $mytitle;
+                ?>
+              </h3>
+            </a>
+          </div>
           <h5><span><?php echo __('Regia'); ?></span>  
             <?php $registi = get_field('regia');
             $i = 0;
@@ -246,8 +242,9 @@
       </div>
     </div>
   </div>
-  <div class="mission large-12 columns">
-    <div class="row">
+<div class="mission">
+  <div class="row collapse">
+    <div class="large-12 column">
       <h2><?php echo __('La nostra mission'); ?></h2>
       <p>Lucky Red è una società di distribuzione e produzione cinematografica, fondata nel 1987 da Andrea Occhipinti.<br>
         La socità acquista e distribuisce film considerati d'essai, attraverso festival cinematografici importanti come il festival di Cannes<br> e di Berlino.
@@ -255,5 +252,6 @@
       </p>
     </div>
   </div>
-    <!--FOOTER-->
+</div>
+<!--FOOTER-->
   <?php get_footer(); ?>

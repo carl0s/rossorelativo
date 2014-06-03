@@ -20,19 +20,67 @@
     <div class="archivio-pg row">
       <div class="large-12 columns">
         <h2><?php echo __('Archivio'); ?></h2>
+        <?php 
+
+        $dir_args = array(
+          'post_type' => 'regista',
+          'number_posts' => -1
+          );
+
+        $query = new WP_Query($dir_args);
+        $i=0;
+        foreach ($query->posts as $d):
+          $directors[$i] = $d->post_title;
+        $i++;
+        endforeach;
+
+        $args = array();
+        $args['wp_query'] = array('post_type' => 'film',
+          'posts_per_page' => 5,
+          'order' => 'DESC',
+          'orderby' => 'date');
+
+
+        $args['fields'][] = array('type' => 'search',
+          'label' => 'Search',
+          'value' => '');
+
+
+        $args['fields'][] = array('type' => 'taxonomy',
+          'label' => 'Genere',
+          'taxonomy' => 'category',
+          'format' => 'select',
+          'operator' => 'AND');
+
+        $args['fields'][] = array('type' => 'submit',
+          'value' => 'Search');
+        $my_search_object = new WP_Advanced_Search($args);
+
+        $my_search_object->the_form();
+
+        $temp_query = $wp_query;
+        $wp_query = $my_search_object->query();
+
+        ?>
       </div>
     </div>
   </div>
   <div class="option-visual-page row">
     <div class="large-6 columns">
-      <h6><?php echo __('Ordina per'); ?></h6>
+      <ul class="order-film">
+      <li><?php echo __('Ordina per'); ?></li>
+      <li><a href="?posts=4#archivio">Nome</a></li>
+      <li><a href="?posts=8#archivio">Più recente</a></li>
+      <li><a href="?posts=16#archivio">Più vecchio</a></li>
+      </ul>
     </div>
-    <div class="large-6 columns">
-      <h6><?php echo __('Visualizza'); ?></h6>
+    <div class="large-6 end columns">
       <ul class="view-film">
+      <li><?php echo __('Visualizza'); ?></li>
       <li><a href="?posts=4#archivio">4</a></li>
       <li><a href="?posts=8#archivio">8</a></li>
-      <li><a href="?posts=16#archivio">16</a></li>
+      <li><a href="?posts=12#archivio">12</a></li>
+      <li><?php echo __('per pagina'); ?></li>
       </ul>
     </div>
   </div>
@@ -40,15 +88,16 @@
     <?php $paged = (get_query_var('paged')) ? get_query_var('paged') : 1; query_posts(array('post_type'=>'film', 'orderby' => 'title', 'order' => 'ASC', 'posts_per_page'=>$post_initial_view, 'paged'=>$paged)); ?>
     <?php if (have_posts()) : while(have_posts()) : the_post(); ?>
       <div class="layout-film large-3 columns">
+        <div class="title-layout">
           <a href="<?php echo get_the_permalink(); ?>">
           <h3>
             <?php 
             $mytitle = get_the_title();
-            if (strlen($mytitle)>17) $mytitle=substr($mytitle, 0,15) . '...';
             echo $mytitle;
             ?>
           </h3>
           </a>
+        </div>
           <a class="archive-img" href="<?php echo get_permalink(); ?>"><?php $image = get_field('locandina'); ?><img src="<?php echo $image['url']; ?>" /></a>
           <h5><span><?php echo __('Regia'); ?></span>  
             <?php $registi = get_field('regia');

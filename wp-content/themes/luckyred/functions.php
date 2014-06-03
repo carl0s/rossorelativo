@@ -1,13 +1,17 @@
 <?php
 
+require_once('wp-advanced-search/wpas.php');
 function luckyred_scripts() {
   wp_enqueue_style( 'luckyred-foundation', get_template_directory_uri() . '/css/foundation.css', array(), '1.0.0' );
   wp_enqueue_style( 'luckyred-general', get_template_directory_uri() . '/css/style.css', array(), '1.0.0' );
+  wp_enqueue_style( 'luckyred-fotorama', get_template_directory_uri() . '/css/fotorama.css', array(), '1.0.0' );
+  wp_enqueue_style( 'luckyred-general', get_template_directory_uri() . '/css/style.css', array(), '1.0.0' ); 
 
   
   wp_enqueue_script( 'jquery-script', get_template_directory_uri() . '/js/jquery.js', array(), '20131209', true );
   wp_enqueue_script( 'modernizr-script', get_template_directory_uri() . '/js/modernizr.js', array(), '20131209' );
   wp_enqueue_script( 'foundation-script', get_template_directory_uri() . '/js/foundation.min.js', array(), '20131209', true );
+  wp_enqueue_script( 'fotorama-script', get_template_directory_uri() . '/js/fotorama.js', array(), '20131209', true );
 
 
   wp_enqueue_script( 'custom-script', get_template_directory_uri() . '/js/custom.js', array(), '20131209', true);
@@ -18,11 +22,24 @@ function luckyred_scripts() {
 add_theme_support( 'post-thumbnails', array( 'post', 'film', 'regista', 'cinema', 'page' ) ); // Posts and Movies
 add_action( 'wp_enqueue_scripts', 'luckyred_scripts', 'wp_print_styles', 'add_custom_font', 'add_custom_size', 'wpbeginner_numeric_posts_nav' );
 
+
+
 register_nav_menus( array(
   'main_menu' => 'My Custom Main Menu'
 ) );
 
 show_admin_bar(false);
+
+/**
+ * Redirect non-admins to the homepage after logging into the site.
+ *
+ * @since   1.0
+ */
+function soi_login_redirect( $redirect_to, $request, $user  ) {
+  return ( is_array( $user->roles ) && in_array( 'administrator', $user->roles ) ) ? admin_url() : site_url();
+} // end soi_login_redirect
+add_filter( 'login_redirect', 'soi_login_redirect', 'trade',10, 3 );
+
 
 function debug($var) {
   return "<pre>" . var_dump($var) . "</pre>";
@@ -81,7 +98,7 @@ function wpbeginner_numeric_posts_nav() {
 
   /** Previous Post Link */
   if ( get_previous_posts_link() )
-    printf( '<li>%s</li>' . "\n", get_previous_posts_link('<<') );
+    printf( '<li>%s</li>' . "\n", get_previous_posts_link('<') );
 
   /** Link to first page, plus ellipses if necessary */
   if ( ! in_array( 1, $links ) ) {
@@ -111,7 +128,7 @@ function wpbeginner_numeric_posts_nav() {
 
   /** Next Post Link */
   if ( get_next_posts_link() )
-    printf( '<li>%s</li>' . "\n", get_next_posts_link('>>') );
+    printf( '<li>%s</li>' . "\n", get_next_posts_link('>') );
 
   echo '</ul></div>' . "\n";
 
@@ -126,6 +143,8 @@ function get_page_link_by_slug($page_slug) {
     return "#";
   endif;
 }
+
+
 
 
 
