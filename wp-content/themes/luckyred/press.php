@@ -38,7 +38,7 @@ endif;
 	    <div class="large-6 columns">
 	      <ul class="order-film">
 	      <li><?php echo __('Ordina per'); ?></li>
-	      <li><a href="?posts=4#archivio">Nome</a></li>
+	      <li><a href="?orderby=title">Nome</a></li>
 	      <li><a href="?posts=8#archivio">Più recente</a></li>
 	      <li><a href="?posts=16#archivio">Più vecchio</a></li>
 	      </ul>
