@@ -66,9 +66,9 @@ $args = array();
 	    <div class="large-6 columns">
 	      <ul class="order-film">
 	      <li><?php echo __('Ordina per'); ?></li>
-	      <li><a href="orderby=title">Nome</a></li>
-	      <li><a href="orderby=date">Più recente</a></li>
-	      <li><a href="orderby=rand">Più vecchio</a></li>
+	      <li><a href="?orderby=title">Nome</a></li>
+	      <li><a href="?orderby=date">Più recente</a></li>
+	      <li><a href="?orderby=rand">Più vecchio</a></li>
 	      </ul>
 	    </div>
 	    <div class="large-6 end columns">

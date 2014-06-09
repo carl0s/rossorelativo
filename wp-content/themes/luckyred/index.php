@@ -160,8 +160,18 @@
   <div class="row">
     <div class="blog large-5 columns">
       <h2><?php echo __('Blog'); ?></h2>
-      <h4>PROVA TESTO</h4>
+      <br>
+      <?php query_posts(array('post_type'=>'blog', 'posts_per_page'=>1)); ?>
+      <?php if (have_posts()) : while(have_posts()) : the_post(); ?>
+      <?php echo get_the_post_thumbnail(); ?>
+      <h4><span><?php echo the_title(); ?></span></h4>
+      <p><?php excerpt('50','<p>','</p>'); ?></p>
+      <?php endwhile; endif; ?>
+      <div>
+          <a href="<?php echo get_permalink(); ?>" class="button right">Leggi articolo</a>
+      </div>
     </div>
+
     <div class="archivio large-7 columns">
       <h2><?php echo __('Archivio Film'); ?></h2>
       <br>
