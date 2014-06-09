@@ -21,6 +21,29 @@ if($_GET):
 else:
   $post_initial_view = 4;
 endif;
+
+$args = array();
+          $args['wp_query'] = array(
+                                  'post_type' => 'film',
+                                  'posts_per_page' => $post_initial_view,
+                                  'orderby' => $post_orderby,
+                                  'order' => 'ASC');
+          $args['fields'][] = array(
+                                  'type' => 'search',
+                                  'label' => 'Cerca per titolo',
+                                  'placeholder' => 'Cerca il film che fa per te...');
+          $args['fields'][] = array(
+                                  'type' => 'taxonomy',
+                                  'label' => 'Cerca per genere',
+                                  'placeholder' => 'Seleziona il genere',
+                                  'taxonomy' => 'category');                          
+
+          $args['fields'][] = array(
+                                  'type' => 'submit',
+                                  'value' => 'Search');
+
+          $search = new WP_Advanced_Search($args);
+
 ?>
 
 <div id="press" class="ricerca-bg large-12 columns">
@@ -29,6 +52,11 @@ endif;
         <p>Cerca il tuo film all'interno del catalogo.<br>
         Scegli il contenuto multimediale e la risoluzione che desideri<br>
         e avvia il download.</p>
+        <?php
+        
+          $search->the_form();
+
+        ?>
       </div>
     </div>
   </div>
@@ -38,9 +66,9 @@ endif;
 	    <div class="large-6 columns">
 	      <ul class="order-film">
 	      <li><?php echo __('Ordina per'); ?></li>
-	      <li><a href="?posts=4#archivio">Nome</a></li>
-	      <li><a href="?posts=8#archivio">Più recente</a></li>
-	      <li><a href="?posts=16#archivio">Più vecchio</a></li>
+	      <li><a href="orderby=title">Nome</a></li>
+	      <li><a href="orderby=date">Più recente</a></li>
+	      <li><a href="orderby=rand">Più vecchio</a></li>
 	      </ul>
 	    </div>
 	    <div class="large-6 end columns">
@@ -56,6 +84,12 @@ endif;
 		
 
 		<?php $paged = (get_query_var('paged')) ? get_query_var('paged') : 1; query_posts(array('post_type'=>'film', 'orderby'=>$post_orderby, 'order'=>'ASC', 'posts_per_page'=>$post_initial_view, 'paged'=>$paged)); ?>
+		
+		<?php
+    $temp = $wp_query;
+    $wp_query = $search->query();
+    ?>
+
 		<?php
 	 	if (have_posts()) : while(have_posts()) : the_post();
 	 	?>
@@ -130,7 +164,16 @@ endif;
                   </div>
                 </div>
               </div>
-              <?php endwhile; endif; ?>
+              <?php endwhile;
+          else:
+            echo '<p>Spiacenti. Nessun risultato trovato</p>';
+          endif;
+
+
+          $wp_query = $temp;
+          wp_reset_query();
+
+          ?>
             </div>
           </div>
 
@@ -150,7 +193,11 @@ endif;
 			</div>
 		</div>
 
+
+
 	</div>
+
+
 
 
 	<div class="row">

@@ -32,9 +32,13 @@ $('.icon-search').click(function(){
 $(document).foundation();
 init();
 
-$(function() {
-    Grid.init();
-    });
+$(document).ready(function(){
+  $('input').iCheck({
+    checkboxClass: 'icheckbox_square-red',
+    radioClass: 'iradio_square-red',
+    increaseArea: '20%' // optional
+  });
+});
 
 $('.slider-nextexit .slideshow').on(
     'fotorama:show fotorama:showend',
