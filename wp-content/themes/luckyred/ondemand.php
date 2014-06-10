@@ -18,6 +18,8 @@
     $args = array();
           $args['wp_query'] = array(
                                   'post_type' => 'film',
+                                  'meta_key' => 'on_demand',
+                                  'meta_value' => 1,
                                   'posts_per_page' => $post_initial_view,
                                   'orderby' => $post_orderby,
                                   'order' => 'ASC');

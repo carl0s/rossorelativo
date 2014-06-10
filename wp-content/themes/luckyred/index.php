@@ -104,7 +104,7 @@
           </div>
         <?php endwhile; endif; ?>
       </div>
-      <a href="" class="cta-page button right"><?php echo __('Vai alla pagina'); ?></a>
+      <a href="" class="cta-page button right"><?php echo __('Vai al film'); ?></a>
     </div>
   </div>
 
@@ -140,7 +140,7 @@
                     </div>
                   </div>
                 </div>
-                <a href="<?php echo get_the_permalink($film->ID); ?>" class="button right"><?php echo __('Vai alla pagina'); ?></a>
+                <a href="<?php echo get_the_permalink($film->ID); ?>" class="button right"><?php echo __('Vai al film'); ?></a>
               </div>
             </div>
           </div>
