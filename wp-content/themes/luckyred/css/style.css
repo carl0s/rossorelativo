@@ -1074,7 +1074,7 @@ footer .button:active {
 }
 
 .azienda-bg {
-  background-image: url(../img/blur2.png);
+  background-image: url(../img/blur_bn.png);
   background-repeat: no-repeat;
   padding-top: 35px;
   padding-bottom: 90px;
@@ -1706,7 +1706,6 @@ footer .button:active {
 
 .img-film-download .film-thumb-title h4 a {
   color: rgba(255,255,255,1);
-  background-color: rgba(0,0,0,0.8);
   padding: 10px;
   font-family: "Bebas Neue";
   font-size: 1em;
@@ -1714,6 +1713,22 @@ footer .button:active {
   bottom: -560px;
   z-index: 10;
   display: inline-block;
+  background-color: rgba(0,0,0,0.8);
+}
+
+.info-date .share {
+  display: block;
+}
+
+.info-date .share:hover div.inner {
+  display: block
+}
+
+.info-date .share div.inner {
+  background-color: rgba(0,0,0,0.8);
+  width: 130px;
+  margin-left: -15px;
+  display: none;
 }
 /* FINE FOTO FILM */
 

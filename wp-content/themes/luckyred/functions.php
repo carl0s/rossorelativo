@@ -12,6 +12,7 @@ function luckyred_scripts() {
   wp_enqueue_script( 'foundation-script', get_template_directory_uri() . '/js/foundation.min.js', array(), '20131209', true );
   wp_enqueue_script( 'fotorama-script', get_template_directory_uri() . '/js/fotorama.js', array(), '20131209', true );
   wp_enqueue_script( 'checkbox-script', get_template_directory_uri() . '/js/icheck.js', array(), '20131209', true );
+  wp_enqueue_script( 'share-script', get_template_directory_uri() . '/js/jquery.share.js', array(), '20131209', true );
 
 
   wp_enqueue_script( 'custom-script', get_template_directory_uri() . '/js/custom.js', array(), '20131209', true);
