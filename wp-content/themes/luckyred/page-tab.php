@@ -6,6 +6,28 @@
 
 <?php get_header(); ?>
 
-<dl class="tabs" data-tab> <dd class="active"><a href="#panel2-1">Tab 1</a></dd> <dd><a href="#panel2-2">Tab 2</a></dd> <dd><a href="#panel2-3">Tab 3</a></dd> <dd><a href="#panel2-4">Tab 4</a></dd> </dl> <div class="tabs-content"> <div class="content active" id="panel2-1"> <p>First panel content goes here...</p> </div> <div class="content" id="panel2-2"> <p>Second panel content goes here...</p> </div> <div class="content" id="panel2-3"> <p>Third panel content goes here...</p> </div> <div class="content" id="panel2-4"> <p>Fourth panel content goes here...</p> </div> </div>
+
+<br><br><br><br><br><br><br><br><br><br>
+
+<br><br><br><br><br>
+<br><br><br><br><br>
+<br><br><br><br><br>
+
+<div class="slideToggler2">
+  click to open an EXPANDING COLLAPSING DIV
+</div>
+<div class="slideContent2">
+  content content content <span class="collaps2"><b>CLOSE</b></span>
+</div>
+
+
+<img id="expanderHead" style="cursor:pointer;" src="<?php echo get_template_directory_uri() . '/img/gallery.png' ?>"/>
+<div id="expanderContent" style="display:none">
+  content<br />
+  content<br />
+  content<br />
+  content<br />
+  content<br />
+</div>
 
 <?php get_footer() ?>

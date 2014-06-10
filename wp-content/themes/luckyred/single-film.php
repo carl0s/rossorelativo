@@ -188,7 +188,14 @@
             </div>
             <div class="large-6 large-offset-1 columns">
               <h4>Il manifesto del film</h4>
-              <a href="#" class="button left [tiny small large]"><?php echo __('Download'); ?></a>
+              <?php
+                if( get_field('uscita_del_materiale_di_stampa') ):
+                  $file = get_field('uscita_del_materiale_di_stampa');
+              ?>
+                <a href="<?php echo $file['url']; ?>" class="button left large"><?php echo __('Download'); ?></a>
+              <?php
+                endif;
+              ?>
             </div>
           </div>
         </div>

@@ -59,25 +59,25 @@
 
 <?php wp_reset_postdata(); ?>
 
-<div id="prossime-uscite" class="nextexit-bg large-12 columns">
+<div name="prossime-uscite" id="prossime-uscite" class="nextexit-bg large-12 columns">
   <div class="row">
     <h2><?php echo __('Prossime uscite'); ?></h2>
-
     <div class="slider-nextexit slideshow-wrapper">
-      <div class="fotorama slideshow" data-click="false" data-nav="thumbs" data-width="100%" data-ratio="1180/360" data-thumbheight="112" data-thumbwidth="180">
+      <div class="fotorama slideshow" data-click="false" data-auto="false" data-nav="thumbs" data-width="100%" data-ratio="1180/360" data-thumbheight="112" data-thumbwidth="180">
         <?php 
         $args = array(
           'post_type'  => 'film',
           'meta_key'   => 'in_uscita',
           'meta_value' => 'Si',
           'posts_per_page' => 3,
-          'orderby' => 'data_di_uscita'
+          'orderby' => 'menu_order',
+          'order' => 'ASC'
           );
         $film = new WP_Query($args);
         ?>
         <?php if ($film->have_posts()) : while($film->have_posts()) : $film->the_post() ; ?>
         <div class="slide" data-thumb="<?php echo wp_get_attachment_image_src(get_post_thumbnail_id($film->ID))[0]; // retrieving url from attached thumb as featured image ?>">
-          <div class='info-wrapper'>
+          <div class='info-wrapper' data-id="<?php echo get_permalink($film->ID); ?>">
             <?php echo get_the_post_thumbnail($film->ID); ?>
             <div class='row'>
               <div class='info-title large-5 columns'>
@@ -100,9 +100,8 @@
         </div>
       <?php endwhile; endif; ?>
     </div>
-    <a href="<?php echo get_permalink($film->ID); ?>" class="button right [tiny small large]"><?php echo __('Vai alla pagina'); ?></a>
+    <a href="" class="cta-page button right"><?php echo __('Vai alla pagina'); ?></a>
   </div>
-</div>
 </div>
 </div>
 
@@ -133,40 +132,43 @@
               <div class='info-title large-5 large-offset-7 end columns'>
                 <?php the_title('<h2>','</h2>'); ?>
                 <div class="row collapse">
-                <div class="large-9 columns">
-                  <div class='info-content'>
-                    <?php excerpt('35','<p>','</p>'); ?>
+                  <div class="large-9 columns">
+                    <div class='info-content'>
+                      <?php excerpt('35','<p>','</p>'); ?>
+                    </div>
                   </div>
                 </div>
-              </div>
+                <a href="<?php echo get_the_permalink($film->ID); ?>" class="button right [tiny small large]"><?php echo __('Vai alla pagina'); ?></a>
               </div>
             </div>
           </div>
           <div class="row">
             <div class="film-thumb large-12 columns">
               <?php the_field('video_thumbnail'); ?>
-
             </div>
           </div>
         </div>
       <?php endwhile; endif; ?>
     </div>
-
     <a href="<?php  ?>" class="button right [tiny small large]"><?php echo __('Vai alla pagina'); ?></a>
-  </div>
+    </div>
 </div>
 </div>
 </div>
-
-
 <div class="blog-archivio-bg large-12 columns">
   <div class="row">
     <div class="blog large-5 columns">
       <h2><?php echo __('Blog'); ?></h2>
-      <h4>PROVA TESTO</h4>
-      <a href="<?php echo get_permalink( get_page_by_title( 'single-blog' )); ?>" class="button right [tiny small large]"><?php echo __('Vai alla pagina'); ?></a>
+      <?php
+      $args = array( 'post_type' => 'post', 'posts_per_page' => 1, );
+      $loopblog = new WP_Query( $args );
+      while ( $loopblog->have_posts() ) : $loopblog->the_post(); ?>
+        <?php echo get_the_post_thumbnail($loopblog->ID); ?>  
+        <h3> <?php the_title(); ?> </h3>
+        <p><?php excerpt('35','<p>','</p>'); ?></p>    
+      <?php endwhile; ?>
+        <a href="<?php echo get_permalink(); ?>" class="button right">Vai al blog</a>
     </div>
-
     <div class="archivio large-7 columns">
       <h2><?php echo __('Archivio Film'); ?></h2>
       <br>
@@ -175,16 +177,17 @@
         <?php if (have_posts()) : while(have_posts()) : the_post(); ?>
         <div class="large-4 columns">
           <a class="archive-img" href="<?php echo get_permalink(); ?>"><?php $image = get_field('locandina'); ?><img src="<?php echo $image['url']; ?>" /></a>
+          <div class="title-layout">
           <a href="<?php echo get_permalink(); ?>">
             <h3>
               <?php 
               $mytitle = get_the_title();
-              if (strlen($mytitle)>17) $mytitle=substr($mytitle, 0,15) . '...';
               echo $mytitle;
               ?>
             </h3>
           </a>
-          <h5><span><?php echo __('Regia:'); ?></span>  
+          </div>
+          <h5><span><?php echo __('Regia'); ?></span>  
             <?php $registi = get_field('regia');
             $i = 0;
             foreach($registi as $regista):
@@ -200,7 +203,7 @@
               ?>
             </h5>
             <h5>
-              <span><?php echo __('Genere:'); ?></span> 
+              <span><?php echo __('Genere'); ?></span> 
               <?php
               $categories = get_the_category();
               $separator = ' ';
@@ -214,7 +217,7 @@
               ?>
             </h5> 
             <h5>
-              <span><?php echo __('Nazione:'); ?></span>
+              <span><?php echo __('Nazione'); ?></span>
               <?php
               $nazioni = get_field('nazione');
               $i=0;
@@ -231,7 +234,7 @@
                 ?>
               </h5>
               <h5>
-                <span><?php echo __('Anno:'); ?></span>
+                <span><?php echo __('Anno'); ?></span>
                 <?php
                 $anno = get_field('anno');
                 ?>
@@ -241,7 +244,7 @@
           <?php endwhile; endif; ?>
         </div>
         <div>
-          <a class="button right [tiny small large]">Guarda l'archivio</a>
+          <a href="<?php echo get_page_link_by_slug('archivio'); ?>" class="button right">Guarda l'archivio</a>
         </div>
       </div>
     </div>
@@ -256,8 +259,4 @@
     </div>
   </div>
     <!--FOOTER-->
-    <?php get_footer(); ?>
-
-  <script>
-  $(document).foundation();
-  </script>
+  <?php get_footer(); ?>

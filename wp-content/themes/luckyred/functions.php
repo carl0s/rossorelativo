@@ -2,25 +2,20 @@
 
 function luckyred_scripts() {
   wp_enqueue_style( 'luckyred-foundation', get_template_directory_uri() . '/css/foundation.css', array(), '1.0.0' );
-  wp_enqueue_style( 'luckyred-general', get_template_directory_uri() . '/css/style.css', array(), '1.0.0' );
-
-  if (!is_admin()) {
-      wp_dequeue_script( 'jquery' );
-      wp_deregister_script( 'jquery' );
-      wp_register_script( 'jquery', get_template_directory_uri() . '/js/vendor/jquery.js', array(), '20140226', true);
-      wp_register_script( 'jquery-migrate', get_template_directory_uri() . '/js/jquery-migrate-1.2.1.min.js', array(), '20140226', true);
-      wp_enqueue_script( 'jquery' );
-      wp_enqueue_script( 'jquery-migrate' );
-  }
-
+  wp_enqueue_style( 'luckyred-general', get_template_directory_uri() . '/css/style.css', array(), '1.0.0' ); 
+  
+  wp_enqueue_script( 'jquery-script', get_template_directory_uri() . '/js/jquery.js', array(), '20131209', true );
   wp_enqueue_script( 'modernizr-script', get_template_directory_uri() . '/js/modernizr.js', array(), '20131209' );
   wp_enqueue_script( 'foundation-script', get_template_directory_uri() . '/js/foundation.min.js', array(), '20131209', true );
 
   wp_enqueue_script( 'custom-script', get_template_directory_uri() . '/js/custom.js', array(), '20131209', true);
+
+  wp_enqueue_script( 'grid-script', get_template_directory_uri() . '/js/grid.js', array(), '20131209', true);
+
 }
 
 add_theme_support( 'post-thumbnails', array( 'post', 'film', 'regista', 'cinema', 'page' ) ); // Posts and Movies
-add_action( 'wp_enqueue_scripts', 'luckyred_scripts', 'wp_print_styles', 'add_custom_font', 'add_custom_size', 'wpbeginner_numeric_posts_nav' );
+add_action( 'wp_enqueue_scripts', 'luckyred_scripts', 'wp_print_styles', 'add_custom_font', 'add_custom_size', 'wpbeginner_numeric_posts_nav', 'legacy_comments', 'mytheme_comment' );
 
 register_nav_menus( array(
   'main_menu' => 'My Custom Main Menu'
@@ -85,7 +80,7 @@ function wpbeginner_numeric_posts_nav() {
 
   /** Previous Post Link */
   if ( get_previous_posts_link() )
-    printf( '<li>%s</li>' . "\n", get_previous_posts_link('<<') );
+    printf( '<li>%s</li>' . "\n", get_previous_posts_link('<') );
 
   /** Link to first page, plus ellipses if necessary */
   if ( ! in_array( 1, $links ) ) {
@@ -115,12 +110,21 @@ function wpbeginner_numeric_posts_nav() {
 
   /** Next Post Link */
   if ( get_next_posts_link() )
-    printf( '<li>%s</li>' . "\n", get_next_posts_link('>>') );
+    printf( '<li>%s</li>' . "\n", get_next_posts_link('>') );
 
   echo '</ul></div>' . "\n";
 
 }
 
+function get_page_link_by_slug($page_slug) {
+  $page = get_page_by_path($page_slug);
+  if ($page) :
+    
+    return get_permalink( $page->ID );
+  else :
+    return "#";
+  endif;
+}
 
 
 ?>
