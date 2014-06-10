@@ -119,7 +119,7 @@
         <?php 
         $args = array(
           'post_type'  => 'film',
-          'meta_key'   => 'stato_film',
+          'meta_key'   => 'on_demand',
           'meta_value' => 1,
           'posts_per_page' => 3
           );

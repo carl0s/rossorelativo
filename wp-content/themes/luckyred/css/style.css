@@ -2297,4 +2297,17 @@ footer .button:active {
   float: right;
 }
 
+.pagination a{
+  color: rgba(243,33,36,1);
+  font-size: 1.2em;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+.pagination .current {
+  font-size: 1.2em;
+  background-color: rgba(243,33,36,1);
+  font-family: 'Georgia';
+}
+
 /* --FINE FORM RICERCA-- */
