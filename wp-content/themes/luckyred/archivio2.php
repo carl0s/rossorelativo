@@ -1,51 +1,12 @@
   <?php
-    /*
-    * Template Name: Stile Archivio
-    */
+    
+    
 
     if($_GET):
       $post_initial_view = $_GET['posts'];
     else:
       $post_initial_view = 4;
     endif;
-
-    if($_GET):
-      $post_orderby = $_GET['orderby'];
-    else:
-      $post_orderby = 'title';
-    endif;
-
-    $args = array();
-          $args['wp_query'] = array(
-                                  'post_type' => 'film',
-                                  'posts_per_page' => $post_initial_view,
-                                  'orderby' => $post_orderby,
-                                  'order' => 'ASC');
-          $args['fields'][] = array(
-                                  'type' => 'search',
-                                  'label' => 'Cerca per titolo',
-                                  'placeholder' => 'Cerca il film che fa per te...');
-          $args['fields'][] = array(
-                                  'type' => 'taxonomy',
-                                  'label' => 'Cerca per genere',
-                                  'default' => '',
-                                  'allow_null' => 'Scegli un genere',
-                                  'taxonomy' => 'category',
-                                  'format' => 'select',
-                                  'operator' => 'AND',
-                                  'term_args' => array(
-                                                       'hide_empty' => true,
-                                                       'orderby' => 'name',
-                                                       'order' => 'ASC'
-                                                      )
-                                  );                         
-
-          $args['fields'][] = array(
-                                  'type' => 'submit',
-                                  'value' => 'Search');
-
-          $search = new WP_Advanced_Search($args);
-
   ?>
 
   <!--HEADER-->
@@ -58,11 +19,9 @@
     <div class="archivio-pg row">
       <div class="large-12 columns">
         <h2><?php echo __('Archivio'); ?></h2>
-        <?php
         
-          $search->the_form();
+        <?php echo do_shortcode('[searchandfilter fields="search,category"]'); ?>
 
-        ?>
       </div>
     </div>
   </div>
@@ -70,9 +29,9 @@
     <div class="large-6 columns">
       <ul class="order-film">
       <li><?php echo __('Ordina per'); ?></li>
-        <li><a href="?orderby=title">Nome</a></li>
-        <li><a href="?orderby=date">Più recente</a></li>
-        <li><a href="?orderby=rand">Più vecchio</a></li>
+      <li><a href="?posts=4#archivio">Nome</a></li>
+      <li><a href="?posts=8#archivio">Più recente</a></li>
+      <li><a href="?posts=16#archivio">Più vecchio</a></li>
       </ul>
     </div>
     <div class="large-6 end columns">
@@ -86,13 +45,7 @@
     </div>
   </div>
   <div class="archivio-film row">
-    <?php $paged = (get_query_var('paged')) ? get_query_var('paged') : 1; query_posts(array('post_type'=>'film', 'orderby' => $post_orderby, 'order' => 'ASC', 'posts_per_page'=>$post_initial_view, 'paged'=>$paged)); ?>
-    
-    <?php
-    $temp = $wp_query;
-    $wp_query = $search->query();
-    ?>
-
+    <?php $paged = (get_query_var('paged')) ? get_query_var('paged') : 1; query_posts(array('post_type'=>'film', 'orderby' => 'title', 'order' => 'ASC', 'posts_per_page'=>$post_initial_view, 'paged'=>$paged)); ?>
     <?php if (have_posts()) : while(have_posts()) : the_post(); ?>
       <div class="layout-film large-3 columns">
         <div class="title-layout">
@@ -160,30 +113,15 @@
                 <a href="<?php echo get_permalink($anno->ID); ?>" title="Film del <?php echo $anno ?>"><?php echo $anno;?></a>
               </h5>
             </div>
-          <?php endwhile; ?>
-            <div class="row">
-              <div class="pagination large-3 columns end right">
-                <?php $search->pagination(array('prev_text' => '«','next_text' => '»')); ?>
-              </div>
-            </div>
-          <?php
-          else:
-            echo '<p>Spiacenti. Nessun risultato trovato</p>';
-          endif;
+          <?php endwhile; endif; ?>
+        </div>
 
-
-          $wp_query = $temp;
-          wp_reset_query();
-
-          ?>
-
-          <div class="row">
+        <div class="row">
           <div class="large-3 columns end right">
-            <?php 
-              //wpbeginner_numeric_posts_nav(); 
-            ?>
+            <?php wpbeginner_numeric_posts_nav(); ?>
           </div>
         </div>
+
 
     </div>
   </div>

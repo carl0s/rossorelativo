@@ -9,7 +9,7 @@
   endforeach;
  ?>
 <div class="img-film slideshow-wrapper">
-  <div class="fotorama slideshow" data-nav="thumbs" data-allowfullscreen="native" data-width="100%" data-ratio="1440/750">
+  <div class="fotorama slideshow" data-nav="thumbs" data-width="100%" data-ratio="1440/750">
     <div class="slide">
       <div class='info-wrapper'>
         <?php echo get_the_post_thumbnail(); ?>
@@ -22,12 +22,24 @@
                   <p><?php echo __('Titolo originale'); ?></p>
                   <span><?php echo get_field('titolo_originale'); ?></span>
                 </div>
+                <div class='film-thumb-title'>
+                  <h4>
+                    <?php
+                    if( get_field('trailer_scaricabile') ):
+                      $file = get_field('trailer_scaricabile');
+                    ?>
+                    <a href="<?php echo $file['url']; ?>"><?php echo __('Scarica il trailer'); ?></a>
+                    <?php
+                    endif;
+                    ?>
+                  </h4>
+                </div>
               </div>
             </div>
           </div>
           <div class='info-share large-1 large-offset-4 columns'>
             <h6>Share</h6>
-          </div>
+            </div>
         </div>
       </div>
       <div class="row">
@@ -152,7 +164,16 @@
                 <div class='info-wrapper'>
                   <div class="row">
                     <div class='film-thumb-title large-5 columns'>
-                    <h4><?php echo __('Download'); ?></h4>
+                      <h4>
+                      <?php
+                      if( get_sub_field('download_immagine') ):
+                        $file = get_sub_field('download_immagine');
+                      ?>
+                      <a href="<?php echo $file['url']; ?>"><?php echo __('Download immagine'); ?></a>
+                      <?php
+                      endif;
+                      ?>
+                      </h4>
                     </div>
                   </div>
                   <img src="<?php the_sub_field('foto_immagine'); ?>" alt="<?php the_sub_field('titolo'); ?>" />
@@ -176,41 +197,65 @@
           <div class="pressbook">
             <?php echo get_the_post_thumbnail(); ?>
             <div class="large-12 columns">
-            <a href="#" class="button left [tiny small large]"><?php echo __('Download'); ?></a>
+            <h4>Vuoi sapere tutto ciò che riguarda il tuo film preferito?</h4>
+            <h5>Hai la possibilità di scaricare il Pressbook e leggere tutte le curiosità riguardanti il film</h5>
+            <?php
+                if( get_field('uscita_del_materiale_di_stampa') ):
+                  $file = get_field('uscita_del_materiale_di_stampa');
+              ?>
+                <a href="<?php echo $file['url']; ?>" class="button large"><?php echo __('Download'); ?></a>
+              <?php
+                endif;
+              ?>
           </div>
           </div>
         </div>
         <div class="content" id="panel2-3">
           <div class="manifesto">
             <?php echo get_the_post_thumbnail(); ?>
-            <div class="large-3 large-offset-2 columns">
-              <a href="<?php echo get_permalink(); ?>"><?php $manifesto = get_field('poster'); ?><img src="<?php echo $manifesto['url']; ?>" /></a>
-            </div>
-            <div class="large-6 large-offset-1 columns">
-              <h4>Il manifesto del film</h4>
-              <?php
-                if( get_field('uscita_del_materiale_di_stampa') ):
-                  $file = get_field('uscita_del_materiale_di_stampa');
-              ?>
-                <a href="<?php echo $file['url']; ?>" class="button left large"><?php echo __('Download'); ?></a>
-              <?php
-                endif;
-              ?>
+            <div class="manifesto-bg">
+              <div class="large-3 large-offset-2 columns">
+                <a href="<?php echo get_permalink(); ?>"><?php $manifesto = get_field('poster'); ?><img src="<?php echo $manifesto['url']; ?>" /></a>
+              </div>
+              <div class="large-6 large-offset-1 columns">
+                <h4>Il manifesto del film</h4>
+                <h6><span>Formato:</span> <?php echo get_field('formato_manifesto'); ?></h6><br><br>
+                <h6><span>Misure:</span> <?php echo get_field('misure_manifesto'); ?></h6><br><br>
+                <h6><span>Risoluzione:</span> <?php echo get_field('risoluzione_manifesto'); ?></h6>
+                <?php
+                  if( get_field('poster') ):
+                    $file = get_field('poster');
+                ?>
+                  <a href="<?php echo $file['url']; ?>" class="button left large"><?php echo __('Download'); ?></a>
+                <?php
+                  endif;
+                ?>
+              </div>
             </div>
           </div>
         </div>
         <div class="content" id="panel2-4">
           <!-- GALLERY DI VIDEO -->
           <?php $items = get_field('video_item'); ?>
+
           <div class="video-film-download fotorama" data-click="false" data-nav="thumbs" data-thumbheight="115" data-thumbwidth="180">
             <?php
-            foreach ($items as $item): 
-              ?>
-            <a href="<?php echo $item['video_link']; ?>" data-caption="
+              while(the_repeater_field('video_item')) :
+            ?>
+            <a href="<?php the_sub_field('video_link'); ?>" data-caption="
               <div class='info-wrapper'>
                   <div class='row'>
                     <div class='film-thumb-title large-5 columns'>
-                    <h4>Download</h4>
+                    <h4>
+                    <?php
+                      if( get_sub_field('download_video') ):
+                        $file = get_sub_field('download_video');
+                      ?>
+                      <a href='<?php echo $file['url']; ?>'><?php echo __('Download video'); ?></a>
+                      <?php
+                      endif;
+                      ?>
+                    </h4>
                     </div>
                   </div>
                   <div class='row'>
@@ -219,10 +264,10 @@
                     </div>
                   </div>
             ">
-              <img src="<?php echo $item['foto_video']; ?>" alt="<?php echo $item['titolo']; ?>">
+              <img src="<?php the_sub_field('foto_video'); ?>" alt="<?php the_sub_field('titolo_video'); ?>">
             </a>
             <?php
-            endforeach;
+            endwhile;
             ?>
           </div>
           <!-- END GALLERY -->

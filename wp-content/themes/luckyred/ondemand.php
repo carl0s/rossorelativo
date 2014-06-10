@@ -1,6 +1,6 @@
   <?php
     /*
-    * Template Name: Stile Archivio
+    * Template Name: Stile On Demand
     */
 
     if($_GET):
@@ -18,6 +18,8 @@
     $args = array();
           $args['wp_query'] = array(
                                   'post_type' => 'film',
+                                  'meta_key' => 'on_demand',
+                                  'meta_value' => 1,
                                   'posts_per_page' => $post_initial_view,
                                   'orderby' => $post_orderby,
                                   'order' => 'ASC');
@@ -57,7 +59,7 @@
   <div id="archivio" class="ricerca-bg large-12 columns">
     <div class="archivio-pg row">
       <div class="large-12 columns">
-        <h2><?php echo __('Archivio'); ?></h2>
+        <h2><?php echo __('On demand'); ?></h2>
         <?php
         
           $search->the_form();
@@ -86,7 +88,7 @@
     </div>
   </div>
   <div class="archivio-film row">
-    <?php $paged = (get_query_var('paged')) ? get_query_var('paged') : 1; query_posts(array('post_type'=>'film', 'orderby' => $post_orderby, 'order' => 'ASC', 'posts_per_page'=>$post_initial_view, 'paged'=>$paged)); ?>
+    <?php $paged = (get_query_var('paged')) ? get_query_var('paged') : 1; query_posts(array('post_type'=>'film', 'meta_key'=>'on_demand', 'meta_value'=>1 , 'orderby' => $post_orderby, 'order' => 'ASC', 'posts_per_page'=>$post_initial_view, 'paged'=>$paged)); ?>
     
     <?php
     $temp = $wp_query;
