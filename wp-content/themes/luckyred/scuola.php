@@ -13,7 +13,51 @@
  else:
    $post_orderby = 'rand';
  endif;
+
+ $args = array();
+          $args['wp_query'] = array(
+                                  'post_type' => 'film',
+                                  'posts_per_page' => $post_initial_view,
+                                  'orderby' => $post_orderby,
+                                  'order' => 'ASC');
+          $args['fields'][] = array(
+                                  'type' => 'search',
+                                  'label' => 'Cerca per titolo',
+                                  'placeholder' => 'Cerca il film che fa per te...');
+          $args['fields'][] = array(
+                                  'type' => 'taxonomy',
+                                  'label' => 'Cerca per genere',
+                                  'default' => 'none',
+                                  'taxonomy' => 'category',
+                                  'format' => 'select',
+                                  'operator' => 'AND',
+                                  'term_args' => array('hide_empty' => false,
+                                               'orderby' => 'name',
+                                               'order' => 'ASC'));                         
+
+          $args['fields'][] = array(
+                                  'type' => 'submit',
+                                  'value' => 'Search');
+
+          $search = new WP_Advanced_Search($args);
+
  ?>
+
+ <div id="archivio" class="ricerca-scuola-bg large-12 columns">
+    <div class="scuola-pg row">
+      <div class="large-12 columns">
+        <h2><?php echo __('Catalogo scuole'); ?></h2>
+        <p>Il nostro catalogo riservato alle scuole include film adatti alla visione in ambito didattico, per bambini
+          e ragazzi dai 4 ai 16 anni. Per gli insegnanti è possibile scaricare gratuitamente materiali utili per l'analisi del film e delle sue tematiche.</p>
+        <?php
+        
+          $search->the_form();
+
+        ?>
+      </div>
+    </div>
+  </div>
+
 
 <div class="scuola-bg large-12 columns">
    <div class="row">
@@ -25,8 +69,8 @@
         <li><a href="?orderby=rand">Più vecchio</a></li>
       </ul>
     </div>
-    <div class="large-6 columns right">
-       <ul class="selected">
+    <div class="large-6 end columns">
+       <ul class="selected-2">
         <li><h5>Visualizza</h5></li>
         <li><a href="#">9</a></li>
         <li><a href="#">12</a></li>
@@ -35,7 +79,8 @@
       </ul>
     </div>
   </div>
-<?php $paged = (get_query_var('paged')) ? get_query_var('paged') : 1; query_posts(array('post_type'=>'film', 'orderby'=>$post_orderby, 'order'=>'ASC', 'posts_per_page'=>4, 'paged'=>$paged)); ?>
+<?php $paged = (get_query_var('paged')) ? get_query_var('paged') : 1; query_posts(array('post_type'=>'film', 'meta_key'   => 'scuola',
+      'meta_value' => 'Si', 'orderby'=>$post_orderby, 'order'=>'ASC', 'posts_per_page'=>4, 'paged'=>$paged)); ?>
 <?php
 if (have_posts()) : while(have_posts()) : the_post();
 ?>
@@ -55,9 +100,9 @@ if (have_posts()) : while(have_posts()) : the_post();
    <a class="archive-img" href="<?php echo get_permalink(); ?>"> <?php $image = get_field('locandina'); ?><img src="<?php echo $image['url']; ?>" /></a>
  </div>
  <div class="text-film large-6 columns">
-   <?php echo the_content(); ?>
+   <p><?php echo custom_field_excerpt(); ?></p>
    <br><br>
-   <a href="#"><h5>Guarda il trailer</h5></a>
+   <a href="<?php echo get_field('link_trailer'); ?>" target="_blank"><h5>Guarda il trailer</h5></a>
  </div>
  <div id="content-scuola">
   <div class="info-film-scuola large-3 columns">

@@ -146,7 +146,19 @@ function get_page_link_by_slug($page_slug) {
   endif;
 }
 
-
+function custom_field_excerpt() {
+  global $post;
+  $text = get_field('descrizione');
+  if ( '' != $text ) {
+    $text = strip_shortcodes( $text );
+    $text = apply_filters('the_content', $text);
+    $text = str_replace(']]>', ']]>', $text);
+    $excerpt_length = 140; // 20 words
+    $excerpt_more = "[<a href='". get_permalink($post->ID) ."'>...</a>]";
+    $text = wp_trim_words( $text, $excerpt_length, $excerpt_more );
+  }
+  return apply_filters('the_excerpt', $text);
+}
 
 
 ?>

@@ -2146,7 +2146,31 @@ footer .button:active {
 /* INIZIO PAGINA SCUOLA */
 
 .scuola-bg {
-  margin-top: 150px;
+  margin: 0 autosc;
+}
+
+.scuola-pg h2 {
+  color: #F7F7F7;
+background-color: rgba(0, 0, 0, 0.8);
+padding: 10px;
+font-family: "Bebas Neue";
+font-size: 2.4em;
+line-height: 1em;
+display: inline-block;
+margin-top: 180px;
+}
+
+.scuola-pg p {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  color: #F7F7F7;
+  font-family: 'Georgia';
+  font-style: italic;
+}
+
+.ricerca-scuola-bg {
+  /*b ackground-color: #F2F2F2; */
+    height: 570px;
 }
 
 .scuola-bg .first-menu {
@@ -2157,6 +2181,10 @@ footer .button:active {
   margin-left: 0rem;
 }
 
+#sezione-film ul li h4, h3{
+  font-family: "Bebas Neue";
+}
+
 .scuola-bg ul li h5 {
   font-family: 'Georgia';
   font-style: italic;  
@@ -2164,10 +2192,33 @@ footer .button:active {
 
 .scuola-bg .selected li {
   display: inline-block;
-  margin-right: 20px;
+  margin-right: 15px;
+  margin-top: 30px;
+margin-bottom: 60px;
+font-size: 1.2em;
+
+}
+
+.scuola-bg .selected-2 li {
+  display: inline-block;
+  margin-right: 15px;
+  margin-top: 30px;
+margin-bottom: 60px;
+font-size: 1.2em;
+
+}
+
+.scuola-bg .selected-2 {
+  margin-left: 240px;
 }
 
 .scuola-bg .selected a {
+  font-family: 'Georgia';
+  font-style: italic;
+  color: rgba(181,58,61,1);
+}
+
+.scuola-bg .selected-2 a {
   font-family: 'Georgia';
   font-style: italic;
   color: rgba(181,58,61,1);
@@ -2186,7 +2237,6 @@ footer .button:active {
 }
 
 #scuola {
-  margin-top: 70px ;
   margin-bottom: 50px;
 }
 
@@ -2209,7 +2259,6 @@ footer .button:active {
 .text-film p {
   font-family: 'Georgia';
   font-style: italic;
-  margin-top: -25px;
 }
 
 .text-film h5 {
@@ -2245,6 +2294,8 @@ footer .button:active {
   background-color: rgba(243,33,36,1);
   color: rgba(255,255,255,1);
   font-family: "Bebas Neue";
+  font-style: normal;
+  text-decoration: none;
   font-size: 2em;
   padding: 10px 40px 10px 40px;
   margin-top: 20px;
