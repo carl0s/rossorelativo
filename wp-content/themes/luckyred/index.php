@@ -105,7 +105,6 @@
 </div>
 </div>
 
-
 <?php wp_reset_postdata(); ?>
 
 <div class="ondemand-bg large-12 columns">
@@ -150,7 +149,6 @@
         </div>
       <?php endwhile; endif; ?>
     </div>
-    <a href="<?php  ?>" class="button right [tiny small large]"><?php echo __('Vai alla pagina'); ?></a>
     </div>
 </div>
 </div>

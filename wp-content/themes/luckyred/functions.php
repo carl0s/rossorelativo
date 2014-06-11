@@ -18,7 +18,7 @@ function luckyred_scripts() {
 }
 
 add_theme_support( 'post-thumbnails', array( 'post', 'film', 'regista', 'cinema', 'page' ) ); // Posts and Movies
-add_action( 'wp_enqueue_scripts', 'luckyred_scripts', 'wp_print_styles', 'add_custom_font', 'add_custom_size', 'wpbeginner_numeric_posts_nav', 'legacy_comments', 'mytheme_comment' );
+add_action( 'wp_enqueue_scripts', 'luckyred_scripts', 'wp_print_styles', 'add_custom_font', 'add_custom_size', 'wpbeginner_numeric_posts_nav' );
 
 register_nav_menus( array(
   'main_menu' => 'My Custom Main Menu'
