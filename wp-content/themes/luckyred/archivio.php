@@ -32,9 +32,12 @@
                                   'taxonomy' => 'category',
                                   'format' => 'select',
                                   'operator' => 'AND',
-                                  'term_args' => array('hide_empty' => false,
+                                  'term_args' => array(
+                                               'hide_empty' => false,
                                                'orderby' => 'name',
-                                               'order' => 'ASC'));                         
+                                               'order' => 'ASC'
+                                              )
+                                  );                         
 
           $args['fields'][] = array(
                                   'type' => 'submit',
@@ -90,7 +93,7 @@
     ?>
 
     <?php if (have_posts()) : while(have_posts()) : the_post(); ?>
-      <div class="layout-film large-3 columns">
+      <div class="layout-film large-3 small-12 columns">
         <div class="title-layout">
           <a href="<?php echo get_the_permalink(); ?>">
           <h3>

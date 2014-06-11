@@ -2298,3 +2298,95 @@ footer .button:active {
 }
 
 /* --FINE FORM RICERCA-- */
+
+@media only screen and (max-width: 480px) {
+
+#logo {
+  height: 70px;
+}  
+
+.archivio-film img, .archive-img img {
+  height: auto;
+  background-size: content;
+  width: 100%;
+}
+
+.archivio-film h3, .sezione-film h3 {
+  margin-bottom: 5px;  
+}
+
+.layout-film, .sezione-film{
+  height: 200px;  
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.tabs {
+  margin-top: -373px;
+  width: 100%;
+}
+
+.tabs dd {
+  background: rgba(243,33,36,1);
+  padding: 0px 18.2px 0px 18px;
+}
+
+.tabs dd a {
+  color: #fff;
+}
+
+.tabs dd a:hover {
+  background: #fff;
+}
+
+.archivio-film h5 {
+  display: none;
+}
+
+.title-layout {
+  height: 50px;  
+}
+
+.option-visual-page ul li, .press-bg .option-visual-page ul li {
+  font-size: 16px;
+  margin: 20px 0px 10px 0px;
+  padding: 0px;
+}
+.option-visual-page .view-film, .press-bg .option-visual-page .view-film {
+  margin:0px 20px 10px 20px;
+  float: left;
+}
+
+.wpas-submit {
+  width: 120px;
+  height: 40px;
+}
+
+.ricerca-bg {
+  height: 520px;
+}
+
+.archivio-pg p {
+  margin-top: 120px;
+}
+
+.wp-advanced-search {
+  margin-top: 10px;
+}
+
+#tax_category {
+  height: 40px;
+}
+
+#search_query{
+  height: 40px;
+}
+
+.social-icon img {
+  display: none;
+}
+
+#main-menu {
+display: none;
+}
+}
