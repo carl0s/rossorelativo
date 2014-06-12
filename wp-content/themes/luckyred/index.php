@@ -112,7 +112,7 @@
 
 <div class="ondemand-bg">
   <div class="row">
-    <h2><?php echo __('On demand'); ?></h2>
+    <a href="<?php echo get_page_link_by_slug('on demand'); ?>"><h2><?php echo __('Home video'); ?></h2></a>
 
     <div class="slider-ondemand slideshow-wrapper">
       <div class="fotorama slideshow" data-click="false" data-transition="crossfade" data-nav="thumbs" data-width="100%" data-ratio="1180/360" data-thumbheight="260" data-thumbwidth="180">
