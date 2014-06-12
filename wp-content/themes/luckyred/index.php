@@ -107,6 +107,7 @@
       <a href="" class="cta-page button right"><?php echo __('Vai al film'); ?></a>
     </div>
   </div>
+</div>
 
 <?php wp_reset_postdata(); ?>
 
@@ -152,7 +153,13 @@
         </div>
       <?php endwhile; endif; ?>
     </div>
+<<<<<<< HEAD
   </div>
+=======
+    </div>
+</div>
+</div>
+>>>>>>> FETCH_HEAD
 </div>
 
 

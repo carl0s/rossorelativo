@@ -769,6 +769,62 @@ footer .button:hover {
   background-color: rgba(253,184,19,1);
 }
 
+.blog-content{
+  font-family: 'Georgia';
+  font-style: italic;
+  margin-bottom: 95px;
+  width: 100%;
+  padding: 0 20% 0 10%;
+  margin-top: 50px;
+  color: white;
+}
+
+#blog-tag {
+  width: 100%;
+  font-family: "Bebas Neue";
+  float: left;
+  clear: both;
+}
+
+#blog-tag h2{
+  background-color: #F00;
+  color: #FFF;
+  width: 270px;
+  text-align: center;
+  float: left;
+  font-family: 'Bebas Neue';
+  height: 55px;
+}
+
+#blog-tag ul{
+  float: left;
+  width: 550px;
+  height: 150px;
+  padding: 10px;
+  list-style-type: none;
+}
+
+#blog-tag ul li{
+  background-color: #969696;
+  color: #FFF;
+  width: 30%;
+  margin-right: 3%;
+  text-align: center;
+  float: left;
+  height: 40px;
+  font-size: 1.5em;
+}
+
+#blog-tag a {
+  color: #FFF;
+}
+
+#blog-tag li:hover {
+  background-color: rgba(253,184,19,1);
+} 
+
+/* --FINE PAGINA BLOG-- */
+
 footer .button:active {
   background-color: black;
 }
