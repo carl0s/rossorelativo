@@ -40,6 +40,10 @@ $(document).ready(function(){
   });
 });
 
+$('.share .inner .icons').share({
+        networks: ['facebook','twitter','googleplus','pinterest','tumblr']
+  });
+
 $('.slider-nextexit .slideshow').on(
     'fotorama:show fotorama:showend',
     function (e, fotorama, extra) {
