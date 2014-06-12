@@ -827,6 +827,37 @@ footer .button:hover {
   background-color: rgba(253,184,19,1);
 } 
 
+.blog-simil {
+
+}
+
+.blog-simil h2 {
+  background-color: #F00;
+  color: #FFF;
+  width: 270px;
+  text-align: center;
+  font-family: 'Bebas Neue';
+  height: 55px;
+  clear: both;
+}
+
+.slide-blog-simil {
+  width: 20%;
+  float: left;
+  margin-right: 5%;
+
+}
+
+.blog-content-simil {
+  font-family: 'Georgia';
+  font-style: italic;
+  padding: 0px 10px 0px 15px;
+  margin-top: 15px;
+  color: #FFF;
+  font-size: 0.8em;
+  line-height: 1.5em;
+}
+
 /* --FINE PAGINA BLOG-- */
 
 footer .button:active {

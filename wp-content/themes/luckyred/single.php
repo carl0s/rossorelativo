@@ -50,8 +50,6 @@ $actual_id = get_the_ID();
   <div class="row">
     <div class="blog-content">
     <p> <?php echo get_the_content(); ?> </p>
-    
-  
     <div id="blog-tag">
       <h2>ricerca tra i tag : </h2>
       <?php
@@ -60,6 +58,37 @@ $actual_id = get_the_ID();
       }
       ?>
     </div>
+    </div>
+    <div class="blog-simil">
+      <h2>altre news dal blog</h2>
+      <?php 
+      $args = array(
+        'post_type'  => 'post',
+        'post__not_in' => array (
+                            $actual_id
+                          ),
+        'posts_per_page' => -1,
+        'orderby' => 'date',
+        'order' => 'DESC'
+        );
+      $loop_blog_simil = new WP_Query($args);
+      ?>
+        <?php if ($loop_blog_simil->have_posts()) : while($loop_blog_simil->have_posts()) : $loop_blog_simil->the_post(); ?>
+        <?php $temp_id = get_the_ID(); echo $temp_id; ?>
+        <?php if ($actual_id != $temp_id ): ?>
+        <div class="slide-blog-simil" >
+        <div class='info-wrapper' data-id="<?php echo get_permalink(); ?>">
+          <?php echo get_the_post_thumbnail(); ?>
+        </div>
+        <div class="row">
+          <div class="blog-content-simil">
+          <?php excerpt('20','<p>','</p>'); ?>
+          </div>
+        </div>
+        </div>
+        <?php endif; ?>
+        <?php endwhile; endif; ?> 
+        <?php wp_reset_query(); ?>
     </div>
   </div>
   </div>
