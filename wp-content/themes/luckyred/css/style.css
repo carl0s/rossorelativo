@@ -14,6 +14,9 @@
 
 }
 
+.tab-bar {
+  display: none;
+}
 
 header {
   position: fixed;
@@ -2478,11 +2481,15 @@ font-size: 1.2em;
 
 /* --FINE FORM RICERCA-- */
 
-@media only screen and (max-width: 480px) {
+@media only screen and (min-width: 320px) and (max-width: 480px) {
 
-#logo {
-  height: 70px;
-}  
+.tab-bar{
+  display: block;
+}
+
+header {
+  display: none;
+}
 
 .archivio-film img {
   height: auto;
@@ -2492,15 +2499,79 @@ font-size: 1.2em;
 .archive-img img {
   display: none;
 }
+.archivio-pg h2 {
+  margin-top: 15px;
+}
 
 .archivio-film h3, .sezione-film h3 {
   margin-bottom: 5px;  
+}
+
+.archivio-film h5 {
+  display: none;
 }
 
 .layout-film, .sezione-film{
   height: 200px;  
   overflow: hidden;
   margin-bottom: 10px;
+}
+
+.tab-bar {
+  height: 60px;
+  display: block;
+  background-color: rgba(0,0,0,0.8);
+}
+
+.left-off-canvas-menu {
+  background-color: rgba(242,242,242,1);
+  font-family: "Bebas Neue";
+}
+
+.tab-bar a img {
+  height: 60px;
+}
+
+.left-small {
+  border-right: none;
+  padding: 10px;
+}
+
+.menu-main-menu-container {
+  margin-left: -20px;
+}
+
+.off-canvas-list ul li a{
+  color: rgba(80,80,80,1);
+  border-bottom: none;
+}
+
+.off-canvas-list ul li {
+  list-style-type: none;
+}
+
+.left-off-canvas-menu ul li a:hover {
+  background-color: rgba(255,255,255,1);
+  color: rgba(218,33,44,1);
+}
+
+ul.off-canvas-list li label{
+  height: 60px;
+  background-color: rgba(241,242,242,1);
+}
+
+ul.off-canvas-list li label img{
+  height: 60px;
+  margin-left: 20px;
+  margin-top: -15px;
+}
+
+ul.off-canvas-list li label a:hover{
+  background-color: rgba(242,242,242,1);
+}
+
+ul.off-canvas-list li label a{
+  border-bottom: none;
 }
 
 .tabs {
@@ -2521,10 +2592,6 @@ font-size: 1.2em;
   background: #fff;
 }
 
-.archivio-film h5 {
-  display: none;
-}
-
 .title-layout {
   height: 50px;  
 }
@@ -2540,16 +2607,16 @@ font-size: 1.2em;
 }
 
 .wpas-submit {
-  width: 120px;
+  width: 100%;
   height: 40px;
 }
 
 .ricerca-bg {
-  height: 520px;
+  height: 320px;
 }
 
 .archivio-pg p {
-  margin-top: 120px;
+  display: none;
 }
 
 .wp-advanced-search {
@@ -2569,10 +2636,22 @@ font-size: 1.2em;
 }
 
 #main-menu {
-display: none;
+  display: none;
 }
 
 .archive-img-smart img {
   display: inline-block;
+}
+
+.pagination {
+  margin-left: 15px;
+}
+
+footer .wrapper {
+  margin-top: 80px;
+}
+
+#tax_category {
+  width: 100%;
 }
 }
