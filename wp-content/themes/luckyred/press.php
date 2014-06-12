@@ -13,7 +13,7 @@ Template Name:  Press
 if($_GET):
 	$post_orderby = $_GET['orderby'];
 else:
-	$post_orderby = 'rand';
+	$post_orderby = 'title';
 endif;
 
 if($_GET):
@@ -33,10 +33,19 @@ $args = array();
                                   'label' => 'Cerca per titolo',
                                   'placeholder' => 'Cerca il film che fa per te...');
           $args['fields'][] = array(
-                                  'type' => 'taxonomy',
+          												'type' => 'taxonomy',
                                   'label' => 'Cerca per genere',
-                                  'placeholder' => 'Seleziona il genere',
-                                  'taxonomy' => 'category');                          
+                                  'default' => '',
+                                  'allow_null' => 'Scegli un genere',
+                                  'taxonomy' => 'category',
+                                  'format' => 'select',
+                                  'operator' => 'AND',
+                                  'term_args' => array(
+                                                       'hide_empty' => true,
+                                                       'orderby' => 'name',
+                                                       'order' => 'ASC'
+                                                      )
+                                  );                          
 
           $args['fields'][] = array(
                                   'type' => 'submit',
@@ -76,7 +85,7 @@ $args = array();
 	      <li><?php echo __('Visualizza'); ?></li>
 	      <li><a href="?posts=4#archivio">4</a></li>
 	      <li><a href="?posts=8#archivio">8</a></li>
-	      <li><a href="?posts=16#archivio">16</a></li>
+	      <li><a href="?posts=12#archivio">12</a></li>
 	      <li><?php echo __('per pagina'); ?></li>
 	      </ul>
 	    </div>
@@ -164,7 +173,13 @@ $args = array();
                   </div>
                 </div>
               </div>
-              <?php endwhile;
+            <?php endwhile; ?>
+            <div class="row">
+              <div class="pagination large-3 columns end right">
+                <?php $search->pagination(array('prev_text' => '«','next_text' => '»')); ?>
+              </div>
+            </div>
+          <?php
           else:
             echo '<p>Spiacenti. Nessun risultato trovato</p>';
           endif;

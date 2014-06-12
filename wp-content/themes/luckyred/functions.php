@@ -2,26 +2,47 @@
 
 function luckyred_scripts() {
   wp_enqueue_style( 'luckyred-foundation', get_template_directory_uri() . '/css/foundation.css', array(), '1.0.0' );
+  wp_enqueue_style( 'luckyred-fotorama', get_template_directory_uri() . '/css/fotorama.css', array(), '1.0.0' );
+  wp_enqueue_style( 'luckyred-checkbox', get_template_directory_uri() . '/square/red.css', array(), '1.0.0' );
   wp_enqueue_style( 'luckyred-general', get_template_directory_uri() . '/css/style.css', array(), '1.0.0' ); 
+
   
   wp_enqueue_script( 'jquery-script', get_template_directory_uri() . '/js/jquery.js', array(), '20131209', true );
   wp_enqueue_script( 'modernizr-script', get_template_directory_uri() . '/js/modernizr.js', array(), '20131209' );
   wp_enqueue_script( 'foundation-script', get_template_directory_uri() . '/js/foundation.min.js', array(), '20131209', true );
+  wp_enqueue_script( 'fotorama-script', get_template_directory_uri() . '/js/fotorama.js', array(), '20131209', true );
+  wp_enqueue_script( 'checkbox-script', get_template_directory_uri() . '/js/icheck.js', array(), '20131209', true );
+  wp_enqueue_script( 'share-script', get_template_directory_uri() . '/js/jquery.share.js', array(), '20131209', true );
+
 
   wp_enqueue_script( 'custom-script', get_template_directory_uri() . '/js/custom.js', array(), '20131209', true);
 
-  wp_enqueue_script( 'grid-script', get_template_directory_uri() . '/js/grid.js', array(), '20131209', true);
 
 }
 
+require_once('wp-advanced-search/wpas.php');
+
 add_theme_support( 'post-thumbnails', array( 'post', 'film', 'regista', 'cinema', 'page' ) ); // Posts and Movies
-add_action( 'wp_enqueue_scripts', 'luckyred_scripts', 'wp_print_styles', 'add_custom_font', 'add_custom_size', 'wpbeginner_numeric_posts_nav', 'legacy_comments', 'mytheme_comment' );
+
+add_action( 'wp_enqueue_scripts', 'luckyred_scripts', 'wp_print_styles', 'add_custom_font', 'add_custom_size', 'wpbeginner_numeric_posts_nav' );
+
 
 register_nav_menus( array(
   'main_menu' => 'My Custom Main Menu'
 ) );
 
 show_admin_bar(false);
+
+/**
+ * Redirect non-admins to the homepage after logging into the site.
+ *
+ * @since   1.0
+ */
+function soi_login_redirect( $redirect_to, $request, $user  ) {
+  return ( is_array( $user->roles ) && in_array( 'administrator', $user->roles ) ) ? admin_url() : site_url();
+} // end soi_login_redirect
+add_filter( 'login_redirect', 'soi_login_redirect', 'trade',10, 3 );
+
 
 function debug($var) {
   return "<pre>" . var_dump($var) . "</pre>";
@@ -71,6 +92,8 @@ function custom_field_excerpt() {
   }
   return apply_filters('the_excerpt', $text);
 }
+
+
 
 
 ?>
