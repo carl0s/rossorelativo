@@ -153,13 +153,10 @@
         </div>
       <?php endwhile; endif; ?>
     </div>
-<<<<<<< HEAD
   </div>
-=======
     </div>
 </div>
 </div>
->>>>>>> FETCH_HEAD
 </div>
 
 
