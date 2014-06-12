@@ -79,7 +79,7 @@
       </ul>
     </div>
   </div>
-<?php $paged = (get_query_var('paged')) ? get_query_var('paged') : 1; query_posts(array('post_type'=>'film', 'meta_key'   => 'scuola',
+<?php $paged = (get_query_var('paged')) ? get_query_var('paged') : 1; query_posts(array('post_type'=>'film', 'meta_key'=> 'scuola',
       'meta_value' => 'Si', 'orderby'=>$post_orderby, 'order'=>'ASC', 'posts_per_page'=>4, 'paged'=>$paged)); ?>
 <?php
 if (have_posts()) : while(have_posts()) : the_post();
@@ -169,11 +169,6 @@ if (have_posts()) : while(have_posts()) : the_post();
  </div>
 </div>
 <?php endwhile; endif; ?>
-<div class="row">
-  <div class="large-3 columns end right">
-    <?php wpbeginner_numeric_posts_nav(); ?>
-  </div>
-</div>
 </div>
 
 <!--FOOTER-->

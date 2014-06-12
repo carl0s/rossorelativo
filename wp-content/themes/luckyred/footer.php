@@ -1,3 +1,4 @@
+<?php wp_footer(); ?>
 <footer class="clearfix">
   <div class="wrapper large-12 column">
     <div class="row">
