@@ -103,7 +103,8 @@ $args = array();
 				?>
 			</h4>
 			</div>
-			
+      
+			<a class="archive-img-smart" href="<?php echo get_permalink(); ?>"><?php echo get_the_post_thumbnail(); ?></a>
 			<a class="archive-img" href="<?php echo get_permalink(); ?>"> <?php $image = get_field('locandina'); ?><img src="<?php echo $image['url']; ?>" /></a>
 
 			<dl class="tabs" data-tab>

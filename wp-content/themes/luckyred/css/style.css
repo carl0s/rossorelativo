@@ -637,6 +637,10 @@ header.smaller .social-icon {
   width: 1em;
 }
 
+.archive-img-smart img {
+  display: none;
+}
+
 .archive-film a img {
   max-height: 250px;
 }
@@ -2305,10 +2309,13 @@ footer .button:active {
   height: 70px;
 }  
 
-.archivio-film img, .archive-img img {
+.archivio-film img {
   height: auto;
   background-size: content;
   width: 100%;
+}
+.archive-img img {
+  display: none;
 }
 
 .archivio-film h3, .sezione-film h3 {
@@ -2322,7 +2329,7 @@ footer .button:active {
 }
 
 .tabs {
-  margin-top: -373px;
+  margin-top: -68px;
   width: 100%;
 }
 
@@ -2388,5 +2395,9 @@ footer .button:active {
 
 #main-menu {
 display: none;
+}
+
+.archive-img-smart img {
+  display: inline-block;
 }
 }

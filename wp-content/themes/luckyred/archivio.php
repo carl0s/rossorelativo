@@ -104,6 +104,7 @@
           </h3>
           </a>
         </div>
+          <a class="archive-img-smart" href="<?php echo get_permalink(); ?>"><?php echo get_the_post_thumbnail(); ?></a>
           <a class="archive-img" href="<?php echo get_permalink(); ?>"><?php $image = get_field('locandina'); ?><img src="<?php echo $image['url']; ?>" /></a>
           <h5><span><?php echo __('Regia'); ?></span>  
             <?php $registi = get_field('regia');
@@ -179,7 +180,5 @@
     </div>
   </div>
   
-  <!--SIDEBAR-->
-  <?php get_sidebar(); ?>
   <!--FOOTER-->
   <?php get_footer(); ?>
