@@ -773,6 +773,62 @@ footer .button:hover {
   background-color: rgba(253,184,19,1);
 }
 
+.blog-content{
+  font-family: 'Georgia';
+  font-style: italic;
+  margin-bottom: 95px;
+  width: 100%;
+  padding: 0 20% 0 10%;
+  margin-top: 50px;
+  color: white;
+}
+
+#blog-tag {
+  width: 100%;
+  font-family: "Bebas Neue";
+  float: left;
+  clear: both;
+}
+
+#blog-tag h2{
+  background-color: #F00;
+  color: #FFF;
+  width: 270px;
+  text-align: center;
+  float: left;
+  font-family: 'Bebas Neue';
+  height: 55px;
+}
+
+#blog-tag ul{
+  float: left;
+  width: 550px;
+  height: 150px;
+  padding: 10px;
+  list-style-type: none;
+}
+
+#blog-tag ul li{
+  background-color: #969696;
+  color: #FFF;
+  width: 30%;
+  margin-right: 3%;
+  text-align: center;
+  float: left;
+  height: 40px;
+  font-size: 1.5em;
+}
+
+#blog-tag a {
+  color: #FFF;
+}
+
+#blog-tag li:hover {
+  background-color: rgba(253,184,19,1);
+} 
+
+/* --FINE PAGINA BLOG-- */
+
 footer .button:active {
   background-color: black;
 }
@@ -1014,6 +1070,14 @@ footer .button:active {
   width: 100%;
 }
 
+<<<<<<< HEAD
+/* -- FINE MISSION-- */
+
+/* --FOOTER-- */
+
+footer {
+  background-color: rgba(38,37,37,0.7);
+}
 .chi-siamo .info-date {
   background-color: rgba(0,0,0,0.8);
   text-align: center;
@@ -1078,7 +1142,7 @@ footer .button:active {
 }
 
 .azienda-bg {
-  background-image: url(../img/blur2.png);
+  background-image: url(../img/blur_bn.png);
   background-repeat: no-repeat;
   padding-top: 35px;
   padding-bottom: 90px;
@@ -1710,7 +1774,6 @@ footer .button:active {
 
 .img-film-download .film-thumb-title h4 a {
   color: rgba(255,255,255,1);
-  background-color: rgba(0,0,0,0.8);
   padding: 10px;
   font-family: "Bebas Neue";
   font-size: 1em;
@@ -1718,6 +1781,22 @@ footer .button:active {
   bottom: -560px;
   z-index: 10;
   display: inline-block;
+  background-color: rgba(0,0,0,0.8);
+}
+
+.info-date .share {
+  display: block;
+}
+
+.info-date .share:hover div.inner {
+  display: block
+}
+
+.info-date .share div.inner {
+  background-color: rgba(0,0,0,0.8);
+  width: 130px;
+  margin-left: -15px;
+  display: none;
 }
 /* FINE FOTO FILM */
 
@@ -2150,7 +2229,31 @@ footer .button:active {
 /* INIZIO PAGINA SCUOLA */
 
 .scuola-bg {
-  margin-top: 150px;
+  margin: 0 auto;
+}
+
+.scuola-pg h2 {
+  color: #F7F7F7;
+background-color: rgba(0, 0, 0, 0.8);
+padding: 10px;
+font-family: "Bebas Neue";
+font-size: 2.4em;
+line-height: 1em;
+display: inline-block;
+margin-top: 180px;
+}
+
+.scuola-pg p {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  color: #F7F7F7;
+  font-family: 'Georgia';
+  font-style: italic;
+}
+
+.ricerca-scuola-bg {
+  /*b ackground-color: #F2F2F2; */
+    height: 570px;
 }
 
 .scuola-bg .first-menu {
@@ -2161,6 +2264,10 @@ footer .button:active {
   margin-left: 0rem;
 }
 
+#sezione-film ul li h4, h3{
+  font-family: "Bebas Neue";
+}
+
 .scuola-bg ul li h5 {
   font-family: 'Georgia';
   font-style: italic;  
@@ -2168,10 +2275,33 @@ footer .button:active {
 
 .scuola-bg .selected li {
   display: inline-block;
-  margin-right: 20px;
+  margin-right: 15px;
+  margin-top: 30px;
+margin-bottom: 60px;
+font-size: 1.2em;
+
+}
+
+.scuola-bg .selected-2 li {
+  display: inline-block;
+  margin-right: 15px;
+  margin-top: 30px;
+margin-bottom: 60px;
+font-size: 1.2em;
+
+}
+
+.scuola-bg .selected-2 {
+  margin-left: 240px;
 }
 
 .scuola-bg .selected a {
+  font-family: 'Georgia';
+  font-style: italic;
+  color: rgba(181,58,61,1);
+}
+
+.scuola-bg .selected-2 a {
   font-family: 'Georgia';
   font-style: italic;
   color: rgba(181,58,61,1);
@@ -2190,7 +2320,6 @@ footer .button:active {
 }
 
 #scuola {
-  margin-top: 70px ;
   margin-bottom: 50px;
 }
 
@@ -2213,7 +2342,7 @@ footer .button:active {
 .text-film p {
   font-family: 'Georgia';
   font-style: italic;
-  margin-top: -25px;
+  margin-top: 60px;
 }
 
 .text-film h5 {
@@ -2249,6 +2378,8 @@ footer .button:active {
   background-color: rgba(243,33,36,1);
   color: rgba(255,255,255,1);
   font-family: "Bebas Neue";
+  font-style: normal;
+  text-decoration: none;
   font-size: 2em;
   padding: 10px 40px 10px 40px;
   margin-top: 20px;
@@ -2299,6 +2430,19 @@ footer .button:active {
   font-size: 1.2em;
   height: 50px;
   float: right;
+}
+
+.pagination a{
+  color: rgba(243,33,36,1);
+  font-size: 1.2em;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+.pagination .current {
+  font-size: 1.2em;
+  background-color: rgba(243,33,36,1);
+  font-family: 'Georgia';
 }
 
 /* --FINE FORM RICERCA-- */

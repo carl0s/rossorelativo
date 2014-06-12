@@ -39,7 +39,7 @@
           </div>
           <div class='info-share large-1 large-offset-4 columns'>
             <h6>Share</h6>
-            </div>
+          </div>
         </div>
       </div>
       <div class="row">
@@ -179,7 +179,13 @@
                   <img src="<?php the_sub_field('foto_immagine'); ?>" alt="<?php the_sub_field('titolo'); ?>" />
                   <div class='row'>
                     <div class='info-date large-1 large-offset-11 columns'>
-                      <h6>Share</h6>
+                        <h6 class="share">
+                          Share
+                          <div class="inner">
+                            <div class="icons">
+                            </div>
+                          </div>
+                        </h6>
                     </div>
                   </div>
                 </div>

@@ -104,22 +104,23 @@
           </div>
         <?php endwhile; endif; ?>
       </div>
-      <a href="" class="cta-page button right"><?php echo __('Vai alla pagina'); ?></a>
+      <a href="" class="cta-page button right"><?php echo __('Vai al film'); ?></a>
     </div>
   </div>
+</div>
 
 <?php wp_reset_postdata(); ?>
 
 <div class="ondemand-bg">
   <div class="row">
-    <h2><?php echo __('On demand'); ?></h2>
+    <a href="<?php echo get_page_link_by_slug('on demand'); ?>"><h2><?php echo __('Home video'); ?></h2></a>
 
     <div class="slider-ondemand slideshow-wrapper">
       <div class="fotorama slideshow" data-click="false" data-transition="crossfade" data-nav="thumbs" data-width="100%" data-ratio="1180/360" data-thumbheight="260" data-thumbwidth="180">
         <?php 
         $args = array(
           'post_type'  => 'film',
-          'meta_key'   => 'stato_film',
+          'meta_key'   => 'on_demand',
           'meta_value' => 1,
           'posts_per_page' => 3
           );
@@ -140,7 +141,7 @@
                     </div>
                   </div>
                 </div>
-                <a href="<?php echo get_the_permalink($film->ID); ?>" class="button right"><?php echo __('Vai alla pagina'); ?></a>
+                <a href="<?php echo get_the_permalink($film->ID); ?>" class="button right"><?php echo __('Vai al film'); ?></a>
               </div>
             </div>
           </div>
@@ -152,7 +153,11 @@
         </div>
       <?php endwhile; endif; ?>
     </div>
+
   </div>
+    </div>
+</div>
+</div>
 </div>
 
 

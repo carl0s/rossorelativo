@@ -81,7 +81,7 @@
         <div class="large-6 columns">
           <h4><?php echo __('Co Produzioni internazionali'); ?></h4>
             <div class="row">
-              <div class="large-4 columns">
+              <div class="large-5 columns">
                 <?php
                 if( have_rows('co_produzione_internazionale') ): while ( have_rows('co_produzione_internazionale') ) : the_row();
                 ?>
@@ -96,7 +96,7 @@
                 endif;
                 ?>
               </div>
-              <div class="large-8 columns">
+              <div class="large-7 columns">
                 <?php
                 if( have_rows('co_produzione_internazionale') ): while ( have_rows('co_produzione_internazionale') ) : the_row();
                 ?>
