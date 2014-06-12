@@ -166,7 +166,7 @@
     <div class="blog large-5 columns">
       <h2><?php echo __('Blog'); ?></h2>
       <br>
-      <?php query_posts(array('post_type'=>'blog', 'posts_per_page'=>1)); ?>
+      <?php query_posts(array('post_type'=>'post', 'posts_per_page'=>1)); ?>
       <?php if (have_posts()) : while(have_posts()) : the_post(); ?>
       <?php echo get_the_post_thumbnail(); ?>
       <h4><span><?php echo the_title(); ?></span></h4>
