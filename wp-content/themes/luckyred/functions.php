@@ -87,7 +87,7 @@ function custom_field_excerpt() {
     $text = apply_filters('the_content', $text);
     $text = str_replace(']]>', ']]>', $text);
     $excerpt_length = 140; // 20 words
-    $excerpt_more = "[<a href='". get_permalink($post->ID) ."'>...</a>]";
+    $excerpt_more = '<a href="'. get_permalink($post->ID) . '">' . '  Read the Rest...' . '</a>';
     $text = wp_trim_words( $text, $excerpt_length, $excerpt_more );
   }
   return apply_filters('the_excerpt', $text);
