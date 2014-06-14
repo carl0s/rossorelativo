@@ -1,5 +1,7 @@
  <?php
- /* Template Name: Stile Scuola */
+ /*
+  * Template Name: Stile Scuola
+  */
  ?>
 
  <!--HEADER-->
@@ -101,9 +103,9 @@ if (have_posts()) : while(have_posts()) : the_post();
    <a class="archive-img" href="<?php echo get_permalink(); ?>"> <?php $image = get_field('locandina'); ?><img src="<?php echo $image['url']; ?>" ></a>
  </div>
  <div class="text-film large-6 columns">
-  <p><textarea readonly id="text">
-     <?php echo get_field('descrizione'); ?>
-  </textarea></p>
+  <p class="descrizione-scuole">
+    <?php echo get_field('descrizione'); ?>
+  </p>
   
    <a href="<?php echo get_field('link_trailer'); ?>" target="_blank"><h5>Guarda il trailer</h5></a>
  </div>
@@ -162,8 +164,22 @@ if (have_posts()) : while(have_posts()) : the_post();
         ?>
       </h5> 
       <div id="button-scuola">
-       <a href="<?php echo post_permalink(); ?>" class="button expand">Scheda del film</a>
-       <a href="<?php echo get_page_link_by_slug('index'); ?>" class="button expand">Spunti didattici</a>
+        <?php
+          if( get_field('scheda_del_film') ):
+          $file = get_field('scheda_del_film');
+        ?>
+        <a href="<?php echo $file['url']; ?>" class="button expand"><?php echo __('Scheda del film'); ?></a>
+        <?php
+          endif;
+        ?>
+        <?php
+          if( get_field('spunti_didattici') ):
+          $file = get_field('spunti_didattici');
+        ?>
+        <a href="<?php echo $file['url']; ?>" class="button expand"><?php echo __('Spunti didattici'); ?></a>
+        <?php
+          endif;
+        ?>
      </div>
    </div>
 </div>
