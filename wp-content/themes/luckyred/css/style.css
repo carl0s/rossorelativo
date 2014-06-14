@@ -527,7 +527,7 @@ header.smaller .social-icon {
   margin-left: -15px;
 }
 
-.blog h3 {
+.blog h4 {
   font-family: "Bebas Neue", Helvetica, sans-serif;
   margin-top: 10px;
   color: rgba(72,72,72,1);
@@ -693,7 +693,7 @@ header.smaller .social-icon {
 .blog-content{
   font-family: "Georgia";
   font-style: italic;
-  margin-bottom: 95px;
+  margin-bottom: 135px;
   width: 100%;
   padding: 0 20% 0 10%;
   margin-top: 50px;
