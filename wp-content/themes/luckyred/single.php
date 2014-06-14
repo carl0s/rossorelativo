@@ -1,27 +1,3 @@
-
-<?php
-get_header();
-?>
-
-<?php wp_reset_postdata();  ?>
-
-<div class="row film-uno">
-  <?php // query_posts('post_type=movie'); ?>
-  <div class="large-4 columns">
-    <img src="http://www.placehold.it/400X600">
-  </div>
-  <div class="large-8 columns">
-    <?php //if (have_posts()) : while(have_posts()) : the_post(); ?>
-    <h1><?php echo get_the_title(); ?></h1>
-    <h6>Regia</h6>
-    <h6>Genere</h6>
-    <h6>Nazione</h6>
-    <h6>Anno</h6>
-    <h6>Cast</h6>
-    <?php the_content(); ?>
-    <?php //endwhile; endif; ?>
-  </div>
-</div>
 <?php get_header(); ?>
 
 <?php wp_reset_postdata(); ?>
@@ -30,7 +6,7 @@ get_header();
 $actual_id = get_the_ID();
 ?>
 
-<div id="blog" class="large-12 columns">
+<div id="blog">
   <div class="slide-blog" >
   <div class='info-wrapper' >
     <?php echo get_the_post_thumbnail(); ?>
