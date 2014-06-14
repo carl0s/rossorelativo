@@ -50,7 +50,7 @@ $actual_id = get_the_ID();
       $loop_blog_simil = new WP_Query($args);
       ?>
         <?php if ($loop_blog_simil->have_posts()) : while($loop_blog_simil->have_posts()) : $loop_blog_simil->the_post(); ?>
-        <?php $temp_id = get_the_ID(); echo $temp_id; ?>
+        <?php $temp_id = get_the_ID(); //echo $temp_id; ?>
         <?php if ($actual_id != $temp_id ): ?>
         <div class="slide-blog-simil" >
         <div class='info-wrapper' data-id="<?php echo get_permalink(); ?>">
