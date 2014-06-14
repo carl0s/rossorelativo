@@ -1,5 +1,8 @@
   <!--HEADER-->
   <?php get_header(); ?>
+
+  <section class="main-section">
+      <!-- content goes here -->
   
   <!--BODY-->
   <?php wp_reset_postdata(); ?>
@@ -157,8 +160,8 @@
   </div>
     </div>
 </div>
-</div>
-</div>
+
+
 
 
 <div class="blog-archivio-bg">
@@ -166,7 +169,7 @@
     <div class="blog large-5 columns">
       <h2><?php echo __('Blog'); ?></h2>
       <br>
-      <?php query_posts(array('post_type'=>'blog', 'posts_per_page'=>1)); ?>
+      <?php query_posts(array('post_type'=>'post', 'posts_per_page'=>1)); ?>
       <?php if (have_posts()) : while(have_posts()) : the_post(); ?>
       <?php echo get_the_post_thumbnail(); ?>
       <h4><span><?php echo the_title(); ?></span></h4>
@@ -266,6 +269,13 @@
         Lucky Red distribuisce i Italia pellicole spagnole, francesi e di molti altri paesi del mondo girate da autori di qualità e giovani emergenti.
       </p>
     </div>
+  </div>
+</div>
+
+   </section>
+
+  <a class="exit-off-canvas"></a>
+
   </div>
 </div>
 <!--FOOTER-->
