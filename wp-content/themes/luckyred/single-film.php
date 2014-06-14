@@ -54,7 +54,7 @@
   <div class="large-6 columns">
     <h3><span><?php echo __('Il film') ?></span></h3>
     <div class="row">
-      <div class="large-3 columns">
+      <div class="infofilm large-3 columns">
         <h4><?php echo __('Regia'); ?></h4>
       </div>
       <div class="content-film large-9 columns">
@@ -76,7 +76,7 @@
         </div>
       </div>
       <div class="row">
-        <div class="large-3 columns">
+        <div class="infofilm large-3 columns">
           <h4><?php echo __('Genere'); ?></h4>
         </div>
         <div class="content-film large-9 columns">
@@ -84,7 +84,7 @@
         </div>
       </div>
       <div class="row">
-        <div class="large-3 columns">
+        <div class="infofilm large-3 columns">
           <h4><?php echo __('Nazione'); ?></h4>
         </div>
         <div class="content-film large-9 columns">
@@ -104,7 +104,7 @@
             </div>
           </div>
           <div class="row">
-            <div class="large-3 columns">
+            <div class="infofilm large-3 columns">
               <h4><?php echo __('Anno'); ?></h4>
             </div>
             <div class="content-film large-9 columns">
@@ -112,10 +112,10 @@
             </div>
           </div>
           <div class="row">
-            <div class="large-3 columns">
+            <div class="infofilm large-3 columns">
               <h4><?php echo __('Durata'); ?></h4>
             </div>
-            <div class="content-film large-9 columns">
+            <div id="durata" class="content-film large-9 columns">
               <a><?php echo get_field('durata'); ?></a>
             </div>
           </div>
@@ -125,7 +125,7 @@
             </div>
           </div>
         </div>
-        <div class="large-6 columns">
+        <div class="trama large-6 columns">
           <h3><span><?php echo __('La trama'); ?></span></h3>
           <p><?php the_content(); ?></p>
         </div>
@@ -135,28 +135,28 @@
           <h3>Download</h3>
           <dl class="tabs" data-tab>
             <dd class="active large-2 columns">
-              <a href="#panel2-1"><h4><span><?php echo __('Foto film'); ?></span></h4></a>
+              <a href="#panel-foto"><h4><span><?php echo __('Foto film'); ?></span></h4></a>
             </dd>
             <dd class="large-2 columns">
-              <a href="#panel2-2"><h4><span><?php echo __('Pressbook'); ?></span></h4></a>
+              <a href="#panel-pressbook"><h4><span><?php echo __('Pressbook'); ?></span></h4></a>
             </dd>
             <dd class="large-2 columns">
-              <a href="#panel2-3"><h4><span><?php echo __('Manifesto'); ?></span></h4></a>
+              <a href="#panel-manifesto"><h4><span><?php echo __('Manifesto'); ?></span></h4></a>
             </dd>
             <dd class="large-2 columns">
-              <a href="#panel2-4"><h4><span><?php echo __('Clip video'); ?></span></h4></a>
+              <a href="#panel-video"><h4><span><?php echo __('Clip video'); ?></span></h4></a>
             </dd>
             <dd class="large-2 columns">
-              <a href="#panel2-5"><h4><span><?php echo __('Dvd Pack'); ?></span></h4></a>
+              <a href="#panel-dvd"><h4><span><?php echo __('Dvd Pack'); ?></span></h4></a>
             </dd>
             <dd class="large-2 columns">
-              <a href="#panel2-6"><h4><span><?php echo __('Clip audio'); ?></span></h4></a>
+              <a href="#panel-audio"><h4><span><?php echo __('Clip audio'); ?></span></h4></a>
             </dd>
           </dl>
         </div>
       </div>
       <div class="tabs-content">
-        <div class="content active" id="panel2-1">
+        <div class="content active" id="panel-foto">
           <div class="img-film-download slideshow-wrapper">
             <div class="fotorama slideshow" data-click="false" data-nav="thumbs" data-width="100%" data-ratio="1440/750" data-thumbheight="115" data-thumbwidth="180">
               <?php if (get_field('foto_item')) : while(the_repeater_field('foto_item')) : ?>

@@ -3,7 +3,7 @@
 /* @import "pesticide"; */
 
 @font-face {
-    font-family: "Bebas Neue";
+    font-family: "Bebas Neue", Helvetica, sans-serif;
     src: url("../fonts/BebasNeue-webfont.eot");
     src: url("../fonts/BebasNeue-webfont.eot?#iefix") format("embedded-opentype"),
          url("../fonts/BebasNeue-webfont.woff") format("woff"),
@@ -14,6 +14,9 @@
 
 }
 
+.tab-bar {
+  display: none;
+}
 
 header {
   position: fixed;
@@ -22,13 +25,16 @@ header {
   width: 100%;
   top: 0;
   height: 135px;
-
   -webkit-transition: height 0.3s;
   -moz-transition: height 0.3s;
   -ms-transition: height 0.3s;
   -o-transition: height 0.3s;
   transition: height 0.3s;
 }
+
+.archive-img-smart img {
+  display: none;
+} 
 
 .search-container {
   position: absolute;
@@ -42,7 +48,6 @@ header {
   margin-top: -20px;
   z-index: 9999;
   position: fixed;
-
   -webkit-transition: height 0.3s;
   -moz-transition: height 0.3s;
   -ms-transition: height 0.3s;
@@ -77,7 +82,7 @@ header {
   float: left;
   border: 0;
   box-shadow: none;
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   font-size: 2em;
   height: 60px;
 }
@@ -87,7 +92,7 @@ header {
   background: transparent;
   padding: 10px;
   color: rgba(255,255,255,0.5);
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   font-size: 2em;
   border: 0; 
   border-left: 1px solid rgba(255,255,255,1);
@@ -110,7 +115,7 @@ header {
 #main-menu ul li {
   display: inline-block;
   margin-right: 15px;
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
 }
 
 #main-menu a {
@@ -118,7 +123,6 @@ header {
   line-height: 135px;
   height: 135px;
   font-size: 1.3em;
-
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
   -ms-transition: all 0.3s;
@@ -248,7 +252,7 @@ header.smaller .social-icon {
 }
 
 .slider-cinema .info-wrapper {
-  padding-top: 185px;
+  margin-top: -575px;
   position: relative;
 }
 
@@ -256,7 +260,7 @@ header.smaller .social-icon {
   color: rgba(255,255,255,1);
   background-color: rgba(0,0,0,0.8);
   padding: 10px;
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   font-size: 2.4em;
   line-height: 1em;
   display: inline-block;
@@ -280,7 +284,7 @@ header.smaller .social-icon {
 
 .slider-cinema .info-date h4 {
   color: rgba(255,255,255,1);
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   font-size: 7.3em;
   height: 1em;
   margin-left: -5px;
@@ -299,7 +303,7 @@ header.smaller .social-icon {
 
 .slider-cinema .info-date h6 {
   color: rgba(255,255,255,1);
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   font-size: 1.5em;
   height: 1em;
 }
@@ -308,7 +312,7 @@ header.smaller .social-icon {
   color: rgba(255,255,255,1);
   background-color: rgba(0,0,0,0.8);
   padding: 10px;
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   font-size: 1.5em;
   position: absolute;
   bottom: -450px;
@@ -325,7 +329,7 @@ header.smaller .social-icon {
 }
 
 .nextexit-bg h2 {
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   color: rgba(243,33,36,1);
   margin: 50px 0 17px 0;
   font-size: 350%;
@@ -350,7 +354,7 @@ header.smaller .social-icon {
   color: rgba(255,255,255,1);
   background-color: rgba(0,0,0,0.8);
   padding: 10px 10px 10px 33px;
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   font-size: 1.8em;
   margin-top: -495px;
   text-align: right;
@@ -365,7 +369,7 @@ header.smaller .social-icon {
 
 .slider-nextexit .info-date h4 {
   color: rgba(255,255,255,1);
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   font-size: 2em;
   height: 1em;
   float: left;
@@ -383,7 +387,7 @@ header.smaller .social-icon {
 
 .slider-nextexit .info-date h6 {
   color: rgba(255,255,255,1);
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   font-size: 2em;
   height: 1em;
   float: left;
@@ -400,7 +404,7 @@ header.smaller .social-icon {
 
 .slider-nextexit .button {
   background-color: rgba(243,33,36,1);
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   font-size: 2em;
   padding: 10px 40px 10px 40px;
   margin-top: -155px;
@@ -419,8 +423,15 @@ header.smaller .social-icon {
   height: 565px;
 }
 
+.ricerca-bg-hm {
+  background-image: url(../img/ondemand-copertina.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .ondemand-bg h2 {
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   color: rgba(72,72,72,1);
   margin: 40px 0 10px 0;
   font-size: 350%;
@@ -445,7 +456,7 @@ header.smaller .social-icon {
   color: rgba(255,255,255,1);
   background-color: rgba(0,0,0,0.8);
   padding: 5px 10px 2px 10px;
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   font-size: 1.8em;
   margin-top: -535px;
   text-align: left;
@@ -490,7 +501,7 @@ header.smaller .social-icon {
 
 .slider-ondemand .button {
   background-color: rgba(243,33,36,1);
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   font-size: 2em;
   padding: 10px 40px 10px 40px;
   margin-top: -75px;
@@ -517,7 +528,7 @@ header.smaller .social-icon {
 }
 
 .blog h3 {
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   margin-top: 10px;
   color: rgba(72,72,72,1);
   text-decoration: none;
@@ -530,7 +541,7 @@ header.smaller .social-icon {
 
 .blog .button {
   background-color: rgba(243,33,36,1);
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   font-size: 2em;
   padding: 10px 40px 10px 40px;
   margin-top: 29px;
@@ -547,14 +558,14 @@ header.smaller .social-icon {
 }
 
 .blog-archivio-bg h2 {
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   color: rgba(243,33,36,1);
   margin: 45px 0 10px 0;
   font-size: 350%;
 }
 
 .blog-archivio-bg h5 {
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   padding:2px;
   color: rgba(255,255,255,1);
 }
@@ -568,7 +579,7 @@ header.smaller .social-icon {
 }
 
 .archivio a h3 {
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   margin-top: 10px;
   color: rgba(72,72,72,1);
   text-decoration: none;
@@ -590,7 +601,7 @@ header.smaller .social-icon {
 
 .archivio .button {
   background-color: rgba(243,33,36,1);
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   font-size: 2em;
   padding: 10px 40px 10px 40px;
   margin-top: 29px;
@@ -629,7 +640,7 @@ header.smaller .social-icon {
   color: rgba(255,255,255,1);
   background-color: rgba(0,0,0,0.8);
   padding: 10px;
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   font-size: 2.4em;
   line-height: 1em;
   display: inline-block;
@@ -655,7 +666,7 @@ header.smaller .social-icon {
 
 .slide-blog .info-date h4 {
   color: rgba(255,255,255,1);
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   font-size: 7.3em;
   height: 1em;
   margin-left: -15px;
@@ -674,7 +685,7 @@ header.smaller .social-icon {
 
 .slide-blog .info-date h6 {
   color: rgba(255,255,255,1);
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   font-size: 1.5em;
   height: 1em;
 }
@@ -701,7 +712,7 @@ header.smaller .social-icon {
   width: 270px;
   text-align: center;
   float: left;
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   height: 55px;
 }
 
@@ -739,7 +750,7 @@ header.smaller .social-icon {
   color: #FFF;
   width: 270px;
   text-align: center;
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   height: 55px;
   clear: both;
 }
@@ -767,7 +778,7 @@ header.smaller .social-icon {
 /* -- MISSION --*/
   
 .mission h2 {
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   color: rgba(72,72,72,1);
   margin: 30px 0 10px 0;
   font-size: 350%;
@@ -784,33 +795,200 @@ header.smaller .social-icon {
 /* --FOOTER-- */
 
 footer {
+  padding:0;
+  margin:40px 0 0 0;
+  background:url(../img/blur.png) top center no-repeat;
+  background-size: contain;
+}
+
+footer .wrapper {
+  margin-top:150px;
   background-color: rgba(38,37,37,1);
 }
 
+.info-footer {
+  margin-bottom: 50px;
+}
+
 footer h6 {
-  text-align: center;
   padding-top: 70px;
-  padding-bottom: 300px;
-  font-family: "Bebas Neue";
+  font-family: "Georgia";
+  font-style: italic;
   color: rgba(255,255,255,1);
+  line-height: 20px;
+  font-size: 0.9em;
+}
+
+footer h2 {
+  float: left;
+  height: 40px;
   line-height: 40px;
-  font-size: 120%;
+  font-size: 0.8em;
+  padding-left: 325px;
+  padding-right: 50px;
+}
+
+footer span {
+  color: rgba(243,33,36,1);
+  font-family: "Bebas Neue";
+  font-style: normal;
+  font-size: 1.2em;
+  text-decoration: none;
 }
 
 footer a {
-  color: rgba(181,58,61,1);
+  color: rgba(255,255,255,1);
+  text-decoration: underline;
+}
+
+footer a:hover {
+  color: rgba(253,184,19,1);
+}
+
+footer .button {
+  background-color: rgba(243,33,36,1);
+  font-family: "Bebas Neue";
+  padding: 10px 40px 10px 40px;
+  margin-top: 29px;
+  width: 180px;
+  margin-bottom: -50px;
+}
+
+footer .button:hover {
+  background-color: rgba(253,184,19,1);
+}
+
+footer .button:active {
+  background-color: black;
+}
+
+.back-login {
+  background-color: rgba(255,255,255,0.9);
+  border: none;
+}
+
+.back-login .close-reveal-modal {
+  text-decoration: none;
+}
+
+.back-login h4 {
+  color: rgba(38,37,37,1);
+  font-size: 3em;
+  font-family: "Bebas Neue";
+}
+
+.back-login h6 {
+  color: rgba(38,37,37,1);
+  font-size: 1em;
+  font-family: "Georgia";
+  font-style: italic;
+  float: right;
+  line-height: 60px;
+  margin-left: 50px;
+}
+
+.back-login h6 a {
+  color: rgba(38,37,37,1);
+  text-decoration: underline;
+}
+
+#loginform {
+  margin-top: 20px;
+}
+
+#loginform p {
+  font-family: "Bebas Neue";
+}
+
+#loginform label {
+  font-size: 1.2em;
+}
+
+#user_login {
+  background-color: rgba(0,0,0,0.1);
+  border: none;
+  box-shadow: none;
+  height: 50px;
+  font-size: 30px;
+  font-family: 'Georgia';
+}
+
+#user_pass {
+  background-color: rgba(0,0,0,0.1);
+  border: none;
+  box-shadow: none;
+  height: 50px;
+  font-size: 30px;
+  font-family: 'Georgia';
+}
+
+#wp-submit {
+  background-color: rgba(243,33,36,1);
+  font-family: "Bebas Neue";
+  padding: 10px 40px 10px 40px;
+  margin-top: 10px;
+  width: 180px;
+  border: none;
+  color: rgba(255,255,255,1);
+  font-size: 1.5em;
+  float: left;
+  line-height: 60px;
+}
+
+.hello-user a {
+  float: left;
+  font-family: "Bebas Neue";
+  font-size: 2.5em;
+  width: 33.33%;
+  text-align: center;
+  color: rgba(243,33,36,1);
+  padding: 20px 20px 20px 20px;
+}
+
+.hello-user a:hover {
+  background-color: rgba(243,33,36,1);
+  color: rgba(255,255,255,1);
+}
+
+.site-admin a {
+  float: left;
+  font-family: "Bebas Neue";
+  font-size: 2.5em;
+  width: 33.33%;
+  text-align: center;
+  color: rgba(243,33,36,1);
+  padding: 20px 20px 20px 20px;
+}
+
+.site-admin a:hover {
+  background-color: rgba(243,33,36,1);
+  color: rgba(255,255,255,1);
+}
+
+.log-out a {
+  float: left;
+  font-family: "Bebas Neue";
+  font-size: 2.5em;
+  width: 33.33%;
+  text-align: center;
+  color: rgba(243,33,36,1);
+  padding: 20px 20px 20px 20px;
+}
+
+.log-out a:hover {
+  background-color: rgba(243,33,36,1);
+  color: rgba(255,255,255,1);
 }
 
 .social-icon-footer {
-  height: 135px;
-  line-height: 135px;
-  bottom: 350px;
+  height: 75px;
+  line-height: 75px;
 }
 
 .social-icon-footer img {
   height: 20px;
-  margin-left: 3px;
-  margin-right: 3px;
+  margin-left: 0.35em;
+  margin-right: 0.3em;
   padding: 2px;
   opacity: 0;
 }
@@ -903,7 +1081,7 @@ footer a {
   color: rgba(255,255,255,1);
   background-color: rgba(0,0,0,0.8);
   padding: 10px;
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   font-size: 2.4em;
   line-height: 1em;
   display: inline-block;
@@ -921,6 +1099,15 @@ footer a {
   width: 100%;
 }
 
+
+/* -- FINE MISSION-- */
+
+/* --FOOTER-- */
+
+footer {
+  background-color: rgba(38,37,37,0.7);
+}
+
 .chi-siamo .info-date {
   background-color: rgba(0,0,0,0.8);
   text-align: center;
@@ -929,7 +1116,7 @@ footer a {
 
 .chi-siamo .info-date h6 {
   color: rgba(255,255,255,1);
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   font-size: 1.5em;
   height: 1em;
 }
@@ -940,7 +1127,7 @@ footer a {
 }
 
 .chi-siamo-bg h3 {
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   font-size: 2.5em;
   color: rgba(243,33,36,1);
   margin-top: 50px;
@@ -957,14 +1144,14 @@ footer a {
 }
 
 .produzioni-bg h3 {
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   font-size: 2.5em;
   color: rgba(243,33,36,1);
   margin-top: 50px;
 }
 
 .produzioni-bg h4 {
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   font-size: 1.5em;
   color: rgba(255,255,255,1);
   padding: 5px 10px;
@@ -1000,7 +1187,7 @@ footer a {
 }
 
 .azienda-bg h4 {
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   font-size: 2em;
   color: rgba(255,255,255,1);
   padding: 5px 10px;
@@ -1011,7 +1198,7 @@ footer a {
 }
 
 .azienda-bg h5 {
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   font-size: 2em;
   color: rgba(255,255,255,1);
   padding: 5px 10px;
@@ -1082,7 +1269,7 @@ footer a {
   color: rgba(255,255,255,1);
   background-color: rgba(0,0,0,0.8);
   padding: 10px;
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   font-size: 2.4em;
   line-height: 1em;
   display: inline-block;
@@ -1092,7 +1279,7 @@ footer a {
   color: rgba(255,255,255,1);
   background-color: rgba(0,0,0,0.8);
   padding: 10px;
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   font-size: 2.4em;
   line-height: 1em;
 }
@@ -1104,7 +1291,7 @@ footer a {
 
 .img-regista .info-date h4 {
   color: rgba(255,255,255,1);
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   font-size: 6.5em;
   height: 1em;
   margin-left: -5px;
@@ -1122,7 +1309,7 @@ footer a {
 
 .img-regista .info-date h6 {
   color: rgba(255,255,255,1);
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   font-size: 1.5em;
   height: 1em;
   }
@@ -1131,7 +1318,7 @@ footer a {
   color: rgba(255,255,255,1);
   background-color: rgba(0,0,0,0.8);
   padding: 10px;
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   font-size: 1.5em;
   margin-top: 255px;
 }
@@ -1141,7 +1328,7 @@ footer a {
 }
 
 .biografia h2 {
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   color: rgba(243,33,36,1);
   margin: 45px 0 10px 0;
   font-size: 350%;
@@ -1153,14 +1340,14 @@ footer a {
 }
 
 .filmografia h2 {
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   color: rgba(243,33,36,1);
   margin: 45px 0 10px 0;
   font-size: 350%;
 }
 
 .filmografia h3 {
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   margin-top: -5px;
   color: rgba(255,255,255,1);
   display: inline-block;
@@ -1187,7 +1374,7 @@ footer a {
 }
 
 .slider-film-catalogo .info-film-catalogo h3 spam {
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   color: rgba(255,255,255,1);
   display: inline-block;
   background-color: rgba(72,72,72,1);
@@ -1201,7 +1388,7 @@ footer a {
 }
 
 .altri-film-bg h3 {
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   margin-top: 10px;
   color: rgba(255,255,255,1);
   display: inline-block;
@@ -1228,7 +1415,7 @@ footer a {
 }
 
 .slider-film-catalogo .info-film-catalogo h3 spam {
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   color: rgba(255,255,255,1);
   display: inline-block;
   background-color: rgba(72,72,72,1);
@@ -1254,7 +1441,7 @@ footer a {
 }
 
 .slider-film-catalogo .info-film-catalogo h3 spam {
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   color: rgba(255,255,255,1);
   display: inline-block;
   background-color: rgba(72,72,72,1);
@@ -1267,7 +1454,7 @@ footer a {
   list-style-type: none;
 }
 .slider-film-catalogo a {
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   color: rgba(0,0,0,0.7);
   text-align: left;
   margin-left: 280px;
@@ -1288,7 +1475,7 @@ footer a {
 }
 
 .slider-film-catalogo a {
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   color: rgba(0,0,0,0.7);
   text-align: left;
   margin-left: 280px;
@@ -1365,7 +1552,7 @@ footer a {
   color: rgba(255,255,255,1);
   background-color: rgba(0,0,0,0.8);
   padding: 10px;
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   font-size: 2.4em;
   line-height: 1em;
   display: inline-block;
@@ -1389,7 +1576,7 @@ footer a {
 .img-film .info-content span {
   color: rgba(255,255,255,0.8);
   font-size: 2em;
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   font-style: normal;
 }
 
@@ -1401,7 +1588,7 @@ footer a {
 
 .img-film .info-share h6 {
   color: rgba(255,255,255,1);
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   font-size: 1.5em;
   height: 1em;
   display: inline-block;
@@ -1411,7 +1598,7 @@ footer a {
   color: rgba(255,255,255,1);
   background-color: rgba(0,0,0,0.8);
   padding: 10px;
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   font-size: 1.5em;
   margin-top: 255px;
   display: inline-block;
@@ -1427,7 +1614,7 @@ footer a {
 }
 
 .info-film h3 span {
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   padding: 5px 7px 3px 7px;
   color: rgba(255,255,255,1);
   background-color: rgba(0,0,0,0.9);
@@ -1435,7 +1622,7 @@ footer a {
 
 .info-film h4 {
   color: rgba(0,0,0,0.7);
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   font-size: 2em;
   margin-top: 5px;
   margin-bottom: 5px;
@@ -1472,7 +1659,7 @@ footer a {
 }
 
 .download-film h3 {
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   font-size: 3em;
   color: rgba(181,58,61,1);
   margin-bottom: -10px;
@@ -1491,7 +1678,7 @@ footer a {
 }
 
 .download-film .tabs a h4 span {
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   font-size: 1.1em;
   color: rgba(0,0,0,0.7);
   padding: 5px 7px 3px 7px;
@@ -1556,7 +1743,7 @@ footer a {
   color: rgba(255,255,255,1);
   background-color: rgba(0,0,0,0.8);
   padding: 10px;
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   font-size: 2.4em;
   line-height: 1em;
   display: inline-block;
@@ -1580,7 +1767,7 @@ footer a {
 
 .img-film-download .info-date h4 {
   color: rgba(255,255,255,1);
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   font-size: 7.3em;
   height: 1em;
   margin-left: -5px;
@@ -1599,7 +1786,7 @@ footer a {
 
 .img-film-download .info-date h6 {
   color: rgba(255,255,255,1);
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   font-size: 1.5em;
   height: 1em;
 }
@@ -1607,7 +1794,7 @@ footer a {
 .img-film-download .film-thumb-title h4 {
   color: rgba(255,255,255,1);
   padding: 10px;
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   font-size: 1.5em;
   position: absolute;
   bottom: -575px;
@@ -1639,7 +1826,7 @@ footer a {
 
 .pressbook .button {
   background-color: rgba(0,0,0,0.8);
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   font-size: 2em;
   padding: 10px 40px 10px 40px;
   margin-top: -300px;
@@ -1662,7 +1849,7 @@ footer a {
 }
 
 .manifesto h4 {
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   color: rgba(0,0,0,1);
   position: absolute;
   margin-top: -580px;
@@ -1671,7 +1858,7 @@ footer a {
 
 .manifesto .button {
   background-color: rgba(0,0,0,0.8);
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   font-size: 2em;
   padding: 10px 40px 10px 40px;
   margin-top: -300px;
@@ -1716,7 +1903,7 @@ footer a {
   color: rgba(255,255,255,1);
   background-color: rgba(0,0,0,0.8);
   padding: 10px;
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   font-size: 2.4em;
   line-height: 1em;
   display: inline-block;
@@ -1740,7 +1927,7 @@ footer a {
 
 .video-film-download .info-date h4 {
   color: rgba(255,255,255,1);
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   font-size: 7.3em;
   height: 1em;
   margin-left: -5px;
@@ -1759,7 +1946,7 @@ footer a {
 
 .video-film-download .info-date h6 {
   color: rgba(255,255,255,1);
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   font-size: 1.5em;
   height: 1em;
 }
@@ -1768,7 +1955,7 @@ footer a {
   color: rgba(255,255,255,1);
   background-color: rgba(0,0,0,0.8);
   padding: 10px;
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   font-size: 1.5em;
   position: absolute;
   bottom: -575px;
@@ -1809,12 +1996,12 @@ footer a {
 }
 
 .slider-film-simili .altri-film span {
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   color: rgba(181,58,61,1);
 }
 
 .slider-film-simili .slide a {
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   color: rgba(0,0,0,0.7);
   text-align: left;
   margin-top: 50px;
@@ -1838,14 +2025,21 @@ footer a {
 /* --PRESS-- */
 
 .archivio-pg p {
-  font-family: "Georgia";
+  color: rgba(255,255,255,1);
+  background-color: rgba(0,0,0,0.8);
+  padding: 10px;
+  font-family: "Georgia", serif;
   font-style: italic;
   font-size: 1em;
+  line-height: 1.2em;
   display: inline-block;
-  background-color: rgba(0,0,0,0.8);
-  color: rgba(255,255,255,1);
-  padding: 10px;
-  margin-top: 180px;
+}
+
+.ricerca-bg-pr {
+  background-image: url(../img/press-copertina.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .press-bg .option-visual-page ul li {
@@ -1880,7 +2074,7 @@ footer a {
 }
 
 .press-bg .sezione-film h4 {
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   margin-top: 10px;
   color: rgba(255,255,255,1);
   display: inline-block;
@@ -1992,22 +2186,24 @@ footer a {
 
 /* --FINE PRESS-- */
 
-/* PAGINA ARCHIVIO */
+/* --ARCHIVIO-- */
 
 .archivio-pg h2 {
   color: rgba(243,33,36,1);
   background-color: rgba(0,0,0,0.8);
   padding: 10px;
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   font-size: 2.4em;
   line-height: 1em;
   display: inline-block;
   margin-top: 180px;
 }
 
-.ricerca-bg {
-  background-color: rgba(242,242,242,1);
-  height: 500px;
+.ricerca-bg-ar {
+  background-image: url(../img/archivio-copertina.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .option-visual-page ul li {
@@ -2050,7 +2246,7 @@ footer a {
   color: rgba(255,255,255,1);
   background-color: rgba(0,0,0,0.5);
   padding: 10px;
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   font-size: 2em;
   line-height: 1em;
   display: inline-block;
@@ -2064,7 +2260,7 @@ footer a {
 .archivio-film span {
   background-color: rgba(0,0,0,0.8);
   color: rgba(255,255,255,1);
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   padding-left: 2px;
   padding-right: 2px;
 }
@@ -2077,9 +2273,35 @@ footer a {
   text-decoration: underline;
 }
 /* FINE PAGINA ARCHIVIO */
+
 /* INIZIO PAGINA SCUOLA */
-.scuola-bg {
-  margin-top: 150px;
+.scuola-pg h2 {
+  color: rgba(243,33,36,1);
+  background-color: rgba(0,0,0,0.8);
+  padding: 10px;
+  font-family: "Bebas Neue", Helvetica, sans-serif;
+  font-size: 2.4em;
+  line-height: 1em;
+  display: inline-block;
+  margin-top: 180px;
+}
+
+.scuola-pg p {
+  color: rgba(255,255,255,1);
+  background-color: rgba(0,0,0,0.8);
+  padding: 10px;
+  font-family: "Georgia", serif;
+  font-style: italic;
+  font-size: 1em;
+  line-height: 1.2em;
+  display: inline-block;
+}
+
+.ricerca-bg-sc {
+  background-image: url(../img/scuole-copertina.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .scuola-bg .first-menu {
@@ -2140,7 +2362,7 @@ footer a {
 }
 
 #scuola .sezione-film ul li h4 {
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   margin-top: 10px;
   color: rgba(255,255,255,1);
   display: inline-block;
@@ -2151,7 +2373,7 @@ footer a {
 }
 
 #scuola .sezione-film ul li h3 {
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   color: rgba(72,72,72,1);
 }
 
@@ -2193,7 +2415,7 @@ textarea {
 }
 
 .info-film-scuola h5 span {
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   color: rgba(255,255,255,1);
   display: inline-block;
   background-color: rgba(72,72,72,1);
@@ -2212,10 +2434,327 @@ textarea {
 #button-scuola a {
   background-color: rgba(243,33,36,1);
   color: rgba(255,255,255,1);
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   font-size: 2em;
   padding: 10px 40px 10px 40px;
   margin-top: 20px;
   margin-bottom: 0px;
 }
 /* FINE PAGINA SCUOLA */
+
+
+/* FORM RICERCA */
+
+.wp-advanced-search {
+  margin-top: 35px;
+}
+
+#search_query {
+  background-color: rgba(0,0,0,0.3);
+  border: none;
+  box-shadow: none;
+  height: 50px;
+  font-size: 20px;
+  font-family: 'Georgia';
+  color: rgba(255,255,255,1);
+}
+
+.label-container label {
+  font-family: "Bebas Neue";
+  font-size: 1.2em;
+  color: rgba(0,0,0,1);
+  background-color: rgba(255,255,255,0.5);
+  padding: 5px 10px 1px 10px;
+  display: inline-block;
+}
+
+#tax_category {
+  background-color: rgba(0,0,0,0.3);
+  border: none;
+  box-shadow: none;
+  height: 50px;
+  width: 80%;
+  font-size: 20px;
+  font-family: 'Georgia';
+  font-style: italic;
+  margin-right: 25px;
+  float: left;
+  color: rgba(255,255,255,1);
+}
+
+.wpas-submit {
+  background-color: rgba(243,33,36,1);
+  font-family: Bebas Neue;
+  width: 180px;
+  border: none;
+  color: rgba(255,255,255,1);
+  font-size: 1.2em;
+  height: 50px;
+  float: right;
+}
+
+.pagination a{
+  color: rgba(243,33,36,1);
+  font-size: 1.2em;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+.pagination .current {
+  font-size: 1.2em;
+  background-color: rgba(243,33,36,1);
+  font-family: 'Georgia';
+}
+
+/* --FINE FORM RICERCA-- */
+
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+
+.tab-bar{
+  display: block;
+}
+
+header {
+  display: none;
+}
+
+.archivio-film img {
+  height: auto;
+  background-size: content;
+  width: 100%;
+}
+.archive-img img {
+  display: none;
+}
+.archivio-pg h2 {
+  margin-top: 15px;
+}
+
+.archivio-film h3, .sezione-film h3 {
+  margin-bottom: 5px;  
+}
+
+.archivio-film h5 {
+  display: none;
+}
+
+.layout-film, .sezione-film{
+  height: 200px;  
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.tab-bar {
+  height: 60px;
+  display: block;
+  background-color: rgba(0,0,0,0.8);
+}
+
+.left-off-canvas-menu {
+  background-color: rgba(242,242,242,1);
+  font-family: "Bebas Neue";
+}
+
+.tab-bar a img {
+  height: 60px;
+}
+
+.left-small {
+  border-right: none;
+  padding: 10px;
+}
+
+.menu-main-menu-container {
+  margin-left: -20px;
+}
+
+.off-canvas-list ul li a{
+  color: rgba(80,80,80,1);
+  border-bottom: none;
+}
+
+.off-canvas-list ul li {
+  list-style-type: none;
+}
+
+.left-off-canvas-menu ul li a:hover {
+  background-color: rgba(255,255,255,1);
+  color: rgba(218,33,44,1);
+}
+
+ul.off-canvas-list li label{
+  height: 60px;
+  background-color: rgba(241,242,242,1);
+}
+
+ul.off-canvas-list li label img{
+  height: 60px;
+  margin-left: 20px;
+  margin-top: -15px;
+}
+
+ul.off-canvas-list li label a:hover{
+  background-color: rgba(242,242,242,1);
+}
+
+ul.off-canvas-list li label a{
+  border-bottom: none;
+}
+
+.tabs {
+  margin-top: -40px;
+  width: 100%;
+}
+
+.tabs dd {
+  background: rgba(243,33,36,1);
+  padding: 0px 3.9% 0px 3.8%;
+}
+
+.tabs dd a {
+  color: #fff;
+}
+
+.tabs dd a:hover {
+  background: #fff;
+}
+
+.title-layout {
+  height: 50px;  
+}
+
+.option-visual-page ul, .press-bg .option-visual-page ul  {
+  margin-left: 0px;
+}
+.option-visual-page ul li, .press-bg .option-visual-page ul li {
+  font-size: 13px;
+  margin: 20px 0px 10px 0px;
+  padding: 0px;
+}
+.option-visual-page .view-film, .press-bg .option-visual-page .view-film {
+  margin-left: 0px;
+  float: left;
+}
+
+
+.wpas-submit .content {
+  width: 120px;
+
+  width: 100%;
+
+  height: 40px;
+}
+
+button.large, .button.large {
+  padding-top: 10px;
+}
+
+.ricerca-bg {
+  height: 320px;
+}
+
+.archivio-pg p {
+  display: none;
+}
+
+.wp-advanced-search {
+  margin-top: 10px;
+}
+
+#tax_category {
+  height: 40px;
+}
+
+#search_query{
+  height: 40px;
+}
+
+.social-icon img {
+  display: none;
+}
+
+#main-menu {
+  display: none;
+}
+
+.archive-img-smart img {
+  display: inline-block;
+}
+
+/*SINGLE-FILM INIZIO*/
+.attachment-post-thumbnail wp-post-image {
+  max-width: 50%;
+  min-height: 838px;
+}
+
+.content {
+  display:none;
+}
+
+.tabs {
+  display: none;
+}
+
+.slider-film-simili {
+  display:none;
+}
+
+.altri-film {
+  display:none;
+}
+
+.infofilm{
+  display:none;
+}
+
+#durata{
+  display:none;
+}
+
+.trama p{
+  font-size:0.8em;
+}
+
+.content-film a{
+  font-size:0.8em;
+}
+
+.footer{
+  display:none;
+}
+
+.footerfooter h6{
+  display:none;
+}
+
+.button.large{
+  display:none;
+}
+
+.clearfix:after{
+  display: none;
+}
+
+
+.pagination {
+  margin-left: 15px;
+}
+
+footer .wrapper {
+  margin-top: 80px;
+}
+
+#tax_category {
+  width: 100%;
+}
+
+.info-footer h6{
+  display: none;
+}
+
+.social-icon-footer {
+  text-align: center;
+  height: 30px;
+}
+
+}
