@@ -55,7 +55,7 @@ $args = array();
 
 ?>
 
-<div id="press" class="ricerca-bg large-12 columns">
+<div id="press" class="ricerca-bg">
     <div class="archivio-pg row">
       <div class="large-12 columns">
         <p>Cerca il tuo film all'interno del catalogo.<br>
@@ -69,7 +69,7 @@ $args = array();
       </div>
     </div>
   </div>
-<div class="press-bg large-12 columns">
+<div class="press-bg">
 	<div class="row">
 		<div class="option-visual-page row">
 	    <div class="large-6 columns">
