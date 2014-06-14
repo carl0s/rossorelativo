@@ -1,5 +1,7 @@
  <?php
- /* Template Name: Stile Scuola */
+ /*
+  * Template Name: Stile Scuola
+  */
  ?>
 
  <!--HEADER-->
@@ -59,7 +61,7 @@
   </div>
 
 
-<div class="scuola-bg large-12 columns">
+<div class="scuola-bg">
    <div class="row">
     <div class="first-menu large-6 columns">
        <ul class="selected">
@@ -80,12 +82,13 @@
     </div>
   </div>
 <?php $paged = (get_query_var('paged')) ? get_query_var('paged') : 1; query_posts(array('post_type'=>'film', 'meta_key'=> 'scuola',
-      'meta_value' => 'Si', 'orderby'=>$post_orderby, 'order'=>'ASC', 'posts_per_page'=>4, 'paged'=>$paged)); ?>
+      'meta_value' => 'Si', 'orderby'=>$post_orderby, 'order'=>'ASC', 'posts_per_page'=>4, 'paged'=>$paged)); 
+?>
 <?php
 if (have_posts()) : while(have_posts()) : the_post();
 ?>
 <div id="scuola" class="row">
-  <div id="sezione-film" class="large-12 columns">
+  <div id="sezione-film">
     <ul>
       <li><h4>
         <?php 
@@ -97,14 +100,15 @@ if (have_posts()) : while(have_posts()) : the_post();
     </ul>
   </div>
   <div class="sezione-film large-3 columns">
-   <a class="archive-img" href="<?php echo get_permalink(); ?>"> <?php $image = get_field('locandina'); ?><img src="<?php echo $image['url']; ?>" /></a>
+   <a class="archive-img" href="<?php echo get_permalink(); ?>"> <?php $image = get_field('locandina'); ?><img src="<?php echo $image['url']; ?>" ></a>
  </div>
  <div class="text-film large-6 columns">
-   <p><?php echo custom_field_excerpt(); ?></p>
-   <br><br>
+  <p class="descrizione-scuole">
+    <?php echo get_field('descrizione'); ?>
+  </p>
+  
    <a href="<?php echo get_field('link_trailer'); ?>" target="_blank"><h5>Guarda il trailer</h5></a>
  </div>
- <div id="content-scuola">
   <div class="info-film-scuola large-3 columns">
    <h5><span><?php echo __('Regia'); ?></span>  
     <?php $registi = get_field('regia');
@@ -160,13 +164,24 @@ if (have_posts()) : while(have_posts()) : the_post();
         ?>
       </h5> 
       <div id="button-scuola">
-       <a href="<?php echo post_permalink(); ?>" class="button expand">Scheda del film</a>
-       <a href="<?php echo get_page_link_by_slug('index'); ?>" class="button expand">Spunti didattici</a>
+        <?php
+          if( get_field('scheda_del_film') ):
+          $file = get_field('scheda_del_film');
+        ?>
+        <a href="<?php echo $file['url']; ?>" class="button expand"><?php echo __('Scheda del film'); ?></a>
+        <?php
+          endif;
+        ?>
+        <?php
+          if( get_field('spunti_didattici') ):
+          $file = get_field('spunti_didattici');
+        ?>
+        <a href="<?php echo $file['url']; ?>" class="button expand"><?php echo __('Spunti didattici'); ?></a>
+        <?php
+          endif;
+        ?>
      </div>
-
    </div>
-
- </div>
 </div>
 <?php endwhile; endif; ?>
 </div>
