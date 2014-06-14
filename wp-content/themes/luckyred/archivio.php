@@ -1,6 +1,6 @@
   <?php
     /*
-    * Template Name: Stile Archivio
+    Template Name: Stile Archivio
     */
 
     if($_GET):

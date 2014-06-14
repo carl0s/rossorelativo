@@ -54,7 +54,7 @@
   <div class="large-6 columns">
     <h3><span><?php echo __('Il film') ?></span></h3>
     <div class="row">
-      <div class="large-3 columns">
+      <div class="infofilm large-3 columns">
         <h4><?php echo __('Regia'); ?></h4>
       </div>
       <div class="content-film large-9 columns">
@@ -76,7 +76,7 @@
         </div>
       </div>
       <div class="row">
-        <div class="large-3 columns">
+        <div class="infofilm large-3 columns">
           <h4><?php echo __('Genere'); ?></h4>
         </div>
         <div class="content-film large-9 columns">
@@ -84,7 +84,7 @@
         </div>
       </div>
       <div class="row">
-        <div class="large-3 columns">
+        <div class="infofilm large-3 columns">
           <h4><?php echo __('Nazione'); ?></h4>
         </div>
         <div class="content-film large-9 columns">
@@ -104,7 +104,7 @@
             </div>
           </div>
           <div class="row">
-            <div class="large-3 columns">
+            <div class="infofilm large-3 columns">
               <h4><?php echo __('Anno'); ?></h4>
             </div>
             <div class="content-film large-9 columns">
@@ -112,10 +112,10 @@
             </div>
           </div>
           <div class="row">
-            <div class="large-3 columns">
+            <div class="infofilm large-3 columns">
               <h4><?php echo __('Durata'); ?></h4>
             </div>
-            <div class="content-film large-9 columns">
+            <div id="durata" class="content-film large-9 columns">
               <a><?php echo get_field('durata'); ?></a>
             </div>
           </div>
@@ -125,7 +125,7 @@
             </div>
           </div>
         </div>
-        <div class="large-6 columns">
+        <div class="trama large-6 columns">
           <h3><span><?php echo __('La trama'); ?></span></h3>
           <p><?php the_content(); ?></p>
         </div>
