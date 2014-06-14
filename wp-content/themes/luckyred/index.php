@@ -117,7 +117,6 @@
 <div class="ondemand-bg">
   <div class="row">
     <a href="<?php echo get_page_link_by_slug('on demand'); ?>"><h2><?php echo __('Home video'); ?></h2></a>
-
     <div class="slider-ondemand slideshow-wrapper">
       <div class="fotorama slideshow" data-click="false" data-transition="crossfade" data-nav="thumbs" data-width="100%" data-ratio="1180/360" data-thumbheight="260" data-thumbwidth="180">
         <?php 
@@ -161,13 +160,10 @@
     </div>
 </div>
 
-
-
-
 <div class="blog-archivio-bg">
   <div class="row">
     <div class="blog large-5 columns">
-      <h2><?php echo __('Blog'); ?></h2>
+      <a href="<?php echo get_page_link_by_slug('blog'); ?>"><h2><?php echo __('Blog'); ?></h2></a>
       <br>
       <?php query_posts(array('post_type'=>'post', 'posts_per_page'=>1)); ?>
       <?php if (have_posts()) : while(have_posts()) : the_post(); ?>
