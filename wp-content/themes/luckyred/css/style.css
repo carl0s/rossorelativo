@@ -235,6 +235,10 @@ header.smaller .social-icon {
 
 .slider-cinema .fotorama__video-play {
   margin-top: 20px;
+  position: absolute;
+  background-image: url(../img/play.svg);
+  background-position: 0px 0px;
+  background-size: 75%;
 }
 
 .slider-cinema .fotorama__nav-wrap {
