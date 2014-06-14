@@ -67,7 +67,7 @@
     </div>
   </div>
   <div class="option-visual-page row">
-    <div class="large-6 columns">
+    <div class="large-6 small-12 columns">
       <ul class="order-film">
       <li><?php echo __('Ordina per'); ?></li>
         <li><a href="?orderby=title">Nome</a></li>
@@ -75,7 +75,7 @@
         <li><a href="?orderby=rand">Più vecchio</a></li>
       </ul>
     </div>
-    <div class="large-6 end columns">
+    <div class="large-6 small-12 end columns">
       <ul class="view-film">
       <li><?php echo __('Visualizza'); ?></li>
       <li><a href="?posts=4#archivio">4</a></li>
