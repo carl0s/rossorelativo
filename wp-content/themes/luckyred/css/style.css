@@ -34,6 +34,10 @@ header {
   transition: height 0.3s;
 }
 
+.archive-img-smart img {
+  display: none;
+} 
+
 .search-container {
   position: absolute;
   margin-top:-99999px;
