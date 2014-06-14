@@ -7,9 +7,9 @@ $actual_id = get_the_ID();
 ?>
 
 <div id="blog">
-    <?php echo get_the_post_thumbnail(); ?>
   <div class="slide-blog" >
   <div class='info-wrapper' >
+    <?php echo get_the_post_thumbnail(); ?>
     <div class='row'>
       <div class="info-blog">
       <div class='info-title large-5 columns'>
@@ -25,7 +25,7 @@ $actual_id = get_the_ID();
   </div>
   <div class="row">
     <div class="blog-content">
-      <?php the_content(); ?>
+    <p> <?php echo get_the_content(); ?> </p>
     <div id="blog-tag">
       <h2>ricerca tra i tag : </h2>
       <?php
@@ -40,7 +40,7 @@ $actual_id = get_the_ID();
       <?php 
       $args = array(
         'post_type'  => 'post',
-        'post_not_in' => array (
+        'post__not_in' => array (
                             $actual_id
                           ),
         'posts_per_page' => -1,
@@ -50,12 +50,11 @@ $actual_id = get_the_ID();
       $loop_blog_simil = new WP_Query($args);
       ?>
         <?php if ($loop_blog_simil->have_posts()) : while($loop_blog_simil->have_posts()) : $loop_blog_simil->the_post(); ?>
-        <?php $temp_id = get_the_ID(); echo $temp_id; ?>
+        <?php $temp_id = get_the_ID(); //echo $temp_id; ?>
         <?php if ($actual_id != $temp_id ): ?>
         <div class="slide-blog-simil" >
         <div class='info-wrapper' data-id="<?php echo get_permalink(); ?>">
           <?php echo get_the_post_thumbnail(); ?>
-          <?php the_title(); ?>
         </div>
         <div class="row">
           <div class="blog-content-simil">
