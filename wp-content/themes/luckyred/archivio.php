@@ -54,7 +54,7 @@
   <!--BODY-->
   <?php wp_reset_postdata(); ?>
 
-  <div id="archivio" class="ricerca-bg large-12 columns">
+  <div id="archivio" class="ricerca-bg-ar large-12 columns">
     <div class="archivio-pg row">
       <div class="large-12 columns">
         <h2><?php echo __('Archivio'); ?></h2>

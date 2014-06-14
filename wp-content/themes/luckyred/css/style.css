@@ -256,7 +256,7 @@ header.smaller .social-icon {
 }
 
 .slider-cinema .info-wrapper {
-  padding-top: 185px;
+  margin-top: -575px;
   position: relative;
 }
 
@@ -425,6 +425,13 @@ header.smaller .social-icon {
 
 .ondemand-bg {
   height: 565px;
+}
+
+.ricerca-bg-hm {
+  background-image: url(../img/ondemand-copertina.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .ondemand-bg h2 {
@@ -2012,14 +2019,21 @@ footer .button:active {
 /* --PRESS-- */
 
 .archivio-pg p {
-  font-family: "Georgia";
+  color: rgba(255,255,255,1);
+  background-color: rgba(0,0,0,0.8);
+  padding: 10px;
+  font-family: "Georgia", serif;
   font-style: italic;
   font-size: 1em;
+  line-height: 1.2em;
   display: inline-block;
-  background-color: rgba(0,0,0,0.8);
-  color: rgba(255,255,255,1);
-  padding: 10px;
-  margin-top: 180px;
+}
+
+.ricerca-bg-pr {
+  background-image: url(../img/press-copertina.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .press-bg .option-visual-page ul li {
@@ -2166,7 +2180,7 @@ footer .button:active {
 
 /* --FINE PRESS-- */
 
-/* PAGINA ARCHIVIO */
+/* --ARCHIVIO-- */
 
 .archivio-pg h2 {
   color: rgba(243,33,36,1);
@@ -2179,9 +2193,11 @@ footer .button:active {
   margin-top: 180px;
 }
 
-.ricerca-bg {
-  background-color: rgba(242,242,242,1);
-  height: 500px;
+.ricerca-bg-ar {
+  background-image: url(../img/archivio-copertina.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .option-visual-page ul li {
@@ -2251,9 +2267,35 @@ footer .button:active {
   text-decoration: underline;
 }
 /* FINE PAGINA ARCHIVIO */
+
 /* INIZIO PAGINA SCUOLA */
-.scuola-bg {
-  margin-top: 150px;
+.scuola-pg h2 {
+  color: rgba(243,33,36,1);
+  background-color: rgba(0,0,0,0.8);
+  padding: 10px;
+  font-family: "Bebas Neue", Helvetica, sans-serif;
+  font-size: 2.4em;
+  line-height: 1em;
+  display: inline-block;
+  margin-top: 180px;
+}
+
+.scuola-pg p {
+  color: rgba(255,255,255,1);
+  background-color: rgba(0,0,0,0.8);
+  padding: 10px;
+  font-family: "Georgia", serif;
+  font-style: italic;
+  font-size: 1em;
+  line-height: 1.2em;
+  display: inline-block;
+}
+
+.ricerca-bg-sc {
+  background-image: url(../img/scuole-copertina.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .scuola-bg .first-menu {
@@ -2402,21 +2444,26 @@ textarea {
 }
 
 #search_query {
-  background-color: rgba(0,0,0,0.1);
+  background-color: rgba(0,0,0,0.3);
   border: none;
   box-shadow: none;
   height: 50px;
   font-size: 20px;
   font-family: 'Georgia';
+  color: rgba(255,255,255,1);
 }
 
 .label-container label {
   font-family: "Bebas Neue";
   font-size: 1.2em;
+  color: rgba(0,0,0,1);
+  background-color: rgba(255,255,255,0.5);
+  padding: 5px 10px 1px 10px;
+  display: inline-block;
 }
 
 #tax_category {
-  background-color: rgba(0,0,0,0.1);
+  background-color: rgba(0,0,0,0.3);
   border: none;
   box-shadow: none;
   height: 50px;
@@ -2426,6 +2473,7 @@ textarea {
   font-style: italic;
   margin-right: 25px;
   float: left;
+  color: rgba(255,255,255,1);
 }
 
 .wpas-submit {

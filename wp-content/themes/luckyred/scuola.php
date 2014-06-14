@@ -29,13 +29,17 @@
           $args['fields'][] = array(
                                   'type' => 'taxonomy',
                                   'label' => 'Cerca per genere',
-                                  'default' => 'none',
+                                  'default' => '',
+                                  'allow_null' => 'Scegli un genere',
                                   'taxonomy' => 'category',
                                   'format' => 'select',
                                   'operator' => 'AND',
-                                  'term_args' => array('hide_empty' => false,
-                                               'orderby' => 'name',
-                                               'order' => 'ASC'));                         
+                                  'term_args' => array(
+                                                       'hide_empty' => true,
+                                                       'orderby' => 'name',
+                                                       'order' => 'ASC'
+                                                      )
+                                  );                         
 
           $args['fields'][] = array(
                                   'type' => 'submit',
@@ -45,12 +49,12 @@
 
  ?>
 
- <div id="archivio" class="ricerca-scuola-bg large-12 columns">
+ <div id="archivio" class="ricerca-bg-sc large-12 columns">
     <div class="scuola-pg row">
       <div class="large-12 columns">
-        <h2><?php echo __('Catalogo scuole'); ?></h2>
-        <p>Il nostro catalogo riservato alle scuole include film adatti alla visione in ambito didattico, per bambini
-          e ragazzi dai 4 ai 16 anni. Per gli insegnanti è possibile scaricare gratuitamente materiali utili per l'analisi del film e delle sue tematiche.</p>
+        <h2><?php echo __('Catalogo Scuole'); ?></h2>
+        <p>Il nostro catalogo riservato alle scuole include film adatti alla visione in ambito didattico, per bambini e ragazzi dai 4 ai 16 anni.
+        Per gli insegnanti è possibile scaricare gratuitamente materiali utili per l'analisi del film e delle sue tematiche.</p>
         <?php
         
           $search->the_form();
@@ -59,25 +63,22 @@
       </div>
     </div>
   </div>
-
-
-<div class="scuola-bg">
-   <div class="row">
-    <div class="first-menu large-6 columns">
-       <ul class="selected">
-        <li><h5>Ordina per</h5></li>
+  <div class="option-visual-page row">
+    <div class="large-6 columns">
+      <ul class="order-film">
+      <li><?php echo __('Ordina per'); ?></li>
         <li><a href="?orderby=title">Nome</a></li>
         <li><a href="?orderby=date">Più recente</a></li>
         <li><a href="?orderby=rand">Più vecchio</a></li>
       </ul>
     </div>
     <div class="large-6 end columns">
-       <ul class="selected-2">
-        <li><h5>Visualizza</h5></li>
-        <li><a href="#">9</a></li>
-        <li><a href="#">12</a></li>
-        <li><a href="#">18</a></li>
-        <li><h5>per pagina</h5></li>
+      <ul class="view-film">
+      <li><?php echo __('Visualizza'); ?></li>
+      <li><a href="?posts=4#archivio">4</a></li>
+      <li><a href="?posts=8#archivio">8</a></li>
+      <li><a href="?posts=12#archivio">12</a></li>
+      <li><?php echo __('per pagina'); ?></li>
       </ul>
     </div>
   </div>
