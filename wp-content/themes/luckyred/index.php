@@ -1,5 +1,8 @@
   <!--HEADER-->
   <?php get_header(); ?>
+
+  <section class="main-section">
+      <!-- content goes here -->
   
   <!--BODY-->
   <?php wp_reset_postdata(); ?>
@@ -266,6 +269,13 @@
         Lucky Red distribuisce i Italia pellicole spagnole, francesi e di molti altri paesi del mondo girate da autori di qualità e giovani emergenti.
       </p>
     </div>
+  </div>
+</div>
+
+   </section>
+
+  <a class="exit-off-canvas"></a>
+
   </div>
 </div>
 <!--FOOTER-->
