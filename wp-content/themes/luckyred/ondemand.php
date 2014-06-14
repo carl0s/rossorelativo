@@ -179,14 +179,6 @@
 
           ?>
 
-          <div class="row">
-          <div class="large-3 columns end right">
-            <?php 
-              //wpbeginner_numeric_posts_nav(); 
-            ?>
-          </div>
-        </div>
-
     </div>
   </div>
   

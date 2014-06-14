@@ -1805,11 +1805,9 @@ footer {
 
 .info-date .share {
   display: block;
+  cursor: pointer;
 }
 
-.info-date .share:hover div.inner {
-  display: block
-}
 
 .info-date .share div.inner {
   background-color: rgba(0,0,0,0.8);
@@ -1817,6 +1815,41 @@ footer {
   margin-left: -15px;
   display: none;
 }
+
+.info-date:hover div.inner {
+  display: block
+}
+
+.info-date:hover div.inner .icons .pop {
+  height: 30px;
+  margin: 10px;
+}
+
+.share-icon {
+  display: inline-block;
+  height: 20px;
+  width: 30px; 
+  background-size:contain;
+  background-repeat: no-repeat;
+}
+
+.share-icon-facebook {
+  background-image: url(../img/facebook.svg);
+}
+
+.share-icon-twitter {
+  background-image: url(../img/twitter.svg);
+}
+
+.share-icon-pinterest {
+  background-image: url(../img/pinterest.svg);
+}
+
+.share-icon-googleplus {
+  background-image: url(../img/googleplus.svg);
+}
+
+
 /* FINE FOTO FILM */
 
 /* PRESSBOOK */
@@ -2112,76 +2145,18 @@ footer {
   margin-top: 1.0em;
   margin-bottom: 3.0em;
 }
-/*-- start img exstendes --*/
-.sezione-film {
-  position: relative;
+
+.pagination a{
+  color: rgba(243,33,36,1);
+  font-size: 1.2em;
+  text-decoration: none;
+  margin: 0 5px;
 }
 
-.og-grid {
-    list-style: none;
-    margin: 0 auto;
-    width: 1170px;
-    position: relative;
-}
-
-.og-grid li {
-    display: inline-block;
-    margin: 10px 5px 0 5px;
-    vertical-align: top;
-    height: 250px;
-}
-
-.og-grid li > a,
-.og-grid li > a img {
-    border: none;
-    outline: none;
-}
-
-.og-expanded li {
-  padding-top: 10px;
-  display: none;
-}
-
-.og-expander-inner {
-  position: absolute;
-  width: 100%;
-  left: 0;
-  right: 0;
-}
- 
-@keyframes loader {
-    0% { background: #ddd; }
-    33% { background: #ccc; box-shadow: 0 0 1px #ccc, 15px 30px 1px #ccc, -15px 30px 1px #ddd; }
-    66% { background: #ccc; box-shadow: 0 0 1px #ccc, 15px 30px 1px #ddd, -15px 30px 1px #ccc; }
-}
-
-/*-- end img exstendes --*/
-
-.navigation li a,
-.navigation li a:hover,
-.navigation li.active a,
-.navigation li.disabled {
-  color: rgba(181,58,61,1);
-  text-decoration:none;
-  font-family: "Georgia";
-  font-style: italic;
-}
-
-.navigation li {
-  display: inline;
-  margin: 0 0.2em;
-}
-
-.navigation li a,
-.navigation li a:hover,
-.navigation li.active a,
-.navigation li.disabled {
-  cursor: pointer;
-  padding: 0 0.3em;
-}
-
-.navigation li.active a {
-  background-color: rgba(72,72,72,1);
+.pagination .current {
+  font-size: 1.2em;
+  background-color: rgba(243,33,36,1);
+  font-family: 'Georgia';
 }
 
 /* --FINE PRESS-- */
@@ -2272,6 +2247,7 @@ footer {
   font-size: 0.8em;
   text-decoration: underline;
 }
+
 /* FINE PAGINA ARCHIVIO */
 
 /* INIZIO PAGINA SCUOLA */
@@ -2460,12 +2436,7 @@ textarea {
 }
 
 .label-container label {
-  font-family: "Bebas Neue";
-  font-size: 1.2em;
-  color: rgba(0,0,0,1);
-  background-color: rgba(255,255,255,0.5);
-  padding: 5px 10px 1px 10px;
-  display: inline-block;
+  display: none;
 }
 
 #tax_category {
@@ -2493,20 +2464,133 @@ textarea {
   float: right;
 }
 
-.pagination a{
-  color: rgba(243,33,36,1);
-  font-size: 1.2em;
-  text-decoration: none;
-  margin: 0 5px;
-}
-
-.pagination .current {
-  font-size: 1.2em;
-  background-color: rgba(243,33,36,1);
-  font-family: 'Georgia';
-}
-
 /* --FINE FORM RICERCA-- */
+
+/* --PAGINA SEARCH-- */
+
+.title-red {
+  margin-top: 185px;
+  color: rgba(243,33,36,1);
+  font-family: "Bebas Neue", Helvetica, sans-serif;
+}
+
+.search-list li {
+  list-style: none;
+  margin-left: -15px;
+  margin-bottom: 20px;
+}
+
+.search-list li h4 a {
+  color: rgba(255,255,255,1);
+  background-color: rgba(0,0,0,0.5);
+  padding: 10px;
+  font-family: "Bebas Neue", Helvetica, sans-serif;
+  font-size: 1em;
+  line-height: 1em;
+  display: inline-block;
+}
+
+.side {
+  margin-bottom: 50px;
+}
+
+.side h2{
+  color: rgba(255,255,255,1);
+  background-color: rgba(0,0,0,0.8);
+  padding: 10px 10px 5px 10px;
+  font-family: "Bebas Neue", Helvetica, sans-serif;
+  font-size: 2.4em;
+  line-height: 1em;
+  display: inline-block;
+  margin-top: 185px;
+  margin-left: -5px;
+}
+
+.side h4 {
+  font-family: 'Georgia';
+  font-style: italic;
+  text-align: right;
+  font-size: 1em;
+}
+
+.side h3 a {
+  color: rgba(255,255,255,1);
+  background-color: rgba(0,0,0,0.5);
+  padding: 10px;
+  font-family: "Bebas Neue", Helvetica, sans-serif;
+  font-size: 1em;
+  line-height: 1em;
+  display: inline-block;
+  margin-left: -5px;
+}
+
+.side {
+  font-family: 'Georgia';
+  font-style: italic;
+}
+
+.film-archivio-bg {
+  background-color: rgba(242,242,242,1);
+}
+
+.section-title {
+  color: rgba(255,255,255,1);
+  background-color: rgba(0,0,0,0.8);
+  padding: 10px 10px 5px 10px;
+  font-family: "Bebas Neue", Helvetica, sans-serif;
+  font-size: 2.4em;
+  line-height: 1em;
+  display: inline-block;
+  margin-top: 30px;
+  margin-left: -5px;
+}
+
+.img-archivio img {
+  padding: 10px;
+}
+
+.img-archivio li {
+  list-style: none;
+  font-family: 'Georgia';
+  font-style: italic;
+  margin-left: -5px;
+  font-size: 1.2em;
+}
+
+.img-archivio li a {
+  color: rgba(0,0,0,1);
+}
+
+.text-container {
+  height: 100px;
+}
+
+.text-container h3 a {
+  color: rgba(255,255,255,1);
+  background-color: rgba(0,0,0,0.5);
+  padding: 10px;
+  font-family: "Bebas Neue", Helvetica, sans-serif;
+  font-size: 1em;
+  line-height: 1em;
+  display: inline-block;
+  margin-left: -5px;
+}
+
+.search-button {
+  background-color: rgba(243,33,36,1);
+  font-family: "Bebas Neue", Helvetica, sans-serif;
+  font-size: 2em;
+  padding: 10px 40px 10px 40px;
+  width: 275px;
+  color: rgba(255,255,255,1);
+  margin-bottom: 50px;
+}
+
+.search-button:hover {
+  background-color: rgba(253,184,19,1);
+}
+
+/* --FINE PAGINA SEARCH-- */
 
 @media only screen and (min-width: 320px) and (max-width: 480px) {
 

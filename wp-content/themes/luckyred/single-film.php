@@ -130,22 +130,31 @@
           <p><?php the_content(); ?></p>
         </div>
       </div>
+      <?php if(get_field('foto_item') && get_field('uscita_del_materiale_di_stampa') && get_field('poster') && get_field('video_item')): ?>
       <div class="row">
         <div class="download-film large-12 columns">
           <h3>Download</h3>
           <dl class="tabs" data-tab>
+            <?php if(get_field('foto_item')): ?>
             <dd class="active large-2 columns">
               <a href="#panel-foto"><h4><span><?php echo __('Foto film'); ?></span></h4></a>
             </dd>
+            <?php endif; ?>
+            <?php if(get_field('uscita_del_materiale_di_stampa')): ?>
             <dd class="large-2 columns">
               <a href="#panel-pressbook"><h4><span><?php echo __('Pressbook'); ?></span></h4></a>
             </dd>
+            <?php endif; ?>
+            <?php if(get_field('poster')): ?>
             <dd class="large-2 columns">
               <a href="#panel-manifesto"><h4><span><?php echo __('Manifesto'); ?></span></h4></a>
             </dd>
+            <?php endif; ?>
+            <?php if(get_field('video_item')): ?>
             <dd class="large-2 columns">
               <a href="#panel-video"><h4><span><?php echo __('Clip video'); ?></span></h4></a>
             </dd>
+            <?php endif; ?>
             <dd class="large-2 columns">
               <a href="#panel-dvd"><h4><span><?php echo __('Dvd Pack'); ?></span></h4></a>
             </dd>
@@ -156,6 +165,7 @@
         </div>
       </div>
       <div class="tabs-content">
+        <?php if(get_field('foto_item')): ?>
         <div class="content active" id="panel-foto">
           <div class="img-film-download slideshow-wrapper">
             <div class="fotorama slideshow" data-click="false" data-nav="thumbs" data-width="100%" data-ratio="1440/750" data-thumbheight="115" data-thumbwidth="180">
@@ -199,7 +209,9 @@
             </div>
           </div>
         </div>
-        <div class="content" id="panel2-2">
+        <?php endif; ?>
+        <?php if(get_field('uscita_del_materiale_di_stampa')): ?>
+        <div class="content" id="panel-pressbook">
           <div class="pressbook">
             <?php echo get_the_post_thumbnail(); ?>
             <div class="large-12 columns">
@@ -216,7 +228,9 @@
           </div>
           </div>
         </div>
-        <div class="content" id="panel2-3">
+        <?php endif; ?>
+        <?php if(get_field('poster')): ?>
+        <div class="content" id="panel-manifesto">
           <div class="manifesto">
             <?php echo get_the_post_thumbnail(); ?>
             <div class="manifesto-bg">
@@ -240,7 +254,9 @@
             </div>
           </div>
         </div>
-        <div class="content" id="panel2-4">
+        <?php endif; ?>
+        <?php if(get_field('video_item')): ?>
+        <div class="content" id="panel-video">
           <!-- GALLERY DI VIDEO -->
           <?php $items = get_field('video_item'); ?>
 
@@ -278,17 +294,19 @@
           </div>
           <!-- END GALLERY -->
         </div>
-        <div class="content" id="panel2-5">
+        <?php endif; ?>
+        <div class="content" id="panel-dvd">
           <div class="pressbook">
             <?php echo get_the_post_thumbnail(); ?>
           </div>
         </div>
-        <div class="content" id="panel2-6">
+        <div class="content" id="panel-audio">
           <div class="pressbook">
             <?php echo get_the_post_thumbnail(); ?>
           </div>
         </div>
       </div>
+      <?php endif; ?>
     </div>
 
     <div class="row">

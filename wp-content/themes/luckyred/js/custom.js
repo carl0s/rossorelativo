@@ -38,15 +38,21 @@ $(document).ready(function(){
     radioClass: 'iradio_square-red',
     increaseArea: '20%' // optional
   });
-});
 
-$('.share .inner .icons').share({
-        networks: ['facebook','twitter','googleplus','pinterest','tumblr']
+  $('.info-date .share').hover(function() {
+    $(this).find('.inner').show();
   });
 
-$('.slider-nextexit .slideshow').on(
-    'fotorama:show fotorama:showend',
-    function (e, fotorama, extra) {
-      $('.cta-page.button').attr('href', $('.slider-nextexit .fotorama__active .info-wrapper').attr('data-film-link'));
-    }
-).fotorama();
+  $('.share .inner .icons').share({
+          networks: ['facebook','twitter','googleplus','pinterest']
+    });
+
+  $('.slider-nextexit .slideshow').on(
+      'fotorama:show fotorama:showend',
+      function (e, fotorama, extra) {
+        $('.cta-page.button').attr('href', $('.slider-nextexit .fotorama__active .info-wrapper').attr('data-film-link'));
+      }
+  ).fotorama();
+});
+
+
