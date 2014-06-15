@@ -2689,12 +2689,97 @@ h3.titolo-film-regista {
 
 /* --FINE PAGINA BLOG-- */
 
-@media only screen and (min-width: 320px) and (max-width: 480px) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) { 
+#logo a img {
+  width: 300px;
+}
+
+#main-menu {
+  display: none;
+}
 
 .tab-bar{
   display: block;
 }
 
+header {
+  display: none;
+}
+
+.tab-bar-section.middle a img {
+  width: 300px;
+  margin-left: 160px;
+}
+
+.option-visual-page ul li {
+  font-size: 16px;
+  margin-right: 5px;
+}
+
+.press-bg .option-visual-page ul li {
+  font-size: 16px;
+  margin-right: 5px;
+}
+
+.press-bg .option-visual-page .view-film {
+  margin-left: 0px;
+}
+
+.option-visual-page .view-film {
+margin-left: 0px;
+}
+
+.archivio-pg h2 {
+  margin-top: 40px;
+}
+.tab-bar {
+  height: 130px;
+}
+
+.layout-film{
+  margin-bottom: 0px;
+}
+
+.pagination {
+  float: right;
+  margin-right: 10px;
+}
+
+.tab-bar .menu-icon {
+  margin-top: 40px;
+  width: 50px;
+}
+
+.left-small {
+ width: 80px;
+ height: 130px;
+}
+.tab-bar .menu-icon span {
+  width: 3rem;
+}
+
+.ricerca-bg-ar {
+  height: 350px;
+}
+
+.layout-film {
+  height: 580px;
+}
+
+.archivio-film h3 {
+  margin-bottom: 0px;
+}
+.title-layout {
+  height: 55px;
+}
+
+}
+
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+
+.tab-bar{
+  display: block;
+}
 header {
   display: none;
 }
