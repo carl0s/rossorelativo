@@ -541,8 +541,6 @@ header.smaller .social-icon {
   background-color: rgba(242,242,242,1);
 }
 
-
-
 .blog {
   margin-left: -15px;
 }
@@ -2314,8 +2312,7 @@ footer .button:active {
 .white-gradient button {
   width: 550px;
   position: relative;
-  
-  background:url(../img/arrow-down.png) center no-repeat;
+  background: url(../img/arrow-down.png) center no-repeat;
   margin-top: 20px;
 }
 
