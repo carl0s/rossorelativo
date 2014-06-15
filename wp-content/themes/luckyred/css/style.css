@@ -1,14 +1,14 @@
 /* --HEADER E MAIN MENU-- */
 
-/* @import "pesticide"; */ 
+/* @import "pesticide"; */
 
 @font-face {
-    font-family: 'Bebas Neue';
-    src: url('../fonts/BebasNeue-webfont.eot');
-    src: url('../fonts/BebasNeue-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/BebasNeue-webfont.woff') format('woff'),
-         url('../fonts/BebasNeue-webfont.ttf') format('truetype'),
-         url('../fonts/BebasNeue-webfont.svg#bebas_neueregular') format('svg');
+    font-family: "Bebas Neue", Helvetica, sans-serif;
+    src: url("../fonts/BebasNeue-webfont.eot");
+    src: url("../fonts/BebasNeue-webfont.eot?#iefix") format("embedded-opentype"),
+         url("../fonts/BebasNeue-webfont.woff") format("woff"),
+         url("../fonts/BebasNeue-webfont.ttf") format("truetype"),
+         url("../fonts/BebasNeue-webfont.svg#bebas_neueregular") format("svg");
     font-weight: normal;
     font-style: normal;
 
@@ -20,12 +20,11 @@
 
 header {
   position: fixed;
-  z-index: 99999;
+  z-index: 50;
   background-color: rgba(0,0,0,0.8);
   width: 100%;
   top: 0;
   height: 135px;
-
   -webkit-transition: height 0.3s;
   -moz-transition: height 0.3s;
   -ms-transition: height 0.3s;
@@ -33,25 +32,27 @@ header {
   transition: height 0.3s;
 }
 
+.archive-img-smart img {
+  display: none;
+} 
+
 .search-container {
   position: absolute;
   margin-top:-99999px;
   background-color: rgba(0,0,0,0.9);
   padding: 5px;
   width:100%;
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  -ms-transition: all 0.5s;
-  -o-transition: all 0.5s;
-  transition: all 0.5s;
 }
 
 .search-container.show {
   margin-top: -20px;
   z-index: 9999;
   position: fixed;
-
-
+  -webkit-transition: height 0.3s;
+  -moz-transition: height 0.3s;
+  -ms-transition: height 0.3s;
+  -o-transition: height 0.3s;
+  transition: height 0.3s;
 }
 
 .icon-search {
@@ -81,7 +82,7 @@ header {
   float: left;
   border: 0;
   box-shadow: none;
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   font-size: 2em;
   height: 60px;
 }
@@ -91,20 +92,19 @@ header {
   background: transparent;
   padding: 10px;
   color: rgba(255,255,255,0.5);
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   font-size: 2em;
   border: 0; 
   border-left: 1px solid rgba(255,255,255,1);
 }
 
 .search-container.show .searchform input[type=submit]:hover {
-  background-color: rgba(253,184,19,0.2);
+  background-color: rgba(255,255,255,0.2);
 }
 
 #logo {
   height: 135px;
   line-height: 135px;
-
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
   -ms-transition: all 0.3s;
@@ -115,15 +115,14 @@ header {
 #main-menu ul li {
   display: inline-block;
   margin-right: 15px;
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
 }
 
 #main-menu a {
   color: rgba(255,255,255,1);
   line-height: 135px;
   height: 135px;
-  font-size: 1.3em;
-
+  font-size: 1.2em;
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
   -ms-transition: all 0.3s;
@@ -132,13 +131,15 @@ header {
 }
 
 #main-menu a:hover {
-  color: rgba(255,255,255,0.5);
-
-  -webkit-transition: all 0.1s;
-  -moz-transition: all 0.1s;
-  -ms-transition: all 0.1s;
-  -o-transition: all 0.1s;
-  transition: all 0.1s;
+  color: rgba(253,184,19,1);
+  line-height: 135px;
+  height: 135px;
+  font-size: 1.2em;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .social-icon {
@@ -180,57 +181,17 @@ header {
 }
 
 header.smaller {
-    height: 80px;
+  height: 80px;
 }
 
-header.smaller .search-container.show {
-  margin-top: -20px;
+.search-container.smaller {
+  margin-top: 80px;
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
   -ms-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s;
 }
-
-
-header.smaller .search-container.show .searchform input[type=text] {
-  width: 90%;
-  background: rgba(0,0,0,0);
-  color: rgba(253,184,19,1); 
-  float: left;
-  border: 0;
-  box-shadow: none;
-  font-family: Bebas Neue;
-  font-size: 1.2em;
-  margin-top: 10px;
-  height: 30px;
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  -ms-transition: all 0.5s;
-  -o-transition: all 0.5s;
-  transition: all 0.5s;
-}
-
-header.smaller .search-container.show .searchform input[type=submit] {
-  width: 10%;
-  background: transparent;
-  padding: 10px;
-  color: rgba(255,255,255,0.5);
-  font-family: Bebas Neue;
-  font-size: 1.5em;
-  border: 0; 
-  border-left: 1px solid rgba(255,255,255,1);
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  -ms-transition: all 0.5s;
-  -o-transition: all 0.5s;
-  transition: all 0.5s;
-}
-
-header.smaller .search-container.show .searchform input[type=submit]:hover {
-  background-color: rgba(253,184,19,0.2);
-}
-
 
 header.smaller #logo {
   width: 200px;
@@ -241,7 +202,6 @@ header.smaller #logo {
   -ms-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s;
-
 }
 
 header.smaller #main-menu a {
@@ -259,13 +219,7 @@ header.smaller .social-icon {
 
 .fotorama__thumb-border {
   border-color: rgba(243,33,36,1);
-}
-
-.fotorama__video-play {
-  background-image: url(../img/play.svg);
-  background-position: top;
-  background-size: contain;
-  width: 80px;
+  border-width: 20px;
 }
 
 /* --SLIDER FILM AL CINEMA-- */
@@ -275,17 +229,28 @@ header.smaller .social-icon {
   min-height: 838px;
 }
 
-.slider-cinema .info-wrapper {
-  margin-top: -755px;
+.slider-cinema .slideshow {
+  z-index: 0;
+  /* --DA CAMBIARE IL PRIMA POSSIBILE-- */
+  position: relative;
+}
+
+.slider-cinema .slide {
+  position: relative;
+}
+
+.slider-cinema .slide .info-wrapper img {
+  position: absolute;
+  top: 0px;
+  z-index: 0;
 }
 
 .slider-cinema .fotorama__video-play {
   margin-top: 20px;
   position: absolute;
   background-image: url(../img/play.svg);
-  background-position: top;
-  background-size: contain;
-  width: 80px;
+  background-position: 0px 0px;
+  background-size: 75%;
 }
 
 .slider-cinema .fotorama__nav-wrap {
@@ -303,7 +268,7 @@ header.smaller .social-icon {
 }
 
 .slider-cinema .info-wrapper {
-  padding-top: 185px;
+  margin-top: -575px;
   position: relative;
 }
 
@@ -311,17 +276,17 @@ header.smaller .social-icon {
   color: rgba(255,255,255,1);
   background-color: rgba(0,0,0,0.8);
   padding: 10px;
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   font-size: 2.4em;
   line-height: 1em;
   display: inline-block;
-} 
+}
 
 .slider-cinema .info-content {
   color: rgba(255,255,255,1);
   background-color: rgba(0,0,0,0.8);
   padding: 10px;
-  font-family: 'Georgia';
+  font-family: "Georgia";
   font-style: italic;
   margin-top: 15px;
   line-height: 1.1em;
@@ -335,7 +300,7 @@ header.smaller .social-icon {
 
 .slider-cinema .info-date h4 {
   color: rgba(255,255,255,1);
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   font-size: 7.3em;
   height: 1em;
   margin-left: -5px;
@@ -345,7 +310,7 @@ header.smaller .social-icon {
 
 .slider-cinema .info-date h5 {
   color: rgba(255,255,255,1);
-  font-family: 'Georgia';
+  font-family: "Georgia";
   font-style: italic;
   font-size: 1.2em;
   margin-bottom: -5px;
@@ -354,7 +319,7 @@ header.smaller .social-icon {
 
 .slider-cinema .info-date h6 {
   color: rgba(255,255,255,1);
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   font-size: 1.5em;
   height: 1em;
 }
@@ -363,17 +328,12 @@ header.smaller .social-icon {
   color: rgba(255,255,255,1);
   background-color: rgba(0,0,0,0.8);
   padding: 10px;
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   font-size: 1.5em;
   position: absolute;
   bottom: -450px;
   z-index: 10;
   display: inline-block;
-}
-
-.slider-cinema .info-wrapper a {
-  border-bottom: none;
-  color: rgba(255,255,255,1);
 }
 
 /* --FINE SLIDER FILM AL CINEMA-- */
@@ -384,12 +344,8 @@ header.smaller .social-icon {
   background-color: rgba(242,242,242,1);
 }
 
-.slider-nextexit .cta-page {
-  z-index: 10000;
-}
-
 .nextexit-bg h2 {
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   color: rgba(243,33,36,1);
   margin: 50px 0 17px 0;
   font-size: 350%;
@@ -414,7 +370,7 @@ header.smaller .social-icon {
   color: rgba(255,255,255,1);
   background-color: rgba(0,0,0,0.8);
   padding: 10px 10px 10px 33px;
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   font-size: 1.8em;
   margin-top: -495px;
   text-align: right;
@@ -429,7 +385,7 @@ header.smaller .social-icon {
 
 .slider-nextexit .info-date h4 {
   color: rgba(255,255,255,1);
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   font-size: 2em;
   height: 1em;
   float: left;
@@ -437,7 +393,7 @@ header.smaller .social-icon {
 
 .slider-nextexit .info-date h5 {
   color: rgba(255,255,255,1);
-  font-family: 'Georgia';
+  font-family: "Georgia";
   padding: 10px 5px 10px 5px;
   font-style: italic;
   font-size: 1.3em;
@@ -447,7 +403,7 @@ header.smaller .social-icon {
 
 .slider-nextexit .info-date h6 {
   color: rgba(255,255,255,1);
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   font-size: 2em;
   height: 1em;
   float: left;
@@ -464,11 +420,11 @@ header.smaller .social-icon {
 
 .slider-nextexit .button {
   background-color: rgba(243,33,36,1);
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   font-size: 2em;
   padding: 10px 40px 10px 40px;
   margin-top: -155px;
-  width: 280px;  
+  width: 280px;
 }
 
 .slider-nextexit .button:hover {
@@ -480,12 +436,18 @@ header.smaller .social-icon {
 /* --ON DEMAND-- */
 
 .ondemand-bg {
-  background-color: rgba(255,255,255,1);
   height: 565px;
 }
 
+.ricerca-bg-hm {
+  background-image: url(../img/ondemand-copertina.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .ondemand-bg h2 {
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   color: rgba(72,72,72,1);
   margin: 40px 0 10px 0;
   font-size: 350%;
@@ -493,11 +455,6 @@ header.smaller .social-icon {
 
 .slider-ondemand .info-wrapper img {
   opacity: 0;
-}
-
-.slider-ondemand {
-  margin-top: -50px;
-  margin-bottom: 95px;
 }
 
 .slider-ondemand .slideshow-wrapper {
@@ -515,7 +472,7 @@ header.smaller .social-icon {
   color: rgba(255,255,255,1);
   background-color: rgba(0,0,0,0.8);
   padding: 5px 10px 2px 10px;
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   font-size: 1.8em;
   margin-top: -535px;
   text-align: left;
@@ -526,7 +483,7 @@ header.smaller .social-icon {
 .slider-ondemand .info-content {
   color: rgba(0,0,0,1);
   padding: 10px 10px 10px 0;
-  font-family: 'Georgia';
+  font-family: "Georgia";
   font-style: italic;
   margin-top: 15px;
   line-height: 1.2em;
@@ -560,9 +517,11 @@ header.smaller .social-icon {
 
 .slider-ondemand .button {
   background-color: rgba(243,33,36,1);
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   font-size: 2em;
-  padding: 10px 40px 10px 20px;
+  padding: 10px 40px 10px 40px;
+  margin-top: -75px;
+  width: 280px;
   margin-top: -335px;
   width: 280px;  
   margin-bottom: 95px;
@@ -582,44 +541,37 @@ header.smaller .social-icon {
 
 .blog {
   margin-left: -15px;
-  padding-right: 20px;
 }
 
 .blog h4 {
-  margin: 20px 0px;
+  color: rgba(255,255,255,1);
+  background-color: rgba(0,0,0,0.8);
+  padding: 5px 10px 2px 10px;
+  font-family: "Bebas Neue", Helvetica, sans-serif;
+  font-size: 1.5em;
+  text-align: left;
+  display: inline-block;
+  margin-top: 15px;
 }
 
-.blog h4 span {
-  font-family: "Bebas Neue";
-  background-color: rgba(0,0,0,0.8);
-  color: rgba(255,255,255,1);
-  padding: 4px 5px;
+.blog h3 {
+  font-family: "Bebas Neue", Helvetica, sans-serif;
+  margin-top: 10px;
+  color: rgba(72,72,72,1);
+  text-decoration: none;
 }
 
 .blog p {
-  font-family: 'Georgia';
+  font-family: "Georgia";
   font-style: italic;
-}
-
-.blog-archivio-bg h2 {
-  font-family: "Bebas Neue";
-  color: rgba(243,33,36,1);
-  margin: 45px 0 10px 0;
-  font-size: 350%;
-}
-
-.blog-archivio-bg h5 {
-  font-family: "Bebas Neue";
-  padding:2px;
-  color: rgba(255,255,255,1);
 }
 
 .blog .button {
   background-color: rgba(243,33,36,1);
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   font-size: 2em;
   padding: 10px 40px 10px 40px;
-  margin-top: 119px;
+  margin-top: 29px;
   width: 280px;
   margin-bottom: 95px;
 }
@@ -632,31 +584,32 @@ header.smaller .social-icon {
   color: rgba(255,255,255,1);
 }
 
+.blog-archivio-bg h2 {
+  font-family: "Bebas Neue", Helvetica, sans-serif;
+  color: rgba(243,33,36,1);
+  margin: 45px 0 10px 0;
+  font-size: 350%;
+}
+
+.blog-archivio-bg h5 {
+  font-family: "Bebas Neue", Helvetica, sans-serif;
+  padding:2px;
+  color: rgba(255,255,255,1);
+}
+
 .archive-film {
   margin-left: -15px;
 }
 
-.archive-img {
-  width: 1em;
-}
-
-.archive-img-smart img {
-  display: none;
-}
-
-.archive-film a img {
-  max-height: 250px;
-}
-
 .archivio a h3 {
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   margin-top: 10px;
   color: rgba(72,72,72,1);
   text-decoration: none;
 }
 
 .archivio h5 a {
-  font-family: 'Georgia';
+  font-family: "Georgia";
   font-style: italic;
   color: rgba(72,72,72,1);
   font-size: 0.7em;
@@ -671,7 +624,7 @@ header.smaller .social-icon {
 
 .archivio .button {
   background-color: rgba(243,33,36,1);
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   font-size: 2em;
   padding: 10px 40px 10px 40px;
   margin-top: 29px;
@@ -689,21 +642,173 @@ header.smaller .social-icon {
 
 /* --FINE BLOG-ARCHIVIO-- */
 
-/* -- MISSION --*/
+/* --PAGINA BLOG-- */
 
-.mission {
-  background-color: rgba(255,255,255,1);
+#blog {
+  margin-top: 135px;
 }
+
+.info-blog {
+  z-index: 20;
+  width: 100%;
+  margin: -350px 0px 37px -15px;
+}
+
+.slide-blog {
+  height: auto;
+  margin-bottom: 10px;  
+}
+
+.slide-blog .info-title h2 {
+  color: rgba(255,255,255,1);
+  background-color: rgba(0,0,0,0.8);
+  padding: 10px;
+  font-family: "Bebas Neue", Helvetica, sans-serif;
+  font-size: 2.4em;
+  line-height: 1em;
+  display: inline-block;
+}
+
+.slide-blog .info-content {
+  color: rgba(255,255,255,1);
+  background-color: rgba(0,0,0,0.8);
+  padding: 10px;
+  font-family: "Georgia";
+  font-style: italic;
+  margin-top: 15px;
+  line-height: 2em;
+  width: 70%;
+  margin-left: 30px;
+}
+
+.slide-blog .info-date {
+  background-color: rgba(0,0,0,0.8);
+  text-align: center;
+  float: right;
+}
+
+.slide-blog .info-date h4 {
+  color: rgba(255,255,255,1);
+  font-family: "Bebas Neue", Helvetica, sans-serif;
+  font-size: 7.3em;
+  height: 1em;
+  margin-left: -15px;
+  margin-bottom: 20px;
+  margin-top: -30px;
+}
+
+.slide-blog .info-date h5 {
+  color: rgba(255,255,255,1);
+  font-family: "Georgia";
+  font-style: italic;
+  font-size: 1.2em;
+  margin-bottom: -5px;
+  text-align: center;
+}
+
+.slide-blog .info-date h6 {
+  color: rgba(255,255,255,1);
+  font-family: "Bebas Neue", Helvetica, sans-serif;
+  font-size: 1.5em;
+  height: 1em;
+}
+
+.blog-content{
+  font-family: "Georgia";
+  font-style: italic;
+  margin-bottom: 95px;
+  width: 100%;
+  padding: 0 20% 0 10%;
+  margin-top: 50px;
+}
+
+#blog-tag {
+  width: 100%;
+  font-family: "Georgia";
+  float: left;
+  clear: both;
+}
+
+#blog-tag h2{
+  background-color: #F00;
+  color: #FFF;
+  width: 270px;
+  text-align: center;
+  float: left;
+  font-family: "Bebas Neue", Helvetica, sans-serif;
+  height: 55px;
+}
+
+#blog-tag ul{
+  float: left;
+  width: 550px;
+  height: auto;
+  padding: 10px;
+  list-style-type: none;
+}
+
+#blog-tag ul li{
+  background-color: #969696;
+  color: #FFF;
+  width: 30%;
+  margin-right: 3%;
+  text-align: center;
+  float: left;
+  height: 40px;
+  font-size: 1em;
+  line-height: 40px;
+}
+
+#blog-tag a {
+  color: #FFF;
+}
+
+#blog-tag li:hover {
+  background-color: rgba(253,184,19,1);
+} 
+
+
+.blog-simil h2 {
+  background-color: #F00;
+  color: #FFF;
+  width: 270px;
+  text-align: center;
+  font-family: "Bebas Neue", Helvetica, sans-serif;
+  height: 55px;
+  clear: both;
+}
+
+.slide-blog-simil {
+  width: 20%;
+  float: left;
+  margin-right: 5%;
+  margin-bottom: 2%;
+}
+
+.blog-content-simil {
+  font-family: "Georgia";
+  font-style: italic;
+  padding: 0px 10px 0px 15px;
+  margin-top: 15px;
+  font-size: 0.8em;
+  line-height: 1.5em;
+}
+
+/* --FINE PAGINA BLOG-- */
+
+
+
+/* -- MISSION --*/
   
 .mission h2 {
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   color: rgba(72,72,72,1);
   margin: 30px 0 10px 0;
   font-size: 350%;
 }
 
 .mission p {
-  font-family: 'Georgia';
+  font-family: "Georgia";
   font-style: italic;
   margin-bottom: 95px;
 }
@@ -734,7 +839,7 @@ footer h6 {
   font-style: italic;
   color: rgba(255,255,255,1);
   line-height: 20px;
-  font-size: 0.9em; 
+  font-size: 0.9em;
 }
 
 footer h2 {
@@ -765,7 +870,7 @@ footer a:hover {
 
 footer .button {
   background-color: rgba(243,33,36,1);
-  font-family: Bebas Neue;
+  font-family: "Bebas Neue";
   padding: 10px 40px 10px 40px;
   margin-top: 29px;
   width: 180px;
@@ -775,93 +880,6 @@ footer .button {
 footer .button:hover {
   background-color: rgba(253,184,19,1);
 }
-
-.blog-content{
-  font-family: 'Georgia';
-  font-style: italic;
-  margin-bottom: 95px;
-  width: 100%;
-  padding: 0 20% 0 10%;
-  margin-top: 50px;
-  color: white;
-}
-
-#blog-tag {
-  width: 100%;
-  font-family: "Bebas Neue";
-  float: left;
-  clear: both;
-}
-
-#blog-tag h2{
-  background-color: #F00;
-  color: #FFF;
-  width: 270px;
-  text-align: center;
-  float: left;
-  font-family: 'Bebas Neue';
-  height: 55px;
-}
-
-#blog-tag ul{
-  float: left;
-  width: 550px;
-  height: 150px;
-  padding: 10px;
-  list-style-type: none;
-}
-
-#blog-tag ul li{
-  background-color: #969696;
-  color: #FFF;
-  width: 30%;
-  margin-right: 3%;
-  text-align: center;
-  float: left;
-  height: 40px;
-  font-size: 1.5em;
-}
-
-#blog-tag a {
-  color: #FFF;
-}
-
-#blog-tag li:hover {
-  background-color: rgba(253,184,19,1);
-} 
-
-.blog-simil {
-
-}
-
-.blog-simil h2 {
-  background-color: #F00;
-  color: #FFF;
-  width: 270px;
-  text-align: center;
-  font-family: 'Bebas Neue';
-  height: 55px;
-  clear: both;
-}
-
-.slide-blog-simil {
-  width: 20%;
-  float: left;
-  margin-right: 5%;
-
-}
-
-.blog-content-simil {
-  font-family: 'Georgia';
-  font-style: italic;
-  padding: 0px 10px 0px 15px;
-  margin-top: 15px;
-  color: #FFF;
-  font-size: 0.8em;
-  line-height: 1.5em;
-}
-
-/* --FINE PAGINA BLOG-- */
 
 footer .button:active {
   background-color: black;
@@ -902,7 +920,7 @@ footer .button:active {
 }
 
 #loginform p {
-  font-family: Bebas Neue;
+  font-family: "Bebas Neue";
 }
 
 #loginform label {
@@ -929,7 +947,7 @@ footer .button:active {
 
 #wp-submit {
   background-color: rgba(243,33,36,1);
-  font-family: Bebas Neue;
+  font-family: "Bebas Neue";
   padding: 10px 40px 10px 40px;
   margin-top: 10px;
   width: 180px;
@@ -1065,6 +1083,10 @@ footer .button:active {
 
 .chi-siamo .fotorama__video-play {
   margin-top: 30px;
+  position: absolute;
+  background-image: url(../img/play.svg);
+  background-position: 0px 0px;
+  background-size: 75%;
 }
 
 .chi-siamo .fotorama__nav-wrap {
@@ -1086,7 +1108,7 @@ footer .button:active {
   color: rgba(255,255,255,1);
   background-color: rgba(0,0,0,0.8);
   padding: 10px;
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   font-size: 2.4em;
   line-height: 1em;
   display: inline-block;
@@ -1097,21 +1119,13 @@ footer .button:active {
   color: rgba(255,255,255,1);
   background-color: rgba(0,0,0,0.8);
   padding: 10px;
-  font-family: 'Georgia';
+  font-family: "Georgia";
   font-style: italic;
   margin-top: 15px;
   line-height: 1.1em;
   width: 100%;
 }
 
-<<<<<<< HEAD
-/* -- FINE MISSION-- */
-
-/* --FOOTER-- */
-
-footer {
-  background-color: rgba(38,37,37,0.7);
-}
 .chi-siamo .info-date {
   background-color: rgba(0,0,0,0.8);
   text-align: center;
@@ -1120,7 +1134,7 @@ footer {
 
 .chi-siamo .info-date h6 {
   color: rgba(255,255,255,1);
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   font-size: 1.5em;
   height: 1em;
 }
@@ -1131,7 +1145,7 @@ footer {
 }
 
 .chi-siamo-bg h3 {
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   font-size: 2.5em;
   color: rgba(243,33,36,1);
   margin-top: 50px;
@@ -1148,14 +1162,14 @@ footer {
 }
 
 .produzioni-bg h3 {
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   font-size: 2.5em;
   color: rgba(243,33,36,1);
   margin-top: 50px;
 }
 
 .produzioni-bg h4 {
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   font-size: 1.5em;
   color: rgba(255,255,255,1);
   padding: 5px 10px;
@@ -1191,7 +1205,7 @@ footer {
 }
 
 .azienda-bg h4 {
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   font-size: 2em;
   color: rgba(255,255,255,1);
   padding: 5px 10px;
@@ -1202,7 +1216,7 @@ footer {
 }
 
 .azienda-bg h5 {
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   font-size: 2em;
   color: rgba(255,255,255,1);
   padding: 5px 10px;
@@ -1273,20 +1287,19 @@ footer {
   color: rgba(255,255,255,1);
   background-color: rgba(0,0,0,0.8);
   padding: 10px;
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   font-size: 2.4em;
   line-height: 1em;
   display: inline-block;
 }
 
 .img-regista .info-content {
-  color: rgba(255,255,255,0.8);
+  color: rgba(255,255,255,1);
   background-color: rgba(0,0,0,0.8);
   padding: 10px;
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   font-size: 2.4em;
   line-height: 1em;
-  display: inline-block;
 }
 
 .img-regista .info-date {
@@ -1296,7 +1309,7 @@ footer {
 
 .img-regista .info-date h4 {
   color: rgba(255,255,255,1);
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   font-size: 6.5em;
   height: 1em;
   margin-left: -5px;
@@ -1306,7 +1319,7 @@ footer {
 
 .img-regista .info-date h5 {
   color: rgba(255,255,255,1);
-  font-family: 'Georgia';
+  font-family: "Georgia";
   font-style: italic;
   font-size: 2.3em;
   margin-bottom: -5px;
@@ -1314,7 +1327,7 @@ footer {
 
 .img-regista .info-date h6 {
   color: rgba(255,255,255,1);
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   font-size: 1.5em;
   height: 1em;
   }
@@ -1323,7 +1336,7 @@ footer {
   color: rgba(255,255,255,1);
   background-color: rgba(0,0,0,0.8);
   padding: 10px;
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   font-size: 1.5em;
   margin-top: 255px;
 }
@@ -1333,27 +1346,26 @@ footer {
 }
 
 .biografia h2 {
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   color: rgba(243,33,36,1);
   margin: 45px 0 10px 0;
   font-size: 350%;
 }
 
 .biografia p {
-  font-family: 'Georgia';
+  font-family: "Georgia";
   font-style: italic;
-  margin-bottom: 95px;
 }
 
 .filmografia h2 {
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   color: rgba(243,33,36,1);
   margin: 45px 0 10px 0;
   font-size: 350%;
 }
 
 .filmografia h3 {
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   margin-top: -5px;
   color: rgba(255,255,255,1);
   display: inline-block;
@@ -1380,7 +1392,7 @@ footer {
 }
 
 .slider-film-catalogo .info-film-catalogo h3 spam {
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   color: rgba(255,255,255,1);
   display: inline-block;
   background-color: rgba(72,72,72,1);
@@ -1394,7 +1406,7 @@ footer {
 }
 
 .altri-film-bg h3 {
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   margin-top: 10px;
   color: rgba(255,255,255,1);
   display: inline-block;
@@ -1402,15 +1414,11 @@ footer {
   padding-left: 7px;
   padding-right: 7px;
   padding-top: 3px;
-}
-
-.slider-film-catalogo .fotorama__html {
-  height: 450px;
+  position: absolute;
 }
 
 .slider-film-catalogo .info-wrapper img {
   opacity: 0;
-  height: 380px;
 }
 
 .slider-film-catalogo .slideshow-wrapper {
@@ -1425,7 +1433,7 @@ footer {
 }
 
 .slider-film-catalogo .info-film-catalogo h3 spam {
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   color: rgba(255,255,255,1);
   display: inline-block;
   background-color: rgba(72,72,72,1);
@@ -1451,7 +1459,7 @@ footer {
 }
 
 .slider-film-catalogo .info-film-catalogo h3 spam {
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   color: rgba(255,255,255,1);
   display: inline-block;
   background-color: rgba(72,72,72,1);
@@ -1464,12 +1472,12 @@ footer {
   list-style-type: none;
 }
 .slider-film-catalogo a {
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   color: rgba(0,0,0,0.7);
   text-align: left;
   margin-left: 280px;
   margin-top: -2px;
-  margin-bottom: -50px;  
+  margin-bottom: -50px;
   font-size: 2em;
 }
 
@@ -1485,12 +1493,12 @@ footer {
 }
 
 .slider-film-catalogo a {
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   color: rgba(0,0,0,0.7);
   text-align: left;
   margin-left: 280px;
   margin-top: -2px;
-  margin-bottom: -50px;  
+  margin-bottom: -50px;
   font-size: 2em;
 }
 
@@ -1501,7 +1509,7 @@ footer {
   padding-top: 20px;
   z-index: 10;
   width: 100%;
-  margin-top: -400px;
+  margin-top: -320px;
   position: absolute;
 }
 
@@ -1510,113 +1518,130 @@ footer {
 
 /* --SINGLE-FILM-- */
 
-.img-film .slideshow-wrapper {
-  width: 100%;
-  min-height: 838px;
-}
-
-.img-film .slideshow {
-  z-index: 0;
-  /* --DA CAMBIARE IL PRIMA POSSIBILE-- */
-  position: relative;
-}
-
-.img-film .fotorama__nav-wrap {
-  position: absolute;
-  z-index: 10;
-}
-
-.img-film .slide {
-  position: relative;
-}
-
-.img-film .slide .info-wrapper img {
+.single-film .slide .info-wrapper img {
   position: absolute;
   top: 0px;
+  z-index: 0;
 }
 
-.img-film .fotorama__video-play {
-  margin-top: 20px;
-}
-
-.img-film .fotorama__nav-wrap {
-  background-color: rgba(0,0,0,0.8);
-  height: 210px;
-  line-height: 210px;
-  padding: 10px;
-  padding-top: 15px;
-}
-
-.img-film .fotorama__caption__wrap {
+.single-film .fotorama__video-play {
+  margin-top: 30px;
   position: absolute;
+  background-image: url(../img/play.svg);
+  background-position: 0px 0px;
+  background-size: 75%;
+}
+
+.single-film .fotorama__nav-wrap {
+  background-color: rgba(0,0,0,0.8);
+  position: absolute;
+  z-index: 30;
+  height: 210px;
+  margin-top: -120px;
+}
+
+.single-film .fotorama__caption__wrap {
+  position: relative;
   background: none;
   width: 100%;
+  margin-top: -1390px;
 }
 
-.img-film .info-wrapper {
-  padding-top: 185px;
-  position: relative;
-}
-
-.img-film .info-title h2 {
+.single-film .info-title h2 {
   color: rgba(255,255,255,1);
   background-color: rgba(0,0,0,0.8);
   padding: 10px;
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   font-size: 2.4em;
   line-height: 1em;
   display: inline-block;
-}
+  margin-top: 285px;
+} 
 
-.img-film .info-content {
+.single-film .info-content {
   color: rgba(255,255,255,1);
   background-color: rgba(0,0,0,0.8);
   padding: 10px;
-  font-family: 'Georgia';
+  font-family: "Georgia";
   font-style: italic;
-  margin-top: 15px;
+  margin-top: 10px;
   line-height: 1.1em;
   display: inline-block;
 }
 
-.img-film .info-content p {
+.single-film .info-content p {
   margin-bottom: 5px;
 }
 
-.img-film .info-content span {
+.single-film .info-content span {
   color: rgba(255,255,255,0.8);
   font-size: 2em;
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   font-style: normal;
 }
 
-.img-film .info-share h6 {
+.single-film .info-date {
+  background-color: rgba(0,0,0,0.8);
+  text-align: center;
+  margin-top: -220px;
+}
+
+.single-film .info-date h6 {
   color: rgba(255,255,255,1);
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   font-size: 1.5em;
   height: 1em;
-  display: inline-block;
-  background-color: rgba(0,0,0,0.8);
-  padding: 10px;
-  padding-top: 5px;
-  text-align: center;
 }
 
-.share-icon img {
-  height: 20px;
-  margin-left: 3px;
-  margin-right: 3px;
-  padding: 2px;
+.single-film .info-wrapper {
+  padding-top: 375px;
+  position: relative;
 }
 
-.img-film .film-thumb-title h4 a {
+.single-film .film-thumb-title h4 a {
   color: rgba(255,255,255,1);
   background-color: rgba(0,0,0,0.8);
   padding: 10px;
-  font-family: "Bebas Neue";
-  font-size: 1.5em;
-  margin-top: 255px;
+  font-family: "Bebas Neue", Helvetica, sans-serif;
+  font-size: 1em;
+  margin-top: 15px;
   display: inline-block;
+}
+
+.single-film .info-ondemand h4 {
+  color: rgba(255,255,255,1);
+  background-color: rgba(0,0,0,0.8);
+  padding: 10px;
+  font-family: "Bebas Neue", Helvetica, sans-serif;
+  font-size: 1.3em;
+  margin-top: 50px;
+  margin-left: 15px;
+  display: inline-block;
+}
+
+.single-film .info-ondemand ul li a {
+  color: rgba(255,255,255,1);
+  background-color: rgba(0,0,0,0.8);
+  padding: 5px;
+  font-family: "Bebas Neue", Helvetica, sans-serif;
+  font-size: 1em;
+  display: inline-block;
+  float: left;
+  margin: 0 10px 0 -2px;
+}
+
+.single-film .info-ondemand li {
+  list-style: none;
+}
+
+.single-film .info-ondemand li a.itunes:hover {
+  color: rgba(255,255,255,1);
+  background-color: rgba(14,140,211,1);
+}
+
+.single-film .info-ondemand li a.amazon:hover {
+  color: rgba(255,255,255,1);
+  background-color: rgba(247,155,52,1);
 }
 
 .info-film {
@@ -1625,11 +1650,11 @@ footer {
 }
 
 .info-film h3 {
-  margin-bottom: 20px; 
+  margin-bottom: 20px;
 }
 
 .info-film h3 span {
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   padding: 5px 7px 3px 7px;
   color: rgba(255,255,255,1);
   background-color: rgba(0,0,0,0.9);
@@ -1637,7 +1662,7 @@ footer {
 
 .info-film h4 {
   color: rgba(0,0,0,0.7);
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   font-size: 2em;
   margin-top: 5px;
   margin-bottom: 5px;
@@ -1652,18 +1677,18 @@ footer {
 }
 
 .content-film a {
-  font-family: 'Georgia';
+  font-family: "Georgia";
   color: rgba(0,0,0,1);
   font-size: 1em;
   font-style: italic;
   text-decoration: underline;
   line-height: 45px;
   margin-top: 5px;
-  margin-bottom: 5px; 
+  margin-bottom: 5px;
 }
 
 .info-film p {
-  font-family: 'Georgia';
+  font-family: "Georgia";
   font-size: 1em;
   line-height: 1.7em;
   font-style: italic;
@@ -1674,7 +1699,7 @@ footer {
 }
 
 .download-film h3 {
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   font-size: 3em;
   color: rgba(181,58,61,1);
   margin-bottom: -10px;
@@ -1693,7 +1718,7 @@ footer {
 }
 
 .download-film .tabs a h4 span {
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   font-size: 1.1em;
   color: rgba(0,0,0,0.7);
   padding: 5px 7px 3px 7px;
@@ -1707,7 +1732,7 @@ footer {
 }
 
 .tabs-content {
-  margin-top: 42px;
+  margin-top: 43px;
   margin-bottom: -20px;
   z-index: 40;
   position: relative;
@@ -1758,17 +1783,17 @@ footer {
   color: rgba(255,255,255,1);
   background-color: rgba(0,0,0,0.8);
   padding: 10px;
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   font-size: 2.4em;
   line-height: 1em;
   display: inline-block;
-} 
+}
 
 .img-film-download .info-content {
   color: rgba(255,255,255,1);
   background-color: rgba(0,0,0,0.8);
   padding: 10px;
-  font-family: 'Georgia';
+  font-family: "Georgia";
   font-style: italic;
   margin-top: 15px;
   line-height: 1.1em;
@@ -1782,7 +1807,7 @@ footer {
 
 .img-film-download .info-date h4 {
   color: rgba(255,255,255,1);
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   font-size: 7.3em;
   height: 1em;
   margin-left: -5px;
@@ -1792,7 +1817,7 @@ footer {
 
 .img-film-download .info-date h5 {
   color: rgba(255,255,255,1);
-  font-family: 'Georgia';
+  font-family: "Georgia";
   font-style: italic;
   font-size: 1.2em;
   margin-bottom: -5px;
@@ -1801,7 +1826,7 @@ footer {
 
 .img-film-download .info-date h6 {
   color: rgba(255,255,255,1);
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   font-size: 1.5em;
   height: 1em;
 }
@@ -1809,10 +1834,10 @@ footer {
 .img-film-download .film-thumb-title h4 a {
   color: rgba(255,255,255,1);
   padding: 10px;
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   font-size: 1em;
   position: absolute;
-  bottom: -560px;
+  bottom: -555px;
   z-index: 10;
   display: inline-block;
   background-color: rgba(0,0,0,0.8);
@@ -1820,11 +1845,9 @@ footer {
 
 .info-date .share {
   display: block;
+  cursor: pointer;
 }
 
-.info-date .share:hover div.inner {
-  display: block
-}
 
 .info-date .share div.inner {
   background-color: rgba(0,0,0,0.8);
@@ -1832,6 +1855,41 @@ footer {
   margin-left: -15px;
   display: none;
 }
+
+.info-date:hover div.inner {
+  display: block
+}
+
+.info-date:hover div.inner .icons .pop {
+  height: 30px;
+  margin: 10px;
+}
+
+.share-icon {
+  display: inline-block;
+  height: 20px;
+  width: 30px; 
+  background-size:contain;
+  background-repeat: no-repeat;
+}
+
+.share-icon-facebook {
+  background-image: url(../img/facebook.svg);
+}
+
+.share-icon-twitter {
+  background-image: url(../img/twitter.svg);
+}
+
+.share-icon-pinterest {
+  background-image: url(../img/pinterest.svg);
+}
+
+.share-icon-googleplus {
+  background-image: url(../img/googleplus.svg);
+}
+
+
 /* FINE FOTO FILM */
 
 /* PRESSBOOK */
@@ -1839,38 +1897,35 @@ footer {
   opacity: 0.2;
 }
 
-.pressbook h4 {
-  width: 1400px;
-  font-family: 'Georgia';
-  font-style: italic;
-  color: rgba(0,0,0,1);
-  position: absolute;
-  margin-top: -580px;
-  font-size: 1.5em;
-  text-align: center;
-}
-
-.pressbook h5 {
-  width: 1400px;
-  font-family: 'Georgia';
-  font-style: italic;
-  color: rgba(0,0,0,1);
-  position: absolute;
-  margin-top: -520px;
-  font-size: 1em;
-  text-align: center;
-}
-
 .pressbook .button {
   background-color: rgba(0,0,0,0.8);
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   font-size: 2em;
   padding: 10px 40px 10px 40px;
   margin-top: -300px;
   width: 280px;
-  margin-left: 580px;
+  margin-left: 560px;
   position: absolute;
   display: inline-block;
+}
+
+.pressbook h4 {
+  font-family: "Bebas Neue", Helvetica, sans-serif;
+  position: absolute;
+  margin-top: -500px;
+  text-align: center;
+  width: 100%;
+  font-size: 2.5em;
+}
+
+.pressbook h5 {
+  font-family: 'Georgia';
+  font-style: italic;
+  position: absolute;
+  margin-top: -420px;
+  text-align: center;
+  width: 100%;
+  font-size: 1em;
 }
 /* FINE PRESSBOOK */
 
@@ -1883,12 +1938,10 @@ footer {
   opacity: 1;
   position: absolute;
   margin-top: -620px;
-  background-color: rgba(0,0,0,0.5);
-  padding: 20px 20px;
 }
 
 .manifesto h4 {
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   color: rgba(0,0,0,1);
   position: absolute;
   margin-top: -580px;
@@ -1896,20 +1949,18 @@ footer {
 }
 
 .manifesto h6 {
-  font-family: 'Georgia';
+  font-family: "Georgia", serif;
   font-style: italic;
   color: rgba(0,0,0,1);
   position: absolute;
-  margin-top: -500px;
-  font-size: 1.2em;
-  height: 50px;
-  line-height: 100px;
-  margin-bottom: 40px;
+  margin-top: -450px;
+  margin-bottom: 50px;
+  font-size: 1.5em;
 }
 
 .manifesto .button {
   background-color: rgba(0,0,0,0.8);
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   font-size: 2em;
   padding: 10px 40px 10px 40px;
   margin-top: -300px;
@@ -1954,17 +2005,17 @@ footer {
   color: rgba(255,255,255,1);
   background-color: rgba(0,0,0,0.8);
   padding: 10px;
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   font-size: 2.4em;
   line-height: 1em;
   display: inline-block;
-} 
+}
 
 .video-film-download .info-content {
   color: rgba(255,255,255,1);
   background-color: rgba(0,0,0,0.8);
   padding: 10px;
-  font-family: 'Georgia';
+  font-family: "Georgia";
   font-style: italic;
   margin-top: 15px;
   line-height: 1.1em;
@@ -1978,7 +2029,7 @@ footer {
 
 .video-film-download .info-date h4 {
   color: rgba(255,255,255,1);
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   font-size: 7.3em;
   height: 1em;
   margin-left: -5px;
@@ -1988,7 +2039,7 @@ footer {
 
 .video-film-download .info-date h5 {
   color: rgba(255,255,255,1);
-  font-family: 'Georgia';
+  font-family: "Georgia";
   font-style: italic;
   font-size: 1.2em;
   margin-bottom: -5px;
@@ -1997,30 +2048,21 @@ footer {
 
 .video-film-download .info-date h6 {
   color: rgba(255,255,255,1);
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   font-size: 1.5em;
   height: 1em;
 }
 
-.video-film-download .film-thumb-title h4 {
+.video-film-download .film-thumb-title h4 a {
   color: rgba(255,255,255,1);
   background-color: rgba(0,0,0,0.8);
   padding: 10px;
-  font-family: "Bebas Neue";
-  font-size: 1.5em;
+  font-family: "Bebas Neue", Helvetica, sans-serif;
+  font-size: 1em;
   position: absolute;
-  bottom: -575px;
+  bottom: -555px;
   z-index: 10;
   display: inline-block;
-}
-
-.video-film-download .film-thumb-title h4 a {
-  color: rgba(255,255,255,1);
-  text-decoration: none;
-}
-
-.video-film-download .film-thumb-title h4 a:hover {
-  text-decoration: none;
 }
 
 .video-film-download .fotorama__caption__wrap {
@@ -2056,16 +2098,16 @@ footer {
 }
 
 .slider-film-simili .altri-film span {
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   color: rgba(181,58,61,1);
 }
 
 .slider-film-simili .slide a {
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   color: rgba(0,0,0,0.7);
   text-align: left;
   margin-top: 50px;
-  margin-bottom: -50px;  
+  margin-bottom: -50px;
   font-size: 2em;
 }
 
@@ -2085,20 +2127,27 @@ footer {
 /* --PRESS-- */
 
 .archivio-pg p {
-  font-family: 'Georgia';
+  color: rgba(255,255,255,1);
+  background-color: rgba(0,0,0,0.8);
+  padding: 10px;
+  font-family: "Georgia", serif;
   font-style: italic;
   font-size: 1em;
+  line-height: 1.2em;
   display: inline-block;
-  background-color: rgba(0,0,0,0.8);
-  color: rgba(255,255,255,1);
-  padding: 10px;
-  margin-top: 150px;
+}
+
+.ricerca-bg-pr {
+  background-image: url(../img/press-copertina.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .press-bg .option-visual-page ul li {
   display: inline-block;
   margin-right: 15px;
-  font-family: 'Georgia';
+  font-family: "Georgia";
   font-style: italic;
   float: left;
   margin-top: 30px;
@@ -2127,7 +2176,7 @@ footer {
 }
 
 .press-bg .sezione-film h4 {
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   margin-top: 10px;
   color: rgba(255,255,255,1);
   display: inline-block;
@@ -2137,65 +2186,74 @@ footer {
   padding-top: 3px;
 }
 
-/*-- start img exstendes --*/
-
-.sezione-film {
-  position: relative;
-}
-
-/*-- end img exstendes --*/
-
-.navigation li a,
-.navigation li a:hover,
-.navigation li.active a,
-.navigation li.disabled {
-  color: rgba(181,58,61,1);
-  text-decoration:none;
-  font-family: 'Georgia';
+.press-bg ul li h5 {
+  font-family: "Georgia";
   font-style: italic;
 }
 
-.navigation li {
-  display: inline;
-  margin: 0 0.2em;
+.press-bg .selected li {
+  display: inline-block;
+  margin-right: 20px;
 }
 
-.navigation li a,
-.navigation li a:hover,
-.navigation li.active a,
-.navigation li.disabled {
-  cursor: pointer;
-  padding: 0 0.3em;
+.press-bg .selected a {
+  font-family: "Georgia";
+  font-style: italic;
+  color: rgba(181,58,61,1);
 }
 
-.navigation li.active a {
-  background-color: rgba(72,72,72,1);
+.press-bg .selected a.selected {
+  color: rgba(255,255,255,1);
+  background: rgba(72,72,72,1);
+  padding: 0px 5px;
+}
+
+.press-icone {
+  max-width: 1.2em;
+  margin-right: 0.5em;
+  margin-top: 1.0em;
+  margin-bottom: 3.0em;
+}
+
+.pagination a{
+  color: rgba(243,33,36,1);
+  font-size: 1.2em;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+.pagination .current {
+  font-size: 1.2em;
+  background-color: rgba(243,33,36,1);
+  font-family: 'Georgia';
 }
 
 /* --FINE PRESS-- */
 
-/* PAGINA ARCHIVIO */
+/* --ARCHIVIO-- */
 
 .archivio-pg h2 {
   color: rgba(243,33,36,1);
   background-color: rgba(0,0,0,0.8);
   padding: 10px;
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   font-size: 2.4em;
   line-height: 1em;
   display: inline-block;
   margin-top: 180px;
 }
 
-.ricerca-bg {
-  background-color: rgba(242,242,242,1);
-  height: 500px;
+.ricerca-bg-ar {
+  background-image: url(../img/archivio-copertina.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .option-visual-page ul li {
   display: inline-block;
   margin-right: 15px;
-  font-family: 'Georgia';
+  font-family: "Georgia";
   font-style: italic;
   float: left;
   margin-top: 30px;
@@ -2232,7 +2290,7 @@ footer {
   color: rgba(255,255,255,1);
   background-color: rgba(0,0,0,0.5);
   padding: 10px;
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   font-size: 2em;
   line-height: 1em;
   display: inline-block;
@@ -2246,64 +2304,61 @@ footer {
 .archivio-film span {
   background-color: rgba(0,0,0,0.8);
   color: rgba(255,255,255,1);
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   padding-left: 2px;
   padding-right: 2px;
 }
 
 .archivio-film a {
-  font-family: 'Georgia';
+  font-family: "Georgia";
   font-style: italic;
   color: rgba(0,0,0,1);
   font-size: 0.8em;
   text-decoration: underline;
 }
+
 /* FINE PAGINA ARCHIVIO */
 
 /* INIZIO PAGINA SCUOLA */
-
-.scuola-bg {
-  margin: 0 auto;
-}
-
 .scuola-pg h2 {
-  color: #F7F7F7;
-background-color: rgba(0, 0, 0, 0.8);
-padding: 10px;
-font-family: "Bebas Neue";
-font-size: 2.4em;
-line-height: 1em;
-display: inline-block;
-margin-top: 180px;
+  color: rgba(243,33,36,1);
+  background-color: rgba(0,0,0,0.8);
+  padding: 10px;
+  font-family: "Bebas Neue", Helvetica, sans-serif;
+  font-size: 2.4em;
+  line-height: 1em;
+  display: inline-block;
+  margin-top: 180px;
 }
 
 .scuola-pg p {
-  background-color: rgba(0, 0, 0, 0.8);
+  color: rgba(255,255,255,1);
+  background-color: rgba(0,0,0,0.8);
   padding: 10px;
-  color: #F7F7F7;
-  font-family: 'Georgia';
+  font-family: "Georgia", serif;
   font-style: italic;
+  font-size: 1em;
+  line-height: 1.2em;
+  display: inline-block;
 }
 
-.ricerca-scuola-bg {
-  /*b ackground-color: #F2F2F2; */
-    height: 570px;
+.ricerca-bg-sc {
+  background-image: url(../img/scuole-copertina.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .scuola-bg .first-menu {
   margin-left: -15px;
 }
 
-#sezione-film ul {
+.sezione-film ul {
   margin-left: 0rem;
 }
 
-#sezione-film ul li h4, h3{
-  font-family: "Bebas Neue";
-}
-
 .scuola-bg ul li h5 {
-  font-family: 'Georgia';
+  font-family: "Georgia";
   font-style: italic;  
 }
 
@@ -2311,32 +2366,25 @@ margin-top: 180px;
   display: inline-block;
   margin-right: 15px;
   margin-top: 30px;
-margin-bottom: 60px;
-font-size: 1.2em;
-
+  margin-bottom: 60px;
+  font-size: 1.2em;
 }
 
 .scuola-bg .selected-2 li {
   display: inline-block;
   margin-right: 15px;
   margin-top: 30px;
-margin-bottom: 60px;
-font-size: 1.2em;
-
+  margin-bottom: 60px;
+  font-size: 1.2em;
 }
 
 .scuola-bg .selected-2 {
   margin-left: 240px;
+  margin-right: 20px;
 }
 
 .scuola-bg .selected a {
-  font-family: 'Georgia';
-  font-style: italic;
-  color: rgba(181,58,61,1);
-}
-
-.scuola-bg .selected-2 a {
-  font-family: 'Georgia';
+  font-family: "Georgia";
   font-style: italic;
   color: rgba(181,58,61,1);
 }
@@ -2354,11 +2402,12 @@ font-size: 1.2em;
 }
 
 #scuola {
+  margin-top: 70px ;
   margin-bottom: 50px;
 }
 
 #scuola .sezione-film ul li h4 {
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   margin-top: 10px;
   color: rgba(255,255,255,1);
   display: inline-block;
@@ -2369,14 +2418,15 @@ font-size: 1.2em;
 }
 
 #scuola .sezione-film ul li h3 {
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   color: rgba(72,72,72,1);
 }
 
 .text-film p {
-  font-family: 'Georgia';
+  font-family: "Georgia";
   font-style: italic;
 }
+
 
 .text-film a {
   position: relative;
@@ -2415,11 +2465,15 @@ font-size: 1.2em;
   
   background:url(../img/arrow-down.png) center no-repeat;
   margin-top: 20px;
+}
 
+.descrizione-scuole {
+  overflow: auto;
+  height: 400px;
 }
 
 .text-film h5 {
-  font-family: 'Georgia';
+  font-family: "Georgia";
   font-style: italic;
   color: rgba(181,58,61,1);
   text-decoration:underline;
@@ -2430,7 +2484,7 @@ font-size: 1.2em;
 }
 
 .info-film-scuola h5 span {
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   color: rgba(255,255,255,1);
   display: inline-block;
   background-color: rgba(72,72,72,1);
@@ -2440,26 +2494,23 @@ font-size: 1.2em;
 }
 
 .info-film-scuola a {
-  font-family: 'Georgia';
+  font-family: "Georgia";
   font-style: italic;
   font-size: 80%;
   color: rgba(72,72,72,1);
-  text-decoration:underline;
 }
 
 #button-scuola a {
   background-color: rgba(243,33,36,1);
   color: rgba(255,255,255,1);
-  font-family: "Bebas Neue";
-  font-style: normal;
-  text-decoration: none;
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   font-size: 2em;
   padding: 10px 40px 10px 40px;
   margin-top: 20px;
   margin-bottom: 0px;
 }
-
 /* FINE PAGINA SCUOLA */
+
 
 /* FORM RICERCA */
 
@@ -2468,21 +2519,21 @@ font-size: 1.2em;
 }
 
 #search_query {
-  background-color: rgba(0,0,0,0.1);
+  background-color: rgba(0,0,0,0.3);
   border: none;
   box-shadow: none;
   height: 50px;
   font-size: 20px;
   font-family: 'Georgia';
+  color: rgba(255,255,255,1);
 }
 
 .label-container label {
-  font-family: "Bebas Neue";
-  font-size: 1.2em;
+  display: none;
 }
 
 #tax_category {
-  background-color: rgba(0,0,0,0.1);
+  background-color: rgba(0,0,0,0.3);
   border: none;
   box-shadow: none;
   height: 50px;
@@ -2492,6 +2543,7 @@ font-size: 1.2em;
   font-style: italic;
   margin-right: 25px;
   float: left;
+  color: rgba(255,255,255,1);
 }
 
 .wpas-submit {
@@ -2505,20 +2557,134 @@ font-size: 1.2em;
   float: right;
 }
 
-.pagination a{
-  color: rgba(243,33,36,1);
-  font-size: 1.2em;
-  text-decoration: none;
-  margin: 0 5px;
-}
-
-.pagination .current {
-  font-size: 1.2em;
-  background-color: rgba(243,33,36,1);
-  font-family: 'Georgia';
-}
-
 /* --FINE FORM RICERCA-- */
+
+/* --PAGINA SEARCH-- */
+
+.title-red {
+  margin-top: 185px;
+  color: rgba(243,33,36,1);
+  font-family: "Bebas Neue", Helvetica, sans-serif;
+}
+
+.search-list li {
+  list-style: none;
+  margin-left: -15px;
+  margin-bottom: 20px;
+}
+
+.search-list li h4 a {
+  color: rgba(255,255,255,1);
+  background-color: rgba(0,0,0,0.5);
+  padding: 10px;
+  font-family: "Bebas Neue", Helvetica, sans-serif;
+  font-size: 1em;
+  line-height: 1em;
+  display: inline-block;
+}
+
+.side {
+  margin-bottom: 50px;
+}
+
+.side h2{
+  color: rgba(255,255,255,1);
+  background-color: rgba(0,0,0,0.8);
+  padding: 10px 10px 5px 10px;
+  font-family: "Bebas Neue", Helvetica, sans-serif;
+  font-size: 2.4em;
+  line-height: 1em;
+  display: inline-block;
+  margin-top: 185px;
+  margin-left: -5px;
+}
+
+.side h4 {
+  font-family: 'Georgia';
+  font-style: italic;
+  text-align: right;
+  font-size: 1em;
+}
+
+.side h3 a {
+  color: rgba(255,255,255,1);
+  background-color: rgba(0,0,0,0.5);
+  padding: 10px;
+  font-family: "Bebas Neue", Helvetica, sans-serif;
+  font-size: 1em;
+  line-height: 1em;
+  display: inline-block;
+  margin-left: -5px;
+}
+
+.side {
+  font-family: 'Georgia';
+  font-style: italic;
+}
+
+.film-archivio-bg {
+  background-color: rgba(242,242,242,1);
+}
+
+.section-title {
+  color: rgba(255,255,255,1);
+  background-color: rgba(0,0,0,0.8);
+  padding: 10px 10px 5px 10px;
+  font-family: "Bebas Neue", Helvetica, sans-serif;
+  font-size: 2.4em;
+  line-height: 1em;
+  display: inline-block;
+  margin-top: 30px;
+  margin-left: -5px;
+}
+
+.img-archivio img {
+  padding: 10px;
+}
+
+.img-archivio li {
+  list-style: none;
+  font-family: 'Georgia';
+  font-style: italic;
+  margin-left: -5px;
+  font-size: 1.2em;
+}
+
+.img-archivio li a {
+  color: rgba(0,0,0,1);
+}
+
+.text-container {
+  height: 100px;
+}
+
+.text-container h3 a {
+  color: rgba(255,255,255,1);
+  background-color: rgba(0,0,0,0.5);
+  padding: 10px;
+  font-family: "Bebas Neue", Helvetica, sans-serif;
+  font-size: 1em;
+  line-height: 1em;
+  display: inline-block;
+  margin-left: -5px;
+}
+
+.search-button {
+  background-color: rgba(243,33,36,1);
+  font-family: "Bebas Neue", Helvetica, sans-serif;
+  font-size: 2em;
+  padding: 10px 40px 10px 40px;
+  width: 275px;
+  color: rgba(255,255,255,1);
+  margin-bottom: 50px;
+}
+
+.search-button:hover {
+  background-color: rgba(253,184,19,1);
+  color: rgba(255,255,255,1);
+}
+
+/* --FINE PAGINA SEARCH-- */
 
 @media only screen and (min-width: 320px) and (max-width: 480px) {
 
@@ -2614,13 +2780,13 @@ ul.off-canvas-list li label a{
 }
 
 .tabs {
-  margin-top: -68px;
+  margin-top: -40px;
   width: 100%;
 }
 
 .tabs dd {
   background: rgba(243,33,36,1);
-  padding: 0px 18.2px 0px 18px;
+  padding: 0px 3.9% 0px 3.8%;
 }
 
 .tabs dd a {
@@ -2635,19 +2801,30 @@ ul.off-canvas-list li label a{
   height: 50px;  
 }
 
+.option-visual-page ul, .press-bg .option-visual-page ul  {
+  margin-left: 0px;
+}
 .option-visual-page ul li, .press-bg .option-visual-page ul li {
-  font-size: 16px;
+  font-size: 13px;
   margin: 20px 0px 10px 0px;
   padding: 0px;
 }
 .option-visual-page .view-film, .press-bg .option-visual-page .view-film {
-  margin:0px 20px 10px 20px;
+  margin-left: 0px;
   float: left;
 }
 
-.wpas-submit {
+
+.wpas-submit .content {
+  width: 120px;
+
   width: 100%;
+
   height: 40px;
+}
+
+button.large, .button.large {
+  padding-top: 10px;
 }
 
 .ricerca-bg {
@@ -2682,6 +2859,61 @@ ul.off-canvas-list li label a{
   display: inline-block;
 }
 
+/*SINGLE-FILM INIZIO*/
+.attachment-post-thumbnail wp-post-image {
+  max-width: 50%;
+  min-height: 838px;
+}
+
+.content {
+  display:none;
+}
+
+.tabs {
+  display: none;
+}
+
+.slider-film-simili {
+  display:none;
+}
+
+.altri-film {
+  display:none;
+}
+
+.infofilm{
+  display:none;
+}
+
+#durata{
+  display:none;
+}
+
+.trama p{
+  font-size:0.8em;
+}
+
+.content-film a{
+  font-size:0.8em;
+}
+
+.footer{
+  display:none;
+}
+
+.footerfooter h6{
+  display:none;
+}
+
+.button.large{
+  display:none;
+}
+
+.clearfix:after{
+  display: none;
+}
+
+
 .pagination {
   margin-left: 15px;
 }
@@ -2693,4 +2925,14 @@ footer .wrapper {
 #tax_category {
   width: 100%;
 }
+
+.info-footer h6{
+  display: none;
+}
+
+.social-icon-footer {
+  text-align: center;
+  height: 30px;
+}
+
 }

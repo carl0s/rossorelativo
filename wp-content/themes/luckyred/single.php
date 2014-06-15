@@ -40,7 +40,7 @@ $actual_id = get_the_ID();
       <?php 
       $args = array(
         'post_type'  => 'post',
-        'post_not_in' => array (
+        'post__not_in' => array (
                             $actual_id
                           ),
         'posts_per_page' => -1,

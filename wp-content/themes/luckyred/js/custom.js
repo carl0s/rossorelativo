@@ -38,10 +38,9 @@ $(document).ready(function(){
     radioClass: 'iradio_square-red',
     increaseArea: '20%' // optional
   });
-});
 
-$('.share .inner .icons').share({
-        networks: ['facebook','twitter','googleplus','pinterest','tumblr']
+  $('.info-date .share').hover(function() {
+    $(this).find('.inner').show();
   });
 
 $('.slider-nextexit .slideshow').on(
@@ -60,3 +59,11 @@ $('.bottone-scuola').click(function(){
     // }, 500);
     $('.descrizione-scuole').toggleClass('expanded');
 });
+
+  $('.share .inner .icons').share({
+          networks: ['facebook','twitter','googleplus','pinterest']
+    });
+
+
+
+

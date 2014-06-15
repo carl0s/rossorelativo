@@ -55,12 +55,12 @@ $args = array();
 
 ?>
 
-<div id="press" class="ricerca-bg">
+<div id="press" class="ricerca-bg-pr">
     <div class="archivio-pg row">
       <div class="large-12 columns">
-        <p>Cerca il tuo film all'interno del catalogo.<br>
-        Scegli il contenuto multimediale e la risoluzione che desideri<br>
-        e avvia il download.</p>
+      	<h2><?php echo __('Catalogo Press'); ?></h2><br>
+        <p>Cerca il tuo film all'interno del catalogo.
+        Scegli il contenuto multimediale e la risoluzione che desideri e avvia il download.</p>
         <?php
         
           $search->the_form();
@@ -116,102 +116,35 @@ $args = array();
 			<a class="archive-img-smart" href="<?php echo get_permalink(); ?>"><?php echo get_the_post_thumbnail(); ?></a>
 			<a class="archive-img" href="<?php echo get_permalink(); ?>"> <?php $image = get_field('locandina'); ?><img src="<?php echo $image['url']; ?>" /></a>
 
-			<dl class="tabs" data-tab>
-				<dd class="tab-title">
-					<a href="#film<?php echo $id; ?>-1"><img src="<?php echo get_template_directory_uri() . '/img/gallery.png' ?>"></a>
-				</dd>
-				<dd class="tab-title">
-					<a href="#film<?php echo $id; ?>-2"><img src="<?php echo get_template_directory_uri() . '/img/video.png' ?>"></a>
-				</dd>
-				<dd class="tab-title">
-					<a href="#film<?php echo $id; ?>-3"><img src="<?php echo get_template_directory_uri() . '/img/press.png' ?>"></a>
-				</dd>
-				<dd class="tab-title">
-					<a href="#film<?php echo $id; ?>-4"><img src="<?php echo get_template_directory_uri() . '/img/copy.png' ?>"></a>
-				</dd>
-				<dd class="tab-title">
-					<a href="#film<?php echo $id; ?>-5"><img src="<?php echo get_template_directory_uri() . '/img/audio.png' ?>"></a>
-				</dd>
-			</dl>
+			<a href="<?php echo get_permalink($id); ?>#panel-foto"><img src="<?php echo get_template_directory_uri() . '/img/gallery.png' ?>"></a>
+			<a href="<?php echo get_permalink($id); ?>#panel-video"><img src="<?php echo get_template_directory_uri() . '/img/video.png' ?>"></a>
+			<a href="<?php echo get_permalink($id); ?>#panel-manifesto"><img src="<?php echo get_template_directory_uri() . '/img/press.png' ?>"></a>
+			<a href="<?php echo get_permalink($id); ?>#panel-pressbook"><img src="<?php echo get_template_directory_uri() . '/img/copy.png' ?>"></a>
+			<a href="<?php echo get_permalink($id); ?>#panel-audio"><img src="<?php echo get_template_directory_uri() . '/img/audio.png' ?>"></a>
 
 		</div>
 
-		<?php endwhile; endif; ?>
-
-		<div class="tabs-content large-12 columns">
-			<div class="content" id="film<?php echo $id; ?>-1">
-				
-
-				<div class="img-film-download slideshow-wrapper">
-            <div class="fotorama slideshow" data-click="false" data-nav="thumbs" data-width="100%" data-ratio="1440/750" data-thumbheight="115" data-thumbwidth="180">
-              <?php if (get_field('foto_item')) : while(the_repeater_field('foto_item')) : ?>
-              <div class="slide" data-thumb="<?php the_sub_field('foto_immagine'); ?>">
-                <div class='info-wrapper'>
-                  <div class="row">
-                    <div class='film-thumb-title large-5 columns'>
-                      <h4>
-                      <?php
-                      if( get_sub_field('download_immagine') ):
-                        $file = get_sub_field('download_immagine');
-                      ?>
-                      <a href="<?php echo $file['url']; ?>"><?php echo __('Download'); ?></a>
-                      <?php
-                      endif;
-                      ?>
-                      </h4>
-                    </div>
-                  </div>
-                  <img src="<?php the_sub_field('foto_immagine'); ?>" alt="<?php the_sub_field('titolo'); ?>" />
-                  <div class='row'>
-                    <div class='info-date large-1 large-offset-11 columns'>
-                      <h6>Share</h6>
-                    </div>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="film-thumb large-12 columns">
-                    <?php the_field('video_thumbnail'); ?>
-                  </div>
-                </div>
-              </div>
-            <?php endwhile; ?>
-            <div class="row">
-              <div class="pagination large-3 columns end right">
-                <?php $search->pagination(array('prev_text' => '«','next_text' => '»')); ?>
-              </div>
-            </div>
-          <?php
-          else:
-            echo '<p>Spiacenti. Nessun risultato trovato</p>';
-          endif;
-
-
-          $wp_query = $temp;
-          wp_reset_query();
-
-          ?>
-            </div>
-          </div>
-
-
-			</div>
-			<div class="content" id="film<?php echo $id; ?>-2">
-				<p>Second panel content goes here...</p>
-			</div>
-			<div class="content" id="panel2-3">
-				<p>Third panel content goes here...</p>
-			</div>
-			<div class="content" id="panel2-4">
-				<p>Fourth panel content goes here...</p>
-			</div>
-			<div class="content" id="panel2-5">
-				<p>Fourth panel content goes here...</p>
-			</div>
+	<?php endwhile; ?>
+	<div class="row">
+		<div class="pagination large-3 columns end right">
+			<?php $search->pagination(array('prev_text' => '«','next_text' => '»')); ?>
 		</div>
-
-
-
 	</div>
+	<?php
+	else:
+		echo '<p>Spiacenti. Nessun risultato trovato</p>';
+	endif;
+
+
+	$wp_query = $temp;
+	wp_reset_query();
+
+	?>
+</div>
+</div>
+
+
+</div>
 	
 </div>
 

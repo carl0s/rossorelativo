@@ -56,10 +56,10 @@
   <!--BODY-->
   <?php wp_reset_postdata(); ?>
 
-  <div id="archivio" class="ricerca-bg large-12 columns">
+  <div id="archivio" class="ricerca-bg-hm large-12 columns">
     <div class="archivio-pg row">
       <div class="large-12 columns">
-        <h2><?php echo __('On demand'); ?></h2>
+        <h2><?php echo __('Home video'); ?></h2>
         <?php
         
           $search->the_form();
@@ -178,14 +178,6 @@
           wp_reset_query();
 
           ?>
-
-          <div class="row">
-          <div class="large-3 columns end right">
-            <?php 
-              //wpbeginner_numeric_posts_nav(); 
-            ?>
-          </div>
-        </div>
 
     </div>
   </div>

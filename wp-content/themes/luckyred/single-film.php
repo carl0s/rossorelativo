@@ -8,53 +8,62 @@
     $cat_string = "'" . $cat_string_item->term_id . ",";
   endforeach;
  ?>
-<div class="img-film slideshow-wrapper">
-  <div class="fotorama slideshow" data-nav="thumbs" data-width="100%" data-ratio="1440/750">
-    <div class="slide">
-      <div class='info-wrapper'>
-        <?php echo get_the_post_thumbnail(); ?>
-        <div class='row'>
-          <div class='info-title large-6 columns'>
-            <?php the_title('<h2>','</h2>'); ?>
-            <div class="row collapse">
-              <div class="large-9 columns">
-                <div class='info-content'>
-                  <p><?php echo __('Titolo originale'); ?></p>
-                  <span><?php echo get_field('titolo_originale'); ?></span>
-                </div>
-                <div class='film-thumb-title'>
-                  <h4>
-                    <?php
-                    if( get_field('trailer_scaricabile') ):
-                      $file = get_field('trailer_scaricabile');
-                    ?>
-                    <a href="<?php echo $file['url']; ?>"><?php echo __('Scarica il trailer'); ?></a>
-                    <?php
-                    endif;
-                    ?>
-                  </h4>
-                </div>
+
+<div class="single-film fotorama" data-click="false" data-nav="thumbs" data-thumbheight="115" data-thumbwidth="180">
+  <a href="<?php the_field('link_trailer'); ?>" data-caption="
+    <div class='info-wrapper'>
+      <div class='row'>
+        <div class='info-title large-6 columns'>
+          <a href='<?php echo get_the_permalink(); ?>'><h2><?php the_title(); ?></h2></a>
+          <div class='row collapse'>
+            <div class='large-9 columns'>
+              <div class='info-content'>
+                <p><?php echo __('Titolo originale'); ?></p>
+                <span><?php echo get_field('titolo_originale'); ?></span>
+              </div>
+              <div class='film-thumb-title'>
+                <h4>
+                  <?php
+                  if( get_field('trailer_scaricabile') ):
+                    $file = get_field('trailer_scaricabile');
+                  ?>
+                  <a href='<?php echo $file['url']; ?>'><?php echo __('Scarica il trailer'); ?></a>
+                  <?php
+                  endif;
+                  ?>
+                </h4>
               </div>
             </div>
           </div>
-          <div class='info-share large-1 large-offset-4 columns'>
-            <h6>Share</h6>
+        </div>
+        <div class='info-date large-1 large-offset-11 columns'>
+          <h6>Share</h6>
+        </div>
+        <div class='row collapse'>
+            <div class='large-6 columns'>
+              <div class='info-ondemand'>
+                  <h4><?php echo __('Noleggia il film:'); ?></h4><br>
+                  <ul>
+                    <?php if(get_field('itunes_link')): ?>
+                      <li><a href='<?php echo get_field('itunes_link'); ?>' class='itunes'><?php echo __('Itunes'); ?></a></li>
+                    <?php endif; ?>
+                    <?php if(get_field('amazon_link')): ?>
+                      <li><a href='<?php echo get_field('amazon_link'); ?>' class='amazon'><?php echo __('Amazon'); ?></a></li>
+                    <?php endif; ?>
+                  </ul>
+                </div>
+            </div>
           </div>
-        </div>
       </div>
-      <div class="row">
-        <div class="film-thumb large-12 columns">
-          <?php the_field('video_thumbnail'); ?>
-        </div>
-      </div>
-    </div>
-  </div>
+    ">
+    <img src='<?php echo wp_get_attachment_image_src(get_post_thumbnail_id(), 'full')[0]; ?>'>
+  </a>
 </div>
 <div class="info-film row">
   <div class="large-6 columns">
     <h3><span><?php echo __('Il film') ?></span></h3>
     <div class="row">
-      <div class="large-3 columns">
+      <div class="infofilm large-3 columns">
         <h4><?php echo __('Regia'); ?></h4>
       </div>
       <div class="content-film large-9 columns">
@@ -76,7 +85,7 @@
         </div>
       </div>
       <div class="row">
-        <div class="large-3 columns">
+        <div class="infofilm large-3 columns">
           <h4><?php echo __('Genere'); ?></h4>
         </div>
         <div class="content-film large-9 columns">
@@ -84,7 +93,7 @@
         </div>
       </div>
       <div class="row">
-        <div class="large-3 columns">
+        <div class="infofilm large-3 columns">
           <h4><?php echo __('Nazione'); ?></h4>
         </div>
         <div class="content-film large-9 columns">
@@ -104,7 +113,7 @@
             </div>
           </div>
           <div class="row">
-            <div class="large-3 columns">
+            <div class="infofilm large-3 columns">
               <h4><?php echo __('Anno'); ?></h4>
             </div>
             <div class="content-film large-9 columns">
@@ -112,10 +121,10 @@
             </div>
           </div>
           <div class="row">
-            <div class="large-3 columns">
+            <div class="infofilm large-3 columns">
               <h4><?php echo __('Durata'); ?></h4>
             </div>
-            <div class="content-film large-9 columns">
+            <div id="durata" class="content-film large-9 columns">
               <a><?php echo get_field('durata'); ?></a>
             </div>
           </div>
@@ -125,38 +134,48 @@
             </div>
           </div>
         </div>
-        <div class="large-6 columns">
+        <div class="trama large-6 columns">
           <h3><span><?php echo __('La trama'); ?></span></h3>
           <p><?php the_content(); ?></p>
         </div>
       </div>
+      <?php if(get_field('foto_item') && get_field('uscita_del_materiale_di_stampa') && get_field('poster') && get_field('video_item')): ?>
       <div class="row">
         <div class="download-film large-12 columns">
           <h3>Download</h3>
           <dl class="tabs" data-tab>
+            <?php if(get_field('foto_item')): ?>
             <dd class="active large-2 columns">
-              <a href="#panel2-1"><h4><span><?php echo __('Foto film'); ?></span></h4></a>
+              <a href="#panel-foto"><h4><span><?php echo __('Foto film'); ?></span></h4></a>
+            </dd>
+            <?php endif; ?>
+            <?php if(get_field('uscita_del_materiale_di_stampa')): ?>
+            <dd class="large-2 columns">
+              <a href="#panel-pressbook"><h4><span><?php echo __('Pressbook'); ?></span></h4></a>
+            </dd>
+            <?php endif; ?>
+            <?php if(get_field('poster')): ?>
+            <dd class="large-2 columns">
+              <a href="#panel-manifesto"><h4><span><?php echo __('Manifesto'); ?></span></h4></a>
+            </dd>
+            <?php endif; ?>
+            <?php if(get_field('video_item')): ?>
+            <dd class="large-2 columns">
+              <a href="#panel-video"><h4><span><?php echo __('Clip video'); ?></span></h4></a>
+            </dd>
+            <?php endif; ?>
+            <dd class="large-2 columns">
+              <a href="#panel-dvd"><h4><span><?php echo __('Dvd Pack'); ?></span></h4></a>
             </dd>
             <dd class="large-2 columns">
-              <a href="#panel2-2"><h4><span><?php echo __('Pressbook'); ?></span></h4></a>
-            </dd>
-            <dd class="large-2 columns">
-              <a href="#panel2-3"><h4><span><?php echo __('Manifesto'); ?></span></h4></a>
-            </dd>
-            <dd class="large-2 columns">
-              <a href="#panel2-4"><h4><span><?php echo __('Clip video'); ?></span></h4></a>
-            </dd>
-            <dd class="large-2 columns">
-              <a href="#panel2-5"><h4><span><?php echo __('Dvd Pack'); ?></span></h4></a>
-            </dd>
-            <dd class="large-2 columns">
-              <a href="#panel2-6"><h4><span><?php echo __('Clip audio'); ?></span></h4></a>
+              <a href="#panel-audio"><h4><span><?php echo __('Clip audio'); ?></span></h4></a>
             </dd>
           </dl>
         </div>
       </div>
       <div class="tabs-content">
-        <div class="content active" id="panel2-1">
+        <?php if(get_field('foto_item')): ?>
+        <div class="content active" id="panel-foto">
           <div class="img-film-download slideshow-wrapper">
             <div class="fotorama slideshow" data-click="false" data-nav="thumbs" data-width="100%" data-ratio="1440/750" data-thumbheight="115" data-thumbwidth="180">
               <?php if (get_field('foto_item')) : while(the_repeater_field('foto_item')) : ?>
@@ -199,7 +218,9 @@
             </div>
           </div>
         </div>
-        <div class="content" id="panel2-2">
+        <?php endif; ?>
+        <?php if(get_field('uscita_del_materiale_di_stampa')): ?>
+        <div class="content" id="panel-pressbook">
           <div class="pressbook">
             <?php echo get_the_post_thumbnail(); ?>
             <div class="large-12 columns">
@@ -216,7 +237,9 @@
           </div>
           </div>
         </div>
-        <div class="content" id="panel2-3">
+        <?php endif; ?>
+        <?php if(get_field('poster')): ?>
+        <div class="content" id="panel-manifesto">
           <div class="manifesto">
             <?php echo get_the_post_thumbnail(); ?>
             <div class="manifesto-bg">
@@ -240,7 +263,9 @@
             </div>
           </div>
         </div>
-        <div class="content" id="panel2-4">
+        <?php endif; ?>
+        <?php if(get_field('video_item')): ?>
+        <div class="content" id="panel-video">
           <!-- GALLERY DI VIDEO -->
           <?php $items = get_field('video_item'); ?>
 
@@ -278,17 +303,19 @@
           </div>
           <!-- END GALLERY -->
         </div>
-        <div class="content" id="panel2-5">
+        <?php endif; ?>
+        <div class="content" id="panel-dvd">
           <div class="pressbook">
             <?php echo get_the_post_thumbnail(); ?>
           </div>
         </div>
-        <div class="content" id="panel2-6">
+        <div class="content" id="panel-audio">
           <div class="pressbook">
             <?php echo get_the_post_thumbnail(); ?>
           </div>
         </div>
       </div>
+      <?php endif; ?>
     </div>
 
     <div class="row">
