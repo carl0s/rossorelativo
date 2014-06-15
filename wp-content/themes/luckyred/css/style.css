@@ -1220,32 +1220,15 @@ footer .button:active {
   padding-left: 7px;
   padding-right: 7px;
   padding-top: 3px;
-  position: absolute;
 }
 
-.slider-film-catalogo .info-wrapper img {
-  opacity: 0;
+.film-regista {
+  margin-top: 30px; 
+  margin-bottom: 50px;
 }
 
-.slider-film-catalogo .slideshow-wrapper {
-  width: 100%;
-  min-height: 360px;
-}
-
-.slider-film-catalogo .fotorama__caption__wrap {
-  background: none;
-  position: absolute;
-  width: 100%;
-}
-
-.slider-film-catalogo .info-film-catalogo h3 spam {
-  font-family: "Bebas Neue", Helvetica, sans-serif;
-  color: rgba(255,255,255,1);
-  display: inline-block;
-  background-color: rgba(72,72,72,1);
-  padding-left: 7px;
-  padding-right: 7px;
-  padding-top: 3px;
+h3.titolo-film-regista {
+  background-color: rgba(0,0,0,0.5);
 }
 
 .altri-film-bg {
@@ -1264,21 +1247,6 @@ footer .button:active {
   position: absolute;
 }
 
-.slider-film-catalogo .info-wrapper img {
-  opacity: 0;
-}
-
-.slider-film-catalogo .slideshow-wrapper {
-  width: 100%;
-  min-height: 360px;
-}
-
-.slider-film-catalogo .fotorama__caption__wrap {
-  background: none;
-  position: absolute;
-  width: 100%;
-}
-
 .slider-film-catalogo .info-film-catalogo h3 spam {
   font-family: "Bebas Neue", Helvetica, sans-serif;
   color: rgba(255,255,255,1);
@@ -1290,29 +1258,12 @@ footer .button:active {
   position: absolute;
 }
 
-.slider-film-catalogo .info-wrapper img {
-  opacity: 0;
-}
+.altri-film-regista {
+  margin-top: 60px;
+  font-family: 'Georgia';
+  font-style: italic;
+  text-transform: capitalize;
 
-.slider-film-catalogo .slideshow-wrapper {
-  width: 100%;
-  min-height: 360px;
-}
-
-.slider-film-catalogo .fotorama__caption__wrap {
-  background: none;
-  position: absolute;
-  width: 100%;
-}
-
-.slider-film-catalogo .info-film-catalogo h3 spam {
-  font-family: "Bebas Neue", Helvetica, sans-serif;
-  color: rgba(255,255,255,1);
-  display: inline-block;
-  background-color: rgba(72,72,72,1);
-  padding-left: 7px;
-  padding-right: 7px;
-  padding-top: 3px;
 }
 
 .altri-film-bg ul li {
@@ -2314,14 +2265,8 @@ footer .button:active {
 .white-gradient button {
   width: 550px;
   position: relative;
-  
   background:url(../img/arrow-down.png) center no-repeat;
   margin-top: 20px;
-}
-
-.descrizione-scuole {
-  overflow: auto;
-  height: 400px;
 }
 
 .text-film h5 {

@@ -43,10 +43,10 @@
   <div class="row">
     <h2>Filmografia</h2>
     <h3>Film dal catalogo lucky red:</h3>
-    <div class="slider-film-catalogo slideshow-wrapper">
-      <div class="fotorama slideshow" data-transition="crossfade" data-nav="thumbs" data-width="100%" data-ratio="1180/460" data-thumbheight="255" data-thumbwidth="185">
         <?php if (have_posts()) : while(have_posts()) : the_post() ; ?>
-        <?php 
+        <div>
+
+          <?php 
         $filmografie = get_posts(array(
           'post_type'  => 'film',
           'meta_query' => array(
@@ -60,44 +60,40 @@
           ?>
 
           <?php if( $filmografie ): ?>
-              <ul>
               <?php foreach( $filmografie as $filmografia ): ?>
                 <?php 
                 $id = $filmografia->ID;
                 $photo = get_field('locandina', $filmografia->ID);
                 ?>
-                <div class="slide" data-thumb="<?php echo wp_get_attachment_image_src($photo['id'])[0];?>">
-                  <a href="<?php echo get_the_permalink($id); ?>"> <?php echo $filmografia->post_title; ?></a>
-                  <div class='info-wrapper'>
-                    <?php echo get_the_post_thumbnail($filmografia->ID); ?>
+                <div class="film-regista large-4 columns">
+                  <div class="title-layout">
+                    <a href="<?php get_the_permalink($id); ?>"><h3 class="titolo-film-regista"> <?php echo $filmografia->post_title; ?></h3></a>
                   </div>
+
+                <a href="<?php get_permalink(); ?>"><?php echo get_the_post_thumbnail($filmografia->ID); ?>"</a>
                 </div>
+                
+                  
               <?php endforeach; ?>
-              </ul>
+              
             <?php endif; ?>
+
+        </div>
+        
       <?php endwhile; endif; ?>
-    </div>
-  </div>
   </div>
 </div>
 
 <div class="altri-film-bg large-12 columns">
   <div class="row">
     <h3><span>Altri film</span></h3>
+    <div class="altri-film-regista">
+<?php query_posts(array('post_type'=>'regista')); ?>
+    <h5><?php echo get_field('film_regista'); ?></h5>
 
-    <?php query_posts(array('post_type'=>'regista')); ?>
-    <?php if (have_posts()) : while(have_posts()) : the_post(); ?>
-    <ul>
-      <?php $registi = get_field('film_regista')?>
-      <?php if($registi):?>
-      <?php foreach($registi as $regista):?>
-      <li>
-        <a href="<?php echo get_permalink($regista->ID); ?>"><?php echo get_the_title($regista->ID); ?></a>
-      </li>
-      <?php endforeach; ?>
-    <?php endif; ?>
-  </ul>
-<?php endwhile; endif; ?>
+    </div>
+    
+   
   </div>
 </div>
     <!--FOOTER-->

@@ -64,6 +64,8 @@ $('.bottone-scuola').click(function(){
           networks: ['facebook','twitter','googleplus','pinterest']
     });
 
+});
+
 
 
 
