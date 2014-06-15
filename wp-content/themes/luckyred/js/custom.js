@@ -50,3 +50,13 @@ $('.slider-nextexit .slideshow').on(
       $('.cta-page.button').attr('href', $('.slider-nextexit .fotorama__active .info-wrapper').attr('data-film-link'));
     }
 ).fotorama();
+
+$('.bottone-scuola').click(function(){
+    // var heightnow=$(".inner-scuole").height();
+    // var heightfull=$(".inner-scuole").css({height:'auto'}).height();
+
+    // $(".inner-scuole").css({height:heightnow}).animate({
+    //     height: heightfull
+    // }, 500);
+    $('.descrizione-scuole').toggleClass('expanded');
+});

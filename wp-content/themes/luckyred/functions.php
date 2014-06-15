@@ -94,6 +94,4 @@ function custom_field_excerpt() {
 }
 
 
-
-
 ?>

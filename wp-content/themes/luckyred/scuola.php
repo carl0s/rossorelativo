@@ -101,10 +101,11 @@ if (have_posts()) : while(have_posts()) : the_post();
    <a class="archive-img" href="<?php echo get_permalink(); ?>"> <?php $image = get_field('locandina'); ?><img src="<?php echo $image['url']; ?>" ></a>
  </div>
  <div class="text-film large-6 columns">
-  <p><textarea readonly id="text">
+  <p class="descrizione-scuole">
      <?php echo get_field('descrizione'); ?>
-  </textarea></p>
-  
+     <div class="white-gradient"><button class="bottone-scuola" ></button></div>
+  </p>
+
    <a href="<?php echo get_field('link_trailer'); ?>" target="_blank"><h5>Guarda il trailer</h5></a>
  </div>
   <div class="info-film-scuola large-3 columns">

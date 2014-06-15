@@ -45,27 +45,41 @@
     <h3>Film dal catalogo lucky red:</h3>
     <div class="slider-film-catalogo slideshow-wrapper">
       <div class="fotorama slideshow" data-transition="crossfade" data-nav="thumbs" data-width="100%" data-ratio="1180/460" data-thumbheight="255" data-thumbwidth="185">
+        <?php if (have_posts()) : while(have_posts()) : the_post() ; ?>
         <?php 
-        $args = array(
+        $filmografie = get_posts(array(
           'post_type'  => 'film',
-          );
-        $film = new WP_Query($args);
-        ?>
-        <?php if ($film->have_posts()) : while($film->have_posts()) : $film->the_post() ; ?>
-        <div class="slide" data-thumb="<?php echo wp_get_attachment_image_src($image = get_field('locandina'));?><?php echo $image['url']; ?>">
-          <a href="<?php echo get_permalink(); ?>"> <?php the_title(); ?></a>
-          <div class='info-wrapper'>
-            <?php echo get_the_post_thumbnail($film->ID); ?>
-          </div>
-        </div>
+          'meta_query' => array(
+                array(
+                  'key' => 'regia', // name of custom field
+                  'value' => '"' . get_the_ID() . '"', // matches exaclty "123", not just 123. This prevents a match for "1234"
+                  'compare' => 'LIKE'
+                )
+                )
+          ));
+          ?>
+
+          <?php if( $filmografie ): ?>
+              <ul>
+              <?php foreach( $filmografie as $filmografia ): ?>
+                <?php 
+                $id = $filmografia->ID;
+                $photo = get_field('locandina', $filmografia->ID);
+                ?>
+                <div class="slide" data-thumb="<?php echo wp_get_attachment_image_src($photo['id'])[0];?>">
+                  <a href="<?php echo get_the_permalink($id); ?>"> <?php echo $filmografia->post_title; ?></a>
+                  <div class='info-wrapper'>
+                    <?php echo get_the_post_thumbnail($filmografia->ID); ?>
+                  </div>
+                </div>
+              <?php endforeach; ?>
+              </ul>
+            <?php endif; ?>
       <?php endwhile; endif; ?>
     </div>
   </div>
   </div>
 </div>
-
-
-
 
 <div class="altri-film-bg large-12 columns">
   <div class="row">
