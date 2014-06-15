@@ -163,7 +163,7 @@
             </div>
           <?php endwhile; ?>
             <div class="row">
-              <div class="pagination large-3 columns end right">
+              <div class="pagination-archivio large-3 columns end right">
                 <?php $search->pagination(array('prev_text' => '«','next_text' => '»')); ?>
               </div>
             </div>

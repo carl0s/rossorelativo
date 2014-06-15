@@ -533,6 +533,28 @@ header.smaller .social-icon {
   background-color: rgba(253,184,19,1);
 }
 
+.archivio-film .pagination-homevideo {
+  margin-top: 50px;
+  text-align: right;
+}
+
+.archivio-film .pagination-homevideo a{
+  color: rgba(243,33,36,1);
+  font-family: 'Georgia';
+  font-size: 1.2em;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+.archivio-film .pagination-homevideo .current {
+  font-size: 1.2em;
+  background-color: rgba(243,33,36,1);
+  font-family: 'Georgia';
+  color: rgba(255,255,255,1);
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
 /* --FINE ON DEMAND-- */
 
 /* --BLOG-ARCHIVIO-- */
@@ -1035,7 +1057,7 @@ footer .button:active {
 }
 
 .azienda-bg {
-  background-image: url(../img/blur_bn.png);
+  background-image: url(../img/blur2.png);
   background-repeat: no-repeat;
   padding-top: 35px;
   padding-bottom: 90px;
@@ -1046,7 +1068,7 @@ footer .button:active {
 }
 
 .azienda-bg img {
-  opacity: 0.8;
+  opacity: 1;
 }
 
 .azienda-bg h4 {
@@ -2016,17 +2038,34 @@ h3.titolo-film-regista {
   margin-bottom: 3.0em;
 }
 
-.pagination a{
+.link-press {
+  margin-top: 10px;
+}
+
+.link-press a {
+  margin: 10px 5px;
+}
+
+.pagination-press {
+  margin-top: 50px;
+  text-align: right;
+}
+
+.pagination-press a{
   color: rgba(243,33,36,1);
+  font-family: 'Georgia';
   font-size: 1.2em;
   text-decoration: none;
   margin: 0 5px;
 }
 
-.pagination .current {
+.pagination-press .current {
   font-size: 1.2em;
   background-color: rgba(243,33,36,1);
   font-family: 'Georgia';
+  color: rgba(255,255,255,1);
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 /* --FINE PRESS-- */
@@ -2118,6 +2157,28 @@ h3.titolo-film-regista {
   text-decoration: underline;
 }
 
+.pagination-archivio {
+  margin-top: 50px;
+  text-align: right;
+}
+
+.pagination-archivio a{
+  color: rgba(243,33,36,1);
+  font-family: 'Georgia';
+  font-size: 1.2em;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+.pagination-archivio .current {
+  font-size: 1.2em;
+  background-color: rgba(243,33,36,1);
+  font-family: 'Georgia';
+  color: rgba(255,255,255,1);
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
 /* FINE PAGINA ARCHIVIO */
 
 /* INIZIO PAGINA SCUOLA */
@@ -2203,24 +2264,25 @@ h3.titolo-film-regista {
 }
 
 #scuola {
-  margin-top: 70px ;
   margin-bottom: 50px;
 }
 
-#scuola .sezione-film ul li h4 {
+#sezione-film ul li h4 {
   font-family: "Bebas Neue", Helvetica, sans-serif;
   margin-top: 10px;
+  font-size: 2em;
   color: rgba(255,255,255,1);
   display: inline-block;
-  background-color: rgba(72,72,72,1);
+  background-color: rgba(0,0,0,0.8);
   padding-left: 7px;
   padding-right: 7px;
   padding-top: 3px;
 }
 
-#scuola .sezione-film ul li h3 {
+#sezione-film ul li h3 {
   font-family: "Bebas Neue", Helvetica, sans-serif;
-  color: rgba(72,72,72,1);
+  color: rgba(0,0,0,0.8);
+  font-size: 2em;
 }
 
 .text-film p {
@@ -2256,14 +2318,16 @@ h3.titolo-film-regista {
 }
 
 .white-gradient {
-  background: linear-gradient(#FFFFFF, #EFEFEF ,#D2D2D2);
+  background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.01));
   height: 70px;
 }
 
-.white-gradient button {
+.white-gradient .bottone-scuola {
   width: 550px;
   position: relative;
-  background:url(../img/arrow-down.png) center no-repeat;
+  background:url(../img/arrow-down-black.png) center no-repeat;
+  opacity: 0.5;
+  background-size: 50px;
   margin-top: 20px;
 }
 
@@ -2293,16 +2357,19 @@ h3.titolo-film-regista {
   font-style: italic;
   font-size: 80%;
   color: rgba(72,72,72,1);
+  text-decoration: underline;
 }
 
 #button-scuola a {
   background-color: rgba(243,33,36,1);
   color: rgba(255,255,255,1);
   font-family: "Bebas Neue", Helvetica, sans-serif;
+  font-style: normal;
   font-size: 2em;
   padding: 10px 40px 10px 40px;
   margin-top: 20px;
   margin-bottom: 0px;
+  text-decoration: none;
 }
 /* FINE PAGINA SCUOLA */
 

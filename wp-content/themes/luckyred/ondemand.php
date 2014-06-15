@@ -1,6 +1,6 @@
   <?php
     /*
-    * Template Name: Stile On Demand
+    * Template Name: Stile Home Video
     */
 
     if($_GET):
@@ -164,7 +164,7 @@
             </div>
           <?php endwhile; ?>
             <div class="row">
-              <div class="pagination large-3 columns end right">
+              <div class="pagination-homevideo large-3 columns end right">
                 <?php $search->pagination(array('prev_text' => '«','next_text' => '»')); ?>
               </div>
             </div>

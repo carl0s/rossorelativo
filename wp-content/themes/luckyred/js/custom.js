@@ -60,8 +60,6 @@ $('.bottone-scuola').click(function(){
     $('.descrizione-scuole').toggleClass('expanded');
 });
 
-});
-
 $('.share .inner .icons').share({
           networks: ['facebook','twitter','googleplus','pinterest']
 });

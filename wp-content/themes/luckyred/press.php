@@ -116,30 +116,33 @@ $args = array();
 			<a class="archive-img-smart" href="<?php echo get_permalink(); ?>"><?php echo get_the_post_thumbnail(); ?></a>
 			<a class="archive-img" href="<?php echo get_permalink(); ?>"> <?php $image = get_field('locandina'); ?><img src="<?php echo $image['url']; ?>" /></a>
 
-			<a href="<?php echo get_permalink($id); ?>#panel-foto"><img src="<?php echo get_template_directory_uri() . '/img/gallery.png' ?>"></a>
-			<a href="<?php echo get_permalink($id); ?>#panel-video"><img src="<?php echo get_template_directory_uri() . '/img/video.png' ?>"></a>
-			<a href="<?php echo get_permalink($id); ?>#panel-manifesto"><img src="<?php echo get_template_directory_uri() . '/img/press.png' ?>"></a>
-			<a href="<?php echo get_permalink($id); ?>#panel-pressbook"><img src="<?php echo get_template_directory_uri() . '/img/copy.png' ?>"></a>
-			<a href="<?php echo get_permalink($id); ?>#panel-audio"><img src="<?php echo get_template_directory_uri() . '/img/audio.png' ?>"></a>
+			<div class="link-press">
+				<a href="<?php echo get_permalink($id); ?>#panel-foto"><img src="<?php echo get_template_directory_uri() . '/img/gallery.png' ?>"></a>
+				<a href="<?php echo get_permalink($id); ?>#panel-video"><img src="<?php echo get_template_directory_uri() . '/img/video.png' ?>"></a>
+				<a href="<?php echo get_permalink($id); ?>#panel-manifesto"><img src="<?php echo get_template_directory_uri() . '/img/press.png' ?>"></a>
+				<a href="<?php echo get_permalink($id); ?>#panel-pressbook"><img src="<?php echo get_template_directory_uri() . '/img/copy.png' ?>"></a>
+				<a href="<?php echo get_permalink($id); ?>#panel-audio"><img src="<?php echo get_template_directory_uri() . '/img/audio.png' ?>"></a>
+			</div>
 
 		</div>
 
 	<?php endwhile; ?>
-	<div class="row">
-		<div class="pagination large-3 columns end right">
-			<?php $search->pagination(array('prev_text' => '«','next_text' => '»')); ?>
+
+		<div class="row">
+			<div class="pagination-press large-3 columns end right">
+				<?php $search->pagination(array('prev_text' => '«','next_text' => '»')); ?>
+			</div>
 		</div>
-	</div>
-	<?php
-	else:
-		echo '<p>Spiacenti. Nessun risultato trovato</p>';
-	endif;
+		<?php
+		else:
+			echo '<p>Spiacenti. Nessun risultato trovato</p>';
+		endif;
 
 
-	$wp_query = $temp;
-	wp_reset_query();
+		$wp_query = $temp;
+		wp_reset_query();
 
-	?>
+		?>
 </div>
 </div>
 

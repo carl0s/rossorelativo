@@ -165,8 +165,10 @@
       <?php query_posts(array('post_type'=>'post', 'posts_per_page'=>1)); ?>
       <?php if (have_posts()) : while(have_posts()) : the_post(); ?>
       <?php echo get_the_post_thumbnail(); ?>
-      <h3><span><?php echo the_title(); ?></span></h3>
-      <p><?php excerpt('50','<p>','</p>'); ?></p>
+      <div class="title-layout">
+        <h3><span><?php echo the_title(); ?></span></h3>
+      </div>
+      <p><?php excerpt('40','<p>','</p>'); ?></p>
       <?php endwhile; endif; ?>
       <div>
           <a href="<?php echo get_permalink(); ?>" class="button right">Leggi articolo</a>
