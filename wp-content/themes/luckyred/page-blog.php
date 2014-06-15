@@ -59,6 +59,3 @@ $actual_id = get_the_ID();
     <?php the_field('video_thumbnail'); ?>
   </a>
 <?php //endwhile; endif; ?>
-
-<?php get_footer(); ?>
-
