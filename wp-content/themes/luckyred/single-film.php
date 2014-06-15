@@ -39,21 +39,23 @@
         <div class='info-date large-1 large-offset-11 columns'>
           <h6>Share</h6>
         </div>
-        <div class='row collapse'>
+        <?php if(get_field('itunes_link') && get_field('amazon_link')): ?>
+          <div class='row collapse'>
             <div class='large-6 columns'>
               <div class='info-ondemand'>
                   <h4><?php echo __('Noleggia il film:'); ?></h4><br>
                   <ul>
                     <?php if(get_field('itunes_link')): ?>
-                      <li><a href='<?php echo get_field('itunes_link'); ?>' class='itunes'><?php echo __('Itunes'); ?></a></li>
+                      <li><a href='<?php echo get_field('itunes_link'); ?>' class='itunes'><img src='<?php echo get_template_directory_uri() . '/img/itunes.png' ?>' ><?php echo __('iTunes'); ?></a></li>
                     <?php endif; ?>
                     <?php if(get_field('amazon_link')): ?>
-                      <li><a href='<?php echo get_field('amazon_link'); ?>' class='amazon'><?php echo __('Amazon'); ?></a></li>
+                      <li><a href='<?php echo get_field('amazon_link'); ?>' class='amazon'><img src='<?php echo get_template_directory_uri() . '/img/amazon.png' ?>' ><?php echo __('Amazon'); ?></a></li>
                     <?php endif; ?>
                   </ul>
                 </div>
             </div>
           </div>
+        <?php endif; ?>
       </div>
     ">
     <img src='<?php echo wp_get_attachment_image_src(get_post_thumbnail_id(), 'full')[0]; ?>'>

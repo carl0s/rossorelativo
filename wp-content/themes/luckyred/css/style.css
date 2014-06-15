@@ -436,7 +436,7 @@ header.smaller .social-icon {
 /* --ON DEMAND-- */
 
 .ondemand-bg {
-  height: 565px;
+  height: 485px;
 }
 
 .ricerca-bg-hm {
@@ -455,6 +455,7 @@ header.smaller .social-icon {
 
 .slider-ondemand .info-wrapper img {
   opacity: 0;
+  margin-top: -80px; 
 }
 
 .slider-ondemand .slideshow-wrapper {
@@ -478,6 +479,7 @@ header.smaller .social-icon {
   text-align: left;
   position: absolute;
   display: inline-block;
+  z-index: 50;
 }
 
 .slider-ondemand .info-content {
@@ -511,7 +513,7 @@ header.smaller .social-icon {
   z-index: 30;
   width: 800px;
   margin-left: -200px;
-  margin-top: -300px;
+  margin-top: -380px;
   position: absolute;
 }
 
@@ -538,6 +540,8 @@ header.smaller .social-icon {
 .blog-archivio-bg {
   background-color: rgba(242,242,242,1);
 }
+
+
 
 .blog {
   margin-left: -15px;
@@ -618,8 +622,7 @@ header.smaller .social-icon {
 
 .archivio span {
   background-color: rgba(0,0,0,0.8);
-  padding-left: 2px;
-  padding-right: 2px;
+  padding: 3px 4px 1px 4px; 
 }
 
 .archivio .button {
@@ -641,162 +644,6 @@ header.smaller .social-icon {
 }
 
 /* --FINE BLOG-ARCHIVIO-- */
-
-/* --PAGINA BLOG-- */
-
-#blog {
-  margin-top: 135px;
-}
-
-.info-blog {
-  z-index: 20;
-  width: 100%;
-  margin: -350px 0px 37px -15px;
-}
-
-.slide-blog {
-  height: auto;
-  margin-bottom: 10px;  
-}
-
-.slide-blog .info-title h2 {
-  color: rgba(255,255,255,1);
-  background-color: rgba(0,0,0,0.8);
-  padding: 10px;
-  font-family: "Bebas Neue", Helvetica, sans-serif;
-  font-size: 2.4em;
-  line-height: 1em;
-  display: inline-block;
-}
-
-.slide-blog .info-content {
-  color: rgba(255,255,255,1);
-  background-color: rgba(0,0,0,0.8);
-  padding: 10px;
-  font-family: "Georgia";
-  font-style: italic;
-  margin-top: 15px;
-  line-height: 2em;
-  width: 70%;
-  margin-left: 30px;
-}
-
-.slide-blog .info-date {
-  background-color: rgba(0,0,0,0.8);
-  text-align: center;
-  float: right;
-}
-
-.slide-blog .info-date h4 {
-  color: rgba(255,255,255,1);
-  font-family: "Bebas Neue", Helvetica, sans-serif;
-  font-size: 7.3em;
-  height: 1em;
-  margin-left: -15px;
-  margin-bottom: 20px;
-  margin-top: -30px;
-}
-
-.slide-blog .info-date h5 {
-  color: rgba(255,255,255,1);
-  font-family: "Georgia";
-  font-style: italic;
-  font-size: 1.2em;
-  margin-bottom: -5px;
-  text-align: center;
-}
-
-.slide-blog .info-date h6 {
-  color: rgba(255,255,255,1);
-  font-family: "Bebas Neue", Helvetica, sans-serif;
-  font-size: 1.5em;
-  height: 1em;
-}
-
-.blog-content{
-  font-family: "Georgia";
-  font-style: italic;
-  margin-bottom: 95px;
-  width: 100%;
-  padding: 0 20% 0 10%;
-  margin-top: 50px;
-}
-
-#blog-tag {
-  width: 100%;
-  font-family: "Georgia";
-  float: left;
-  clear: both;
-}
-
-#blog-tag h2{
-  background-color: #F00;
-  color: #FFF;
-  width: 270px;
-  text-align: center;
-  float: left;
-  font-family: "Bebas Neue", Helvetica, sans-serif;
-  height: 55px;
-}
-
-#blog-tag ul{
-  float: left;
-  width: 550px;
-  height: auto;
-  padding: 10px;
-  list-style-type: none;
-}
-
-#blog-tag ul li{
-  background-color: #969696;
-  color: #FFF;
-  width: 30%;
-  margin-right: 3%;
-  text-align: center;
-  float: left;
-  height: 40px;
-  font-size: 1em;
-  line-height: 40px;
-}
-
-#blog-tag a {
-  color: #FFF;
-}
-
-#blog-tag li:hover {
-  background-color: rgba(253,184,19,1);
-} 
-
-
-.blog-simil h2 {
-  background-color: #F00;
-  color: #FFF;
-  width: 270px;
-  text-align: center;
-  font-family: "Bebas Neue", Helvetica, sans-serif;
-  height: 55px;
-  clear: both;
-}
-
-.slide-blog-simil {
-  width: 20%;
-  float: left;
-  margin-right: 5%;
-  margin-bottom: 2%;
-}
-
-.blog-content-simil {
-  font-family: "Georgia";
-  font-style: italic;
-  padding: 0px 10px 0px 15px;
-  margin-top: 15px;
-  font-size: 0.8em;
-  line-height: 1.5em;
-}
-
-/* --FINE PAGINA BLOG-- */
-
-
 
 /* -- MISSION --*/
   
@@ -1632,6 +1479,11 @@ footer .button:active {
 
 .single-film .info-ondemand li {
   list-style: none;
+}
+
+.single-film .info-ondemand li img{
+  height: 20px;
+  margin-right: 5px;
 }
 
 .single-film .info-ondemand li a.itunes:hover {
@@ -2685,6 +2537,169 @@ footer .button:active {
 }
 
 /* --FINE PAGINA SEARCH-- */
+
+/* --PAGINA BLOG-- */
+
+.info-blog {
+  z-index: 20;
+  width: 100%;
+  margin: -180px 0px 37px -15px;
+}
+
+.slide-blog {
+  height: auto;
+  margin-bottom: 10px;  
+}
+
+.slide-blog .info-title h2 {
+  color: rgba(255,255,255,1);
+  background-color: rgba(0,0,0,0.8);
+  padding: 10px;
+  font-family: "Bebas Neue", Helvetica, sans-serif;
+  font-size: 2.4em;
+  line-height: 1em;
+  display: inline-block;
+  margin-left: -80px;
+}
+
+.slide-blog .info-title h6 {
+  color: rgba(255,255,255,1);
+  background-color: rgba(0,0,0,0.8);
+  padding: 10px;
+  font-family: 'Georgia', serif;
+  font-style: italic;
+  font-size: 1em;
+  line-height: 1em;
+  display: inline-block;
+  margin-left: -80px;
+}
+
+.slide-blog .info-content {
+  color: rgba(255,255,255,1);
+  background-color: rgba(0,0,0,0.8);
+  padding: 10px;
+  font-family: "Georgia";
+  font-style: italic;
+  margin-top: 15px;
+  line-height: 2em;
+  width: 70%;
+  margin-left: 30px;
+}
+
+.slide-blog .info-date {
+  background-color: rgba(0,0,0,0.8);
+  text-align: center;
+  height: 180px;
+}
+
+.slide-blog .info-date h4 {
+  color: rgba(255,255,255,1);
+  font-family: "Bebas Neue", Helvetica, sans-serif;
+  font-size: 7.3em;
+  height: 1em;
+  padding-top: 10px;
+  margin-bottom: 15px;
+  margin-left: -15px;
+  margin-top: -30px;
+}
+
+.slide-blog .info-date h5 {
+  color: rgba(255,255,255,1);
+  font-family: "Bebas Neue", Helvetica, sans-serif;
+  font-size: 1.2em;
+  text-align: center;
+}
+
+.slide-blog .info-date h6 {
+  color: rgba(255,255,255,1);
+  font-family: 'Georgia';
+  font-style: italic;
+  font-size: 0.8em;
+  height: 1em;
+}
+
+.blog-content{
+  font-family: "Georgia";
+  font-style: italic;
+  margin-bottom: 95px;
+  width: 100%;
+  padding: 0 20% 0 10%;
+  margin-top: 50px;
+}
+
+#blog-tag h2{
+  color: rgba(243,33,36,1);
+  font-family: "Bebas Neue", Helvetica, sans-serif;
+  font-size: 1.5em;
+}
+
+#blog-tag ul{
+  margin-left: -50px;
+  list-style-type: none;
+}
+
+#blog-tag ul li{
+  background-color: rgba(0,0,0,0.8);
+  color: rgba(255,255,255,1);
+  margin-right: 3%;
+  text-align: center;
+  float: left;
+  font-size: 1em;
+  padding: 3px 5px 3px 5px;
+}
+
+#blog-tag a {
+  color: rgba(255,255,255,1);
+}
+
+#blog-tag li:hover {
+  background-color: rgba(253,184,19,1);
+} 
+
+.blog-simil-bg {
+  background-color: rgba(242,242,242,1);
+}
+
+.blog-simil {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.blog-simil h2 {
+  color: rgba(243,33,36,1);
+  font-family: "Bebas Neue", Helvetica, sans-serif;
+}
+
+.slide-blog-simil {
+  width: 20%;
+  float: left;
+  margin-right: 5%;
+  margin-bottom: 2%;
+}
+
+.slide-blog-simil h4 {
+  font-family: "Bebas Neue", Helvetica, sans-serif;
+}
+
+.blog-content-simil p{
+  font-family: "Georgia";
+  font-style: italic;
+  padding: 0px 10px 0px 15px;
+  font-size: 0.8em;
+  line-height: 1.5em;
+}
+
+.blog-content-simil h6{
+  font-family: "Georgia";
+  font-style: italic;
+  padding: 0px 10px 0px 15px;
+  margin-top: 10px;
+  font-size: 1em;
+  line-height: 1.5em;
+  text-align: right;
+}
+
+/* --FINE PAGINA BLOG-- */
 
 @media only screen and (min-width: 320px) and (max-width: 480px) {
 
