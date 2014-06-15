@@ -66,6 +66,8 @@ $('.share .inner .icons').share({
           networks: ['facebook','twitter','googleplus','pinterest']
 });
 
+});
+
 
 
 
