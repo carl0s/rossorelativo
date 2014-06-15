@@ -1732,7 +1732,7 @@ footer .button:active {
 }
 
 .tabs-content {
-  margin-top: 51px;
+  margin-top: 43px;
   margin-bottom: -20px;
   z-index: 40;
   position: relative;
@@ -1831,13 +1831,13 @@ footer .button:active {
   height: 1em;
 }
 
-.img-film-download .film-thumb-title h4 {
+.img-film-download .film-thumb-title h4 a {
   color: rgba(255,255,255,1);
   padding: 10px;
   font-family: "Bebas Neue", Helvetica, sans-serif;
-  font-size: 1.5em;
+  font-size: 1em;
   position: absolute;
-  bottom: -575px;
+  bottom: -555px;
   z-index: 10;
   display: inline-block;
   background-color: rgba(0,0,0,0.8);
@@ -1904,9 +1904,28 @@ footer .button:active {
   padding: 10px 40px 10px 40px;
   margin-top: -300px;
   width: 280px;
-  margin-left: 520px;
+  margin-left: 560px;
   position: absolute;
   display: inline-block;
+}
+
+.pressbook h4 {
+  font-family: "Bebas Neue", Helvetica, sans-serif;
+  position: absolute;
+  margin-top: -500px;
+  text-align: center;
+  width: 100%;
+  font-size: 2.5em;
+}
+
+.pressbook h5 {
+  font-family: 'Georgia';
+  font-style: italic;
+  position: absolute;
+  margin-top: -420px;
+  text-align: center;
+  width: 100%;
+  font-size: 1em;
 }
 /* FINE PRESSBOOK */
 
@@ -1927,6 +1946,16 @@ footer .button:active {
   position: absolute;
   margin-top: -580px;
   font-size: 2.5em;
+}
+
+.manifesto h6 {
+  font-family: "Georgia", serif;
+  font-style: italic;
+  color: rgba(0,0,0,1);
+  position: absolute;
+  margin-top: -450px;
+  margin-bottom: 50px;
+  font-size: 1.5em;
 }
 
 .manifesto .button {
@@ -2024,14 +2053,14 @@ footer .button:active {
   height: 1em;
 }
 
-.video-film-download .film-thumb-title h4 {
+.video-film-download .film-thumb-title h4 a {
   color: rgba(255,255,255,1);
   background-color: rgba(0,0,0,0.8);
   padding: 10px;
   font-family: "Bebas Neue", Helvetica, sans-serif;
-  font-size: 1.5em;
+  font-size: 1em;
   position: absolute;
-  bottom: -575px;
+  bottom: -555px;
   z-index: 10;
   display: inline-block;
 }
