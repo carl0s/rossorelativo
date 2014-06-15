@@ -8,47 +8,56 @@
     $cat_string = "'" . $cat_string_item->term_id . ",";
   endforeach;
  ?>
-<div class="img-film slideshow-wrapper">
-  <div class="fotorama slideshow" data-nav="thumbs" data-width="100%" data-ratio="1440/750">
-    <div class="slide">
-      <div class='info-wrapper'>
-        <?php echo get_the_post_thumbnail(); ?>
-        <div class='row'>
-          <div class='info-title large-6 columns'>
-            <?php the_title('<h2>','</h2>'); ?>
-            <div class="row collapse">
-              <div class="large-9 columns">
-                <div class='info-content'>
-                  <p><?php echo __('Titolo originale'); ?></p>
-                  <span><?php echo get_field('titolo_originale'); ?></span>
-                </div>
-                <div class='film-thumb-title'>
-                  <h4>
-                    <?php
-                    if( get_field('trailer_scaricabile') ):
-                      $file = get_field('trailer_scaricabile');
-                    ?>
-                    <a href="<?php echo $file['url']; ?>"><?php echo __('Scarica il trailer'); ?></a>
-                    <?php
-                    endif;
-                    ?>
-                  </h4>
-                </div>
+
+<div class="single-film fotorama" data-click="false" data-nav="thumbs" data-thumbheight="115" data-thumbwidth="180">
+  <a href="<?php the_field('link_trailer'); ?>" data-caption="
+    <div class='info-wrapper'>
+      <div class='row'>
+        <div class='info-title large-6 columns'>
+          <a href='<?php echo get_the_permalink(); ?>'><h2><?php the_title(); ?></h2></a>
+          <div class='row collapse'>
+            <div class='large-9 columns'>
+              <div class='info-content'>
+                <p><?php echo __('Titolo originale'); ?></p>
+                <span><?php echo get_field('titolo_originale'); ?></span>
+              </div>
+              <div class='film-thumb-title'>
+                <h4>
+                  <?php
+                  if( get_field('trailer_scaricabile') ):
+                    $file = get_field('trailer_scaricabile');
+                  ?>
+                  <a href='<?php echo $file['url']; ?>'><?php echo __('Scarica il trailer'); ?></a>
+                  <?php
+                  endif;
+                  ?>
+                </h4>
               </div>
             </div>
           </div>
-          <div class='info-share large-1 large-offset-4 columns'>
-            <h6>Share</h6>
+        </div>
+        <div class='info-date large-1 large-offset-11 columns'>
+          <h6>Share</h6>
+        </div>
+        <div class='row collapse'>
+            <div class='large-6 columns'>
+              <div class='info-ondemand'>
+                  <h4><?php echo __('Noleggia il film:'); ?></h4><br>
+                  <ul>
+                    <?php if(get_field('itunes_link')): ?>
+                      <li><a href='<?php echo get_field('itunes_link'); ?>' class='itunes'><?php echo __('Itunes'); ?></a></li>
+                    <?php endif; ?>
+                    <?php if(get_field('amazon_link')): ?>
+                      <li><a href='<?php echo get_field('amazon_link'); ?>' class='amazon'><?php echo __('Amazon'); ?></a></li>
+                    <?php endif; ?>
+                  </ul>
+                </div>
+            </div>
           </div>
-        </div>
       </div>
-      <div class="row">
-        <div class="film-thumb large-12 columns">
-          <?php the_field('video_thumbnail'); ?>
-        </div>
-      </div>
-    </div>
-  </div>
+    ">
+    <img src='<?php echo wp_get_attachment_image_src(get_post_thumbnail_id(), 'full')[0]; ?>'>
+  </a>
 </div>
 <div class="info-film row">
   <div class="large-6 columns">
