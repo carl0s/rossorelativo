@@ -2538,7 +2538,7 @@ footer .button:active {
 
 /* --FINE PAGINA SEARCH-- */
 
-/* --PAGINA BLOG-- */
+/* --SINGLE BLOG-- */
 
 .info-blog {
   z-index: 20;
@@ -2631,6 +2631,8 @@ footer .button:active {
   color: rgba(243,33,36,1);
   font-family: "Bebas Neue", Helvetica, sans-serif;
   font-size: 1.5em;
+  text-align: left;
+  margin-left: -15px;
 }
 
 #blog-tag ul{
@@ -2697,6 +2699,49 @@ footer .button:active {
   font-size: 1em;
   line-height: 1.5em;
   text-align: right;
+}
+
+/* --FINE SINGLE BLOG-- */
+
+/* --PAGINA BLOG-- */
+
+.slide-blog-general img {
+  margin-bottom: 20px;
+}
+
+.slide-blog-general .info-date {
+  background-color: rgba(0,0,0,0.8);
+  margin-top: -400px;
+}
+
+.slide-blog-general .info-date h6 {
+  display: inline-block;
+  color: rgba(255,255,255,1);
+  font-family: 'Georgia', serif;
+  font-style: italic;
+  font-size: 1.5em;
+}
+
+.slide-blog-general .info-title h2 {
+  background-color: rgba(0,0,0,0.8);
+  display: inline-block;
+  color: rgba(255,255,255,1);
+  font-family: "Bebas Neue", Helvetica, sans-serif;
+  font-size: 1.5em;
+  padding: 10px 12px 5px 12px;
+  margin-top: -100px;
+  margin-bottom: 10px;
+}
+
+.slide-blog-general .info-content {
+  background-color: rgba(0,0,0,0.8);
+  display: inline-block;
+  color: rgba(255,255,255,1);
+  font-family: "Georgia", serif;
+  font-style: italic;
+  line-height: 1.5em;
+  font-size: 1em;
+  padding: 10px 12px 5px 12px;
 }
 
 /* --FINE PAGINA BLOG-- */
