@@ -54,9 +54,9 @@
   <!--BODY-->
   <?php wp_reset_postdata(); ?>
 
-  <div id="archivio" class="ricerca-bg-ar large-12 columns">
+  <div id="archivio" class="ricerca-bg-ar large-12 medium-12 columns">
     <div class="archivio-pg row">
-      <div class="large-12 columns">
+      <div class="large-12 medium-12 columns">
         <h2><?php echo __('Archivio'); ?></h2>
         <?php
         
@@ -67,7 +67,7 @@
     </div>
   </div>
   <div class="option-visual-page row">
-    <div class="large-6 small-12 columns">
+    <div class="large-6 medium-6 small-12 columns">
       <ul class="order-film">
       <li><?php echo __('Ordina per'); ?></li>
         <li><a href="?orderby=title">Nome</a></li>
@@ -75,7 +75,7 @@
         <li><a href="?orderby=rand">Più vecchio</a></li>
       </ul>
     </div>
-    <div class="large-6 small-12 end columns">
+    <div class="large-6 medium-6 small-12 end columns">
       <ul class="view-film">
       <li><?php echo __('Visualizza'); ?></li>
       <li><a href="?posts=4#archivio">4</a></li>
@@ -94,7 +94,7 @@
     ?>
 
     <?php if (have_posts()) : while(have_posts()) : the_post(); ?>
-      <div class="layout-film large-3 small-12 columns">
+      <div class="layout-film large-3 medium-4 small-12 columns">
         <div class="title-layout">
           <a href="<?php echo get_the_permalink(); ?>">
           <h3>

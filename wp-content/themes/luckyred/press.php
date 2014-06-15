@@ -57,7 +57,7 @@ $args = array();
 
 <div id="press" class="ricerca-bg-pr">
     <div class="archivio-pg row">
-      <div class="large-12 columns">
+      <div class="large-12 medium-12 columns">
       	<h2><?php echo __('Catalogo Press'); ?></h2><br>
         <p>Cerca il tuo film all'interno del catalogo.
         Scegli il contenuto multimediale e la risoluzione che desideri e avvia il download.</p>
@@ -72,7 +72,7 @@ $args = array();
 <div class="press-bg">
 	<div class="row">
 		<div class="option-visual-page row">
-	    <div class="large-6 columns">
+	    <div class="large-6 medium-6 columns">
 	      <ul class="order-film">
 	      <li><?php echo __('Ordina per'); ?></li>
 	      <li><a href="?orderby=title">Nome</a></li>
@@ -80,7 +80,7 @@ $args = array();
 	      <li><a href="?orderby=rand">Più vecchio</a></li>
 	      </ul>
 	    </div>
-	    <div class="large-6 end columns">
+	    <div class="large-6 medium-6 columns">
 	      <ul class="view-film">
 	      <li><?php echo __('Visualizza'); ?></li>
 	      <li><a href="?posts=4#archivio">4</a></li>
@@ -102,7 +102,7 @@ $args = array();
 		<?php
 	 	if (have_posts()) : while(have_posts()) : the_post();
 	 	?>
-		<div class="sezione-film large-3 columns">
+		<div class="sezione-film large-3 medium-4 columns">
 			<div class="title-layout">
 			<h4>
 				<?php 
