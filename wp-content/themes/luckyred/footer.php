@@ -1,9 +1,3 @@
-</section>
-
-  <a class="exit-off-canvas"></a>
-
-  </div>
-</div>
 <footer class="clearfix">
   <div class="wrapper large-12 column">
     <div class="row">

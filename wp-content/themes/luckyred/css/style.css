@@ -1065,12 +1065,11 @@ footer .button:active {
 .azienda-bg {
   background-image: url(../img/blur2.png);
   background-repeat: no-repeat;
-  padding-top: 35px;
-  padding-bottom: 90px;
 }
 
 .azienda-bg .sfondo {
-  background-color: rgba(255,255,255,0.5);
+  background-color: rgba(255,255,255,0.7);
+  padding-top: 30px;
 }
 
 .azienda-bg img {
@@ -1428,12 +1427,15 @@ footer .button:active {
 .single-film .info-ondemand li a.itunes:hover {
   color: rgba(255,255,255,1);
   background-color: rgba(14,140,211,1);
-
 }
 
 .single-film .info-ondemand li a.amazon:hover {
   color: rgba(255,255,255,1);
   background-color: rgba(247,155,52,1);
+}
+
+.info-film .titolo {
+  display: none;
 }
 
 .info-film {
@@ -1484,6 +1486,14 @@ footer .button:active {
   font-size: 1em;
   line-height: 1.7em;
   font-style: italic;
+}
+
+.durata .infofilm {
+  margin-left: 15px;
+}
+
+.durata .content-film {
+  margin-top: -50px;
 }
 
 .info-cast h3 {
@@ -2860,9 +2870,10 @@ margin-left: 0px;
 
 @media only screen and (min-width: 320px) and (max-width: 480px) {
 
-.tab-bar{
+.tab-bar {
   display: block;
 }
+
 header {
   display: none;
 }
@@ -2896,7 +2907,7 @@ header {
 .tab-bar {
   height: 60px;
   display: block;
-  background-color: rgba(0,0,0,0.8);
+  background-color: rgba(0,0,0,1);
 }
 
 .left-off-canvas-menu {
@@ -2927,8 +2938,7 @@ header {
 }
 
 .left-off-canvas-menu ul li a:hover {
-  background-color: rgba(255,255,255,1);
-  color: rgba(218,33,44,1);
+  background-color: rgba(242,242,242,1);
 }
 
 ul.off-canvas-list li label{
@@ -2985,7 +2995,6 @@ ul.off-canvas-list li label a{
   float: left;
 }
 
-
 .wpas-submit .content {
   width: 120px;
 
@@ -3031,10 +3040,6 @@ button.large, .button.large {
 }
 
 /*SINGLE-FILM INIZIO*/
-.attachment-post-thumbnail wp-post-image {
-  max-width: 50%;
-  min-height: 838px;
-}
 
 .single-film .info-wrapper .info-title  {
   margin-top: 450px;
@@ -3043,6 +3048,7 @@ button.large, .button.large {
 .single-film .info-wrapper .info-title h2 {
   font-size: 2em;
   padding: 7px 7px 4px 7px;
+  display: none;
 }
 
 .single-film .info-wrapper .info-content {
@@ -3050,9 +3056,31 @@ button.large, .button.large {
 }
 
 .single-film .fotorama__video-play {
-  margin-top: 0px;
+  margin-top: -25px;
   background-size: 50%;
   margin-left: -20px;
+}
+
+.single-film .film-thumb-title {
+  display: none;
+}
+
+.info-ondemand {
+  display: none;
+}
+
+.info-film .titolo {
+  margin-top: -50px;
+  display: inline-block;
+}
+
+.info-film .titolo h3 {
+  display: inline-block;
+  font-family: "Bebas Neue", Helvetica, sans-serif;
+  font-size: 1.8em;
+  padding: 3px 7px 1px 7px;
+  background-color: rgba(0,0,0,0.8);
+  color: rgba(255,255,255,1);
 }
 
 .content {
@@ -3078,7 +3106,7 @@ button.large, .button.large {
   float: left;
 }
 
-#durata {
+.durata {
   display:none;
 }
 
@@ -3146,5 +3174,58 @@ footer .wrapper {
   font-size: 2em;
   margin-left: 15px;
 }
+
+/* --CHI SIAMO-- */
+
+.chi-siamo .info-wrapper {
+  display: none;
+}
+
+.chi-siamo .fotorama__video-play {
+  margin-top: -25px;
+  background-size: 50%;
+  margin-left: -20px;
+}
+
+.nome-produttore {
+  font-size: 0.8em;
+}
+
+.titolo-produzione {
+  font-size: 0.8em;
+  display: none;
+}
+
+.azienda-bg {
+  background-image: url(../img/blur2.png);
+}
+
+.azienda-bg .sfondo {
+  padding-top: 0px;
+  padding-bottom: 10px;
+}
+
+.azienda-img {
+  display: none;
+}
+
+.azienda-bg h5 {
+  font-family: "Bebas Neue", Helvetica, sans-serif;
+  font-size: 1.2em;
+  color: rgba(255,255,255,1);
+  padding: 5px 10px;
+  background-color: rgba(0,0,0,0.8);
+  margin-top: 10px;
+  display: inline-block;
+}
+
+.azienda-bg p {
+  font-family: "Georgia";
+  font-style: italic;
+  margin-bottom: 20px;
+  font-size: 0.8em;
+}
+
+/* --FINE CHI SIAMO-- */
 
 }

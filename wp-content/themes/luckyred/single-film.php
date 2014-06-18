@@ -60,6 +60,9 @@
   </a>
 </div>
 <div class="info-film row">
+  <div class="titolo large-12 small-12 columns">
+    <h3><?php the_title(); ?></h3>
+  </div>
   <div class="large-6 columns">
     <h3><span><?php echo __('Il film') ?></span></h3>
     <div class="row">
@@ -120,11 +123,11 @@
               <a><?php echo get_field('anno'); ?></a>
             </div>
           </div>
-          <div class="row">
-            <div id="durata" class="infofilm large-3 small-3columns">
+          <div class="durata row">
+            <div class="infofilm large-3 small-3columns">
               <h4><?php echo __('Durata'); ?></h4>
             </div>
-            <div id="durata" class="content-film large-9 small-9 columns">
+            <div class="content-film large-9 small-9 columns">
               <a><?php echo get_field('durata'); ?></a>
             </div>
           </div>

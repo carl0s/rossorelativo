@@ -32,7 +32,7 @@
 
 <div class="chi-siamo-bg">
   <div class="row">
-    <div class="large-12 columns">
+    <div class="large-12 small-12 columns">
       <h3><?php the_title(); ?></h3>
       <p><?php the_content(); ?></p>
     </div>
@@ -40,13 +40,13 @@
 </div>
 <div class="produzioni-bg">
   <div class="row">
-    <div class="large-12 columns">
+    <div class="large-12 small-12 columns">
       <h3><?php echo __('Le nostre produzioni'); ?></h3>
       <div class="row">
-        <div class="large-6 columns">
+        <div class="large-6 small-12 columns">
           <h4><?php echo __('Produzione italiana'); ?></h4>
           <div class="row">
-            <div class="large-4 columns">
+            <div class="large-4 small-12 columns">
               <?php
               if( have_rows('produzione_italiana') ): while ( have_rows('produzione_italiana') ) : the_row();
               ?>
@@ -61,7 +61,7 @@
               endif;
               ?>
             </div>
-            <div class="large-8 columns">
+            <div class="large-8 small-12 columns">
               <?php
               if( have_rows('produzione_italiana') ): while ( have_rows('produzione_italiana') ) : the_row();
               ?>
