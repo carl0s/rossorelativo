@@ -1278,7 +1278,7 @@ h3.titolo-film-regista {
   position: absolute;
 }
 
-.altri-film-regista {
+.altri-film-regista h5 {
   margin-top: 60px;
   font-family: 'Georgia';
   font-style: italic;
