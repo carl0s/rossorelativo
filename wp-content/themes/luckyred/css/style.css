@@ -1278,6 +1278,7 @@ footer .button:active {
 }
 
 .altri-film-regista h5 {
+  margin-top: 60px;
   font-family: 'Georgia';
   font-style: italic;
   line-height: 1.3em;
@@ -3079,6 +3080,11 @@ footer .wrapper {
 .social-icon-footer {
   text-align: center;
   height: 30px;
+}
+
+.download-film h3{
+  font-size: 2em;
+  margin-left: 15px;
 }
 
 }
