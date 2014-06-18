@@ -52,6 +52,10 @@
 
   <!--HEADER-->
   <?php get_header(); ?>
+
+  
+  <section class="main-section">
+  <!-- content goes here -->
   
   <!--BODY-->
   <?php wp_reset_postdata(); ?>
@@ -181,6 +185,13 @@
 
     </div>
   </div>
+
+  </section>
+
+  <a class="exit-off-canvas"></a>
+
+  </div>
+</div>
   
   <!--FOOTER-->
   <?php get_footer(); ?>

@@ -13,7 +13,7 @@
  if($_GET):
    $post_orderby = $_GET['orderby'];
  else:
-   $post_orderby = 'rand';
+   $post_orderby = 'title';
  endif;
 
  $args = array();
@@ -89,7 +89,7 @@
 if (have_posts()) : while(have_posts()) : the_post();
 ?>
 <div id="scuola" class="row">
-  <div id="sezione-film">
+  <div id="sezione-film" class="large-12 small-12 columns">
     <ul>
       <li><h4>
         <?php 
@@ -97,16 +97,19 @@ if (have_posts()) : while(have_posts()) : the_post();
         echo $mytitle;
         ?>
       </h4></li>
-      <li><h3><?php echo get_field('limite_età'); ?></h3></li>
+      <li><h3><span><?php echo __('Età consigliata '); ?></span><?php echo get_field('limite_età'); ?></h3></li>
     </ul>
   </div>
-  <div class="sezione-film large-3 columns">
-   <a class="archive-img" href="<?php echo get_permalink(); ?>"> <?php $image = get_field('locandina'); ?><img src="<?php echo $image['url']; ?>" ></a>
+  <div class="sezione-film large-3 small-12 columns">
+    <div class="img-device">
+      <?php echo get_the_post_thumbnail(); ?>
+    </div>
+    <a class="archive-img" href="<?php echo get_permalink(); ?>"> <?php $image = get_field('locandina'); ?><img src="<?php echo $image['url']; ?>" ></a>
  </div>
- <div class="text-film large-6 columns">
+ <div class="text-film large-6 small-12 columns">
   <p class="descrizione-scuole">
      <?php echo get_field('descrizione'); ?>
-     <div class="white-gradient"><button class="bottone-scuola" ></button></div>
+     <div class="white-gradient"><button class="bottone-scuola"></button></div>
   </p>
   <a href="<?php echo get_field('link_trailer'); ?>" class="trailer" target="_blank"><h5>Guarda il trailer</h5></a>
  </div>

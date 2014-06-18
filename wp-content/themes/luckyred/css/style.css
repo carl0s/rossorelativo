@@ -2353,6 +2353,14 @@ footer .button:active {
   margin-bottom: 50px;
 }
 
+#sezione-film {
+  margin-left: -20px;
+}
+
+.sezione-film .img-device {
+  display: none;
+}
+
 #sezione-film ul li h4 {
   font-family: "Bebas Neue", Helvetica, sans-serif;
   margin-top: 10px;
@@ -2369,6 +2377,10 @@ footer .button:active {
   font-family: "Bebas Neue", Helvetica, sans-serif;
   color: rgba(0,0,0,0.8);
   font-size: 2em;
+}
+
+#sezione-film ul li h3 span {
+  display: none;
 }
 
 .text-film {
@@ -2447,10 +2459,6 @@ footer .button:active {
   bottom:-50px;
 }
 
-#content-scuola {
-  margin-top: 50px;
-}
-
 .info-film-scuola h5 span {
   font-family: "Bebas Neue", Helvetica, sans-serif;
   color: rgba(255,255,255,1);
@@ -2479,6 +2487,10 @@ footer .button:active {
   margin-top: 20px;
   margin-bottom: 0px;
   text-decoration: none;
+}
+
+#button-scuola a:hover {
+  background-color: rgba(253,184,19,1);
 }
 /* FINE PAGINA SCUOLA */
 
@@ -3456,6 +3468,8 @@ margin-left: 0px;
 
 .archivio-pg h2 {
   font-size: 1.8em;
+  padding: 5px 7px 2px 7px;
+  margin-bottom: -5px;
 }
 
 .tabs {
@@ -3615,6 +3629,96 @@ margin-left: 0px;
 }
 
 /* --FINE PAGINA BLOG-- */
+
+/* --PAGINA SCUOLA-- */
+
+.scuola-pg h2 {
+  font-size: 1.8em;
+  margin-top: 70px;
+  margin-bottom: -15px;
+  padding: 5px 7px 2px 7px;
+}
+
+.scuola-pg p {
+  display: none;
+}
+
+#scuola {
+  height: auto;
+  margin-bottom: 75px;
+}
+
+#sezione-film {
+  margin-bottom: -20px;
+  margin-left: -15px;
+}
+
+#sezione-film ul li h4 {
+  font-size: 1.5em;
+  float: left;
+  margin-bottom: -10px;
+}
+
+#sezione-film ul li h3 {
+  font-size: 1.5em;
+}
+
+#sezione-film ul li h3 span {
+  font-family: "Bebas Neue", Helvetica, sans-serif;
+  margin-top: 5px;
+  color: rgba(0,0,0,0.8);
+  display: inline-block;
+  padding-right: 7px;
+}
+
+.sezione-film .img-device {
+  display: inline-block;
+  width: 100%;
+}
+
+.sezione-film .archive-img {
+  display: none;
+}
+
+.text-film {
+  height: 50px;
+}
+
+.text-film .descrizione-scuole {
+  display: none;
+  /*margin-top: 0px;
+  width: 290px;
+  padding: 0;
+  height: auto;
+  font-size: 0.8em;*/
+}
+
+.white-gradient {
+  display: none;
+}
+
+.info-film-scuola {
+  margin-top: -110px;
+}
+
+.info-film-scuola h5 {
+  display: none;
+}
+
+.info-film-scuola #button-scuola .button {
+  width: 100%;
+  font-size: 1.2em;
+  position: relative;
+  margin-bottom: -5px;
+  margin-top: 20px;
+}
+
+.text-film .trailer {
+  bottom: -60px;
+  position: absolute; 
+  margin-bottom: 0px;
+}
+/* --FINE PAGINA SCUOLA-- */
 
 /* --FOOTER-- */
 .footer {
