@@ -3100,7 +3100,7 @@ margin-left: 0px;
 
   .ondemand-bg h2 {
     font-size: 1.8em;
-    margin: 30px 10px;
+    margin: 30px 10px 30px 25px;
     background-color: rgba(255,255,255,0.8);
     color: rgba(0,0,0,1);
     padding:0px 5px;
@@ -3550,6 +3550,41 @@ margin-left: 0px;
 
 /* --FINE CHI SIAMO-- */
 
+/* --PAGINA BLOG-- */
+
+.slide-blog-general .info-content {
+  display: none;
+}
+
+.slide-blog-general .info-blog {
+  margin-left: 10px;
+}
+
+.slide-blog-general .info-date {
+  margin-top: 20px;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.slide-blog-general .info-date h6 {
+  display: inline-block;
+  font-size: 0.8em;
+  text-align: center;
+}
+
+.slide-blog-general .info-title {
+  margin-top: 5px;
+  margin-left: -15px;
+}
+
+.slide-blog-general .info-title h2 a {
+  display: inline-block;
+  font-size: 0.8em;
+}
+
+/* --FINE PAGINA BLOG-- */
+
+/* --FOOTER-- */
 .footer {
     display: none;
   }
@@ -3578,5 +3613,6 @@ margin-left: 0px;
     text-align: center;
     height: 30px;
   }
+  /* --FINE FOOTER-- */
 
 }
