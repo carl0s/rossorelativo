@@ -5,9 +5,6 @@
 ?>
 <?php get_header(); ?>
 
-<section class="main-section">
-  <!-- content goes here -->
-
 <?php wp_reset_postdata(); ?>
 
 <?php
@@ -34,11 +31,11 @@ $actual_id = get_the_ID();
   <div class='info-wrapper' data-id="<?php echo get_permalink(); ?>">
     <?php echo get_the_post_thumbnail(); ?>
     <div class='row'>
-      <div class="info-blog large-12 small-12 columns">
-        <div class='info-date large-2 small-12 columns'>
+      <div class="info-blog">
+        <div class='info-date large-2 columns'>
           <h6><?php echo get_the_date('d F Y'); ?></h6>
         </div>
-        <div class='info-title large-12 small-12 columns'>
+        <div class='info-title'>
           <h2><a href="<?php echo get_permalink(); ?>"><?php the_title(); ?></a></h2>
         </div>  
         <div class="row collapse">
@@ -53,13 +50,6 @@ $actual_id = get_the_ID();
 <?php endif; ?>
 <?php endwhile; endif; ?> 
 <?php wp_reset_query(); ?>
-</div>
-
-</section>
-
-  <a class="exit-off-canvas"></a>
-
-  </div>
 </div>
 
 <?php get_footer(); ?>
