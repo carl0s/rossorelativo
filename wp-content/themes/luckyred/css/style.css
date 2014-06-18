@@ -2988,24 +2988,6 @@ margin-left: 0px;
   }
 
   #prossime-uscite {
-    height: 300px;
-  }
-
-  .slider-nextexit .info-wrapper {
-    margin-top: -5px;
-  }
-
-  .slider-nextexit .info-title h2 {
-    margin-top: -795px;
-    
-  }
-
-  #prossime-uscite h2 {
-    font-size: 200%;
-    margin: 10px 20px;
-  }
-
-  #prossime-uscite {
     display: none;
   }
 
@@ -3029,6 +3011,10 @@ margin-left: 0px;
     margin-top: -5px;
     color: rgba(0,0,0,0.8);
     margin-left: -10px;
+  }
+
+   .slider-device .info-wrapper {
+    margin-top: -5px;
   }
 
   .slider-device .info-date-device {
@@ -3087,10 +3073,99 @@ margin-left: 0px;
     display: none;
   }
 
-  .ondemand-bg h2 {
-    font-size: 200%;
-    margin: 10px 10px;
+  .ondemand-bg {
+    height: 100px;
+    margin-left: -15px;
   }
+
+  .ondemand-bg h2 {
+    font-size: 1.8em;
+    margin: 30px 10px;
+    background-color: rgba(255,255,255,0.8);
+    color: rgba(0,0,0,1);
+    padding:0px 5px;
+    text-align: center;
+    display: inline-block;
+  }
+
+  .ondemand-device {
+    display: inline-block;
+    background-image: url(../img/blur.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100px;
+    width: 100%;
+    margin-left: 15px;
+  }
+
+  .slider-ondemand {
+    display: none;
+  }
+
+  .blog-archivio-bg {
+    background-color: rgba(255,255,255,1);
+  }
+
+  .blog-archivio-bg h2 {
+    font-size: 1.8em;
+    margin: 30px 10px;
+    background-color: rgba(255,255,255,0.8);
+    color: rgba(0,0,0,1);
+    padding:0px 5px;
+    text-align: center;
+  }
+
+  .blog {
+    padding: 0;
+  }
+
+  .blog-device {
+    display: inline-block;
+    background-image: url(../img/blur_bn.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100px;
+    width: 100%;
+    margin-left: 15px;
+  }
+
+  .blog-device a h2 {
+    margin-left: 25px;
+    display: inline-block;
+  }
+
+  .blog .blog-reference {
+    display: none;
+  }
+
+  .archivio {
+    padding: 0;
+  }
+
+  .archivio-device {
+    background-image: url(../img/blur.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100px;
+  }
+
+  .archivio-device h2 {
+    margin-left: 25px;
+    display: inline-block;    
+  }
+
+  .archive-film {
+    display: none;
+  }
+
+  .archivio-button {
+    display: none;
+  }
+
+  .mission {
+    display: none;
+  }
+
 
    /* -- INDEX FINE -- */
 

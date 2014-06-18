@@ -164,7 +164,9 @@
 
 <div class="ondemand-bg">
   <div class="row">
-    <a href="<?php echo get_page_link_by_slug('home video'); ?>"><h2><?php echo __('Home video'); ?></h2></a>
+    <div class="ondemand-device">
+      <a href="<?php echo get_page_link_by_slug('home video'); ?>"><h2><?php echo __('Home video'); ?></h2></a>
+    </div>
     <div class="slider-ondemand slideshow-wrapper">
       <div class="fotorama slideshow" data-click="false" data-transition="crossfade" data-nav="thumbs" data-width="100%" data-ratio="1180/360" data-thumbheight="260" data-thumbwidth="180">
         <?php 
@@ -202,32 +204,41 @@
           </div>
         </div>
       <?php endwhile; endif; ?>
-    </div>
+      </div>
 
-  </div>
     </div>
+  </div>
 </div>
 
 <div class="blog-archivio-bg">
   <div class="row">
-    <div class="blog large-5 columns">
-      <a href="<?php echo get_page_link_by_slug('blog'); ?>"><h2><?php echo __('Blog'); ?></h2></a>
-      <h4><?php echo __('Il nostro ultimo post'); ?></h4>
-      <?php query_posts(array('post_type'=>'post', 'posts_per_page'=>1)); ?>
-      <?php if (have_posts()) : while(have_posts()) : the_post(); ?>
-      <?php echo get_the_post_thumbnail(); ?>
-      <div class="title-layout">
-        <h3><span><?php echo the_title(); ?></span></h3>
+    <div class="blog large-5 small-12 columns">
+      <div class="blog-device">
+        <a href="<?php echo get_page_link_by_slug('blog'); ?>"><h2><?php echo __('Blog'); ?></h2></a>
       </div>
-      <p><?php excerpt('40','<p>','</p>'); ?></p>
-      <?php endwhile; endif; ?>
-      <div>
-          <a href="<?php echo get_permalink(); ?>" class="button right">Leggi articolo</a>
+      <div class="blog-reference">
+        <h4><?php echo __('Il nostro ultimo post'); ?></h4>
+        <?php query_posts(array('post_type'=>'post', 'posts_per_page'=>1)); ?>
+        <?php if (have_posts()) : while(have_posts()) : the_post(); ?>
+        <?php echo get_the_post_thumbnail(); ?>
+        <div class="title-layout">
+          <h3><span><?php echo the_title(); ?></span></h3>
+        </div>
+        <p><?php excerpt('40','<p>','</p>'); ?></p>
+        <?php endwhile; endif; ?>
+        <div>
+            <a href="<?php echo get_permalink(); ?>" class="button right">Leggi articolo</a>
+        </div>
       </div>
+      
+
+      
     </div>
 
-    <div class="archivio large-7 columns">
-      <h2><?php echo __('Archivio Film'); ?></h2>
+    <div class="archivio large-7 small-12 columns">
+        <div class="archivio-device">
+          <h2><?php echo __('Archivio Film'); ?></h2>
+        </div>
       <br>
       <div class="archive-film row">  
         <?php query_posts(array('post_type'=>'film', 'posts_per_page'=>3)); ?>
@@ -301,8 +312,10 @@
           <?php endwhile; endif; ?>
         </div>
         <div>
-          <a href="<?php echo get_page_link_by_slug('archivio'); ?>" class="button right">Guarda l'archivio</a>
+          <a href="<?php echo get_page_link_by_slug('archivio'); ?>" class="button archivio-button right">Guarda l'archivio</a>
         </div>
+     
+      
       </div>
     </div>
   </div>
