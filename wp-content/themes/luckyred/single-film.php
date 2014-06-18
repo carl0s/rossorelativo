@@ -13,7 +13,7 @@
   <a href="<?php the_field('link_trailer'); ?>" data-caption="
     <div class='info-wrapper'>
       <div class='row'>
-        <div class='info-title large-6 columns'>
+        <div class='info-title large-6 small-12 columns'>
           <a href='<?php echo get_the_permalink(); ?>'><h2><?php the_title(); ?></h2></a>
           <div class='row collapse'>
             <div class='large-9 columns'>
@@ -36,39 +36,40 @@
             </div>
           </div>
         </div>
-        <div class='info-date large-1 large-offset-11 columns'>
-          <h6>Share</h6>
-        </div>
         <?php if(get_field('itunes_link') && get_field('amazon_link')): ?>
           <div class='row collapse'>
             <div class='large-6 columns'>
               <div class='info-ondemand'>
-                  <h4><?php echo __('Noleggia il film:'); ?></h4><br>
-                  <ul>
-                    <?php if(get_field('itunes_link')): ?>
-                      <li><a href='<?php echo get_field('itunes_link'); ?>' class='itunes'><img src='<?php echo get_template_directory_uri() . '/img/itunes.png' ?>' ><?php echo __('iTunes'); ?></a></li>
-                    <?php endif; ?>
-                    <?php if(get_field('amazon_link')): ?>
-                      <li><a href='<?php echo get_field('amazon_link'); ?>' class='amazon'><img src='<?php echo get_template_directory_uri() . '/img/amazon.png' ?>' ><?php echo __('Amazon'); ?></a></li>
-                    <?php endif; ?>
-                  </ul>
-                </div>
+                <h4><?php echo __('Noleggia il film:'); ?></h4><br>
+                <ul>
+                  <?php if(get_field('itunes_link')): ?>
+                    <li><a href='<?php echo get_field('itunes_link'); ?>' class='itunes'><img src='<?php echo get_template_directory_uri() . '/img/itunes.png' ?>' ><?php echo __('iTunes'); ?></a></li>
+                  <?php endif; ?>
+                  <?php if(get_field('amazon_link')): ?>
+                    <li><a href='<?php echo get_field('amazon_link'); ?>' class='amazon'><img src='<?php echo get_template_directory_uri() . '/img/amazon.png' ?>' ><?php echo __('Amazon'); ?></a></li>
+                  <?php endif; ?>
+                </ul>
+              </div>
             </div>
           </div>
         <?php endif; ?>
       </div>
+    </div>
     ">
     <img src='<?php echo wp_get_attachment_image_src(get_post_thumbnail_id(), 'full')[0]; ?>'>
   </a>
 </div>
 <div class="info-film row">
+  <div class="titolo large-12 small-12 columns">
+    <h3><?php the_title(); ?></h3>
+  </div>
   <div class="large-6 columns">
     <h3><span><?php echo __('Il film') ?></span></h3>
     <div class="row">
-      <div class="infofilm large-3 columns">
+      <div class="infofilm large-3 small-3 columns">
         <h4><?php echo __('Regia'); ?></h4>
       </div>
-      <div class="content-film large-9 columns">
+      <div class="content-film large-9 small-9 columns">
         <?php
         $registi = get_field('regia');
         $i = 0;
@@ -87,18 +88,18 @@
         </div>
       </div>
       <div class="row">
-        <div class="infofilm large-3 columns">
+        <div class="infofilm large-3 small-3 columns">
           <h4><?php echo __('Genere'); ?></h4>
         </div>
-        <div class="content-film large-9 columns">
+        <div class="content-film large-9 small-9 columns">
           <a><?php the_category (', '); ?></a>
         </div>
       </div>
       <div class="row">
-        <div class="infofilm large-3 columns">
+        <div class="infofilm large-3 small-3 columns">
           <h4><?php echo __('Nazione'); ?></h4>
         </div>
-        <div class="content-film large-9 columns">
+        <div class="content-film large-9 small-9 columns">
           <a><?php
             $nazioni = get_field('nazione');
             $i = 0;
@@ -115,33 +116,33 @@
             </div>
           </div>
           <div class="row">
-            <div class="infofilm large-3 columns">
+            <div class="infofilm large-3 small-3 columns">
               <h4><?php echo __('Anno'); ?></h4>
             </div>
-            <div class="content-film large-9 columns">
+            <div class="content-film large-9 small-9 columns">
               <a><?php echo get_field('anno'); ?></a>
             </div>
           </div>
-          <div class="row">
-            <div class="infofilm large-3 columns">
+          <div class="durata row">
+            <div class="infofilm large-3 small-3columns">
               <h4><?php echo __('Durata'); ?></h4>
             </div>
-            <div id="durata" class="content-film large-9 columns">
+            <div class="content-film large-9 small-9 columns">
               <a><?php echo get_field('durata'); ?></a>
             </div>
           </div>
-          
-            <div class="row">
-            <div class="large-3 columns">
-              <h4><?php echo __('Cast'); ?></h4>
-            </div>
-            <div id="cast" class="content-film large-9 columns">
-              <a><?php echo get_field('cast'); ?></a>
-          </div>
         </div>
-        <div class="trama large-6 columns">
+        <div class="trama large-6 small-12 columns">
           <h3><span><?php echo __('La trama'); ?></span></h3>
-          <p><?php the_content(); ?></p>
+          <?php the_content(); ?>
+        </div>
+      </div>
+      <div class="info-cast">
+        <div class="row">
+          <div class="large-12 small-12 columns">
+          <h3><span><?php echo __('Il Cast'); ?></span></h3>
+          <h6><?php echo get_field('cast'); ?></h6>
+          </div>
         </div>
       </div>
       <?php if(get_field('foto_item') && get_field('uscita_del_materiale_di_stampa') && get_field('poster') && get_field('video_item')): ?>
@@ -321,7 +322,6 @@
         </div>
       </div>
       <?php endif; ?>
-    </div>
 
     <div class="row">
       <div class="large-12 columns">

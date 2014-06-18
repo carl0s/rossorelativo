@@ -1,7 +1,7 @@
 <?php
 function login_redirect_register_settings() {
 	add_option('login_redirect_type', 'current');
-	add_option('login_redirect_customise_url', home_url());
+	add_option('login_redirect_customise_url', get_page_by_path('press'));
 	register_setting('login_redirect_options', 'login_redirect_type');
 	register_setting('login_redirect_options', 'login_redirect_customise_url');
 }

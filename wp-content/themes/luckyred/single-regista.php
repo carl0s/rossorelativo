@@ -39,12 +39,12 @@
     </div>
   </div>
 
-  <div class="filmografia large-12 columns">
-    <div class="row">
-      <h2>Filmografia</h2>
-      <h3>Film dal catalogo lucky red:</h3>
-      <?php if (have_posts()) : while(have_posts()) : the_post() ; ?>
-      <div>
+<div class="filmografia large-12 columns">
+  <div class="row">
+    <h2><?php echo __('Filmografia'); ?></h2>
+    <h3><?php echo __('Film dal catalogo lucky red'); ?></h3>
+        <?php if (have_posts()) : while(have_posts()) : the_post() ; ?>
+        <div>
 
         <?php 
         $filmografie = get_posts(array(
@@ -60,22 +60,22 @@
           ?>
 
           <?php if( $filmografie ): ?>
-          <?php foreach( $filmografie as $filmografia ): ?>
-          <?php 
-          $id = $filmografia->ID;
-          $photo = get_field('locandina', $filmografia->ID);
-          ?>
-          <div class="film-regista large-4 columns">
-            <div class="title-layout">
-              <a href="<?php get_the_permalink($id); ?>"><h3 class="titolo-film-regista"> <?php echo $filmografia->post_title; ?></h3></a>
-            </div>
-
-            <a href="<?php get_permalink(); ?>"><?php echo get_the_post_thumbnail($filmografia->ID); ?></a>
-          </div>
-
-        <?php endforeach; ?>
-
-      <?php endif; ?>
+              <?php foreach( $filmografie as $filmografia ): ?>
+                <?php 
+                $id = $filmografia->ID;
+                $photo = get_field('locandina', $filmografia->ID);
+                ?>
+                <div class="film-regista large-4 columns">
+                  <a href="<?php get_permalink(); ?>"><?php echo get_the_post_thumbnail($filmografia->ID); ?></a>
+                  <div class="title-layout">
+                    <a href="<?php get_the_permalink($id); ?>"><h4 class="titolo-film-regista"> <?php echo $filmografia->post_title; ?></h4></a>
+                  </div>
+                </div>
+                
+                  
+              <?php endforeach; ?>
+              
+            <?php endif; ?>
 
     </div>
 
@@ -85,7 +85,7 @@
 
 <div class="altri-film-bg large-12 columns">
   <div class="row">
-    <h3><span>Altri film</span></h3>
+    <h3><span><?php echo __('Altri film'); ?></span></h3>
     <div class="altri-film-regista">
       <?php query_posts(array('post_type'=>'regista')); ?>
       <h5><?php echo get_field('film_regista'); ?></h5>

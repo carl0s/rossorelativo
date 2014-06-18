@@ -56,8 +56,4 @@
         <li><?php wp_nav_menu(); ?></li>
       </ul>
     </aside>
-
-    
-  <section class="main-section">
-      <!-- content goes here -->
     

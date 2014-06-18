@@ -7,7 +7,7 @@ $actual_id = get_the_ID();
 ?>
 
 <div id="blog">
-    <?php echo get_the_post_thumbnail(); ?>
+  <?php echo get_the_post_thumbnail(); ?>
   <div class="slide-blog" >
   <div class='info-wrapper' >
     <div class='row'>
@@ -63,18 +63,24 @@ $actual_id = get_the_ID();
         <div class="slide-blog-simil" >
         <div class='info-wrapper' data-id="<?php echo get_permalink(); ?>">
           <?php echo get_the_post_thumbnail(); ?>
-          <h4><?php the_title(); ?></h4>
+          <h4><a href="<?php echo get_permalink(); ?>"><?php the_title(); ?></a></h4>
         </div>
         <div class="row">
           <div class="blog-content-simil">
           <p><?php echo get_field('sottotitolo'); ?></p>
-          <h6><?php echo get_the_date('d/M/Y'); ?></h6>
+          <h6><?php echo get_the_date('d F Y'); ?></h6>
           </div>
         </div>
         </div>
         <?php endif; ?>
         <?php endwhile; endif; ?> 
         <?php wp_reset_query(); ?>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="comments">
+      <?php $withcomments =1; comments_template();?>
     </div>
   </div>
 
