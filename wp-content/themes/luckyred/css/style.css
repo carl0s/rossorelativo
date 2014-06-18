@@ -13,10 +13,71 @@
     font-style: normal;
 
 }
+/* --MENU OFF CANVAS-- */
 
 .tab-bar {
+  height: 60px;
+  background-color: rgba(0,0,0,1);
+  position: fixed;
+  top: 0;
+  z-index: 99999;
+  width: 100%;
   display: none;
 }
+
+.left-off-canvas-menu {
+  background-color: rgba(242,242,242,1);
+  font-family: "Bebas Neue";
+}
+
+.tab-bar a img {
+  height: 60px;
+}
+
+.left-small {
+  border-right: none;
+  padding: 10px;
+}
+
+.menu-main-menu-container {
+  margin-left: -20px;
+}
+
+.off-canvas-list ul li a{
+  color: rgba(80,80,80,1);
+  border-bottom: none;
+}
+
+.off-canvas-list ul li {
+  list-style-type: none;
+}
+
+.left-off-canvas-menu ul li a:hover {
+  background-color: rgba(242,242,242,1);
+}
+
+ul.off-canvas-list li label{
+  height: 60px;
+  background-color: rgba(241,242,242,1);
+}
+
+ul.off-canvas-list li label img{
+  height: 60px;
+  margin-left: 20px;
+  margin-top: -15px;
+}
+
+ul.off-canvas-list li label a:hover{
+  background-color: rgba(242,242,242,1);
+}
+
+ul.off-canvas-list li label a{
+  border-bottom: none;
+}
+
+/* --MENU OFF CANVAS-- */
+
+
 
 header {
   position: fixed;
@@ -2841,6 +2902,7 @@ margin-left: 0px;
 .archivio-pg h2 {
   margin-top: 40px;
 }
+
 .tab-bar {
   height: 130px;
 }
@@ -2886,7 +2948,15 @@ margin-left: 0px;
 
 @media only screen and (min-width: 320px) and (max-width: 480px) {
 
-<<<<<<< HEAD
+  .tab-bar {
+    display: block;
+  }
+
+  header {
+    display: none;
+  }
+
+
   /* -- INDEX INIZIO -- */
   .slider-cinema .info-title h2 {
     margin-top: 400px;
@@ -2960,15 +3030,6 @@ margin-left: 0px;
     color: rgba(0,0,0,0.8);
     margin-left: -10px;
   }
-=======
-.tab-bar {
-  display: block;
-}
-
-header {
-  display: none;
-}
->>>>>>> parent of 5c2f074... Update responsive page-blog.php
 
   .slider-device .info-date-device {
     margin-top: -100px;
@@ -2999,7 +3060,6 @@ header {
     margin-top: 60px;
   }
 
-<<<<<<< HEAD
   .slider-nextexit .info-date-device h6 {
   color: rgba(255,255,255,1);
   font-family: "Bebas Neue", Helvetica, sans-serif;
@@ -3007,65 +3067,9 @@ header {
   height: 1em;
   float: left;
   padding-right: -100px;
-=======
-.tab-bar {
-  height: 60px;
-  display: block;
-  background-color: rgba(0,0,0,1);
 }
 
-.left-off-canvas-menu {
-  background-color: rgba(242,242,242,1);
-  font-family: "Bebas Neue";
-}
-
-.tab-bar a img {
-  height: 60px;
-}
-
-.left-small {
-  border-right: none;
-  padding: 10px;
-}
-
-.menu-main-menu-container {
-  margin-left: -20px;
-}
-
-.off-canvas-list ul li a{
-  color: rgba(80,80,80,1);
-  border-bottom: none;
-}
-
-.off-canvas-list ul li {
-  list-style-type: none;
-}
-
-.left-off-canvas-menu ul li a:hover {
-  background-color: rgba(242,242,242,1);
-}
-
-ul.off-canvas-list li label{
-  height: 60px;
-  background-color: rgba(241,242,242,1);
-}
-
-ul.off-canvas-list li label img{
-  height: 60px;
-  margin-left: 20px;
-  margin-top: -15px;
-}
-
-ul.off-canvas-list li label a:hover{
-  background-color: rgba(242,242,242,1);
-}
-
-ul.off-canvas-list li label a{
-  border-bottom: none;
->>>>>>> parent of 5c2f074... Update responsive page-blog.php
-}
-
-  .slider-device .slider-nextexit .fotorama__nav-wrap .fotorama__nav--dots {
+.slider-device .slider-nextexit .fotorama__nav-wrap .fotorama__nav--dots {
     width: 100%;
     margin-left: 0;
     z-index: 99999;
@@ -3089,13 +3093,6 @@ ul.off-canvas-list li label a{
   }
 
    /* -- INDEX FINE -- */
-
-  .tab-bar{
-    display: block;
-  }
-  header {
-    display: none;
-  }
 
 .wpas-submit .content {
   width: 120px;
@@ -3126,44 +3123,10 @@ ul.off-canvas-list li label a{
     margin-bottom: 10px;
   }
 
-  .tab-bar {
-    height: 60px;
-    display: block;
-    background-color: rgba(0,0,0,0.8);
-  }
-
-  .left-off-canvas-menu {
-    background-color: rgba(242,242,242,1);
-    font-family: "Bebas Neue";
-  }
-
-  .tab-bar a img {
-    height: 60px;
-  }
-
-  .left-small {
-    border-right: none;
-    padding: 10px;
-  }
-
   .menu-main-menu-container {
     margin-left: -20px;
   }
 
-  .off-canvas-list ul li a{
-    color: rgba(80,80,80,1);
-    border-bottom: none;
-  }
-
-  .off-canvas-list ul li {
-    list-style-type: none;
-  }
-
-
-  .left-off-canvas-menu ul li a:hover {
-    background-color: rgba(255,255,255,1);
-    color: rgba(218,33,44,1);
-  }
 
 /*SINGLE-FILM INIZIO*/
 
@@ -3322,85 +3285,7 @@ ul.off-canvas-list li label a{
     display: inline-block;
   }
 
-  /*SINGLE-FILM INIZIO*/
-  .attachment-post-thumbnail wp-post-image {
-    max-width: 50%;
-    min-height: 838px;
-  }
-
-  .content {
-    display:none;
-  }
-
-  .tabs {
-    display: none;
-  }
-
-  .slider-film-simili {
-    display:none;
-  }
-
-  .altri-film {
-    display:none;
-  }
-
-  .infofilm{
-    display:none;
-  }
-
-  #durata{
-    display:none;
-  }
-
-  .trama p{
-    font-size:0.8em;
-  }
-
-  .content-film a{
-    font-size:0.8em;
-  }
-
-  .footer{
-    display:none;
-  }
-
-  .footer h6{
-    display:none;
-  }
-
-  .button.large{
-    display:none;
-  }
-
-  .clearfix:after{
-    display: none;
-  }
-
-  .pagination {
-    margin-left: 15px;
-  }
-
-  footer .wrapper {
-    margin-top: 80px;
-  }
-
-  #tax_category {
-    width: 100%;
-  }
-
-  .info-footer h6{
-    display: none;
-  }
-
-  .social-icon-footer {
-    text-align: center;
-    height: 30px;
-  }
-
-  .download-film h3{
-    font-size: 2em;
-    margin-left: 15px;
-  }
+  
 
 /* --CHI SIAMO-- */
 

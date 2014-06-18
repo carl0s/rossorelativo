@@ -1,5 +1,9 @@
 <?php get_header(); ?>
 
+
+  <section class="main-section">
+  <!-- content goes here -->
+
 <?php wp_reset_postdata();  ?>
 <?php $category = get_the_category();  ?>
 <?php
@@ -353,5 +357,13 @@
       </div>
 
     </div>
+
+    
+</section>
+
+  <a class="exit-off-canvas"></a>
+
+  </div>
+</div>
 
     <?php get_footer(); ?>
