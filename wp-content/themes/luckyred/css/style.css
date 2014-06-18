@@ -2956,13 +2956,23 @@ margin-left: 0px;
     display: none;
   }
 
+  .main-section {
+    margin-top: 60px;
+  }
+
 
   /* -- INDEX INIZIO -- */
   .slider-cinema .info-title h2 {
-    margin-top: 400px;
+    margin-top: 420px;
     font-size: 1.8em;
     padding: 5px 7px 2px 7px;
   }
+
+  .slider-cinema .fotorama__video-play {
+  margin-top: -25px;
+  background-size: 50%;
+  margin-left: -20px;
+}
 
   .info-content {
     display: none;
@@ -2995,10 +3005,6 @@ margin-left: 0px;
     margin-top: -5px;
   }
 
-.slider-nextexit .info-title h2 {
-  margin-top: -795px;
-}
-
   #prossime-uscite h2 {
     font-size: 200%;
     margin: 10px 20px;
@@ -3030,6 +3036,10 @@ margin-left: 0px;
     margin-left: -10px;
   }
 
+  .slider-device .info-title h2 {
+  margin-top: -795px;
+  }
+
   .slider-device .info-date-device {
     margin-top: -100px;
     background-color: rgba(0,0,0,0.8);
@@ -3053,10 +3063,6 @@ margin-left: 0px;
   font-size: 0.8em;
   height: 1em;
   float: left;
-  }
-
-  .main-section {
-    margin-top: 60px;
   }
 
   .slider-nextexit .info-date-device h6 {
@@ -3429,7 +3435,6 @@ margin-left: 0px;
     font-size: 2em;
     margin-left: 15px;
   }
->>>>>>> FETCH_HEAD
 
 /* --CHI SIAMO-- */
 

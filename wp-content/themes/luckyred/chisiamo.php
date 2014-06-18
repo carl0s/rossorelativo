@@ -5,6 +5,11 @@
 ?>
 
 <?php get_header(); ?>
+
+
+  <section class="main-section">
+  <!-- content goes here -->
+
 <?php wp_reset_postdata(); ?>
 
 <div class="chi-siamo fotorama" data-click="false" data-nav="thumbs" data-thumbheight="115" data-thumbwidth="180">
@@ -147,6 +152,14 @@
         </div>
       </div>
     </div>
+  </div>
+</div>
+
+
+</section>
+
+  <a class="exit-off-canvas"></a>
+
   </div>
 </div>
 
