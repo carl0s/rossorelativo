@@ -13,7 +13,7 @@
   <a href="<?php the_field('link_trailer'); ?>" data-caption="
     <div class='info-wrapper'>
       <div class='row'>
-        <div class='info-title large-6 columns'>
+        <div class='info-title large-6 small-12 columns'>
           <a href='<?php echo get_the_permalink(); ?>'><h2><?php the_title(); ?></h2></a>
           <div class='row collapse'>
             <div class='large-9 columns'>
@@ -65,10 +65,10 @@
   <div class="large-6 columns">
     <h3><span><?php echo __('Il film') ?></span></h3>
     <div class="row">
-      <div class="infofilm large-3 columns">
+      <div class="infofilm large-3 small-3 columns">
         <h4><?php echo __('Regia'); ?></h4>
       </div>
-      <div class="content-film large-9 columns">
+      <div class="content-film large-9 small-9 columns">
         <?php
         $registi = get_field('regia');
         $i = 0;
@@ -87,18 +87,18 @@
         </div>
       </div>
       <div class="row">
-        <div class="infofilm large-3 columns">
+        <div class="infofilm large-3 small-3 columns">
           <h4><?php echo __('Genere'); ?></h4>
         </div>
-        <div class="content-film large-9 columns">
+        <div class="content-film large-9 small-9 columns">
           <a><?php the_category (', '); ?></a>
         </div>
       </div>
       <div class="row">
-        <div class="infofilm large-3 columns">
+        <div class="infofilm large-3 small-3 columns">
           <h4><?php echo __('Nazione'); ?></h4>
         </div>
-        <div class="content-film large-9 columns">
+        <div class="content-film large-9 small-9 columns">
           <a><?php
             $nazioni = get_field('nazione');
             $i = 0;
@@ -115,33 +115,33 @@
             </div>
           </div>
           <div class="row">
-            <div class="infofilm large-3 columns">
+            <div class="infofilm large-3 small-3 columns">
               <h4><?php echo __('Anno'); ?></h4>
             </div>
-            <div class="content-film large-9 columns">
+            <div class="content-film large-9 small-9 columns">
               <a><?php echo get_field('anno'); ?></a>
             </div>
           </div>
           <div class="row">
-            <div class="infofilm large-3 columns">
+            <div id="durata" class="infofilm large-3 small-3columns">
               <h4><?php echo __('Durata'); ?></h4>
             </div>
-            <div id="durata" class="content-film large-9 columns">
+            <div id="durata" class="content-film large-9 small-9 columns">
               <a><?php echo get_field('durata'); ?></a>
             </div>
           </div>
-          
-            <div class="row">
-            <div class="large-3 columns">
-              <h4><?php echo __('Cast'); ?></h4>
-            </div>
-            <div id="cast" class="content-film large-9 columns">
-              <a><?php echo get_field('cast'); ?></a>
-          </div>
         </div>
-        <div class="trama large-6 columns">
+        <div class="trama large-6 small-12 columns">
           <h3><span><?php echo __('La trama'); ?></span></h3>
           <p><?php the_content(); ?></p>
+        </div>
+      </div>
+      <div class="info-cast">
+        <div class="row">
+          <div class="large-12 small-12 columns">
+          <h3><span><?php echo __('Il Cast'); ?></span></h3>
+          <h6><?php echo get_field('cast'); ?></h6>
+          </div>
         </div>
       </div>
       <?php if(get_field('foto_item') && get_field('uscita_del_materiale_di_stampa') && get_field('poster') && get_field('video_item')): ?>
