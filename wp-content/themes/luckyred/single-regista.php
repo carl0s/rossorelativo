@@ -1,8 +1,8 @@
   <?php get_header(); ?>
 
-<?php wp_reset_postdata();  ?>
+  <?php wp_reset_postdata();  ?>
 
-<div class="img-regista slideshow-wrapper">
+  <div class="img-regista slideshow-wrapper">
     <div class="fotorama slideshow" data-allowfullscreen="native" data-width="100%" data-ratio="1440/750">
       <div class="slide">
         <div class='info-wrapper'>
@@ -29,33 +29,33 @@
           </div>
         </div>
       </div>
+    </div>
   </div>
-</div>
 
-<div class="biografia large-12 columns">
-  <div class="row">
-    <h2>Biografia</h2>
-    <p><?php echo get_the_content(); ?></p>
+  <div class="biografia large-12 columns">
+    <div class="row">
+      <h2>Biografia</h2>
+      <p><?php echo get_the_content(); ?></p>
+    </div>
   </div>
-</div>
 
 <div class="filmografia large-12 columns">
   <div class="row">
-    <h2>Filmografia</h2>
-    <h3>Film dal catalogo lucky red:</h3>
+    <h2><?php echo __('Filmografia'); ?></h2>
+    <h3><?php echo __('Film dal catalogo lucky red'); ?></h3>
         <?php if (have_posts()) : while(have_posts()) : the_post() ; ?>
         <div>
 
-          <?php 
+        <?php 
         $filmografie = get_posts(array(
           'post_type'  => 'film',
           'meta_query' => array(
-                array(
+            array(
                   'key' => 'regia', // name of custom field
                   'value' => '"' . get_the_ID() . '"', // matches exaclty "123", not just 123. This prevents a match for "1234"
                   'compare' => 'LIKE'
-                )
-                )
+                  )
+            )
           ));
           ?>
 
@@ -66,11 +66,10 @@
                 $photo = get_field('locandina', $filmografia->ID);
                 ?>
                 <div class="film-regista large-4 columns">
+                  <a href="<?php get_permalink(); ?>"><?php echo get_the_post_thumbnail($filmografia->ID); ?></a>
                   <div class="title-layout">
-                    <a href="<?php get_the_permalink($id); ?>"><h3 class="titolo-film-regista"> <?php echo $filmografia->post_title; ?></h3></a>
+                    <a href="<?php get_the_permalink($id); ?>"><h4 class="titolo-film-regista"> <?php echo $filmografia->post_title; ?></h4></a>
                   </div>
-
-                <a href="<?php get_permalink(); ?>"><?php echo get_the_post_thumbnail($filmografia->ID); ?>"</a>
                 </div>
                 
                   
@@ -78,23 +77,20 @@
               
             <?php endif; ?>
 
-        </div>
-        
-      <?php endwhile; endif; ?>
-  </div>
+    </div>
+
+  <?php endwhile; endif; ?>
+</div>
 </div>
 
 <div class="altri-film-bg large-12 columns">
   <div class="row">
-    <h3><span>Altri film</span></h3>
+    <h3><span><?php echo __('Altri film'); ?></span></h3>
     <div class="altri-film-regista">
-<?php query_posts(array('post_type'=>'regista')); ?>
-    <h5><?php echo get_field('film_regista'); ?></h5>
-
+      <?php query_posts(array('post_type'=>'regista')); ?>
+      <h5><?php echo get_field('film_regista'); ?></h5>
     </div>
-    
-   
   </div>
 </div>
-    <!--FOOTER-->
-    <?php get_footer(); ?>
+<!--FOOTER-->
+<?php get_footer(); ?>

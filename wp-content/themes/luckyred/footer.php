@@ -4,54 +4,48 @@
 
   </div>
 </div>
-
-<?php wp_footer(); ?>
-
 <footer class="clearfix">
   <div class="wrapper large-12 column">
     <div class="row">
-            <div class="large-2 large-centered columns">
-              <a href="#" data-reveal-id="logins" class="button center large">Login</a>
-
-              
-
-            </div>
-          </div>
-          <div id="logins" class="back-login reveal-modal" data-reveal>
-          <h4>Area Esercente</h4>
-  <?php
-  if ( ! is_user_logged_in() ) { // Display WordPress login form:
-      $args = array(
-          'redirect' => admin_url(), 
-          'form_id' => 'loginform',
-          'label_username' => __( 'Username:' ),
-          'label_password' => __( 'Password:' ),
-          'label_remember' => __( 'Ricordami' ),
-          'label_log_in' => __( 'Accedi' ),
-          'remember' => true
-      );
-      echo '<div class="container-login">';
-      wp_login_form( $args );
-      ?>
-      <h6>Non sei ancora registrato? Mandaci una <a href="mailto:cacca@piscia.it">mail</a><h6>
-      <a class="close-reveal-modal">&#215;</a>
+      <div class="large-2 large-centered columns">
+        <a href="#" data-reveal-id="login" class="button center large">Login</a>
       </div>
+    </div>
+    <div id="login" class="back-login reveal-modal" data-reveal>
+      <h4>Area Esercente</h4>
       <?php
-  } else { // If logged in:
-      $user_info = get_userdata(1);
-      echo '<div class="container-logout"><div class="hello-user">';
+      if ( ! is_user_logged_in() ) { // Display WordPress login form:
+          $args = array(
+              'redirect' => admin_url(), 
+              'form_id' => 'loginform',
+              'label_username' => __( 'Username:' ),
+              'label_password' => __( 'Password:' ),
+              'label_remember' => __( 'Ricordami' ),
+              'label_log_in' => __( 'Accedi' ),
+              'remember' => true
+          );
+          echo '<div class="container-login">';
+          wp_login_form( $args );
+          ?>
+          <h6>Non sei ancora registrato? Mandaci una <a href="mailto:example@email.com">mail</a><h6>
+          <a class="close-reveal-modal">&#215;</a>
+    </div>
+    <?php
+      } else { // If logged in:
+          $user_info = get_userdata(1);
+          echo '<div class="container-logout"><div class="hello-user">';
+          ?>
+          <a href="<?php bloginfo('home'); ?>/area-riservata">Area Riservata</a>
+          <?
+          echo '</div><div class="site-admin">';
+          wp_register('', ''); // Display "Site Admin" link.
+          echo '</div><div class="log-out">'; ?>
+          <a href="<?php echo wp_logout_url( get_permalink() ); ?>" title="Logout">Logout</a>
+          <?php 
+          echo '</div></div>';
+      }
       ?>
-      <a href="<?php bloginfo('home'); ?>/area-riservata">Area Riservata</a>
-      <?
-      echo '</div><div class="site-admin">';
-      wp_register('', ''); // Display "Site Admin" link.
-      echo '</div><div class="log-out">'; ?>
-      <a href="<?php echo wp_logout_url( get_permalink() ); ?>" title="Logout">Logout</a>
-      <?php 
-      echo '</div></div>';
-  }
-  ?>
-</div>
+      </div>
       <div class="row info-footer">
         <div class="footer large-5 columns">
           <h6>Copyright 2013 <span>LUCKY RED</span> S.r.l.<br>
@@ -74,5 +68,8 @@
           </div>
         </div> 
       </div>
+    </div>
 </footer>
 <?php wp_footer(); ?>
+</body>
+</html>

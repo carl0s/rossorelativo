@@ -36,7 +36,7 @@ $actual_id = get_the_ID();
           <h6><?php echo get_the_date('d F Y'); ?></h6>
         </div>
         <div class='info-title'>
-          <?php the_title('<h2>','</h2>'); ?>
+          <h2><a href="<?php echo get_permalink(); ?>"><?php the_title(); ?></a></h2>
         </div>  
         <div class="row collapse">
           <div class="info-content" >
