@@ -621,6 +621,12 @@ header.smaller .social-icon {
   color: rgba(255,255,255,1);
 }
 
+.comments {
+  width: 100%;
+  height: 100%;
+  float: left;
+}
+
 .archive-film {
   margin-left: -15px;
 }

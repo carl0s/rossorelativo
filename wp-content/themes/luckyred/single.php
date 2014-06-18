@@ -7,7 +7,7 @@ $actual_id = get_the_ID();
 ?>
 
 <div id="blog">
-    <?php echo get_the_post_thumbnail(); ?>
+  <?php echo get_the_post_thumbnail(); ?>
   <div class="slide-blog" >
   <div class='info-wrapper' >
     <div class='row'>
@@ -75,6 +75,12 @@ $actual_id = get_the_ID();
         <?php endif; ?>
         <?php endwhile; endif; ?> 
         <?php wp_reset_query(); ?>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="comments">
+      <?php $withcomments =1; comments_template();?>
     </div>
   </div>
 
