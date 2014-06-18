@@ -58,10 +58,12 @@ $('.bottone-scuola').click(function(){
     //     height: heightfull
     // }, 500);
     $('.descrizione-scuole').toggleClass('expanded');
+    $('.text-film').css('height', $('.descrizione-scuole').css('height'));
+
 });
 
 $('.share .inner .icons').share({
-          networks: ['facebook','twitter','googleplus','pinterest']
+  networks: ['facebook','twitter','googleplus','pinterest']
 });
 
 });

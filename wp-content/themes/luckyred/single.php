@@ -63,12 +63,12 @@ $actual_id = get_the_ID();
         <div class="slide-blog-simil" >
         <div class='info-wrapper' data-id="<?php echo get_permalink(); ?>">
           <?php echo get_the_post_thumbnail(); ?>
-          <h4><?php the_title(); ?></h4>
+          <h4><a href="<?php echo get_permalink(); ?>"><?php the_title(); ?></a></h4>
         </div>
         <div class="row">
           <div class="blog-content-simil">
           <p><?php echo get_field('sottotitolo'); ?></p>
-          <h6><?php echo get_the_date('d/M/Y'); ?></h6>
+          <h6><?php echo get_the_date('d F Y'); ?></h6>
           </div>
         </div>
         </div>

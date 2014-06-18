@@ -108,7 +108,7 @@ if (have_posts()) : while(have_posts()) : the_post();
      <?php echo get_field('descrizione'); ?>
      <div class="white-gradient"><button class="bottone-scuola" ></button></div>
   </p>
-   <a href="<?php echo get_field('link_trailer'); ?>" target="_blank"><h5>Guarda il trailer</h5></a>
+  <a href="<?php echo get_field('link_trailer'); ?>" class="trailer" target="_blank"><h5>Guarda il trailer</h5></a>
  </div>
   <div class="info-film-scuola large-3 columns">
    <h5><span><?php echo __('Regia'); ?></span>  

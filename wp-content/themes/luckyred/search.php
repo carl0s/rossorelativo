@@ -65,10 +65,12 @@
           if($news->have_posts()): 
             while($news->have_posts()): 
               $news->the_post();
-        ?>
-          <h4><?php echo get_the_date('d/M/Y'); ?></h4>
-          <h3><a href="<?php echo get_permalink(); ?>" title="<?php echo get_the_title(); ?>"><?php echo get_the_title(); ?></a></h3>
-          <?php excerpt( '30','<p>','</p>'); ?>
+        ?> 
+          <div class="short-blog">
+            <h3><a href="<?php echo get_permalink(); ?>" title="<?php echo get_the_title(); ?>"><?php echo get_the_title(); ?></a></h3>
+            <?php excerpt( '30','<p>','</p>'); ?>
+            <h4><?php echo get_the_date('d F Y'); ?></h4>
+          </div>
         <?php
             endwhile;
           endif;

@@ -1161,12 +1161,13 @@ footer .button:active {
 }
 
 .img-regista .info-content {
-  color: rgba(255,255,255,1);
+  color: rgba(255,255,255,0.8);
   background-color: rgba(0,0,0,0.8);
   padding: 10px;
   font-family: "Bebas Neue", Helvetica, sans-serif;
   font-size: 2.4em;
   line-height: 1em;
+  display: inline-block;
 }
 
 .img-regista .info-date {
@@ -1190,14 +1191,14 @@ footer .button:active {
   font-style: italic;
   font-size: 2.3em;
   margin-bottom: -5px;
-  }
+}
 
 .img-regista .info-date h6 {
   color: rgba(255,255,255,1);
   font-family: "Bebas Neue", Helvetica, sans-serif;
   font-size: 1.5em;
   height: 1em;
-  }
+}
 
 .img-regista .film-thumb-title h4 {
   color: rgba(255,255,255,1);
@@ -1222,12 +1223,13 @@ footer .button:active {
 .biografia p {
   font-family: "Georgia";
   font-style: italic;
+  margin-bottom: 95px;
 }
 
 .filmografia h2 {
   font-family: "Bebas Neue", Helvetica, sans-serif;
   color: rgba(243,33,36,1);
-  margin: 45px 0 10px 0;
+  margin: 45px 0 40px 0;
   font-size: 350%;
 }
 
@@ -1236,23 +1238,27 @@ footer .button:active {
   margin-top: -5px;
   color: rgba(255,255,255,1);
   display: inline-block;
-  background-color: rgba(72,72,72,1);
+  background-color: rgba(0,0,0,0.8);
   padding-left: 7px;
   padding-right: 7px;
   padding-top: 3px;
 }
 
 .film-regista {
-  margin-top: 30px; 
-  margin-bottom: 50px;
+  margin-top: 10px; 
+  margin-bottom: 30px;
+  margin-left: -15px;
 }
 
-h3.titolo-film-regista {
-  background-color: rgba(0,0,0,0.5);
+.title-layout .titolo-film-regista {
+  color: rgba(0,0,0,0.8);
+  font-family: "Bebas Neue", Helvetica, sans-serif;
+  font-size: 2em;
 }
 
 .altri-film-bg {
   background-color: rgba(242,242,242,1);
+  padding: 30px;
 }
 
 .altri-film-bg h3 {
@@ -1267,70 +1273,16 @@ h3.titolo-film-regista {
   position: absolute;
 }
 
-.slider-film-catalogo .info-film-catalogo h3 spam {
-  font-family: "Bebas Neue", Helvetica, sans-serif;
-  color: rgba(255,255,255,1);
-  display: inline-block;
-  background-color: rgba(72,72,72,1);
-  padding-left: 7px;
-  padding-right: 7px;
-  padding-top: 3px;
-  position: absolute;
+.altri-film-regista {
+  margin-top: 80px;
 }
 
-.altri-film-regista {
-  margin-top: 60px;
+.altri-film-regista h5 {
   font-family: 'Georgia';
   font-style: italic;
-  text-transform: capitalize;
-
+  line-height: 1.3em;
+  font-size: 1em;
 }
-
-.altri-film-bg ul li {
-  list-style-type: none;
-}
-.slider-film-catalogo a {
-  font-family: "Bebas Neue", Helvetica, sans-serif;
-  color: rgba(0,0,0,0.7);
-  text-align: left;
-  margin-left: 280px;
-  margin-top: -2px;
-  margin-bottom: -50px;
-  font-size: 2em;
-}
-
-.slider-film-catalogo .fotorama__nav-wrap {
-  background-color: rgba(255,255,255,1);
-  height: 280px;
-  line-height: 280px;
-  padding-top: 20px;
-  z-index: 10;
-  width: 100%;
-  margin-top: -320px;
-  position: absolute;
-}
-
-.slider-film-catalogo a {
-  font-family: "Bebas Neue", Helvetica, sans-serif;
-  color: rgba(0,0,0,0.7);
-  text-align: left;
-  margin-left: 280px;
-  margin-top: -2px;
-  margin-bottom: -50px;
-  font-size: 2em;
-}
-
-.slider-film-catalogo .fotorama__nav-wrap {
-  background-color: rgba(255,255,255,1);
-  height: 280px;
-  line-height: 280px;
-  padding-top: 20px;
-  z-index: 10;
-  width: 100%;
-  margin-top: -320px;
-  position: absolute;
-}
-
 
 /* --FINE SINGLE-REGISTA-- */
 
@@ -1338,7 +1290,7 @@ h3.titolo-film-regista {
 
 .single-film .slide .info-wrapper img {
   position: absolute;
-  top: 0px;
+  top: 0;
   z-index: 0;
 }
 
@@ -1363,6 +1315,10 @@ h3.titolo-film-regista {
   background: none;
   width: 100%;
   margin-top: -1390px;
+}
+
+.single-film .info-title {
+  top: -70px;
 }
 
 .single-film .info-title h2 {
@@ -1401,7 +1357,7 @@ h3.titolo-film-regista {
 .single-film .info-date {
   background-color: rgba(0,0,0,0.8);
   text-align: center;
-  margin-top: -220px;
+  margin-top: -200px;
 }
 
 .single-film .info-date h6 {
@@ -1424,6 +1380,10 @@ h3.titolo-film-regista {
   font-size: 1em;
   margin-top: 15px;
   display: inline-block;
+}
+
+.single-film .info-ondemand {
+  position: absolute;
 }
 
 .single-film .info-ondemand h4 {
@@ -1450,6 +1410,7 @@ h3.titolo-film-regista {
 
 .single-film .info-ondemand li {
   list-style: none;
+  float: left;
 }
 
 .single-film .info-ondemand li img{
@@ -1460,6 +1421,7 @@ h3.titolo-film-regista {
 .single-film .info-ondemand li a.itunes:hover {
   color: rgba(255,255,255,1);
   background-color: rgba(14,140,211,1);
+
 }
 
 .single-film .info-ondemand li a.amazon:hover {
@@ -2285,6 +2247,23 @@ h3.titolo-film-regista {
   font-size: 2em;
 }
 
+.text-film {
+  position: relative;
+  height: 250px;
+  -webkit-transition: height 0.3s;
+  -moz-transition: height 0.3s;
+  -ms-transition: height 0.3s;
+  -o-transition: height 0.3s;
+  transition: height 0.3s;
+}
+
+.text-film h5 {
+  font-family: "Georgia";
+  font-style: italic;
+  color: rgba(181,58,61,1);
+  text-decoration:underline;
+}
+
 .text-film p {
   font-family: "Georgia";
   font-style: italic;
@@ -2296,30 +2275,38 @@ h3.titolo-film-regista {
 }
 
 .descrizione-scuole {
+  position: absolute;
   min-height: 100px;
   height: 250px;
   overflow: hidden;
-  position: relative;
-  -webkit-transition: height 0.3s;
-  -moz-transition: height 0.3s;
-  -ms-transition: height 0.3s;
-  -o-transition: height 0.3s;
-  transition: height 0.3s;
+  -webkit-transition: height 1s;
+  -moz-transition: height 1s;
+  -ms-transition: height 1s;
+  -o-transition: height 1s;
+  transition: height 1s;
 }
 
 .descrizione-scuole.expanded {
   height: auto;
-  -webkit-transition: height 0.3s;
-  -moz-transition: height 0.3s;
-  -ms-transition: height 0.3s;
-  -o-transition: height 0.3s;
-  transition: height 0.3s;
-
+  -webkit-transition: height 1s;
+  -moz-transition: height 1s;
+  -ms-transition: height 1s;
+  -o-transition: height 1s;
+  transition: height 1s;
 }
 
 .white-gradient {
-  background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.01));
+  background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 80%, rgba(255,255,255,1) 99%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0)), color-stop(80%,rgba(255,255,255,1)), color-stop(99%,rgba(255,255,255,1))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 80%,rgba(255,255,255,1) 99%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 80%,rgba(255,255,255,1) 99%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 80%,rgba(255,255,255,1) 99%); /* IE10+ */
+  background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 80%,rgba(255,255,255,1) 99%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
   height: 70px;
+  position: absolute;
+  bottom: -50px;
+  width: 100%;
 }
 
 .white-gradient .bottone-scuola {
@@ -2331,11 +2318,9 @@ h3.titolo-film-regista {
   margin-top: 20px;
 }
 
-.text-film h5 {
-  font-family: "Georgia";
-  font-style: italic;
-  color: rgba(181,58,61,1);
-  text-decoration:underline;
+.text-film .trailer {
+  position: absolute;
+  bottom:-50px;
 }
 
 #content-scuola {
@@ -2446,6 +2431,10 @@ h3.titolo-film-regista {
 }
 
 .side {
+  margin-bottom: 50px;
+}
+
+.short-blog {
   margin-bottom: 50px;
 }
 
@@ -2689,8 +2678,9 @@ h3.titolo-film-regista {
   margin-bottom: 2%;
 }
 
-.slide-blog-simil h4 {
+.slide-blog-simil h4 a {
   font-family: "Bebas Neue", Helvetica, sans-serif;
+  color: rgba(0,0,0,0.8);
 }
 
 .blog-content-simil p{
@@ -2699,6 +2689,7 @@ h3.titolo-film-regista {
   padding: 0px 10px 0px 15px;
   font-size: 0.8em;
   line-height: 1.5em;
+  height: 50px;
 }
 
 .blog-content-simil h6{
@@ -2732,12 +2723,12 @@ h3.titolo-film-regista {
   font-size: 1.5em;
 }
 
-.slide-blog-general .info-title h2 {
+.slide-blog-general .info-title h2 a{
   background-color: rgba(0,0,0,0.8);
   display: inline-block;
   color: rgba(255,255,255,1);
   font-family: "Bebas Neue", Helvetica, sans-serif;
-  font-size: 1.5em;
+  font-size: 0.8em;
   padding: 10px 12px 5px 12px;
   margin-top: -100px;
   margin-bottom: 10px;
