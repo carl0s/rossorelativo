@@ -610,6 +610,10 @@ header.smaller .social-icon {
   background-color: rgba(253,184,19,1);
 }
 
+.arrow-ondemand {
+  display: none;
+}
+
 .archivio-film .pagination-homevideo {
   margin-top: 50px;
   text-align: right;
@@ -698,6 +702,10 @@ header.smaller .social-icon {
   color: rgba(255,255,255,1);
 }
 
+.arrow-blog {
+  display: none;
+}
+
 .comments {
   width: 100%;
   height: 100%;
@@ -744,6 +752,10 @@ header.smaller .social-icon {
 
 .archivio .button a {
   color: rgba(255,255,255,1);
+}
+
+.arrow-archivio {
+  display: none;
 }
 
 /* --FINE BLOG-ARCHIVIO-- */
@@ -3122,6 +3134,14 @@ margin-left: 0px;
     display: none;
   }
 
+  .arrow-ondemand {
+    display: inline-block;
+    position: absolute;
+    z-index: 50;
+    margin-left: 280px;
+    margin-top: -65px;
+  }
+
   .blog-archivio-bg {
     background-color: rgba(255,255,255,1);
   }
@@ -3158,6 +3178,14 @@ margin-left: 0px;
     display: none;
   }
 
+  .arrow-blog {
+    display: inline-block;
+    position: absolute;
+    z-index: 50;
+    margin-left: 280px;
+    margin-top: -65px;
+  }
+
   .archivio {
     padding: 0;
   }
@@ -3180,6 +3208,14 @@ margin-left: 0px;
 
   .archivio-button {
     display: none;
+  }
+
+  .arrow-archivio {
+    display: inline-block;
+    position: absolute;
+    z-index: 50;
+    margin-left: 265px;
+    margin-top: -80px;
   }
 
   .mission {
@@ -3223,7 +3259,7 @@ margin-left: 0px;
   }
 
 
-/*SINGLE-FILM INIZIO*/
+/* --SINGLE-FILM INIZIO-- */
 
 .single-film .info-wrapper .info-title  {
   margin-top: 450px;
@@ -3265,9 +3301,153 @@ margin-left: 0px;
   padding: 3px 7px 1px 7px;
   background-color: rgba(0,0,0,0.8);
   color: rgba(255,255,255,1);
+} 
+
+.infofilm h4{
+  font-size: 1.1em;
+  margin-bottom: -20px;
+  color: rgba(0,0,0,1);
+  float: left;
 }
 
-/* PRESS */
+.durata {
+  display:none;
+}
+
+.info-cast h6 {
+  font-size: 0.8em;
+}
+
+.trama h3 {
+  margin-top: 20px;
+}
+
+.trama p{
+  font-size:0.8em;
+}
+
+.content-film {
+  margin-top: -10px;
+  margin-bottom: -10px;
+  float: left;
+}
+
+.content-film a{
+  font-size:0.8em;
+}
+
+  .title-layout {
+    height: 50px;  
+  }
+
+
+.wpas-submit .content {
+  width: 120px;
+  width: 100%;
+  height: 40px;
+}
+
+  button.large, .button.large {
+    padding-top: 10px;
+  }
+
+  .ricerca-bg {
+    height: 320px;
+  }
+
+  .archivio-pg p {
+    display: none;
+  }
+
+  .tabs-content {
+    display: none;
+  }
+
+  .slider-film-simili {
+    display: none;
+  }
+
+  .archive-img-smart img {
+    display: inline-block;
+  }
+
+  .attachment-post-thumbnail wp-post-image {
+    max-width: 50%;
+    min-height: 838px;
+  }
+
+  .content {
+    display:none;
+  }
+
+  .tabs {
+    display: none;
+  }
+
+  .altri-film {
+    display:none;
+  }
+
+  .infofilm{
+    display:none;
+  }
+
+  #durata{
+    display:none;
+  }
+
+  .trama p{
+    font-size:0.8em;
+  }
+
+  .content-film a{
+    font-size:0.8em;
+  }
+
+  .footer{
+    display:none;
+  }
+
+  .footer h6{
+    display:none;
+  }
+
+  .button.large{
+    display:none;
+  }
+
+  .clearfix:after{
+    display: none;
+  }
+
+
+  .pagination {
+    margin-left: 15px;
+  }
+
+  footer .wrapper {
+    margin-top: 80px;
+  }
+
+  #tax_category {
+    width: 100%;
+  }
+
+  .info-footer h6{
+    display: none;
+  }
+
+  .social-icon-footer {
+    text-align: center;
+    height: 30px;
+  }
+
+  .download-film h3{
+    font-size: 2em;
+    margin-left: 15px;
+  }
+
+  /* --PRESS-- */
 
 .archivio-pg h2 {
   font-size: 1.8em;
@@ -3334,168 +3514,7 @@ margin-left: 0px;
   font-size: 1em;
 }
 
-/* FINE PRESS */  
-
-.infofilm h4{
-  font-size: 1.1em;
-  margin-bottom: -20px;
-  color: rgba(0,0,0,1);
-  float: left;
-}
-
-.durata {
-  display:none;
-}
-
-.info-cast h6 {
-  font-size: 0.8em;
-}
-
-.trama h3 {
-  margin-top: 20px;
-}
-
-.trama p{
-  font-size:0.8em;
-}
-
-.content-film {
-  margin-top: -10px;
-  margin-bottom: -10px;
-  float: left;
-}
-
-.content-film a{
-  font-size:0.8em;
-}
-
-  .title-layout {
-    height: 50px;  
-  }
-
-  .option-visual-page ul, .press-bg .option-visual-page ul  {
-    margin-left: 0px;
-  }
-  .option-visual-page ul li, .press-bg .option-visual-page ul li {
-    font-size: 13px;
-    margin: 20px 0px 10px 0px;
-    padding: 0px;
-  }
-  .option-visual-page .view-film, .press-bg .option-visual-page .view-film {
-    margin-left: 0px;
-    float: left;
-  }
-
-.wpas-submit .content {
-  width: 120px;
-  width: 100%;
-  height: 40px;
-}
-
-  button.large, .button.large {
-    padding-top: 10px;
-  }
-
-  .ricerca-bg {
-    height: 320px;
-  }
-
-  .archivio-pg p {
-    display: none;
-  }
-
-  .tabs-content {
-    display: none;
-  }
-
-  .slider-film-simili {
-    display: none;
-  }
-
-  .archive-img-smart img {
-    display: inline-block;
-  }
-
-  /*SINGLE-FILM INIZIO*/
-  .attachment-post-thumbnail wp-post-image {
-    max-width: 50%;
-    min-height: 838px;
-  }
-
-  .content {
-    display:none;
-  }
-
-  .tabs {
-    display: none;
-  }
-
-  .slider-film-simili {
-    display:none;
-  }
-
-  .altri-film {
-    display:none;
-  }
-
-  .infofilm{
-    display:none;
-  }
-
-  #durata{
-    display:none;
-  }
-
-  .trama p{
-    font-size:0.8em;
-  }
-
-  .content-film a{
-    font-size:0.8em;
-  }
-
-  .footer{
-    display:none;
-  }
-
-  .footer h6{
-    display:none;
-  }
-
-  .button.large{
-    display:none;
-  }
-
-  .clearfix:after{
-    display: none;
-  }
-
-
-  .pagination {
-    margin-left: 15px;
-  }
-
-  footer .wrapper {
-    margin-top: 80px;
-  }
-
-  #tax_category {
-    width: 100%;
-  }
-
-  .info-footer h6{
-    display: none;
-  }
-
-  .social-icon-footer {
-    text-align: center;
-    height: 30px;
-  }
-
-  .download-film h3{
-    font-size: 2em;
-    margin-left: 15px;
-  }
+/* FINE PRESS */ 
 
 /* --CHI SIAMO-- */
 

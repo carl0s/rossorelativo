@@ -167,6 +167,9 @@
     <div class="ondemand-device">
       <a href="<?php echo get_page_link_by_slug('home video'); ?>"><h2><?php echo __('Home video'); ?></h2></a>
     </div>
+    <div class="arrow-ondemand">
+        <a href="<?php echo get_page_link_by_slug('home video'); ?>"><img src="<?php echo get_template_directory_uri() . '/img/arrow-right.svg' ?>"></a>
+      </div>
     <div class="slider-ondemand slideshow-wrapper">
       <div class="fotorama slideshow" data-click="false" data-transition="crossfade" data-nav="thumbs" data-width="100%" data-ratio="1180/360" data-thumbheight="260" data-thumbwidth="180">
         <?php 
@@ -229,6 +232,9 @@
         <div>
             <a href="<?php echo get_permalink(); ?>" class="button right">Leggi articolo</a>
         </div>
+      </div>
+      <div class="arrow-blog">
+        <a href="<?php echo get_page_link_by_slug('blog'); ?>"><img src="<?php echo get_template_directory_uri() . '/img/arrow-right.svg' ?>"></a>
       </div>
       
 
@@ -314,6 +320,10 @@
         <div>
           <a href="<?php echo get_page_link_by_slug('archivio'); ?>" class="button archivio-button right">Guarda l'archivio</a>
         </div>
+
+      <div class="arrow-archivio">
+        <a href="<?php echo get_page_link_by_slug('archivio'); ?>"><img src="<?php echo get_template_directory_uri() . '/img/arrow-right.svg' ?>"></a>
+      </div>
      
       
       </div>
