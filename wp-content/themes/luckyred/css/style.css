@@ -3090,6 +3090,35 @@ margin-left: 0px;
   .ondemand-bg h2 {
     font-size: 200%;
     margin: 10px 10px;
+  } 
+
+  .footer {
+    display: none;
+  }
+
+  .footer h6 {
+    display:none;
+  }
+
+  .button.large {
+    display:none;
+  }
+
+  .clearfix:after {
+    display: none;
+  } 
+
+  footer .wrapper {
+    margin-top: 80px;
+  } 
+
+  .info-footer h6 {
+    display: none;
+  }
+
+  .social-icon-footer { 
+    text-align: center;
+    height: 30px;
   }
 
    /* -- INDEX FINE -- */
@@ -3240,52 +3269,19 @@ margin-left: 0px;
     float: left;
   }
 
-
-  .wpas-submit .content {
-    width: 120px;
-
-    width: 100%;
-
-    height: 40px;
-  }
-
-  button.large, .button.large {
-    padding-top: 10px;
-  }
-
-  .ricerca-bg {
-    height: 320px;
-  }
-
-  .archivio-pg p {
+  .download-film {
     display: none;
   }
 
-  .wp-advanced-search {
-    margin-top: 10px;
-  }
-
-  #tax_category {
-    height: 40px;
-  }
-
-  #search_query{
-    height: 40px;
-  }
-
-  .social-icon img {
+  .tabs-content {
     display: none;
   }
 
-  #main-menu {
+  .slider-film-simili {
     display: none;
   }
 
-  .archive-img-smart img {
-    display: inline-block;
-  }
-
-  
+/* --FINE SINGLE-FILM-- */ 
 
 /* --CHI SIAMO-- */
 

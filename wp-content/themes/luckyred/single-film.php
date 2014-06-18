@@ -342,7 +342,7 @@
             <?php if ($film->have_posts()) : while($film->have_posts()) : $film->the_post() ; ?>
               <?php if(get_the_ID() != $this_id): ?>
               <div class="slide" data-thumb="<?php echo wp_get_attachment_image_src($image = get_field('locandina'));?><?php echo $image['url']; ?>">
-                <div class="altri-film">
+                <div class="altri-film large-12 columns">
                   <a href="<?php echo get_permalink(); ?>"><span>Guarda anche: </span><?php the_title(); ?></a>
                 </div>
                 <div class='info-wrapper'>
@@ -358,7 +358,7 @@
 
     </div>
 
-    
+
 </section>
 
   <a class="exit-off-canvas"></a>
