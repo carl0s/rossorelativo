@@ -47,8 +47,11 @@ $actual_id = get_the_ID();
           </div> 
         </div>
       </div>
+      <div class="arrow-blog-general">
+        <a href="<?php echo get_permalink(); ?>"><img src="<?php echo get_template_directory_uri() . '/img/arrow-right.svg' ?>"></a>
+      </div>
     </div>
-  </div> 
+  </div>
   </div>
 <?php endif; ?>
 <?php endwhile; endif; ?> 

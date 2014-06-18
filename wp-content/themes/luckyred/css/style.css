@@ -2867,6 +2867,11 @@ footer .button:active {
   line-height: 1.5em;
   font-size: 1em;
   padding: 10px 12px 5px 12px;
+  margin-left: 15px;
+}
+
+.arrow-blog {
+  display: none;
 }
 
 /* --FINE PAGINA BLOG-- */
@@ -3174,7 +3179,7 @@ margin-left: 0px;
     display: inline-block;
   }
 
-  .blog .blog-reference {
+  .blog-reference {
     display: none;
   }
 
@@ -3599,6 +3604,14 @@ margin-left: 0px;
 .slide-blog-general .info-title h2 a {
   display: inline-block;
   font-size: 0.8em;
+}
+
+.arrow-blog-general {
+  display: inline-block;
+  position: absolute;
+  z-index: 50;
+  margin-left: 280px;
+  margin-top: -100px;
 }
 
 /* --FINE PAGINA BLOG-- */
