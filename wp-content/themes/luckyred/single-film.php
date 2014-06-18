@@ -130,10 +130,13 @@
               <a><?php echo get_field('durata'); ?></a>
             </div>
           </div>
-          <div class="row">
+          
+            <div class="row">
             <div class="large-3 columns">
               <h4><?php echo __('Cast'); ?></h4>
             </div>
+            <div id="cast" class="content-film large-9 columns">
+              <a><?php echo get_field('cast'); ?></a>
           </div>
         </div>
         <div class="trama large-6 columns">
