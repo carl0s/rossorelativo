@@ -26,6 +26,7 @@
           <div class='row'>
             <div class='film-thumb-title large-5 columns'>
               <h4><?php echo __('Altri film al cinema'); ?></h4>
+              <h5><?php echo __('Al cinema'); ?></h5>
             </div>
           </div>
           <div class='row'>
@@ -67,7 +68,7 @@
       <h2><?php echo __('Prossime uscite'); ?></h2>
 
       <div class="slider-nextexit slideshow-wrapper">
-        <div class="fotorama slideshow" data-click="false" data-auto="false" data-nav="thumbs" data-width="100%" data-ratio="1180/360" data-thumbheight="112" data-thumbwidth="180">
+        <div class="fotorama slideshow" data-click="false" data-auto="false" data-nav="thumbs" data-loop="true" data-width="100%" data-ratio="1180/360" data-thumbheight="112" data-thumbwidth="180">
           <?php 
           $args = array(
             'post_type'  => 'film',
@@ -84,7 +85,7 @@
             <div class='info-wrapper' data-film-link="<?php echo get_the_permalink(get_the_ID()); ?>">
               <?php echo get_the_post_thumbnail(); ?>
               <div class='row'>
-                <div class='info-title large-5 columns'>
+                <div class='info-title large-5 small-5 columns'>
                   <a href="<?php echo get_the_permalink(); ?>"><?php the_title('<h2>','</h2>'); ?></a>
                 </div>
               </div>
@@ -109,6 +110,53 @@
   </div>
 </div>
 
+<div class="slider-device">
+
+  <h2><?php echo __('Prossime uscite'); ?></h2>
+  <div class="slider-nextexit slideshow-wrapper">
+    <div class="fotorama slideshow" data-click="false" data-auto="false" data-loop="true" data-width="100%" data-ratio="1180/560">
+      <?php 
+      $args = array(
+        'post_type'  => 'film',
+        'meta_key'   => 'in_uscita',
+        'meta_value' => 'Si',
+        'posts_per_page' => 3,
+        'orderby' => 'menu_order',
+        'order' => 'ASC'
+        );
+      $film = new WP_Query($args);
+      ?>
+      <?php if ($film->have_posts()) : while($film->have_posts()) : $film->the_post() ; ?>
+      <div class="slide">
+        <div class='info-title-device large-5 small-12 columns'>
+          <a href="<?php echo get_the_permalink(); ?>"><?php the_title('<h2>','</h2>'); ?></a>
+        </div>
+        <div class='info-wrapper' data-film-link="<?php echo get_the_permalink(get_the_ID()); ?>">
+          <?php echo get_the_post_thumbnail(); ?>
+          <div class='row'>
+            
+          </div>
+          <div class='row'>
+            <div class='info-date-device large-3 large-offset-9 small-4 end columns'>
+              <h4><?php echo date_i18n('j', strtotime(get_field('data_di_uscita'))); ?></h4>
+              <h5><?php echo date_i18n('F', strtotime(get_field('data_di_uscita'))); ?></h5>
+              <h6><?php echo date_i18n('Y', strtotime(get_field('data_di_uscita'))); ?></h6>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="film-thumb large-12 columns">
+            <?php the_field('video_thumbnail'); ?>
+          </div>
+        </div>
+      </div>
+    <?php endwhile; endif; ?>
+  </div>
+  <a href="" class="cta-page button right"><?php echo __('Vai al film'); ?></a>
+  </div>
+
+</div>
+
 <?php wp_reset_postdata(); ?>
 
 <div class="ondemand-bg">
@@ -131,7 +179,7 @@
           <div class='info-wrapper'>
             <?php echo get_the_post_thumbnail($film->ID); ?>
             <div class='row'>
-              <div class='info-title large-5 large-offset-7 end columns'>
+              <div class='info-title large-5 small-5 large-offset-7 end columns'>
                 <a href="<?php echo get_the_permalink(); ?>"><?php the_title('<h2>','</h2>'); ?></a>
                 <div class="row collapse">
                   <div class="large-9 columns">

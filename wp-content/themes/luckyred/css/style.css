@@ -336,6 +336,18 @@ header.smaller .social-icon {
   display: inline-block;
 }
 
+.slider-cinema .film-thumb-title h5 {
+  color: rgba(255,255,255,1);
+  background-color: rgba(0,0,0,0.8);
+  padding: 10px;
+  font-family: "Bebas Neue", Helvetica, sans-serif;
+  font-size: 1.5em;
+  position: absolute;
+  bottom: -450px;
+  z-index: 10;
+  display: none;
+}
+
 /* --FINE SLIDER FILM AL CINEMA-- */
 
 /* --SLIDER PROSSIME USCITE-- */
@@ -429,6 +441,10 @@ header.smaller .social-icon {
 
 .slider-nextexit .button:hover {
   background-color: rgba(253,184,19,1);
+}
+
+.slider-device {
+  display: none;
 }
 
 /* --FINE SLIDER PROSSIME USCITE-- */
@@ -2844,255 +2860,389 @@ margin-left: 0px;
 
 @media only screen and (min-width: 320px) and (max-width: 480px) {
 
-.tab-bar{
-  display: block;
-}
-header {
-  display: none;
+  /* -- INDEX INIZIO -- */
+  .slider-cinema .info-title h2 {
+    margin-top: 400px;
+    font-size: 1.8em;
+    padding: 5px 7px 2px 7px;
+  }
+
+  .info-content {
+    display: none;
+  }
+
+  .slider-cinema .info-date {
+    display: none;
+  }
+
+  .slider-cinema .film-thumb-title h4 {
+    display: none;
+  }
+
+  .slider-cinema .film-thumb-title h5 {
+    font-size: 120%;
+    padding: 5px 7px 2px 7px;
+    bottom: -550px;
+    display: inline-block;
+  }
+
+  .slider-cinema .fotorama__nav-wrap {
+    display: none;
+  }
+
+  #prossime-uscite {
+    height: 300px;
+  }
+
+  .slider-nextexit .info-wrapper {
+    margin-top: -5px;
+  }
+
+  .slider-nextexit .info-title h2 {
+    margin-top: -795px;
+    
+  }
+
+  #prossime-uscite h2 {
+    font-size: 200%;
+    margin: 10px 20px;
+  }
+
+  #prossime-uscite {
+    display: none;
+  }
+
+  .slider-device {
+    display: inline-block;
+    width: 100%;
+  }
+
+  .slider-device h2 {
+    font-family: "Bebas Neue", Helvetica, sans-serif;
+    color: rgba(243,33,36,1);
+    margin: 10px 0 10px 10px;
+    font-size: 1.8em;
+  }
+
+  .slider-device .info-title-device h2 {
+    font-family: "Bebas Neue", Helvetica, sans-serif;
+    font-size: 1.2em;
+    padding: 5px;
+    margin-bottom: 0;
+    margin-top: -5px;
+    color: rgba(0,0,0,0.8);
+    margin-left: -10px;
+  }
+
+  .slider-device .info-date-device {
+    margin-top: -100px;
+    background-color: rgba(0,0,0,0.8);
+    padding: 5px;
+  }
+
+  .slider-nextexit .info-date-device h4 {
+  color: rgba(255,255,255,1);
+  font-family: "Bebas Neue", Helvetica, sans-serif;
+  font-size: 1em;
+  height: 1em;
+  float: left;
+  padding-left: 10px;
 }
 
-.archivio-film img {
-  height: auto;
-  background-size: content;
-  width: 100%;
-}
-.archive-img img {
-  display: none;
-}
-.archivio-pg h2 {
-  margin-top: 15px;
-}
-
-.archivio-film h3, .sezione-film h3 {
-  margin-bottom: 5px;  
-}
-
-.archivio-film h5 {
-  display: none;
-}
-
-.layout-film, .sezione-film{
-  height: 200px;  
-  overflow: hidden;
-  margin-bottom: 10px;
-}
-
-.tab-bar {
-  height: 60px;
-  display: block;
-  background-color: rgba(0,0,0,0.8);
-}
-
-.left-off-canvas-menu {
-  background-color: rgba(242,242,242,1);
-  font-family: "Bebas Neue";
-}
-
-.tab-bar a img {
-  height: 60px;
-}
-
-.left-small {
-  border-right: none;
-  padding: 10px;
-}
-
-.menu-main-menu-container {
-  margin-left: -20px;
-}
-
-.off-canvas-list ul li a{
-  color: rgba(80,80,80,1);
-  border-bottom: none;
-}
-
-.off-canvas-list ul li {
-  list-style-type: none;
-}
-
-.left-off-canvas-menu ul li a:hover {
-  background-color: rgba(255,255,255,1);
-  color: rgba(218,33,44,1);
-}
-
-ul.off-canvas-list li label{
-  height: 60px;
-  background-color: rgba(241,242,242,1);
-}
-
-ul.off-canvas-list li label img{
-  height: 60px;
-  margin-left: 20px;
-  margin-top: -15px;
-}
-
-ul.off-canvas-list li label a:hover{
-  background-color: rgba(242,242,242,1);
-}
-
-ul.off-canvas-list li label a{
-  border-bottom: none;
-}
-
-.tabs {
-  margin-top: -40px;
-  width: 100%;
-}
-
-.tabs dd {
-  background: rgba(243,33,36,1);
-  padding: 0px 3.9% 0px 3.8%;
-}
-
-.tabs dd a {
-  color: #fff;
-}
-
-.tabs dd a:hover {
-  background: #fff;
-}
-
-.title-layout {
-  height: 50px;  
-}
-
-.option-visual-page ul, .press-bg .option-visual-page ul  {
-  margin-left: 0px;
-}
-.option-visual-page ul li, .press-bg .option-visual-page ul li {
-  font-size: 13px;
-  margin: 20px 0px 10px 0px;
-  padding: 0px;
-}
-.option-visual-page .view-film, .press-bg .option-visual-page .view-film {
-  margin-left: 0px;
+.slider-nextexit .info-date-device h5 {
+  color: rgba(255,255,255,1);
+  font-family: "Georgia";
+  padding: 3px 5px 2px 5px;
+  font-style: italic;
+  font-size: 0.8em;
+  height: 1em;
   float: left;
 }
 
-
-.wpas-submit .content {
-  width: 120px;
-
-  width: 100%;
-
-  height: 40px;
+.slider-nextexit .info-date-device h6 {
+  color: rgba(255,255,255,1);
+  font-family: "Bebas Neue", Helvetica, sans-serif;
+  font-size: 1em;
+  height: 1em;
+  float: left;
+  padding-right: -100px;
 }
 
-button.large, .button.large {
-  padding-top: 10px;
-}
+  .slider-device .slider-nextexit .fotorama__nav-wrap .fotorama__nav--dots {
+    width: 100%;
+    margin-left: 0;
+    z-index: 99999;
+    display: inline-block;
+  }
 
-.ricerca-bg {
-  height: 320px;
-}
+  .slider-device .slider-nextexit .fotorama__nav-wrap {
+    margin-left: 0px;
+    line-height: 0px;
+    height: 30px;
+    padding-top: 5px;
+  }
 
-.archivio-pg p {
-  display: none;
-}
+  .slider-nextexit .button {
+    display: none;
+  }
 
-.wp-advanced-search {
-  margin-top: 10px;
-}
+  .ondemand-bg h2 {
+    font-size: 200%;
+    margin: 10px 10px;
+  }
 
-#tax_category {
-  height: 40px;
-}
-
-#search_query{
-  height: 40px;
-}
-
-.social-icon img {
-  display: none;
-}
-
-#main-menu {
-  display: none;
-}
-
-.archive-img-smart img {
-  display: inline-block;
-}
-
-/*SINGLE-FILM INIZIO*/
-.attachment-post-thumbnail wp-post-image {
-  max-width: 50%;
-  min-height: 838px;
-}
-
-.content {
-  display:none;
-}
-
-.tabs {
-  display: none;
-}
-
-.slider-film-simili {
-  display:none;
-}
-
-.altri-film {
-  display:none;
-}
-
-.infofilm{
-  display:none;
-}
-
-#durata{
-  display:none;
-}
-
-.trama p{
-  font-size:0.8em;
-}
-
-.content-film a{
-  font-size:0.8em;
-}
-
-.footer{
-  display:none;
-}
-
-.footerfooter h6{
-  display:none;
-}
-
-.button.large{
-  display:none;
-}
-
-.clearfix:after{
-  display: none;
-}
+   /* -- INDEX FINE -- */
 
 
-.pagination {
-  margin-left: 15px;
-}
+  .tab-bar{
+    display: block;
+  }
+  header {
+    display: none;
+  }
 
-footer .wrapper {
-  margin-top: 80px;
-}
+  .archivio-film img {
+    height: auto;
+    background-size: content;
+    width: 100%;
+  }
+  .archive-img img {
+    display: none;
+  }
+  .archivio-pg h2 {
+    margin-top: 15px;
+  }
 
-#tax_category {
-  width: 100%;
-}
+  .archivio-film h3, .sezione-film h3 {
+    margin-bottom: 5px;  
+  }
 
-.info-footer h6{
-  display: none;
-}
+  .archivio-film h5 {
+    display: none;
+  }
 
-.social-icon-footer {
-  text-align: center;
-  height: 30px;
-}
+  .layout-film, .sezione-film{
+    height: 200px;  
+    overflow: hidden;
+    margin-bottom: 10px;
+  }
 
-.download-film h3{
-  font-size: 2em;
-  margin-left: 15px;
-}
+  .tab-bar {
+    height: 60px;
+    display: block;
+    background-color: rgba(0,0,0,0.8);
+  }
+
+  .left-off-canvas-menu {
+    background-color: rgba(242,242,242,1);
+    font-family: "Bebas Neue";
+  }
+
+  .tab-bar a img {
+    height: 60px;
+  }
+
+  .left-small {
+    border-right: none;
+    padding: 10px;
+  }
+
+  .menu-main-menu-container {
+    margin-left: -20px;
+  }
+
+  .off-canvas-list ul li a{
+    color: rgba(80,80,80,1);
+    border-bottom: none;
+  }
+
+  .off-canvas-list ul li {
+    list-style-type: none;
+  }
+
+  .left-off-canvas-menu ul li a:hover {
+    background-color: rgba(255,255,255,1);
+    color: rgba(218,33,44,1);
+  }
+
+  ul.off-canvas-list li label{
+    height: 60px;
+    background-color: rgba(241,242,242,1);
+  }
+
+  ul.off-canvas-list li label img{
+    height: 60px;
+    margin-left: 20px;
+    margin-top: -15px;
+  }
+
+  ul.off-canvas-list li label a:hover{
+    background-color: rgba(242,242,242,1);
+  }
+
+  ul.off-canvas-list li label a{
+    border-bottom: none;
+  }
+
+  .tabs {
+    margin-top: -40px;
+    width: 100%;
+  }
+
+  .tabs dd {
+    background: rgba(243,33,36,1);
+    padding: 0px 3.9% 0px 3.8%;
+  }
+
+  .tabs dd a {
+    color: #fff;
+  }
+
+  .tabs dd a:hover {
+    background: #fff;
+  }
+
+  .title-layout {
+    height: 50px;  
+  }
+
+  .option-visual-page ul, .press-bg .option-visual-page ul  {
+    margin-left: 0px;
+  }
+  .option-visual-page ul li, .press-bg .option-visual-page ul li {
+    font-size: 13px;
+    margin: 20px 0px 10px 0px;
+    padding: 0px;
+  }
+  .option-visual-page .view-film, .press-bg .option-visual-page .view-film {
+    margin-left: 0px;
+    float: left;
+  }
+
+
+  .wpas-submit .content {
+    width: 120px;
+
+    width: 100%;
+
+    height: 40px;
+  }
+
+  button.large, .button.large {
+    padding-top: 10px;
+  }
+
+  .ricerca-bg {
+    height: 320px;
+  }
+
+  .archivio-pg p {
+    display: none;
+  }
+
+  .wp-advanced-search {
+    margin-top: 10px;
+  }
+
+  #tax_category {
+    height: 40px;
+  }
+
+  #search_query{
+    height: 40px;
+  }
+
+  .social-icon img {
+    display: none;
+  }
+
+  #main-menu {
+    display: none;
+  }
+
+  .archive-img-smart img {
+    display: inline-block;
+  }
+
+  /*SINGLE-FILM INIZIO*/
+  .attachment-post-thumbnail wp-post-image {
+    max-width: 50%;
+    min-height: 838px;
+  }
+
+  .content {
+    display:none;
+  }
+
+  .tabs {
+    display: none;
+  }
+
+  .slider-film-simili {
+    display:none;
+  }
+
+  .altri-film {
+    display:none;
+  }
+
+  .infofilm{
+    display:none;
+  }
+
+  #durata{
+    display:none;
+  }
+
+  .trama p{
+    font-size:0.8em;
+  }
+
+  .content-film a{
+    font-size:0.8em;
+  }
+
+  .footer{
+    display:none;
+  }
+
+  .footerfooter h6{
+    display:none;
+  }
+
+  .button.large{
+    display:none;
+  }
+
+  .clearfix:after{
+    display: none;
+  }
+
+
+  .pagination {
+    margin-left: 15px;
+  }
+
+  footer .wrapper {
+    margin-top: 80px;
+  }
+
+  #tax_category {
+    width: 100%;
+  }
+
+  .info-footer h6{
+    display: none;
+  }
+
+  .social-icon-footer {
+    text-align: center;
+    height: 30px;
+  }
+
+  .download-film h3{
+    font-size: 2em;
+    margin-left: 15px;
+  }
 
 }

@@ -48,9 +48,10 @@
 
     <aside class="left-off-canvas-menu">
       <ul class="off-canvas-list">
-        <li><label>
-              <a href="http://luckyred.dev"><img src="<?php echo get_template_directory_uri() . '/img/logo.png' ?>"></a>
-            </label>
+        <li>
+          <label>
+            <a href="http://luckyred.dev"><img src="<?php echo get_template_directory_uri() . '/img/logo.png' ?>"></a>
+          </label>
         </li>
         <li><?php wp_nav_menu(); ?></li>
       </ul>
