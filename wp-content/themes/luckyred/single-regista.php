@@ -65,7 +65,7 @@
                 $id = $filmografia->ID;
                 $photo = get_field('locandina', $filmografia->ID);
                 ?>
-                <div class="film-regista large-4 columns">
+                <div class="film-regista large-3 end columns">
                   <a href="<?php get_permalink(); ?>"><?php echo get_the_post_thumbnail($filmografia->ID); ?></a>
                   <div class="title-layout">
                     <a href="<?php get_the_permalink($id); ?>"><h4 class="titolo-film-regista"> <?php echo $filmografia->post_title; ?></h4></a>

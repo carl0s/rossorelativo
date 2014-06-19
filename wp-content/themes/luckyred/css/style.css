@@ -1364,7 +1364,6 @@ footer .button:active {
 .film-regista {
   margin-top: 10px; 
   margin-bottom: 30px;
-  margin-left: -15px;
 }
 
 .title-layout .titolo-film-regista {
@@ -2915,9 +2914,9 @@ footer .button:active {
 
 /* --FINE PAGINA BLOG-- */
 
+                            /* -----------------------------------  TABLET ----------------------------------- */
 @media only screen and (min-width: 768px) and (max-width: 1024px) { 
 #logo a img {
-  width: 300px;
 }
 
 #main-menu {
@@ -2933,7 +2932,6 @@ header {
 }
 
 .tab-bar-section.middle a img {
-  width: 300px;
   margin-left: 160px;
 }
 
@@ -2980,9 +2978,6 @@ margin-left: 0px;
 .left-small {
  width: 80px;
  height: 130px;
-}
-.tab-bar .menu-icon span {
-  width: 3rem;
 }
 
 .ricerca-bg-ar {
