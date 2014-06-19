@@ -50,6 +50,9 @@
 
   <!--HEADER-->
   <?php get_header(); ?>
+
+  <section class="main-section">
+  <!-- content goes here -->
   
   <!--BODY-->
   <?php wp_reset_postdata(); ?>
@@ -94,7 +97,7 @@
     ?>
 
     <?php if (have_posts()) : while(have_posts()) : the_post(); ?>
-      <div class="layout-film large-3 medium-4 small-12 columns">
+      <div class="layout-film large-3 medium-3 small-12 columns">
         <div class="title-layout">
           <a href="<?php echo get_the_permalink(); ?>">
           <h3>
@@ -188,6 +191,13 @@
 
     </div>
   </div>
+
+  </section>
+
+  <a class="exit-off-canvas"></a>
+
+  </div>
+</div>
   
   <!--FOOTER-->
   <?php get_footer(); ?>

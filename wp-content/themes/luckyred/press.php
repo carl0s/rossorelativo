@@ -7,6 +7,9 @@ Template Name:  Press
 <!--HEADER-->
 <?php get_header(); ?>
 
+<section class="main-section">
+<!-- content goes here -->
+
 <!--BODY-->
 <?php wp_reset_postdata(); ?>
 <?php 
@@ -102,7 +105,7 @@ $args = array();
 		<?php
 	 	if (have_posts()) : while(have_posts()) : the_post();
 	 	?>
-		<div class="sezione-film large-3 medium-4 columns">
+		<div class="sezione-film large-3 medium-3 columns">
 			<div class="title-layout">
 			<h4>
 				<?php 
@@ -115,6 +118,8 @@ $args = array();
       
 			<a class="archive-img-smart" href="<?php echo get_permalink(); ?>"><?php echo get_the_post_thumbnail(); ?></a>
 			<a class="archive-img" href="<?php echo get_permalink(); ?>"> <?php $image = get_field('locandina'); ?><img src="<?php echo $image['url']; ?>" /></a>
+
+      <div class="press_device"><a href="<?php echo get_permalink(); ?>" class="button right">Leggi articolo</a></div>
 
 			<div class="link-press">
 				<a href="<?php echo get_permalink($id); ?>#panel-foto"><img src="<?php echo get_template_directory_uri() . '/img/gallery.png' ?>"></a>
@@ -149,6 +154,13 @@ $args = array();
 
 </div>
 	
+</div>
+
+</section>
+
+  <a class="exit-off-canvas"></a>
+
+  </div>
 </div>
 
 <!--FOOTER-->

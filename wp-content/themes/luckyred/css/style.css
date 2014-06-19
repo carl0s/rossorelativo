@@ -663,6 +663,10 @@ header.smaller .social-icon {
 
 /* --BLOG-ARCHIVIO-- */
 
+.data-smartphone {
+  display: none;
+}
+
 .blog-archivio-bg {
   background-color: rgba(242,242,242,1);
 }
@@ -2072,6 +2076,10 @@ footer .button:active {
   display: inline-block;
 }
 
+.press_device {
+  display: none;
+}
+
 .ricerca-bg-pr {
   background-image: url(../img/press-copertina.png);
   background-position: center;
@@ -2919,12 +2927,33 @@ footer .button:active {
   width: 300px;
 }
 
+.title-layout {
+  height: 85px;
+}
+
+.link-press {
+  display: none;
+}
+
+.press_device {
+  display: inline-block;
+}
+
+.press_device .button {
+  background-color: rgba(243,33,36,1);
+  font-family: "Bebas Neue", Helvetica, sans-serif;
+  width: 160px;
+  margin-top: 10px;
+  font-size: 1.2em;
+  padding: 10px;
+}
+
 #main-menu {
   display: none;
 }
 
-.tab-bar{
-  display: block;
+.main-section {
+  margin-top: 100px;
 }
 
 header {
@@ -2932,8 +2961,8 @@ header {
 }
 
 .tab-bar-section.middle a img {
-  width: 300px;
-  margin-left: 160px;
+  margin-left: 270px;
+  margin-top: 20px;
 }
 
 .option-visual-page ul li {
@@ -2947,19 +2976,15 @@ header {
 }
 
 .press-bg .option-visual-page .view-film {
-  margin-left: 0px;
+  margin-left: 115px;
 }
 
 .option-visual-page .view-film {
-margin-left: 0px;
+   margin-left: 100px;
 }
 
 .archivio-pg h2 {
   margin-top: 40px;
-}
-
-.tab-bar {
-  height: 130px;
 }
 
 .layout-film{
@@ -2971,32 +2996,58 @@ margin-left: 0px;
   margin-right: 10px;
 }
 
-.tab-bar .menu-icon {
-  margin-top: 40px;
-  width: 50px;
-}
-
 .left-small {
  width: 80px;
  height: 130px;
 }
-.tab-bar .menu-icon span {
-  width: 3rem;
+
+/* TAB BAR */
+.tab-bar {
+  display: block;
+  height: 100px;
 }
 
-.ricerca-bg-ar {
-  height: 350px;
+.tab-bar .menu-icon {
+  width: 50px;
+  margin-top: 20px;
 }
+
+.tab-bar .menu-icon span {
+  width: 1.5rem;
+}
+
+/* FINE TAB BAR*/
+
+
+/* RICERCA */
+#tax_category {
+  width: 70%;
+}
+
+.ricerca-bg-ar, .ricerca-bg-pr {
+  height: 300px;
+}
+
+.archivio-pg {
+  padding: 0px 5px;
+}
+
+.archivio-pg p {
+  display: none;
+}
+
+/* FINE RICERCA */
 
 .layout-film {
-  height: 580px;
+  height: auto;
 }
 
 .archivio-film h3 {
   margin-bottom: 0px;
 }
-.title-layout {
-  height: 55px;
+
+.pagination-archivio, .pagination-press, .pagination-scuole, .pagination-ondemand {
+  margin-right: 20px;
 }
 
 }
@@ -3130,7 +3181,7 @@ margin-left: 0px;
   padding-right: -100px;
 }
 
-.slider-device .slider-nextexit .fotorama__nav-wrap .fotorama__nav--dots {
+  .slider-device .slider-nextexit .fotorama__nav-wrap .fotorama__nav--dots {
     width: 100%;
     margin-left: 0;
     z-index: 99999;
@@ -3515,15 +3566,23 @@ margin-left: 0px;
 }
 
 .link-press {
-  margin-top: -30px; 
-  margin-right: 0px;
+  display: none;
 }
 
-.link-press a {
-  margin:0px;
-  background: red;
-  padding: 10px 18.1px;
-  margin-right: -5px;
+.press_device {
+  display: inline-block;
+  margin-top: -53px;
+  width: 100%;
+}
+
+
+.press_device .button {
+  background-color: rgba(243,33,36,1);
+  font-family: "Bebas Neue", Helvetica, sans-serif;
+  width: 160px;
+  margin-top: 10px;
+  font-size: 1.2em;
+  padding: 10px;
 }
 
 #search_query { 
@@ -3721,6 +3780,7 @@ margin-left: 0px;
 }
 /* --FINE PAGINA SCUOLA-- */
 
+
 /* --INIZIO PAGINA REGISTA-- */
   
   .img-regista .info-wrapper .info-title {
@@ -3768,6 +3828,90 @@ margin-left: 0px;
 
 /* --FINE PAGINA REGISTA-- */
 
+/* --SINGLE-BLOG INIZIO-- */
+
+.info-blog {
+  z-index: 20;
+  margin: -180px 0px 0px 0px;
+  width: 320px;
+}
+
+.blogimage {
+  margin-top: 60px;
+}
+
+.slide-blog .info-date {
+  display: none;
+}
+
+.slide-blog .info-title h2 {
+    color: #FFF;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    font-family: "Bebas Neue",Helvetica,sans-serif;
+    font-size: 1.5em;
+    line-height: 1em;
+    display: inline-block;
+    margin-left: 10px;
+    width: auto;
+}
+
+.slide-blog .info-title h6 {
+    display: none;
+}
+
+.data-smartphone {
+  display: inline-block;
+  margin: 30px 20px 0 20px;
+}
+
+.data-smartphone h6 {
+  color: #FFF;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-family: "Bebas Neue",Helvetica,sans-serif;
+  font-size: 1.2em;
+  line-height: 1em;
+  width: 120px;
+  text-align: center;
+}
+
+.blog-content {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#blog-tag ul {
+  margin-left: -30px;
+  list-style-type: none;
+  height: auto;
+}
+
+#blog-tag {
+  display: none;
+}
+
+.blog-simil h2 {
+  color: #F32124;
+  font-family: "Bebas Neue",Helvetica,sans-serif;
+  margin-top: -30px;
+}
+
+.slide-blog-simil {
+  width: 100%;
+  float: left;
+  margin-bottom: 10px;
+}
+
+.slide-blog-simil h4 {
+  width: 100%;
+  margin-bottom: 10px;
+  font-size: 1em;
+}
+
+/* --SINGLE-BLOG FINE-- */
+
+
 /* --FOOTER-- */
 .footer {
     display: none;
@@ -3800,3 +3944,4 @@ margin-left: 0px;
   /* --FINE FOOTER-- */
 
 }
+

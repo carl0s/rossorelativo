@@ -7,9 +7,11 @@ $actual_id = get_the_ID();
 ?>
 
 <div id="blog">
-  <?php echo get_the_post_thumbnail(); ?>
-  <div class="slide-blog" >
-  <div class='info-wrapper' >
+  <div class="blogimage">
+    <?php echo get_the_post_thumbnail(); ?>
+  </div>
+  <div class="slide-blog">
+  <div class='info-wrapper'>
     <div class='row'>
       <div class="info-blog">
         <div class='info-date large-1 columns'>
@@ -18,7 +20,10 @@ $actual_id = get_the_ID();
           <h6>
             <?php echo __('Autore: ') ?><br>
             <?php the_author(); ?>
-          </h6>
+          </h6> 
+        </div>
+        <div class="data-smartphone">
+          <h6><?php echo get_the_date('d F Y'); ?></h6>
         </div>
         <div class='info-title large-10 columns'>
           <?php the_title('<h2>','</h2>'); ?><br>
