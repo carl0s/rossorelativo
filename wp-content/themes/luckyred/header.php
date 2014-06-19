@@ -55,5 +55,11 @@
         </li>
         <li><?php wp_nav_menu(); ?></li>
       </ul>
+      <div class="info-device">
+        <h5>Info Lucky Red</h5>
+        <h6>T: 063759441</h6>
+        <h6>F: 0637352310</h6>
+        <h6>Mail: <a href="mailto:info@luckyred.it">info@luckyred.it</a></h6>
+      </div>
     </aside>
     

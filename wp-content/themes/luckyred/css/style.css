@@ -46,6 +46,7 @@
 .off-canvas-list ul li a{
   color: rgba(80,80,80,1);
   border-bottom: none;
+  font-size: 1.2em;
 }
 
 .off-canvas-list ul li {
@@ -73,6 +74,28 @@ ul.off-canvas-list li label a:hover{
 
 ul.off-canvas-list li label a{
   border-bottom: none;
+}
+
+.left-off-canvas-menu .info-device {
+  margin-left: 10px;
+  margin-top: 50px;
+}
+
+.left-off-canvas-menu .info-device h5 {
+  font-family: "Bebas Neue", Helvetica, sans-serif;
+  color: rgba(243,33,36,1);
+  font-size: 1.2em;
+}
+
+.left-off-canvas-menu .info-device h6 {
+  font-family: 'Georgia', serif;
+  font-style: italic;
+  font-size: 0.8em;
+}
+
+.left-off-canvas-menu .info-device h6 a {
+  text-decoration: underline;
+  color: rgba(0,0,0,0.8);
 }
 
 /* --MENU OFF CANVAS-- */
@@ -2031,6 +2054,10 @@ footer .button:active {
   position: absolute;
 }
 
+.slider-film-simili-device {
+  display: none;
+}
+
 /* --FINE SINGLE-FILM-- */
 
 /* --PRESS-- */
@@ -3380,10 +3407,6 @@ margin-left: 0px;
     display: none;
   }
 
-  .slider-film-simili {
-    display: none;
-  }
-
   .archive-img-smart img {
     display: inline-block;
   }
@@ -3401,12 +3424,30 @@ margin-left: 0px;
     display: none;
   }
 
-  .altri-film {
-    display:none;
+  .slider-film-simili .altri-film {
+    display: none;
   }
 
-  .infofilm{
-    display:none;
+  .slider-film-simili {
+    display: none;
+  }
+
+  .slider-film-simili-device {
+    display: inline-block;
+    width: 100%;
+    margin-top: 50px;
+  }
+
+  .slider-film-simili-device .altri-film {
+    display: inline-block;
+    font-family: "Bebas Neue", Helvetica, sans-serif;
+    font-size: 1.3em;
+    margin-left: -15px;
+    margin-bottom: 10px;
+  }
+
+  .slider-film-simili-device .altri-film a {
+    color: rgba(0,0,0,0.8);
   }
 
   #durata{
@@ -3421,47 +3462,8 @@ margin-left: 0px;
     font-size:0.8em;
   }
 
-  .footer{
-    display:none;
-  }
-
-  .footer h6{
-    display:none;
-  }
-
-  .button.large{
-    display:none;
-  }
-
-  .clearfix:after{
+  .download-film {
     display: none;
-  }
-
-
-  .pagination {
-    margin-left: 15px;
-  }
-
-  footer .wrapper {
-    margin-top: 80px;
-  }
-
-  #tax_category {
-    width: 100%;
-  }
-
-  .info-footer h6{
-    display: none;
-  }
-
-  .social-icon-footer {
-    text-align: center;
-    height: 30px;
-  }
-
-  .download-film h3{
-    font-size: 2em;
-    margin-left: 15px;
   }
 
   /* --PRESS-- */
