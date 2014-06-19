@@ -3119,6 +3119,12 @@ footer {
   display: none;
 }
 
+.chi-siamo .fotorama__video-play {
+  margin-top: -20px;
+  background-size: 60%;
+  margin-left: -20px;
+}
+
 .produzioni-bg {
   height: auto;
   padding-bottom: 50px;
