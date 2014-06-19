@@ -2924,8 +2924,186 @@ footer .button:active {
 
                             /* -----------------------------------  TABLET ----------------------------------- */
 @media only screen and (min-width: 768px) and (max-width: 1024px) { 
-#logo a img {
+
+/* --HOME-- */
+
+.slider-cinema .info-wrapper .info-title {
+  margin-top: 200px;
+  font-size: 0.8em;
 }
+
+.slider-cinema .info-wrapper .info-title .collapse {
+  display: none;
+}
+
+.slider-cinema .info-wrapper .info-date {
+  margin-top: 200px;
+  margin-right: 20px;
+}
+
+.slider-cinema .info-wrapper .info-date h6 {
+  font-size: 1.1em;
+}
+
+.slider-cinema .info-wrapper .info-date h4 {
+  font-size: 5em;
+  margin-top: -20px;
+}
+
+.slider-cinema .info-wrapper .info-date h5 {
+  font-size: 1em;
+}
+
+.slider-cinema .info-wrapper .film-thumb-title h4 {
+  font-size: 1em;
+  padding: 3px 5px;
+  bottom: -475px;
+}
+
+.slider-cinema .fotorama__video-play {
+  margin-top: -70px;
+  background-size: 60%;
+  margin-left: -20px;
+}
+
+.slider-cinema .fotorama__nav-wrap {
+  height: 100px;
+  bottom: 0;
+}
+
+.slider-cinema .fotorama__nav-wrap .fotorama__nav--thumbs {
+  height: 95px;
+  margin-top: 2px;
+}
+
+#prossime-uscite h2{
+  margin-left: 25px;
+  font-size: 2.5em;
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+
+.slider-nextexit .info-title {
+  display: inline-block;
+}
+
+.slider-nextexit .info-date {
+  margin-left: 555px;
+  margin-top: -170px;
+}
+
+.slider-nextexit .fotorama__nav-wrap {
+  margin-left: 0;
+  margin-bottom: -50px;
+}
+
+.slider-nextexit .cta-page {
+  display: none;
+}
+
+.slider-ondemand {
+  display: none;
+}
+
+.ondemand-bg h2 {
+  font-size: 1.8em;
+  margin: 120px 0px 120px 60px;
+  background-color: rgba(255,255,255,0.8);
+  color: rgba(0,0,0,1);
+  padding:0px 5px;
+  text-align: center;
+  display: inline-block;
+}
+
+.ondemand-device {
+  display: inline-block;
+  background-image: url(../img/blur.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 300px;
+  width: 33.2%;
+  float: left;
+}
+
+.blog-reference {
+  display: none;
+}
+
+.blog-archivio-bg {
+  background: none;
+}
+
+.blog-archivio-bg h2 {
+  font-size: 1.8em;
+  margin: 30px 10px;
+  background-color: rgba(255,255,255,0.8);
+  color: rgba(0,0,0,1);
+  padding:0px 5px;
+  text-align: center;
+} 
+
+.blog-device {
+  display: inline-block;
+  background-image: url(../img/blur_bn.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 300px;
+  width: 72.5%;
+  float: left;
+  margin-left: 255px;
+  margin-top: -485px;
+
+}
+
+.blog-device a h2 {
+  margin: 120px 0px 120px 100px;
+  display: inline-block;
+}
+
+.archive-film {
+  display: none;
+}
+
+.archivio-device {
+  background-image: url(../img/blur.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 300px;
+  width: 72.5%;
+  margin-left: 113px;
+  margin-top: -485px;
+}
+
+.archivio-device h2 {
+  margin: 120px 0px 120px 65px;
+  display: inline-block;    
+}
+
+.archivio-button {
+  display: none;
+}
+
+.mission {
+  display: none;
+}
+
+/* --FINE HOME-- */
+
+/* --FOOTER-- */
+
+footer {
+  margin-top: -200px;
+}
+
+.clearfix:after {
+  display: none;
+}
+
+.info-footer h6 {
+  font-size: 0.8em;
+}
+
+/* --FINE FOOTER-- */
 
 .title-layout {
   height: 85px;

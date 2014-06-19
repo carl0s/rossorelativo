@@ -1,7 +1,7 @@
 <footer class="clearfix">
   <div class="wrapper large-12 column">
     <div class="row">
-      <div class="large-2 large-centered columns">
+      <div class="large-2 large-centered medium-3 medium-centered columns">
         <a href="#" data-reveal-id="login" class="button center large">Login</a>
       </div>
     </div>
@@ -41,14 +41,14 @@
       ?>
       </div>
       <div class="row info-footer">
-        <div class="footer large-5 columns">
+        <div class="footer large-5 medium-5 columns">
           <h6>Copyright 2013 <span>LUCKY RED</span> S.r.l.<br>
           Tutti i diritti riservati. <a>Privacy e policy</a> e diritti di utilizzo.<br><br>
           P.I.01880311004, C.F.07824900588<br>
           N°Iscrizione Reg.Imp. di ROMA 07824900588<br>
           REA N°631446 CAP. SOC. € 1.500.000,00 I.V.</h6>
         </div>
-        <div class="footerfooter large-4 large-offset-3 end columns">
+        <div class="footerfooter large-4 large-offset-3 medium-5 medium-offset-2 end columns">
           <h6>Sede: Via  Antonio Chinotto,16 - 00195 ROMA<br>
           T: 063759441<br>
           F: 0637352310<br>

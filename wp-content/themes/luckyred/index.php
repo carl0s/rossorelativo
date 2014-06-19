@@ -27,13 +27,13 @@
       <a href="<?php the_field('link_trailer'); ?>" data-caption="
         <div class='info-wrapper'>
           <div class='row'>
-            <div class='film-thumb-title large-5 columns'>
+            <div class='film-thumb-title large-5 medium-5 small-5 columns'>
               <h4><?php echo __('Altri film al cinema'); ?></h4>
               <h5><?php echo __('Al cinema'); ?></h5>
             </div>
           </div>
           <div class='row'>
-            <div class='info-title large-6 columns'>
+            <div class='info-title large-6 medium-6 small-6 columns'>
               <a href='<?php echo get_the_permalink(); ?>'><?php the_title('<h2>','</h2>'); ?></a>
               <div class='row collapse'>
                 <div class='large-9 columns'>
@@ -43,7 +43,7 @@
                 </div>
               </div>
             </div>
-            <div class='info-date large-1 large-offset-4 columns'>
+            <div class='info-date large-1 large-offset-4 medium-1 columns'>
               <h6><?php echo __('dal'); ?></h6>
               <h4><?php echo date_i18n('j', strtotime(get_field('data_di_uscita'))); ?></h4>
               <h5><?php echo date_i18n('F', strtotime(get_field('data_di_uscita'))); ?></h5>
@@ -88,12 +88,12 @@
             <div class='info-wrapper' data-film-link="<?php echo get_the_permalink(get_the_ID()); ?>">
               <?php echo get_the_post_thumbnail(); ?>
               <div class='row'>
-                <div class='info-title large-5 small-5 columns'>
+                <div class='info-title large-5 medium-5 small-5 columns'>
                   <a href="<?php echo get_the_permalink(); ?>"><?php the_title('<h2>','</h2>'); ?></a>
                 </div>
               </div>
               <div class='row'>
-                <div class='info-date large-3 large-offset-9 end columns'>
+                <div class='info-date large-3 large-offset-9 medium-3 end columns'>
                   <h4><?php echo date_i18n('j', strtotime(get_field('data_di_uscita'))); ?></h4>
                   <h5><?php echo date_i18n('F', strtotime(get_field('data_di_uscita'))); ?></h5>
                   <h6><?php echo date_i18n('Y', strtotime(get_field('data_di_uscita'))); ?></h6>
@@ -215,7 +215,7 @@
 
 <div class="blog-archivio-bg">
   <div class="row">
-    <div class="blog large-5 small-12 columns">
+    <div class="blog large-5 medium-6 small-12 columns">
       <div class="blog-device">
         <a href="<?php echo get_page_link_by_slug('blog'); ?>"><h2><?php echo __('Blog'); ?></h2></a>
       </div>
@@ -241,9 +241,9 @@
       
     </div>
 
-    <div class="archivio large-7 small-12 columns">
+    <div class="archivio large-7 medium-6 small-12 columns">
         <div class="archivio-device">
-          <h2><?php echo __('Archivio Film'); ?></h2>
+          <a href="<?php echo get_page_link_by_slug('archivio'); ?>"><h2><?php echo __('Archivio Film'); ?></h2></a>
         </div>
       <br>
       <div class="archive-film row">  
