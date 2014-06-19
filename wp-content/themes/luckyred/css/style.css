@@ -3150,6 +3150,25 @@ footer {
 
 /* --SINGLE FILM-- */
 
+.single-film .info-wrapper {
+  padding-top: 735px;
+}
+
+.single-film .info-ondemand {
+  margin-top: -20px;
+}
+
+.single-film .info-ondemand h4 {
+  margin-top: -30px;
+}
+
+.single-film .fotorama__video-play {
+  margin-top: -20px;
+  background-size: 60%;
+  margin-left: -20px;
+  z-index: 30;
+}
+
 .infofilm h4 {
   font-size: 1.5em;
 }
@@ -3189,23 +3208,23 @@ footer {
 }
 
 .slider-film-simili-device {
-    display: inline-block;
-    width: 100%;
-    margin-top: 50px;
-    margin-bottom: 100px;
-  }
+  display: inline-block;
+  width: 100%;
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
 
-  .slider-film-simili-device .altri-film {
-    display: inline-block;
-    font-family: "Bebas Neue", Helvetica, sans-serif;
-    font-size: 2em;
-    margin-left: -30px;
-    margin-bottom: 10px;
-  }
+.slider-film-simili-device .altri-film {
+  display: inline-block;
+  font-family: "Bebas Neue", Helvetica, sans-serif;
+  font-size: 2em;
+  margin-left: -30px;
+  margin-bottom: 10px;
+}
 
-  .slider-film-simili-device .altri-film a {
-    color: rgba(0,0,0,0.8);
-  }
+.slider-film-simili-device .altri-film a {
+  color: rgba(0,0,0,0.8);
+}
 
 /* --FINE SINGLE FILM-- */
 
