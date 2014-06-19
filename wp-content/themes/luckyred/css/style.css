@@ -663,6 +663,10 @@ header.smaller .social-icon {
 
 /* --BLOG-ARCHIVIO-- */
 
+.data-smartphone {
+  display: none;
+}
+
 .blog-archivio-bg {
   background-color: rgba(242,242,242,1);
 }
@@ -3722,6 +3726,89 @@ margin-left: 0px;
 }
 /* --FINE PAGINA SCUOLA-- */
 
+/* --SINGLE-BLOG INIZIO-- */
+
+.info-blog {
+  z-index: 20;
+  margin: -180px 0px 0px 0px;
+  width: 320px;
+}
+
+.blogimage {
+  margin-top: 60px;
+}
+
+.slide-blog .info-date {
+  display: none;
+}
+
+.slide-blog .info-title h2 {
+    color: #FFF;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    font-family: "Bebas Neue",Helvetica,sans-serif;
+    font-size: 1.5em;
+    line-height: 1em;
+    display: inline-block;
+    margin-left: 10px;
+    width: auto;
+}
+
+.slide-blog .info-title h6 {
+    display: none;
+}
+
+.data-smartphone {
+  display: inline-block;
+  margin: 30px 20px 0 20px;
+}
+
+.data-smartphone h6 {
+  color: #FFF;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-family: "Bebas Neue",Helvetica,sans-serif;
+  font-size: 1.2em;
+  line-height: 1em;
+  width: 120px;
+  text-align: center;
+}
+
+.blog-content {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#blog-tag ul {
+  margin-left: -30px;
+  list-style-type: none;
+  height: auto;
+}
+
+#blog-tag {
+  display: none;
+}
+
+.blog-simil h2 {
+  color: #F32124;
+  font-family: "Bebas Neue",Helvetica,sans-serif;
+  margin-top: -30px;
+}
+
+.slide-blog-simil {
+  width: 100%;
+  float: left;
+  margin-bottom: 10px;
+}
+
+.slide-blog-simil h4 {
+  width: 100%;
+  margin-bottom: 10px;
+  font-size: 1em;
+}
+
+/* --SINGLE-BLOG FINE-- */
+
 /* --FOOTER-- */
 .footer {
     display: none;
@@ -3754,3 +3841,4 @@ margin-left: 0px;
   /* --FINE FOOTER-- */
 
 }
+
