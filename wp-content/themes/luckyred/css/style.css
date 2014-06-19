@@ -3148,6 +3148,67 @@ footer {
 
 /* --FINE CHI SIAMO-- */
 
+/* --SINGLE FILM-- */
+
+.infofilm h4 {
+  font-size: 1.5em;
+}
+
+.content-film {
+  margin-top: -3px;
+}
+
+.durata h4 {
+  margin-left: -15px;
+}
+
+.durata .content-film {
+  margin-top: -58px;
+}
+
+.trama {
+  margin-top: 20px;
+}
+
+.info-cast {
+  margin-left: 350px;
+  position: absolute;
+  margin-top: -350px;
+}
+
+.download-film {
+  display: none;
+}
+
+.tabs-content {
+  display: none;
+}
+
+.slider-film-simili {
+  display: none;
+}
+
+.slider-film-simili-device {
+    display: inline-block;
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 100px;
+  }
+
+  .slider-film-simili-device .altri-film {
+    display: inline-block;
+    font-family: "Bebas Neue", Helvetica, sans-serif;
+    font-size: 2em;
+    margin-left: -30px;
+    margin-bottom: 10px;
+  }
+
+  .slider-film-simili-device .altri-film a {
+    color: rgba(0,0,0,0.8);
+  }
+
+/* --FINE SINGLE FILM-- */
+
 .title-layout {
   height: 85px;
 }
