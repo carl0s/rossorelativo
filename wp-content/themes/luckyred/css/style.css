@@ -1364,7 +1364,6 @@ footer .button:active {
 .film-regista {
   margin-top: 10px; 
   margin-bottom: 30px;
-  margin-left: -15px;
 }
 
 .title-layout .titolo-film-regista {
@@ -3721,6 +3720,53 @@ margin-left: 0px;
   margin-bottom: 0px;
 }
 /* --FINE PAGINA SCUOLA-- */
+
+/* --INIZIO PAGINA REGISTA-- */
+  
+  .img-regista .info-wrapper .info-title {
+    margin-top: -172px;
+   
+  }
+
+  .img-regista .info-wrapper .info-title  h2 {
+    padding: 5px 3px 3px 3px;
+    font-size: 1.5em;
+  }
+
+  .img-regista .info-wrapper .info-content {
+    font-size: 1.5em;
+    padding: 3px 3px 3px 3px;
+  }
+
+  .biografia h2 {
+    font-size: 1.8em;
+    margin: 20px 0px 0px;
+  }
+
+  .biografia p {
+    font-size: 0.8em;
+    margin-bottom: 20px;
+  }
+
+  .filmografia h2 {
+    font-size: 1.8em;
+    margin: 20px 0px 0px;
+  }
+
+  .filmografia h3 {
+    font-size: 1.3em;
+  }
+
+  .altri-film-bg .altri-film-regista h5 {
+    font-size: 0.8em;
+  }
+
+  .altri-film-regista {
+    margin-top: 60px;
+  }
+
+
+/* --FINE PAGINA REGISTA-- */
 
 /* --FOOTER-- */
 .footer {
