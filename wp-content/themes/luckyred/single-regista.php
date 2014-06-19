@@ -1,5 +1,8 @@
   <?php get_header(); ?>
 
+  <section class="main-section">
+  <!-- content goes here -->
+
   <?php wp_reset_postdata();  ?>
 
   <div class="img-regista slideshow-wrapper">
@@ -13,7 +16,7 @@
               <div class="row collapse">
                 <div class="large-9 columns">
                   <div class='info-content'>
-                    <span><?php echo get_field('nazionalità'); ?></span>
+                    <span><?php echo get_field('nazionalita'); ?></span>
                   </div>
                 </div>
               </div>
@@ -53,7 +56,8 @@
             array(
                   'key' => 'regia', // name of custom field
                   'value' => '"' . get_the_ID() . '"', // matches exaclty "123", not just 123. This prevents a match for "1234"
-                  'compare' => 'LIKE'
+                  'compare' => 'LIKE',
+                  'posts_per_page' => -1
                   )
             )
           ));
@@ -83,13 +87,20 @@
 </div>
 </div>
 
-<div class="altri-film-bg large-12 columns">
+<div class="altri-film-bg large-12 columns ">
   <div class="row">
     <h3><span><?php echo __('Altri film'); ?></span></h3>
     <div class="altri-film-regista">
       <?php query_posts(array('post_type'=>'regista')); ?>
       <h5><?php echo get_field('film_regista'); ?></h5>
     </div>
+  </div>
+</div>
+
+</section>
+
+  <a class="exit-off-canvas"></a>
+
   </div>
 </div>
 <!--FOOTER-->
