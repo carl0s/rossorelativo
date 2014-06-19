@@ -37,7 +37,7 @@
 
 <div class="chi-siamo-bg">
   <div class="row">
-    <div class="large-12 small-12 columns">
+    <div class="large-12 medium-12 small-12 columns">
       <h3><?php the_title(); ?></h3>
       <p><?php the_content(); ?></p>
     </div>
@@ -45,13 +45,13 @@
 </div>
 <div class="produzioni-bg">
   <div class="row">
-    <div class="large-12 small-12 columns">
+    <div class="large-12 medium-12 small-12 columns">
       <h3><?php echo __('Le nostre produzioni'); ?></h3>
       <div class="row">
-        <div class="large-6 small-12 columns">
+        <div class="large-6 medium-6 small-12 columns">
           <h4><?php echo __('Produzione italiana'); ?></h4>
           <div class="row">
-            <div class="large-4 small-12 columns">
+            <div class="large-4 medium-6 small-12 columns">
               <?php
               if( have_rows('produzione_italiana') ): while ( have_rows('produzione_italiana') ) : the_row();
               ?>
@@ -83,10 +83,10 @@
             </div>
           </div>
         </div>
-        <div class="large-6 columns">
+        <div class="large-6 medium-6 columns">
           <h4><?php echo __('Co Produzioni internazionali'); ?></h4>
             <div class="row">
-              <div class="large-5 columns">
+              <div class="large-5 medium-8 columns">
                 <?php
                 if( have_rows('co_produzione_internazionale') ): while ( have_rows('co_produzione_internazionale') ) : the_row();
                 ?>
@@ -128,22 +128,22 @@
         <div class="large-12 columns">
           <h4><?php echo __("L'azienda"); ?></h4>
           <div class="row">
-            <div class="large-3 columns">
+            <div class="large-3 medium-6 columns">
               <a class="azienda-img" href="<?php echo get_permalink(); ?>"><?php $image = get_field('immagine_area_edizioni'); ?><img src="<?php echo $image['url']; ?>" /></a>
               <h5><?php echo get_field('titolo_area_edizioni'); ?></h5>
               <p><?php echo get_field('descrizione_area_edizioni'); ?></p>
             </div>
-            <div class="large-3 columns">
+            <div class="large-3 medium-6 columns">
               <a class="azienda-img" href="<?php echo get_permalink(); ?>"><?php $image = get_field('immagine_area_commerciale'); ?><img src="<?php echo $image['url']; ?>" /></a>
               <h5><?php echo get_field('titolo_area_commerciale'); ?></h5>
               <p><?php echo get_field('descrizione_area_commerciale'); ?></p>
             </div>
-            <div class="large-3 columns">
+            <div class="large-3 medium-6 columns">
               <a class="azienda-img" href="<?php echo get_permalink(); ?>"><?php $image = get_field('immagine_ufficio_stampa'); ?><img src="<?php echo $image['url']; ?>" /></a>
               <h5><?php echo get_field('titolo_ufficio_stampa'); ?></h5>
               <p><?php echo get_field('descrizione_ufficio_stampa'); ?></p>
             </div>
-            <div class="large-3 columns">
+            <div class="large-3 medium-6 columns">
               <a class="azienda-img" href="<?php echo get_permalink(); ?>"><?php $image = get_field('immagine_marketing'); ?><img src="<?php echo $image['url']; ?>" /></a>
               <h5><?php echo get_field('titolo_marketing'); ?></h5>
               <p><?php echo get_field('descrizione_marketing'); ?></p>

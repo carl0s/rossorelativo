@@ -3105,6 +3105,43 @@ footer {
 
 /* --FINE FOOTER-- */
 
+/* --CHI SIAMO-- */
+
+.chi-siamo .info-wrapper {
+  padding-top: 455px;
+}
+
+.chi-siamo .info-wrapper .info-content {
+  display: none;
+}
+
+.chi-siamo .info-wrapper .info-date {
+  display: none;
+}
+
+.produzioni-bg {
+  height: auto;
+  padding-bottom: 50px;
+}
+
+.titolo-produzione {
+  display: none;
+}
+
+.azienda-bg {
+  padding-bottom: 50px;
+}
+
+.azienda-img {
+  display: none;
+}
+
+.azienda-bg h5 {
+  font-size: 1.2em;
+}
+
+/* --FINE CHI SIAMO-- */
+
 .title-layout {
   height: 85px;
 }
