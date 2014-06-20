@@ -35,15 +35,13 @@ $actual_id = get_the_ID();
   <div class="row">
     <div class="blog-content">
       <?php the_content(); ?>
-      <div id="blog-tag" class="large-3 columns">
-        <h2><?php echo __('Ricerca tra i tag ') ?></h2>
-      </div>
       <div id="blog-tag" class="large-9 columns">
-        <?php
-        if(get_the_tag_list()) {
-          echo get_the_tag_list('<ul><li>','</li><li>','</li></ul>');
-        }
-        ?>
+        <?php if(get_the_tag_list()) : ?>
+          <div id="blog-tag" class="large-3 columns">
+            <h2><?php echo __('Ricerca tra i tag ') ?></h2>
+          </div>
+        <?php  echo get_the_tag_list('<ul><li>','</li><li>','</li></ul>'); ?>
+        <?php endif; ?>
       </div>
     </div>
   </div>
