@@ -8,7 +8,7 @@
 
 <div class="row content" role="content">
   <div class="article-container clearfix">
-    <div class="small-12 medium-8 large-7 columns">
+    <div class="small-12 medium-12 large-7 columns">
       <?php wp_reset_postdata(); ?>
       <?php
 
@@ -40,7 +40,7 @@
         <li>
         <?php echo get_the_post_thumbnail(); ?>
         <h4><a href="<?php echo get_permalink(); ?>"><?php echo get_the_title(); ?></a></h4>
-        <?php excerpt( '50','<p>','</p>'); ?>
+        <p><?php excerpt( '50'); ?></p>
         </li>
       <?php
         endwhile;
@@ -53,7 +53,7 @@
       ?>
     </div>
     <?php wp_reset_postdata(); ?>
-    <div class="small-12 medium-4 large-4 columns">
+    <div class="small-12 medium-12 large-4 columns">
       <div class="side">
         <h2><?php echo __('Notizie dal nostro blog'); ?></h2>
         <?php
@@ -65,7 +65,7 @@
           if($news->have_posts()): 
             while($news->have_posts()): 
               $news->the_post();
-        ?> 
+        ?>
           <div class="short-blog">
             <h3><a href="<?php echo get_permalink(); ?>" title="<?php echo get_the_title(); ?>"><?php echo get_the_title(); ?></a></h3>
             <?php excerpt( '30','<p>','</p>'); ?>
@@ -83,7 +83,7 @@
 
 <div class="film-archivio-bg">
   <div class="row">
-    <div class="large-12 columns">
+    <div class="large-12 medium-12 columns">
       <h2 class="section-title"><?php echo __('I nostri film'); ?></h2>
     </div>
   </div>
@@ -102,10 +102,9 @@
           while($videos->have_posts()): 
             $videos->the_post();
           ?>
-          <div class="small-12 medium-6 large-3 columns">
+          <div class="small-12 medium-3 large-3 columns">
             <div class="row img-archivio">
               <a href="<?php echo get_permalink(); ?>" title="<?php echo get_the_title(); ?>"><?php $image = get_field('locandina'); ?><img src="<?php echo $image['url']; ?>" /></a>
-              <?php the_category(); ?>
             </div>
             <div class="text-container">
               <h3><a href="<?php echo get_permalink(); ?>" title="<?php echo get_the_title(); ?>"><?php echo get_the_title(); ?></a></h3>
@@ -115,7 +114,7 @@
           endwhile;
           endif;
           ?>
-          <div class="small-12 medium-6 large-4 columns right">
+          <div class="small-12 medium-4 large-4 columns right">
             <a href="<?php echo get_page_link_by_slug('archivio'); ?>" class="search-button right">Guarda l'archivio</a>
           </div>       
         </div>

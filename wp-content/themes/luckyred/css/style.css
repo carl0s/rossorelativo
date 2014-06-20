@@ -30,6 +30,55 @@
   font-family: "Bebas Neue";
 }
 
+.right-off-canvas-menu {
+  background-color: rgba(242,242,242,1);
+  font-family: "Bebas Neue";
+}
+
+.right-off-canvas-menu h4 {
+  font-family: "Bebas Neue", Helvetica, sans-serif;
+  margin-left: 10px;
+  margin-top: 20px;
+  color: rgba(243,33,36,1);
+}
+
+.right-off-canvas-menu .login-device {
+  margin-left: 10px; 
+}
+
+.right-off-canvas-menu #loginform .login-username label {
+  font-size: 1em;
+}
+
+.right-off-canvas-menu #loginform .login-username #user_login {
+  width: 230px;
+  height: 40px;
+  font-size: 15px;
+}
+
+.right-off-canvas-menu #loginform .login-password label {
+  font-size: 1em;
+}
+
+.right-off-canvas-menu #loginform .login-password #user_pass {
+  width: 230px;
+  height: 40px;
+  font-size: 15px;
+}
+
+.right-off-canvas-menu #loginform #wp-submit {
+  width: 230px;
+  height: 40px;
+  font-size: 15px;
+  margin-top: -5px;
+}
+
+.right-off-canvas-menu .login-device h6 {
+  margin-top: 75px;
+  font-family: 'Georgia';
+  font-style: italic; 
+}
+
 .tab-bar a img {
   height: 60px;
 }
@@ -37,6 +86,21 @@
 .left-small {
   border-right: none;
   padding: 10px;
+}
+
+.right-small {
+  border-left: none;
+  padding: 10px;
+}
+
+.right-small .menu-icon {
+  background-image: url(../img/user.svg);
+  background-repeat: no-repeat;
+  background-size: 50%;
+}
+
+.right-small .menu-icon span {
+  display: none;
 }
 
 .menu-main-menu-container {
@@ -74,6 +138,35 @@ ul.off-canvas-list li label a:hover{
 
 ul.off-canvas-list li label a{
   border-bottom: none;
+}
+
+.ricerca-device #searchform {
+  width: 190px;
+  margin-left: 10px;
+  margin-top: 5px;
+}
+
+.screen-reader-text {
+  display: none;
+}
+
+.ricerca-device #searchform input {
+  border: none;
+  height: 30px;
+  background-color: rgba(50,50,50,0.1);
+  box-shadow: none;
+}
+
+.ricerca-device #searchform #searchsubmit {
+  background-color: rgba(243,33,36,1);
+  width: 40px;
+  height: 30px;
+  font-family: "Bebas Neue", Helvetica, sans-serif;
+  font-size: 0.8em;
+  color: rgba(255,255,255,1);
+  margin-top: -46px;
+  margin-left: 190px;
+  position: absolute;
 }
 
 .left-off-canvas-menu .info-device {
@@ -2600,6 +2693,11 @@ footer .button:active {
   display: inline-block;
 }
 
+.search-list li p {
+  font-family: 'Georgia', serif;
+  font-style: italic;
+}
+
 .side {
   margin-bottom: 50px;
 }
@@ -3095,6 +3193,10 @@ footer {
   margin-top: -200px;
 }
 
+footer .button {
+  display: none;
+}
+
 .clearfix:after {
   display: none;
 }
@@ -3228,6 +3330,26 @@ footer {
 
 /* --FINE SINGLE FILM-- */
 
+/* --PAGINA SEARCH-- */
+
+.title-red {
+  margin-top: 110px;
+}
+
+.side {
+  margin-top: -100px;
+}
+
+.section-title {
+  font-size: 1.5em;
+}
+
+.text-container h3 {
+  font-size: 1em;
+}
+
+/* --FINE PAGINA SEARCH-- */
+
 .title-layout {
   height: 85px;
 }
@@ -3302,6 +3424,13 @@ header {
  height: 130px;
 }
 
+.right-small {
+ width: 80px;
+ height: 130px;
+ margin-top: 10px;
+ margin-right: -10px;
+}
+
 /* TAB BAR */
 .tab-bar {
   display: block;
@@ -3371,6 +3500,10 @@ header {
     margin-top: 60px;
   }
 
+  .right-small {
+    margin-top: 10px;
+    margin-right: 10px;
+  }
 
   /* -- INDEX INIZIO -- */
   .slider-cinema .info-title h2 {
