@@ -2619,6 +2619,10 @@ footer .button:active {
 #button-scuola a:hover {
   background-color: rgba(253,184,19,1);
 }
+
+.dettagli-film {
+  display: none;
+}
 /* FINE PAGINA SCUOLA */
 
 
@@ -3480,6 +3484,125 @@ header {
   margin-right: 20px;
 }
 
+
+/* INIZIO PAGINA REGISTA */
+
+.img-regista .info-wrapper .info-title {
+    margin-top: -174px;
+   
+  }
+
+  .img-regista .info-wrapper .info-date {
+    display: none;
+   
+  }
+
+  .biografia h2 {
+    font-size: 2.5em;
+    margin: 10px 0px 0px;
+  }
+
+  .biografia p {
+    font-size: 1em;
+    margin-bottom: 25px;
+  }
+
+  .filmografia h2 {
+    font-size: 2.5em;
+    margin: 15px 0px 0px;
+  }
+
+  .filmografia h3 {
+    font-size: 1.3em;
+  }
+
+  .film-regista {
+    height: 300px;
+    overflow: hidden;
+  }
+
+  .film-regista a img {
+    max-height: 250px;
+  }
+
+  .altri-film-bg .altri-film-regista {
+    margin-bottom: 70px;
+  }
+/* FINE PAGINA REGISTA */
+
+/* INIZIO PAGINA SCUOLA */
+
+#button-scuola {
+  display: none;
+}
+
+.info-film-scuola {
+  display: none;
+}
+
+.button-device {
+  display: inline-block;
+}
+
+.text-film , .descrizione-scuole {
+  height: 280px;
+}
+
+.text-film h5 {
+  font-size: 1.3em;
+}
+
+
+.text-film p {
+  font-size: 0.8em;
+}
+
+.white-gradient {
+  display: none;
+}
+.info-film-scuola-device h5 span {
+  font-family: "Bebas Neue", Helvetica, sans-serif;
+  color: rgba(255,255,255,1);
+  display: inline-block;
+  background-color: rgba(72,72,72,1);
+  padding-left: 7px;
+  padding-right: 7px;
+  padding-top: 3px;
+}
+
+.info-film-scuola-device a {
+  font-family: "Georgia";
+  font-style: italic;
+  font-size: 80%;
+  color: rgba(72,72,72,1);
+  text-decoration: underline;
+}
+
+.button-device button {
+  width: 100%;
+  height: 70px;
+  background-color: #F32124;
+}
+
+.button-device button a h5 {
+
+font-family: Bebas Neue;
+border: medium none;
+color: #FFF;
+font-size: 1.8em;
+}
+
+#scuola {
+  margin-bottom: 20px;
+}
+
+.dettagli-film {
+  display: block;
+  margin-bottom: 30px;
+}
+
+/* FINE PAGINA SCUOLA */
+
 }
 
 @media only screen and (min-width: 320px) and (max-width: 480px) {
@@ -4212,6 +4335,8 @@ header {
   position: absolute; 
   margin-bottom: 0px;
 }
+
+
 /* --FINE PAGINA SCUOLA-- */
 
 
