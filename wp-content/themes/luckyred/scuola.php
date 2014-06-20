@@ -64,7 +64,7 @@
     </div>
   </div>
   <div class="option-visual-page row">
-    <div class="large-6 columns">
+    <div class="large-6 medium-6 columns">
       <ul class="order-film">
       <li><?php echo __('Ordina per'); ?></li>
         <li><a href="?orderby=title">Nome</a></li>
@@ -72,7 +72,7 @@
         <li><a href="?orderby=rand">Più vecchio</a></li>
       </ul>
     </div>
-    <div class="large-6 end columns">
+    <div class="large-6 end medium-6 columns">
       <ul class="view-film">
       <li><?php echo __('Visualizza'); ?></li>
       <li><a href="?posts=4#archivio">4</a></li>
@@ -88,8 +88,9 @@
 <?php
 if (have_posts()) : while(have_posts()) : the_post();
 ?>
+
 <div id="scuola" class="row">
-  <div id="sezione-film" class="large-12 small-12 columns">
+  <div id="sezione-film" class="large-12 small-12 medium-12 columns">
     <ul>
       <li><h4>
         <?php 
@@ -100,20 +101,20 @@ if (have_posts()) : while(have_posts()) : the_post();
       <li><h3><span><?php echo __('Età consigliata '); ?></span><?php echo get_field('limite_età'); ?></h3></li>
     </ul>
   </div>
-  <div class="sezione-film large-3 small-12 columns">
+  <div class="sezione-film large-3 small-12 medium-4 columns">
     <div class="img-device">
       <?php echo get_the_post_thumbnail(); ?>
     </div>
     <a class="archive-img" href="<?php echo get_permalink(); ?>"> <?php $image = get_field('locandina'); ?><img src="<?php echo $image['url']; ?>" ></a>
  </div>
- <div class="text-film large-6 small-12 columns">
+ <div class="text-film large-6 small-12 medium-8 columns">
   <p class="descrizione-scuole">
      <?php echo get_field('descrizione'); ?>
      <div class="white-gradient"><button class="bottone-scuola"></button></div>
   </p>
   <a href="<?php echo get_field('link_trailer'); ?>" class="trailer" target="_blank"><h5>Guarda il trailer</h5></a>
  </div>
-  <div class="info-film-scuola large-3 columns">
+  <div class="info-film-scuola large-3 medium-6 columns">
    <h5><span><?php echo __('Regia'); ?></span>  
     <?php $registi = get_field('regia');
     $i = 0;
@@ -186,6 +187,84 @@ if (have_posts()) : while(have_posts()) : the_post();
         ?>
      </div>
    </div>
+</div>
+<div class="dettagli-film">
+  <div class="row">
+<div class="info-film-scuola-device large-3 medium-6 columns">
+   <h5><span><?php echo __('Regia'); ?></span>  
+    <?php $registi = get_field('regia');
+    $i = 0;
+    foreach($registi as $regista):
+      if($i > 0):
+        $separator = ', ';
+      else:
+        $separator = '';
+      endif;?>
+      <?php echo $separator; ?><a href="<?php echo get_permalink($regista->ID); ?>" title="La scheda di <?php echo $regista->post_title; ?>"><?php echo $regista->post_title; ?></a>
+      <?php
+      $i++;
+      endforeach;
+      ?>
+    </h5>
+    <h5>
+      <span><?php echo __('Nazione'); ?></span>
+      <?php
+      $nazioni = get_field('nazione');
+      $i=0;
+      foreach($nazioni as $nazione):
+        if($i = 0):
+          $separator = ', ';
+        else:
+          $separator = '';
+        endif;?>
+        <a title="Film di origine <?php echo $nazione ?>"><?php echo $separator . $nazione ?></a>
+        <?php
+        $i++;
+        endforeach;
+        ?>
+      </h5>
+      <h5>
+        <span><?php echo __('Anno'); ?></span>
+        <?php
+        $anno = get_field('anno');
+        ?>
+        <a title="Film del <?php echo $anno ?>"><?php echo $anno;?></a>
+      </h5>
+      <h5>
+        <span><?php echo __('Genere'); ?></span> 
+        <?php
+        $categories = get_the_category();
+        $separator = ' ';
+        $output = '';
+        if($categories){
+          foreach($categories as $category) {
+            $output .= '<a href="'.get_category_link( $category->term_id ).'" title="' . esc_attr( sprintf( __( "View all posts in %s" ), $category->name ) ) . '">'.$category->cat_name.'</a>'.$separator;
+          }
+          echo trim($output, $separator);
+        }
+        ?>
+      </h5>
+</div>
+
+<div class="button-device medium-6 columns">
+    <?php
+          if( get_field('scheda_del_film') ):
+          $file = get_field('scheda_del_film');
+        ?>
+        <a href="<?php echo $file['url']; ?>" class="button expand"><?php echo __('Scheda del film'); ?></a>
+        <?php
+          endif;
+        ?>
+        <?php
+          if( get_field('spunti_didattici') ):
+          $file = get_field('spunti_didattici');
+        ?>
+        <a href="<?php echo $file['url']; ?>" class="button expand"><?php echo __('Spunti didattici'); ?></a>
+        <?php
+          endif;
+        ?>
+   </div>
+  </div>
 </div>
 <?php endwhile; endif; ?>
 </div>

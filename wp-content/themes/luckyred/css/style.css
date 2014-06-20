@@ -30,6 +30,55 @@
   font-family: "Bebas Neue";
 }
 
+.right-off-canvas-menu {
+  background-color: rgba(242,242,242,1);
+  font-family: "Bebas Neue";
+}
+
+.right-off-canvas-menu h4 {
+  font-family: "Bebas Neue", Helvetica, sans-serif;
+  margin-left: 10px;
+  margin-top: 20px;
+  color: rgba(243,33,36,1);
+}
+
+.right-off-canvas-menu .login-device {
+  margin-left: 10px; 
+}
+
+.right-off-canvas-menu #loginform .login-username label {
+  font-size: 1em;
+}
+
+.right-off-canvas-menu #loginform .login-username #user_login {
+  width: 230px;
+  height: 40px;
+  font-size: 15px;
+}
+
+.right-off-canvas-menu #loginform .login-password label {
+  font-size: 1em;
+}
+
+.right-off-canvas-menu #loginform .login-password #user_pass {
+  width: 230px;
+  height: 40px;
+  font-size: 15px;
+}
+
+.right-off-canvas-menu #loginform #wp-submit {
+  width: 230px;
+  height: 40px;
+  font-size: 15px;
+  margin-top: -5px;
+}
+
+.right-off-canvas-menu .login-device h6 {
+  margin-top: 75px;
+  font-family: 'Georgia';
+  font-style: italic; 
+}
+
 .tab-bar a img {
   height: 60px;
 }
@@ -37,6 +86,21 @@
 .left-small {
   border-right: none;
   padding: 10px;
+}
+
+.right-small {
+  border-left: none;
+  padding: 10px;
+}
+
+.right-small .menu-icon {
+  background-image: url(../img/user.svg);
+  background-repeat: no-repeat;
+  background-size: 50%;
+}
+
+.right-small .menu-icon span {
+  display: none;
 }
 
 .menu-main-menu-container {
@@ -74,6 +138,35 @@ ul.off-canvas-list li label a:hover{
 
 ul.off-canvas-list li label a{
   border-bottom: none;
+}
+
+.ricerca-device #searchform {
+  width: 190px;
+  margin-left: 10px;
+  margin-top: 5px;
+}
+
+.screen-reader-text {
+  display: none;
+}
+
+.ricerca-device #searchform input {
+  border: none;
+  height: 30px;
+  background-color: rgba(50,50,50,0.1);
+  box-shadow: none;
+}
+
+.ricerca-device #searchform #searchsubmit {
+  background-color: rgba(243,33,36,1);
+  width: 40px;
+  height: 30px;
+  font-family: "Bebas Neue", Helvetica, sans-serif;
+  font-size: 0.8em;
+  color: rgba(255,255,255,1);
+  margin-top: -46px;
+  margin-left: 190px;
+  position: absolute;
 }
 
 .left-off-canvas-menu .info-device {
@@ -2526,6 +2619,10 @@ footer .button:active {
 #button-scuola a:hover {
   background-color: rgba(253,184,19,1);
 }
+
+.dettagli-film {
+  display: none;
+}
 /* FINE PAGINA SCUOLA */
 
 
@@ -2598,6 +2695,11 @@ footer .button:active {
   font-size: 1em;
   line-height: 1em;
   display: inline-block;
+}
+
+.search-list li p {
+  font-family: 'Georgia', serif;
+  font-style: italic;
 }
 
 .side {
@@ -3093,6 +3195,10 @@ footer {
   margin-top: -200px;
 }
 
+footer .button {
+  display: none;
+}
+
 .clearfix:after {
   display: none;
 }
@@ -3226,6 +3332,26 @@ footer {
 
 /* --FINE SINGLE FILM-- */
 
+/* --PAGINA SEARCH-- */
+
+.title-red {
+  margin-top: 110px;
+}
+
+.side {
+  margin-top: -100px;
+}
+
+.section-title {
+  font-size: 1.5em;
+}
+
+.text-container h3 {
+  font-size: 1em;
+}
+
+/* --FINE PAGINA SEARCH-- */
+
 .title-layout {
   height: 85px;
 }
@@ -3298,6 +3424,13 @@ header {
 .left-small {
  width: 80px;
  height: 130px;
+}
+
+.right-small {
+ width: 80px;
+ height: 130px;
+ margin-top: 10px;
+ margin-right: -10px;
 }
 
 /* TAB BAR */
@@ -3484,8 +3617,127 @@ footer .wrapper {
   display: none;
 }
 
-
 /* FINE PAGINA BLOG */
+
+
+/* INIZIO PAGINA REGISTA */
+
+.img-regista .info-wrapper .info-title {
+    margin-top: -174px;
+   
+  }
+
+  .img-regista .info-wrapper .info-date {
+    display: none;
+   
+  }
+
+  .biografia h2 {
+    font-size: 2.5em;
+    margin: 10px 0px 0px;
+  }
+
+  .biografia p {
+    font-size: 1em;
+    margin-bottom: 25px;
+  }
+
+  .filmografia h2 {
+    font-size: 2.5em;
+    margin: 15px 0px 0px;
+  }
+
+  .filmografia h3 {
+    font-size: 1.3em;
+  }
+
+  .film-regista {
+    height: 300px;
+    overflow: hidden;
+  }
+
+  .film-regista a img {
+    max-height: 250px;
+  }
+
+  .altri-film-bg .altri-film-regista {
+    margin-bottom: 70px;
+  }
+/* FINE PAGINA REGISTA */
+
+/* INIZIO PAGINA SCUOLA */
+
+#button-scuola {
+  display: none;
+}
+
+.info-film-scuola {
+  display: none;
+}
+
+.button-device {
+  display: inline-block;
+}
+
+.text-film , .descrizione-scuole {
+  height: 280px;
+}
+
+.text-film h5 {
+  font-size: 1.3em;
+}
+
+
+.text-film p {
+  font-size: 0.8em;
+}
+
+.white-gradient {
+  display: none;
+}
+.info-film-scuola-device h5 span {
+  font-family: "Bebas Neue", Helvetica, sans-serif;
+  color: rgba(255,255,255,1);
+  display: inline-block;
+  background-color: rgba(72,72,72,1);
+  padding-left: 7px;
+  padding-right: 7px;
+  padding-top: 3px;
+}
+
+.info-film-scuola-device a {
+  font-family: "Georgia";
+  font-style: italic;
+  font-size: 80%;
+  color: rgba(72,72,72,1);
+  text-decoration: underline;
+}
+
+.button-device button {
+  width: 100%;
+  height: 70px;
+  background-color: #F32124;
+}
+
+.button-device button a h5 {
+
+font-family: Bebas Neue;
+border: medium none;
+color: #FFF;
+font-size: 1.8em;
+}
+
+#scuola {
+  margin-bottom: 20px;
+}
+
+.dettagli-film {
+  display: block;
+  margin-bottom: 30px;
+}
+
+/* FINE PAGINA SCUOLA */
+>>>>>>> FETCH_HEAD
 
 }
 
@@ -3507,6 +3759,10 @@ footer .wrapper {
     margin-top: 60px;
   }
 
+  .right-small {
+    margin-top: 10px;
+    margin-right: 10px;
+  }
 
   /* -- INDEX INIZIO -- */
   .slider-cinema .info-title h2 {
@@ -4216,6 +4472,8 @@ footer .wrapper {
   position: absolute; 
   margin-bottom: 0px;
 }
+
+
 /* --FINE PAGINA SCUOLA-- */
 
 
