@@ -69,7 +69,6 @@
 <div name="prossime-uscite" id="prossime-uscite" class="nextexit-bg">
     <div class="row">
       <h2><?php echo __('Prossime uscite'); ?></h2>
-
       <div class="slider-nextexit slideshow-wrapper">
         <div class="fotorama slideshow" data-click="false" data-auto="false" data-nav="thumbs" data-loop="true" data-width="100%" data-ratio="1180/360" data-thumbheight="112" data-thumbwidth="180">
           <?php 

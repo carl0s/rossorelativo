@@ -35,6 +35,12 @@ $actual_id = get_the_ID();
   <div class="row">
     <div class="blog-content">
       <?php the_content(); ?>
+      <?php $videoblog = get_field('video'); ?>
+      <?php if($videoblog != NULL) : ?>
+        <div class="fotorama">
+          <a href="<?php echo get_field('video'); ?>"></a>
+        </div>
+      <?php endif; ?>
       <div id="blog-tag" class="large-9 columns">
         <?php if(get_the_tag_list()) : ?>
           <div id="blog-tag" class="large-3 columns">

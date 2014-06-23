@@ -2890,7 +2890,7 @@ footer .button:active {
 .blog-content{
   font-family: "Georgia";
   font-style: italic;
-  margin-bottom: 95px;
+  margin-bottom: 30px;
   width: 100%;
   padding: 0 20% 0 10%;
   margin-top: 50px;
@@ -2902,11 +2902,15 @@ footer .button:active {
   font-size: 1.5em;
   text-align: left;
   margin-left: -15px;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 #blog-tag ul{
   margin-left: -50px;
   list-style-type: none;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 #blog-tag ul li{
@@ -3615,6 +3619,10 @@ footer .wrapper {
 
 .arrow-blog-general {
   display: none;
+}
+
+#blog-tag h2 {
+  margin-bottom: 0px;
 }
 
 /* FINE PAGINA BLOG */
