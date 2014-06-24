@@ -119,8 +119,6 @@ $args = array();
 			<a class="archive-img-smart" href="<?php echo get_permalink(); ?>"><?php echo get_the_post_thumbnail(); ?></a>
 			<a class="archive-img" href="<?php echo get_permalink(); ?>"> <?php $image = get_field('locandina'); ?><img src="<?php echo $image['url']; ?>" /></a>
 
-      <div class="press_device"><a href="<?php echo get_permalink(); ?>" class="button right">Leggi articolo</a></div>
-
 			<div class="link-press">
 				<a href="<?php echo get_permalink($id); ?>#panel-foto"><img src="<?php echo get_template_directory_uri() . '/img/gallery.png' ?>"></a>
 				<a href="<?php echo get_permalink($id); ?>#panel-video"><img src="<?php echo get_template_directory_uri() . '/img/video.png' ?>"></a>
@@ -130,6 +128,17 @@ $args = array();
 			</div>
 
 		</div>
+
+    <div class="press_device">
+      <?php
+      if( get_field('uscita_del_materiale_di_stampa') ):
+        $file = get_field('uscita_del_materiale_di_stampa');
+      ?>
+      <a href="<?php echo $file['url']; ?>" class="button right">Leggi articolo</a>
+      <?php
+      endif;
+      ?>
+      </div>
 
 	<?php endwhile; ?>
 

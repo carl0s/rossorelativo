@@ -88,7 +88,7 @@
               <?php echo get_the_post_thumbnail(); ?>
               <div class='row'>
                 <div class='info-title large-5 medium-5 small-5 columns'>
-                  <a href="<?php echo get_the_permalink(); ?>"><?php the_title('<h2>','</h2>'); ?></a>
+                  <a href="<?php echo get_the_permalink(); ?>"><?php the_title('<h3>','</h3>'); ?></a>
                 </div>
               </div>
               <div class='row'>
