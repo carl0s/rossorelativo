@@ -6,6 +6,9 @@
 ?>
 <?php get_header(); ?>
 
+<section class="main-section">
+  <!-- content goes here -->
+
 <div class="row content" role="content">
   <div class="article-container clearfix">
     <div class="small-12 medium-12 large-7 columns">
@@ -121,4 +124,12 @@
       </div>
     </div>
   </div>
+
+  </section>
+
+  <a class="exit-off-canvas"></a>
+
+  </div>
+</div>
+
 <?php get_footer(); ?>
