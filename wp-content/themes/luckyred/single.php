@@ -33,7 +33,7 @@ $actual_id = get_the_ID();
     </div>
   </div>
   <div class="row">
-    <div class="blog-content">
+    <div class="blog-content large-12 medium-12 small-12 columns">
       <?php the_content(); ?>
       <?php $videoblog = get_field('video'); ?>
       <?php if($videoblog != NULL) : ?>
@@ -41,12 +41,14 @@ $actual_id = get_the_ID();
           <a href="<?php echo get_field('video'); ?>"></a>
         </div>
       <?php endif; ?>
-      <div id="blog-tag" class="large-9 columns">
+      <div id="blog-tag" class="large-12 medium-12 columns">
         <?php if(get_the_tag_list()) : ?>
-          <div id="blog-tag" class="large-3 columns">
+          <div id="blog-tag" class="large-3 medium-12 columns">
             <h2><?php echo __('Ricerca tra i tag ') ?></h2>
           </div>
-        <?php  echo get_the_tag_list('<ul><li>','</li><li>','</li></ul>'); ?>
+          <div class="large-9 medium-12 columns">
+            <?php  echo get_the_tag_list('<ul><li>','</li><li>','</li></ul>'); ?>
+          </div>
         <?php endif; ?>
       </div>
     </div>
@@ -88,7 +90,8 @@ $actual_id = get_the_ID();
   </div>
 
   <div class="row">
-    <div class="comments">
+    <div class="comments large-12 columns">
+      <h2><?php echo __('Lascia un commento'); ?></h2>
       <?php $withcomments =1; comments_template();?>
     </div>
   </div>

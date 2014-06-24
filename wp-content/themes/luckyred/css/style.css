@@ -28,11 +28,13 @@
 .left-off-canvas-menu {
   background-color: rgba(242,242,242,1);
   font-family: "Bebas Neue";
+  position: fixed;
 }
 
 .right-off-canvas-menu {
   background-color: rgba(242,242,242,1);
   font-family: "Bebas Neue";
+  position: fixed;
 }
 
 .right-off-canvas-menu h4 {
@@ -68,15 +70,49 @@
 
 .right-off-canvas-menu #loginform #wp-submit {
   width: 230px;
-  height: 40px;
-  font-size: 15px;
+  height: 60px;
+  font-size: 25px;
   margin-top: -5px;
+  margin-bottom: 20px;
 }
 
 .right-off-canvas-menu .login-device h6 {
   margin-top: 75px;
   font-family: 'Georgia';
   font-style: italic; 
+}
+
+.right-off-canvas-menu .hello-user a {
+  width: 230px;
+  text-align: left;
+  font-size: 1.5em;
+  height: 40px;
+  background-color: rgba(243,33,36,1);
+  color: rgba(255,255,255,1);
+  padding: 3px 10px 5px;
+  margin-bottom: 10px;
+}
+
+.right-off-canvas-menu .site-admin a {
+  width: 230px;
+  text-align: left;
+  font-size: 1.5em;
+  height: 40px;
+  background-color: rgba(243,33,36,1);
+  color: rgba(255,255,255,1);
+  padding: 3px 10px 5px;
+  margin-bottom: 10px;
+}
+
+.right-off-canvas-menu .log-out a {
+  width: 230px;
+  text-align: left;
+  font-size: 1.5em;
+  height: 40px;
+  background-color: rgba(243,33,36,1);
+  color: rgba(255,255,255,1);
+  padding: 3px 10px 5px;
+  margin-bottom: 10px;
 }
 
 .tab-bar a img {
@@ -786,9 +822,10 @@ header.smaller .social-icon {
   text-decoration: none;
 }
 
-.blog p {
+.blog-reference p {
   font-family: "Georgia";
   font-style: italic;
+  height: 155px;
 }
 
 .blog .button {
@@ -1030,7 +1067,7 @@ footer .button:active {
 #wp-submit {
   background-color: rgba(243,33,36,1);
   font-family: "Bebas Neue";
-  padding: 10px 40px 10px 40px;
+  padding: 0 40px 10px 40px;
   margin-top: 10px;
   width: 180px;
   border: none;
@@ -2336,7 +2373,7 @@ footer .button:active {
 }
 
 .title-layout {
-  height: auto;
+  height: 100px;
 }
 
 .archivio-film h3 {
@@ -2976,6 +3013,17 @@ footer .button:active {
   text-align: right;
 }
 
+.comments {
+  margin-top: 50px;
+}
+
+.comments h2 {
+  font-family: "Bebas Neue", Helvetica, sans-serif;
+  color: rgba(243,33,36,1);
+  font-size: 2.5em;
+  margin-bottom: 50px;
+}
+
 /* --FINE SINGLE BLOG-- */
 
 /* --PAGINA BLOG-- */
@@ -3031,6 +3079,10 @@ footer .button:active {
 
 /* --HOME-- */
 
+#menu-main-menu-1 .prossimeuscite {
+    display: none;
+  }
+
 .slider-cinema .info-wrapper .info-title {
   margin-top: 200px;
   font-size: 0.8em;
@@ -3051,7 +3103,8 @@ footer .button:active {
 
 .slider-cinema .info-wrapper .info-date h4 {
   font-size: 5em;
-  margin-top: -20px;
+  margin-top: -10px;
+  margin-bottom: -10px;
 }
 
 .slider-cinema .info-wrapper .info-date h5 {
@@ -3096,9 +3149,15 @@ footer .button:active {
   margin-top: -170px;
 }
 
+.slider-nextexit .info-date h4 {
+  margin-top: 10px;
+}
+
 .slider-nextexit .fotorama__nav-wrap {
   margin-left: 0;
   margin-bottom: -50px;
+  background-color: rgba(0,0,0,0.9);
+  height: 190px;
 }
 
 .slider-nextexit .cta-page {
@@ -3121,7 +3180,7 @@ footer .button:active {
 
 .ondemand-device {
   display: inline-block;
-  background-image: url(../img/blur.png);
+  background-image: url(../img/ondemand-copertina.png);
   background-repeat: no-repeat;
   background-size: cover;
   height: 300px;
@@ -3169,7 +3228,7 @@ footer .button:active {
 }
 
 .archivio-device {
-  background-image: url(../img/blur.png);
+  background-image: url(../img/archivio-copertina.png);
   background-repeat: no-repeat;
   background-size: cover;
   height: 300px;
@@ -3506,6 +3565,10 @@ header {
   list-style-type: none;
 }
 
+#blog-tag ul li {
+  font-size: 0.7em;
+}
+
 .blog-simil-bg {
   background-color: #F2F2F2;
   margin-top: 30px;
@@ -3749,6 +3812,7 @@ font-size: 1.8em;
 
 }
 
+/* -----------------------------------  SMARTPHONE ----------------------------------- */
 @media only screen and (min-width: 320px) and (max-width: 480px) {
 
   .tab-bar {
@@ -3917,7 +3981,7 @@ font-size: 1.8em;
 
   .ondemand-device {
     display: inline-block;
-    background-image: url(../img/blur.png);
+    background-image: url(../img/ondemand-copertina.png);
     background-repeat: no-repeat;
     background-size: cover;
     height: 100px;
@@ -3933,7 +3997,7 @@ font-size: 1.8em;
     display: inline-block;
     position: absolute;
     z-index: 50;
-    margin-left: 280px;
+    margin-left: 300px;
     margin-top: -65px;
   }
 
@@ -3977,7 +4041,7 @@ font-size: 1.8em;
     display: inline-block;
     position: absolute;
     z-index: 50;
-    margin-left: 280px;
+    margin-left: 300px;
     margin-top: -65px;
   }
 
@@ -3986,7 +4050,7 @@ font-size: 1.8em;
   }
 
   .archivio-device {
-    background-image: url(../img/blur.png);
+    background-image: url(../img/archivio-copertina.png);
     background-repeat: no-repeat;
     background-size: cover;
     height: 100px;
@@ -4009,7 +4073,7 @@ font-size: 1.8em;
     display: inline-block;
     position: absolute;
     z-index: 50;
-    margin-left: 265px;
+    margin-left: 285px;
     margin-top: -80px;
   }
 
