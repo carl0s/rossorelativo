@@ -1551,6 +1551,7 @@ footer .button:active {
   background-image: url(../img/play.svg);
   background-position: 0px 0px;
   background-size: 75%;
+  z-index: 30;
 }
 
 .single-film .fotorama__nav-wrap {
@@ -1731,14 +1732,6 @@ footer .button:active {
   font-size: 1em;
   line-height: 1.7em;
   font-style: italic;
-}
-
-.durata .infofilm {
-  margin-left: 15px;
-}
-
-.durata .content-film {
-  margin-top: -50px;
 }
 
 .info-cast h3 {
