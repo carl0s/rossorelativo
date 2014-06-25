@@ -2542,7 +2542,8 @@ footer .button:active {
 
 .text-film {
   position: relative;
-  height: 250px;
+  /* da riadattare */
+  height: 290px;
   -webkit-transition: height 0.3s;
   -moz-transition: height 0.3s;
   -ms-transition: height 0.3s;
@@ -2562,16 +2563,13 @@ footer .button:active {
   font-style: italic;
 }
 
-
 .text-film a {
   position: relative;
 }
 
 .descrizione-scuole {
-  position: absolute;
-  min-height: 100px;
-  height: 250px;
-  overflow: hidden;
+  overflow: auto;
+  height: 310px;
   -webkit-transition: height 1s;
   -moz-transition: height 1s;
   -ms-transition: height 1s;
@@ -2613,7 +2611,7 @@ footer .button:active {
 
 .text-film .trailer {
   position: absolute;
-  bottom:-50px;
+  bottom:-70px;
 }
 
 .info-film-scuola h5 span {
@@ -2632,6 +2630,10 @@ footer .button:active {
   font-size: 80%;
   color: rgba(72,72,72,1);
   text-decoration: underline;
+}
+
+.bottone-scuola {
+  display: none;
 }
 
 #button-scuola a {
@@ -3204,7 +3206,7 @@ footer .button:active {
 
 .blog-device {
   display: inline-block;
-  background-image: url(../img/blur_bn.png);
+  background-image: url(../img/marketing.png);
   background-repeat: no-repeat;
   background-size: cover;
   height: 300px;
@@ -4507,9 +4509,6 @@ font-size: 1.8em;
   display: none;
 }
 
-.text-film {
-  height: 50px;
-}
 
 .text-film .descrizione-scuole {
   display: none;
