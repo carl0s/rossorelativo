@@ -24,17 +24,19 @@
   width: 100%;
   display: none;
 }
+  .off-canvas-wrap.move-right, .off-canvas-wrap.move-left {
+    min-height: 480px;
+    max-height: 640px;
+  }
 
 .left-off-canvas-menu {
   background-color: rgba(242,242,242,1);
   font-family: "Bebas Neue";
-  position: fixed;
 }
 
 .right-off-canvas-menu {
   background-color: rgba(242,242,242,1);
   font-family: "Bebas Neue";
-  position: fixed;
 }
 
 .right-off-canvas-menu h4 {
@@ -2543,7 +2545,7 @@ footer .button:active {
 .text-film {
   position: relative;
   /* da riadattare */
-  height: 290px;
+  height: 70px;
   -webkit-transition: height 0.3s;
   -moz-transition: height 0.3s;
   -ms-transition: height 0.3s;

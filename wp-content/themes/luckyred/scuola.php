@@ -246,7 +246,7 @@ if (have_posts()) : while(have_posts()) : the_post();
       </h5>
 </div>
 
-<div class="button-device medium-6 columns">
+<div id="button-scuola" class="medium-6 columns">
     <?php
           if( get_field('scheda_del_film') ):
           $file = get_field('scheda_del_film');

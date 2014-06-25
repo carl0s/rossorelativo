@@ -73,7 +73,7 @@
     </div>
   </div>
   <div class="option-visual-page row">
-    <div class="large-6 columns">
+    <div class="large-6 medium-6 small-12 columns">
       <ul class="order-film">
       <li><?php echo __('Ordina per'); ?></li>
         <li><a href="?orderby=title">Nome</a></li>
@@ -81,7 +81,7 @@
         <li><a href="?orderby=rand">Più vecchio</a></li>
       </ul>
     </div>
-    <div class="large-6 end columns">
+    <div class="large-6 medium-6 small-12 columns">
       <ul class="view-film">
       <li><?php echo __('Visualizza'); ?></li>
       <li><a href="?posts=4#archivio">4</a></li>
@@ -100,7 +100,7 @@
     ?>
 
     <?php if (have_posts()) : while(have_posts()) : the_post(); ?>
-      <div class="layout-film large-3 columns">
+      <div class="layout-film large-3 medium-3 small-12 columns">
         <div class="title-layout">
           <a href="<?php echo get_the_permalink(); ?>">
           <h3>
@@ -111,6 +111,7 @@
           </h3>
           </a>
         </div>
+          <a class="archive-img-smart" href="<?php echo get_permalink(); ?>"><?php echo get_the_post_thumbnail(); ?></a>
           <a class="archive-img" href="<?php echo get_permalink(); ?>"><?php $image = get_field('locandina'); ?><img src="<?php echo $image['url']; ?>" /></a>
           <h5><span><?php echo __('Regia'); ?></span>  
             <?php $registi = get_field('regia');
