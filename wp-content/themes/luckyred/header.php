@@ -28,6 +28,7 @@
       <div class="row">
         <div class="large-12 column">
           <?php get_search_form(); ?>
+          
         </div>
       </div>
     </div>

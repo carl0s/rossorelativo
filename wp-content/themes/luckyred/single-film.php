@@ -17,46 +17,40 @@
   <a href="<?php the_field('link_trailer'); ?>" data-caption="
     <div class='info-wrapper'>
       <div class='row'>
-        <div class='info-title large-6 small-12 columns'>
-          <a href='<?php echo get_the_permalink(); ?>'><h2><?php the_title(); ?></h2></a>
-          <div class='row collapse'>
-            <div class='large-9 columns'>
-              <div class='info-content'>
-                <p><?php echo __('Titolo originale'); ?></p>
-                <span><?php echo get_field('titolo_originale'); ?></span>
-              </div>
-              <div class='film-thumb-title'>
-                <h4>
-                  <?php
-                  if( get_field('trailer_scaricabile') ):
-                    $file = get_field('trailer_scaricabile');
-                  ?>
-                  <a href='<?php echo $file['url']; ?>'><?php echo __('Scarica il trailer'); ?></a>
-                  <?php
-                  endif;
-                  ?>
-                </h4>
-              </div>
+        <div class='large-6 small-12 columns'>
+          <div class='info-title'> 
+            <h2><a href='<?php echo get_the_permalink(); ?>' title='<?php the_title(); ?>'><?php the_title(); ?></a></h2>
+            <div class='info-content'>
+              <p><?php echo __('Titolo originale'); ?></p>
+              <span><?php echo get_field('titolo_originale'); ?></span>
+            </div>
+            <div class='film-thumb-title'>
+              <h4>
+                <?php
+                if( get_field('trailer_scaricabile') ):
+                  $file = get_field('trailer_scaricabile');
+                ?>
+                <a href='<?php echo $file['url']; ?>'><?php echo __('Scarica il trailer'); ?></a>
+                <?php
+                endif;
+                ?>
+              </h4>
             </div>
           </div>
-        </div>
-        <?php if(get_field('itunes_link') && get_field('amazon_link')): ?>
-          <div class='row collapse'>
-            <div class='large-6 columns'>
-              <div class='info-ondemand'>
-                <h4><?php echo __('Noleggia il film:'); ?></h4><br>
-                <ul>
-                  <?php if(get_field('itunes_link')): ?>
-                    <li><a href='<?php echo get_field('itunes_link'); ?>' class='itunes'><img src='<?php echo get_template_directory_uri() . '/img/itunes.png' ?>' ><?php echo __('iTunes'); ?></a></li>
-                  <?php endif; ?>
-                  <?php if(get_field('amazon_link')): ?>
-                    <li><a href='<?php echo get_field('amazon_link'); ?>' class='amazon'><img src='<?php echo get_template_directory_uri() . '/img/amazon.png' ?>' ><?php echo __('Amazon'); ?></a></li>
-                  <?php endif; ?>
-                </ul>
-              </div>
-            </div>
+          <?php if(get_field('itunes_link') && get_field('amazon_link')): ?>
+          <div class='info-ondemand'>
+            <h4><?php echo __('Noleggia il film:'); ?></h4>
+            <ul class='clearfix'>
+              <?php if(get_field('itunes_link')): ?>
+                <li><a href='<?php echo get_field('itunes_link'); ?>' class='itunes'><img src='<?php echo get_template_directory_uri() . '/img/itunes.png' ?>' ><?php echo __('iTunes'); ?></a></li>
+              <?php endif; ?>
+              <?php if(get_field('amazon_link')): ?>
+                <li><a href='<?php echo get_field('amazon_link'); ?>' class='amazon'><img src='<?php echo get_template_directory_uri() . '/img/amazon.png' ?>' ><?php echo __('Amazon'); ?></a></li>
+              <?php endif; ?>
+            </ul>
           </div>
         <?php endif; ?>
+        </div>
       </div>
     </div>
     ">

@@ -23,7 +23,7 @@ $('.prossimeuscite').click(function() {
   if(window.location.pathname == '/') {
     return false;
   }
-})
+});
 
 $('.icon-search').click(function(){
     $('.search-container').toggleClass('show');

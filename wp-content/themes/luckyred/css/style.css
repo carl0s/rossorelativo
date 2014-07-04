@@ -835,7 +835,7 @@ header.smaller .social-icon {
   font-family: "Bebas Neue", Helvetica, sans-serif;
   font-size: 2em;
   padding: 10px 40px 10px 40px;
-  margin-top: 29px;
+  margin-top: 3px;
   width: 280px;
   margin-bottom: 95px;
 }
@@ -1564,18 +1564,28 @@ footer .button:active {
   margin-top: -120px;
 }
 
-.single-film .fotorama__caption__wrap {
-  position: relative;
-  background: none;
-  width: 100%;
-  margin-top: -1390px;
+.single-film .fotorama__caption {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
 }
 
-.single-film .info-title {
-  top: -70px;
+.single-film .fotorama__caption__wrap {
+  position: absolute;
+  background: none;
+  width: 100%;
+  top: 0;
 }
 
 .single-film .info-title h2 {
+  margin-top: 280px;
+  display: block;
+  font-size: 16px;
+} 
+
+.single-film .info-title h2 a {
   color: rgba(255,255,255,1);
   background-color: rgba(0,0,0,0.8);
   padding: 10px;
@@ -1583,8 +1593,7 @@ footer .button:active {
   font-size: 2.4em;
   line-height: 1em;
   display: inline-block;
-  margin-top: 285px;
-} 
+}
 
 .single-film .info-content {
   color: rgba(255,255,255,1);
@@ -1622,7 +1631,6 @@ footer .button:active {
 }
 
 .single-film .info-wrapper {
-  padding-top: 375px;
   position: relative;
 }
 
@@ -1636,10 +1644,6 @@ footer .button:active {
   display: inline-block;
 }
 
-.single-film .info-ondemand {
-  position: absolute;
-}
-
 .single-film .info-ondemand h4 {
   color: rgba(255,255,255,1);
   background-color: rgba(0,0,0,0.8);
@@ -1647,8 +1651,13 @@ footer .button:active {
   font-family: "Bebas Neue", Helvetica, sans-serif;
   font-size: 1.3em;
   margin-top: 50px;
-  margin-left: 15px;
+  margin-left: 0px;
   display: inline-block;
+}
+
+.single-film .info-ondemand ul {
+  margin: 0;
+  padding: 0;
 }
 
 .single-film .info-ondemand ul li a {
@@ -1659,7 +1668,7 @@ footer .button:active {
   font-size: 1em;
   display: inline-block;
   float: left;
-  margin: 0 10px 0 -2px;
+  margin: 0 10px 0 0px;
 }
 
 .single-film .info-ondemand li {
@@ -2545,7 +2554,7 @@ footer .button:active {
 .text-film {
   position: relative;
   /* da riadattare */
-  height: 70px;
+  height: 290px;
   -webkit-transition: height 0.3s;
   -moz-transition: height 0.3s;
   -ms-transition: height 0.3s;

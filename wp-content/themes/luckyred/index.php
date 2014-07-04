@@ -176,7 +176,8 @@
           'post_type'  => 'film',
           'meta_key'   => 'on_demand',
           'meta_value' => 1,
-          'posts_per_page' => 3
+          'posts_per_page' => 3,
+          'orderby' => 'rand'
           );
         $film = new WP_Query($args);
         ?>
@@ -246,7 +247,7 @@
         </div>
       <br>
       <div class="archive-film row">  
-        <?php query_posts(array('post_type'=>'film', 'posts_per_page'=>3)); ?>
+        <?php query_posts(array('post_type'=>'film', 'posts_per_page'=>3, 'orderby'=>'rand')); ?>
         <?php if (have_posts()) : while(have_posts()) : the_post(); ?>
         <div class="large-4 columns">
           <a class="archive-img" href="<?php echo get_permalink(); ?>"><?php $image = get_field('locandina'); ?><img src="<?php echo $image['url']; ?>" /></a>

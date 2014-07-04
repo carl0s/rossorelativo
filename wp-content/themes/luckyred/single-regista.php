@@ -16,7 +16,7 @@
                 <div class="row collapse">
                   <div class="large-9 columns">
                     <div class='info-content'>
-                      <span><?php echo get_field('nazionalita'); ?></span>
+                      <span><?php echo get_field('nazionalità'); ?></span>
                     </div>
                   </div>
                 </div>
@@ -51,6 +51,7 @@
           <?php 
           $filmografie = get_posts(array(
             'post_type'  => 'film',
+            'posts_per_page' => -1,
             'meta_query' => array(
               array(
                   'key' => 'regia', // name of custom field
